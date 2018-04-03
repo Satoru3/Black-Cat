@@ -16,3 +16,11 @@ module.exports.run = async (bot, message, args) => {
     .setAuthor(message.author.tag);
 
     message.channel.send(ballembed);
+
+
+
+}
+
+module.exports.help = {
+    name: "8ball"
+}
