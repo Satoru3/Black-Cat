@@ -51,5 +51,3 @@ bot.on("message", function(message) {
             .addField("Question :", tte)
             .addField("Réponse :", reponse)
         message.channel.sendEmbed(bembed)
-        
-}})
