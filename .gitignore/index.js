@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', function() {
-    bot.user.setGame("*help");
+    bot.user.setGame(" *help");
     console.log("Connecté");
 });
 
