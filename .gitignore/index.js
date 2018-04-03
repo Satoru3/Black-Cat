@@ -50,7 +50,7 @@ bot.on("message", function(message) {
             var bembed = new Discord.RichEmbed()
             .setDescription(":8ball: 8ball")
             .addField("Question :", tte)
-            .addField("Réponse:", reponse)
+            .addField("Réponse :", reponse)
         message.channel.sendEmbed(bembed)
 
 }})
