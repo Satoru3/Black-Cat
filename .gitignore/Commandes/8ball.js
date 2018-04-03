@@ -1,27 +1,47 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
+var bot = new Discord.Client();
+var prefix = ("*");
+const YTDL = require("ytdl-core");
+bot.login("NDMwMzQ4Mjk0NzgzMjM4MTQ0.DaV7bg.RVr9BkqbDZcOAm_qgW1HCaFwCJQ");
 
-module.exports.run = async (bot, message, args) => {
+bot.on("ready", function() {
+    console.log("Connecté");
+});
 
-    //!8ball <question>
-    if(!args[2]) return message.reply("Tu veux me poser une question ? =) :8ball:");
-    let replies = ["Oui.", "Non.", "Je ne sais pas.", "Je n'en suis pas sûr...", "Redemande moi plus tard !", "Exactement !"];
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
 
-    let result = Math.floor((Math.random() * replies.length));
-    let question = args.slice(1).join(" ");
+    if (!message.content.startsWith(prefix)) return;
 
-    let ballembed = new Discord.RichEmbed()
-    .setDescription(":8ball: 8ball")
-    .setColor("#FF9900")
-    .addField("Question :", question)
-    .addField("Réponse :", replies[result])
-    .setAuthor(message.author.tag);
+    var args = message.content.substring(prefix.length).split(" ");
 
-    message.channel.send(ballembed);
+    switch (args[0].toLowerCase()) {
+        case "roll":
+            var roll = Math.floor(Math.random() * args[1]) +1;
+            if (!roll) return message.reply("Entre un numéro !")
+            message.channel.send("Je choisis le numéro" + roll + " !");
+            break;
+        case "8ball":
+        let args = message.content.split(" ").slice(1);
+        let tte = args.join(" ")
+        if (!tte){
+            return message.reply("Pose moi une question ! :8ball:")};
 
+            var replys = [
+                "Oui",
+                "Non",
+                "Peut-être",
+                "Je ne sais pas !",
+                "Sûrement...",
+                "Bien sûr !",
+                "Absolument pas !"
+            ];
 
+            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            var bembed = new Discord.RichEmbed()
+            .setDescription(":8ball: 8ball")
+            .addField("Question :", tte)
+            .addField("Réponse:", reponse)
+        message.channel.sendEmbed(bembed)
 
-}
-
-module.exports.help = {
-    name: "8ball"
-}
+}})
