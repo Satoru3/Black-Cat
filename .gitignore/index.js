@@ -15,4 +15,9 @@ bot.on('message', message => {
     if (message.content === prefix + "help"){
         message.channel.sendMessage("```Liste des commandes disponibles : \n \n *8ball \n Le bot est actuellement en cours de développement.```");
     }
+    
+    if (message.content === "Salut"){
+        message.reply("Bonjour à toi ! =)");
+        console.log("La commande Salut à été effectuée.");
+    }
 });
