@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
+    //!8ball <question>
     if(!args[2]) return message.reply("Tu veux me poser une question ? =) :8ball:");
     let replies = ["Oui.", "Non.", "Je ne sais pas.", "Je n'en suis pas sûr...", "Redemande moi plus tard !", "Exactement !"];
 
