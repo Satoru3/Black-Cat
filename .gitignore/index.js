@@ -8,7 +8,7 @@ bot.on('ready', function() {
     console.log("Connecté");
 });
 
-bot.login("TOKEN");
+bot.login(process.env.TOKEN);
 
 // J'encule celui qui n'a pas de vie et qui à pris le token pour s'amuser, c'est cool de ban 150 membres, de supprimer des grades et des salons ?
 // Malheureusement pour toi, j'avais heureusement laissé la perm assez bas, car je n'avais pas fini le bot. Trou du cul
