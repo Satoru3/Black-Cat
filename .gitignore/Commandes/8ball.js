@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 var bot = new Discord.Client();
 var prefix = ("*");
 const YTDL = require("ytdl-core");
-bot.login("TOKEN");
+bot.login(process.env.TOKEN);
 
 bot.on("ready", function() {
     console.log("Connecté");
