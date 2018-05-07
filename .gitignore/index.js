@@ -55,7 +55,7 @@ bot.on("message", function(message) {
             .addField("Question :", tte)
             .addField("Réponse :", reponse)
             .setFooter("Proposé par :")
-            .setAuthor("Author Name")
+            .setAuthor(msg.author.username)
             .setThumbnail(message.author.avatarURL)
             
 
