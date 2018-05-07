@@ -55,7 +55,7 @@ bot.on("message", function(message) {
             .addField("Question :", tte)
             .addField("Réponse :", reponse)
             .setFooter("Proposé par :")
-            .setThumbnail(message.author)
+            .setThumbnail(message.author.avatarURL)
 
 
         message.channel.sendEmbed(bembed)
