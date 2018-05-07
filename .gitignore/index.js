@@ -54,7 +54,9 @@ bot.on("message", function(message) {
             .setDescription(":8ball: 8ball")
             .addField("Question :", tte)
             .addField("Réponse :", reponse)
-            .setFooter("Proposé par :", message.author)
+            .setFooter("Proposé par :")
+            .setThumbnail(message.author)
+
 
         message.channel.sendEmbed(bembed)
 
