@@ -63,27 +63,25 @@ bot.on("message", function(message) {
 
 }})
 
-bot.on('message', message => {
-
-  if (message.content.startsWith('*play')) {
-    let voiceChannel = message.guild.channels
-      .filter(function (channel) { return channel.type === 'voice' })
-      .first()
-    let args = message.content.split(' ')
-    voiceChannel
-      .join()
-      .then(function (connection) {
-        let stream = YoutubeStream(args[1])
-        stream.on('error', function () {
-          message.reply("Je suis désolé, je n'ai pas réussi à lire cette vidéo. C'est peut-être un problème de copyright ? :(")
-          connection.disconnect()
-        })
-        connection
-          .playStream(stream)
-          .on('end', function () {
-            connection.disconnect()
-          })
-      })
-  }
-
-})
+    if(message.content.startsWith("*sondage")){
+        if(message.member.hasPermission("BAN_MEMBERS")) {
+			
+			let args = message.content.split(" ").slice(1);
+			let thingToEcho = args.join(" ")
+			var embed = new Discord.RichEmbed()
+			    .setDescription('Sondage')
+				.addField(thingToEcho, "Répondre avec :white_check_mark: ou :x: ! \n")
+				.setColor("0xB40404")
+				.setTimestamp()
+			message.channel.sendEmbed(embed)
+			.then(function (message){
+				message.react("?")
+				message.react("?")
+			}).catch(function(){
+				
+			});
+			message.delete()
+		}else{
+			return message.reply("Tu n'as pas la permission de faire ceci.")
+        }
+    }
