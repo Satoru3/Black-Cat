@@ -24,6 +24,15 @@ bot.on('message', message => {
         console.log("La commande Salut à été effectuée.");
 	    
     }
+        
+    if (message.content === prefix + "ruby"){
+	 var embed = new.Discord.RichEmbed()
+	     .setTitle("Ruby")
+	     .setDescription("Ceci est un test pour Ruby")
+	     .addField("Ruby")
+	     .setFooter("Ceci était une commande de test")
+	 message.channel.sendEmbed(embed);
+    }
 	
     if (message.content.startsWith("*sondage")){
     if (message.member.hasPermission("BAN_MEMBERS")) {
