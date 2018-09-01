@@ -4,15 +4,11 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', function() {
-    bot.user.setGame(" *help");
+    bot.user.setGame("Ma commande est *help");
     console.log("Connecté");
 });
 
 bot.login(process.env.TOKEN);
-
-// J'encule celui qui n'a pas de vie et qui à pris le token pour s'amuser, c'est cool de ban 150 membres, de supprimer des grades et des salons ?
-// Malheureusement pour toi, j'avais heureusement laissé la perm assez bas, car je n'avais pas fini le bot. Trou du cul
-
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
@@ -21,17 +17,16 @@ bot.on('message', message => {
     
     if (message.content === "Salut"){
         message.reply("Bonjour à toi ! =)");
-        console.log("La commande Salut à été effectuée.");
-	    
+        console.log("La commande Salut à été effectuée.");  
     }
         
     if (message.content === prefix + "ruby"){
-	 var embed = new.Discord.RichEmbed()
-	     .setTitle("Ruby")
-	     .setDescription("Ceci est un test pour Ruby")
-	     .addField("Ruby")
-	     .setFooter("Ceci était une commande de test")
-	 message.channel.sendEmbed(embed);
+	    var embed = new.Discord.RichEmbed()
+	        .setTitle("Ruby")
+	        .setDescription("Ceci est un test pour Ruby")
+	        .addField("Ruby")
+	        .setFooter("Ceci était une commande de test")
+	    message.channel.sendEmbed(embed);
     }
 	
     if (message.content.startsWith("*sondage")){
