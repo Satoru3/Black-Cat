@@ -19,7 +19,7 @@ bot.on('message', message => {
             .addField("*8ball","Petite commande pour s'amuser à poser des questions à la boule ;)", true)
             .setColor("0xf55b1b")
             .setFooter("Bonne journée sur Knights Chronicle FR ! =)")
-	    .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
+            .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed);
     }
 
