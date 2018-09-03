@@ -23,15 +23,16 @@ bot.on('message', message => {
         message.channel.sendEmbed(embed);
     }
 
-    if (message.content === prefix + "ruby"){
+bot.on('message', message => {
+    if (message.content === prefix + "help"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Ruby")
-            .setDescription("Voici un petit résumé de Ruby, et de ses performances !")
-            .addField("https://image.prntscr.com/image/LFZXg-WhSVK_k7cbuSW7Mg.png","Nous sommes les meilleurs", true)
+            .setTitle("Page d'aide")
+            .setDescription("En construction")
+            .addField("*help","Cette commande sert à faire apparaître cette page.", true)
             .addField("*8ball","Petite commande pour s'amuser à poser des questions à la boule ;)", true)
             .setColor("0xf55b1b")
-            .setFooter("Bonne journée sur Knights Chronicle FR ! =)"
-            .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
+            .setFooter("Bonne journée sur Knights Chronicle FR ! =)")
+	    .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed);
     }
 	
