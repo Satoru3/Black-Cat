@@ -33,6 +33,7 @@ bot.on('message', message => {
             .setFooter("Bonne journée sur Knights Chronicle FR ! =)"
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(lembed);
+    }
 
     if (message.content === "Salut"){
         message.reply("Bonjour à toi ! =)");
