@@ -34,7 +34,7 @@ bot.on('message', message => {
             .setThumbnail("http://prntscr.com/kq6bzr")
         message.channel.sendEmbed(embed));
 
-    });
+    }
 	
 
     if (message.content === "Salut"){
