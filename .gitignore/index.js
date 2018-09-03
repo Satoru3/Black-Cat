@@ -27,7 +27,7 @@ bot.on('message', message => {
         var lembed = new Discord.RichEmbed()
             .setTitle("Ruby")
             .setDescription("Voici un petit résumé de Ruby, et de ses performances !")
-            .addField("https://image.prntscr.com/image/LFZXg-WhSVK_k7cbuSW7Mg.png","Nous sommes les meilleurs","Augmente l'ATQ des Alliés du groupe de 60% si 5 Alliés Vent sont présent dans le groupe.", true)
+            .addField("https://image.prntscr.com/image/LFZXg-WhSVK_k7cbuSW7Mg.png", true)
             .addField("*8ball","Petite commande pour s'amuser à poser des questions à la boule ;)", true)
             .setColor("0xf55b1b")
             .setFooter("Bonne journée sur Knights Chronicle FR ! =)"
