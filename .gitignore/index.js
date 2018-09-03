@@ -12,7 +12,14 @@ bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
     if (message.content === prefix + "help"){
-        message.channel.sendMessage("```Liste des commandes disponibles : \n \n *8ball \n Le bot est actuellement en cours de développement.```");
+        var embed = new Discord.RichEmbed()
+            .setTitle("Page d'aide")
+            .setDescription("En construction")
+            .addField("*help","Cette commande sert à faire apparaître cette page.", true)
+            .addField("*8ball","Petite commande pour s'amuser à poser des questions à la boule ;)", true)
+            .setColor("0xf55b1b")
+            .setFooter("Bonne journée sur Knights Chronicle FR ! =)")
+        message.channel.sendEmbed(embed);
     }
 
     if (message.content === "Salut"){
@@ -81,3 +88,17 @@ bot.on("message", function(message) {
         message.channel.sendEmbed(bembed)
 
 }})
+
+bot.on('message', message => {
+    if (message.content === prefix + "help"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Page d'aide")
+            .setDescription("En construction")
+            .addField("*help","Cette commande sert à faire apparaître cette page.", true)
+            .addField("*8ball","Petite commande pour s'amuser à poser des questions à la boule ;)", true)
+            .setColor("0xf55b1b")
+            .setFooter("Bonne journée sur Knights Chronicle FR ! =)")
+        message.channel.sendEmbed(embed);
+    }
+
+});
