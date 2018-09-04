@@ -17,6 +17,7 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","``", true)
             .addField("__**Utilitaires**__","`*help`", true)
+	    .addBlankField()
 	    .addField("__**Fun**__","`*8ball`", true)
 	    .addField("__**Jeux**__","`*help kc`", true)
             .setColor("0xf55b1b")
