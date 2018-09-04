@@ -26,13 +26,13 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "help kc"){
-        var embed = new Discord.RichEmbed()
+        var bembed = new Discord.RichEmbed()
             .setTitle("**Commande d'aide relative à Knights Chronicle**")
             .setDescription("Une commande d'aide pour le Discord Knights Chronicle FR")
             .addField("Vous devez effectuer la commande `help kc` suivi du nom du Héros voulu **sans la majuscule**, true)
             .setFooter("Page d'aide relative à Knights Chronicle demandé par"+" "+ message.author.username)
             .setThumbnail("message.author.avatarURL");
-        message.channel.sendEmbed(embed)
+        message.channel.sendEmbed(bembed)
     }
 
 
