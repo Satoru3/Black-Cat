@@ -86,7 +86,7 @@ bot.on("message", function(message) {
             .addField("Question :", tte)
             .addField("Réponse :", reponse)
             .setFooter("Proposé par :"+" "+ message.author.username)
-            .setThumbnail(message.author.avatarURL)
+            .setTimestamp
             
 
 
