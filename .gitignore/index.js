@@ -18,7 +18,7 @@ bot.on('message', message => {
             .addField("__**Modération**__","`Aucune cmd pour le moment`", true)
             .addField("__**Utilitaires**__","`*help`/n `*sondage`", true)
 	    .addField("__**Fun**__","`*8ball`", true)
-	    .addField("__**Jeux**__","`*help kc`", /n "`*help tg`", true)
+	    .addField("__**Jeux**__","`*help kc`","`*help tg`", true)
             .setColor("0xf55b1b")
             .setFooter("Bonne journée sur Knights Chronicle FR ! =)")
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
