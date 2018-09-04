@@ -13,9 +13,9 @@ bot.login(process.env.TOKEN);
 bot.on('message', message => {
     if (message.content === prefix + "help"){
         var embed = new Discord.RichEmbed()
-            .setTitle(":black_small_square: Page d'aide :black_small_square:")
+            .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
-            .addField("__**Modération**__","`Aucune cmd pour le moment`", true)
+            .addField("__**Modération**__","``", true)
             .addField("__**Utilitaires**__","`*help`", true)
 	    .addField("__**Fun**__","`*8ball`", true)
 	    .addField("__**Jeux**__","`*help kc`", true)
