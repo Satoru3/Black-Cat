@@ -15,6 +15,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
+	    .addBlankField()
             .addField("__**Modération**__","`*kick`", true)
             .addField("__**Utilitaires**__","`*help`", true)
 	    .addField("__**Fun**__","`*8ball`", true)
