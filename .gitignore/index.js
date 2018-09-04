@@ -16,7 +16,7 @@ bot.on('message', message => {
             .setTitle("Page d'aide")
             .setDescription("En construction")
             .addField("__**Modération**__","`Aucune cmd pour le moment`", true)
-            .addField("__**Utilitaires**__","`*help`/n `*sondage`", true)
+            .addField("__**Utilitaires**__","`*help`","`*sondage`", true)
 	    .addField("__**Fun**__","`*8ball`", true)
 	    .addField("__**Jeux**__","`*help kc`","`*help tg`", true)
             .setColor("0xf55b1b")
