@@ -22,20 +22,9 @@ bot.on('message', message => {
             .setColor("0xf55b1b")
             .setFooter("Page d'aide généré suite à une demande de"+" "+ message.author.username)
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
-        message.channel.sendEmbed(embed)
-   }})
-
-    if (message.content === prefix + "help kc"){
-        var embed = new Discord.RichEmbed()
-            .setTitle("**Commande d'aide relative à Knights Chronicle**")
-            .setDescription("Une commande d'aide pour le Discord Knights Chronicle FR")
-            .addField("Vous devez effectuer la commande `help kc` suivi du nom du Héros voulu **sans la majuscule**, true)
-            .setFooter("Page d'aide relative à Knights Chronicle demandé par"+" "+ message.author.username)
-            .setThumbnail("message.author.avatarURL")
-        message.channel.sendEmbed(embed)
+        message.channel.sendEmbed(embed);
     }
-
-
+	
     if (message.content === "Salut"){
         message.reply("Bonjour à toi ! =)");
         console.log("La commande Salut à été effectuée.");  
@@ -60,7 +49,7 @@ bot.on('message', message => {
 			});
 			message.delete()
 		}else{
-			return message.reply("Tu n'as pas la permission de faire ceci.")
+			return message.reply("Tu n'as pas la permission de faire ceci"+" "+ message.author.username)
         }
     }
 });
@@ -80,8 +69,8 @@ bot.on("message", function(message) {
             return message.reply("Pose moi une question ! :8ball:")};
 
             var replys = [
-                "Oui",
-                "Non",
+                "Oui" + message.author.username,
+                "Non" + message.author.username,
                 "Peut-être",
                 "Je ne sais pas !",
                 "Sûrement...",
