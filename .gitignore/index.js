@@ -76,7 +76,7 @@ bot.on("message", function(message) {
                 "Sûrement..."+" " + message.author.username,
                 "Bien sûr !"+" " + message.author.username,
 		"Bien entendu !"+" " + message.author.username,
-		"Es-tu fou ?!"+" " + message.author.username,
+		"Es-tu fou"+" " + message.author.username + "?!",
                 "Absolument pas !"
             ];
 
