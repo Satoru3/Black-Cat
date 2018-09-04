@@ -22,7 +22,7 @@ bot.on('message', message => {
             .setColor("0xf55b1b")
             .setFooter("Page d'aide généré suite à une demande de"+" "+ message.author.username)
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
-        message.channel.sendEmbed(embed);
+        message.channel.sendEmbed(embed)
     }
 
     if (message.content === prefix + "help kc"){
@@ -32,7 +32,7 @@ bot.on('message', message => {
             .addField("Vous devez effectuer la commande `help kc` suivi du nom du Héros voulu **sans la majuscule**, true)
             .setFooter("Page d'aide relative à Knights Chronicle demandé par"+" "+ message.author.username)
             .setThumbnail("message.author.avatarURL")
-        message.channel.sendEmbed(embed);
+        message.channel.sendEmbed(embed)
     }
 
 
