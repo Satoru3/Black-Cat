@@ -93,8 +93,8 @@ bot.on("message", function(message) {
 }})
 
 bot.on('message', message => {
-    if (message.content === prefix + "help"){
-        var embed = new Discord.RichEmbed()
+    if (message.content === prefix + "ruby"){
+        var bembed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`*kick`", true)
@@ -104,5 +104,5 @@ bot.on('message', message => {
             .setColor("0xf55b1b")
             .setFooter("Page d'aide généré suite à une demande de"+" "+ message.author.username)
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
-        message.channel.sendEmbed(embed);
+        message.channel.sendEmbed(bembed);
     }
