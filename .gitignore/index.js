@@ -13,14 +13,14 @@ bot.login(process.env.TOKEN);
 bot.on('message', message => {
     if (message.content === prefix + "help"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Page d'aide")
-            .setDescription("En construction")
+            .setTitle(":black_small_square: Page d'aide :black_small_square:")
+            .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`Aucune cmd pour le moment`", true)
-            .addField("__**Utilitaires**__","`*help`" /n "`*sondage`", true)
+            .addField("__**Utilitaires**__","`*help`", true)
 	    .addField("__**Fun**__","`*8ball`", true)
-	    .addField("__**Jeux**__","`*help kc`" /n "`*help tg`", true)
+	    .addField("__**Jeux**__","`*help kc`", true)
             .setColor("0xf55b1b")
-            .setFooter("Bonne journée sur Knights Chronicle FR ! =)")
+            .setFooter("N'hésite pas à utiliser ces commandes ! =)")
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed);
     }
