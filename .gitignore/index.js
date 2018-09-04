@@ -69,12 +69,14 @@ bot.on("message", function(message) {
             return message.reply("Pose moi une question ! :8ball:")};
 
             var replys = [
-                "Oui" + message.author.username,
-                "Non" + message.author.username,
-                "Peut-être",
-                "Je ne sais pas !",
-                "Sûrement...",
-                "Bien sûr !",
+                "Oui"+" " + message.author.username,
+                "Non"+" " + message.author.username,
+                "Peut-être"+" " + message.author.username,
+                "Je ne sais pas !"+" " + message.author.username,
+                "Sûrement..."+" " + message.author.username,
+                "Bien sûr !"+" " + message.author.username,
+		"Bien entendu !"+" " + message.author.username,
+		"Es-tu fou ?!"+" " + message.author.username,
                 "Absolument pas !"
             ];
 
