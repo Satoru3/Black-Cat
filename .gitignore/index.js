@@ -20,7 +20,7 @@ bot.on('message', message => {
 	    .addField("__**Fun**__","`*8ball`", true)
 	    .addField("__**Jeux**__","`*help kc`", true)
             .setColor("0xf55b1b")
-            .setFooter("N'hésite pas à utiliser ces commandes ! =)")
+            .setFooter("Page d'aide généré suite à une demande de :black_small_square:"+ message.author.username)
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed);
     }
@@ -83,7 +83,7 @@ bot.on("message", function(message) {
             .setDescription(":8ball: 8ball")
             .addField("Question :", tte)
             .addField("Réponse :", reponse)
-            .setFooter("Proposé par :")
+            .setFooter("Proposé par :black_small_square:"+ message.author.username)
             .setThumbnail(message.author.avatarURL)
             
 
