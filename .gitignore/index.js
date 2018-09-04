@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', function() {
-    bot.user.setGame("Ma commande est *help");
+    bot.user.setGame("ma commande est *help");
     console.log("Connecté");
 });
 
@@ -23,7 +23,7 @@ bot.on('message', message => {
             .setFooter("Page d'aide généré suite à une demande de"+" "+ message.author.username)
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed)
-    }
+   }})
 
     if (message.content === prefix + "help kc"){
         var embed = new Discord.RichEmbed()
