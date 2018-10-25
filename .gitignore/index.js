@@ -20,7 +20,7 @@ bot.on('message', message => {
             .addField("__**Fun**__","`*8ball`", true)
             .addField("__**Jeux**__","`*help kc`", true)
             .setColor("RANDOM")
-            .setFooter("Page d'aide généré suite à une demande de"+" "+ message.author.username)
+            .setFooter("Page d'aide générée suite à une demande de"+" "+ message.author.username)
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed);
     }
@@ -28,8 +28,8 @@ bot.on('message', message => {
     if (message.content === prefix + "ruby"){
         var embed = new Discord.RichEmbed()
 	    .setTitle(":black_small_square: **Ruby** :black_small_square:")
-	    .setDescription("Une commande d'aide sur le Héros Ruby")
-            .addField("__Compétence 1__","Blablabla", true)
+	    .setDescription("Une commande d'aide sur l'Héroïne Ruby")
+            .addField("https://image.prntscr.com/image/9ymXlBV3QhGkc_Ek1whRFw.png","__Compétence 1__","Blablabla", true)
 	    .addField("__Compétence 2__","Blablalblalbal", true)
 	    .addField("__Compétence 3__","Blabkalblabla", true)
 	    .setColor("RANDOM")
