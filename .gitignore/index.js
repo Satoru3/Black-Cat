@@ -25,6 +25,13 @@ bot.on('message', message => {
         message.channel.sendEmbed(embed);
     }
 	
+    if (command === 'say') {
+      let say = args.join(' ');
+      message.delete();
+      message.channel.send(say);
+
+    }	
+
     if (message.content === "Salut"){
         message.reply("Bonjour à toi ! =)");
         console.log("La commande Salut à été effectuée.");  
