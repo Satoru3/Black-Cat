@@ -27,6 +27,7 @@ bot.on('message', message => {
 	
     if (message.content === prefix + "say"){
       let say = args.join(' ');
+      let args = message.content.slice(prefix.length).trim().split(' ');
       message.delete();
       message.channel.send(say);
 
