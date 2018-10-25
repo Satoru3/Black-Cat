@@ -30,9 +30,9 @@ bot.on('message', message => {
 	    .setTitle(":black_small_square: **Ruby** :black_small_square:")
 	    .setDescription("Une commande d'aide sur le Héros Ruby")
             .addField("__Compétence 1__","Blablabla", true)
-            .addBlank
+            .addBlank()
 	    .addField("__Compétence 2__","Blablalblalbal", true)
-	    .addBlank
+	    .addBlank()
 	    .addField("__Compétence 3__","Blabkalblabla", true)
 	    .setColor("RANDOM")
 	    .setFooter("Page de l'Héroïne Ruby générée suite à une demande de"+" "+ message.author.username)
