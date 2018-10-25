@@ -25,7 +25,7 @@ bot.on('message', message => {
         message.channel.sendEmbed(embed);
     }
 	
-    if (command === 'say') {
+    if (message.content.startWith("*say")) {
       let say = args.join(' ');
       message.delete();
       message.channel.send(say);
