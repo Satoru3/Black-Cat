@@ -29,14 +29,24 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
 	    .setTitle(":black_small_square: **Ruby** :black_small_square:")
 	    .setDescription("Une commande d'aide sur l'Héroïne Ruby")
-	    .setImage("https://image.prntscr.com/image/9ymXlBV3QhGkc_Ek1whRFw.png")
             .addField("__Compétence 1__","Blablabla", true)
+	    .setImage("https://image.prntscr.com/image/9ymXlBV3QhGkc_Ek1whRFw.png")
 	    .addField("__Compétence 2__","Blablalblalbal", true)
 	    .addField("__Compétence 3__","Blabkalblabla", true)
 	    .setColor("RANDOM")
 	    .setFooter("Page de l'Héroïne Ruby générée suite à une demande de"+" "+ message.author.username)
 	    .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/505159626459840512/H6rbMsZcmISiAAAAAElFTkSuQmCC.png")
 	message.channel.sendEmbed(embed);
+	    
+    }
+	
+    if (message.content === prefix + "avatar"){
+      let user = message.mentions.users.first()
+      let embed = new Discord.RichEmbed()
+          .setColor("RANDOM")
+          .setTitle("Voici l'avatar de :" + " " + user.username)
+          .setImage(user.displayAvatarURL)
+      message.channel.sendEmbed(embed);
 
     }	
 
