@@ -77,7 +77,7 @@ bot.on("message", function(message) {
                 "Bien sûr"+" " + message.author.username + "!",
 		"Bien entendu"+" " + message.author.username,
 		"Es-tu fou"+" " + message.author.username + "?!",
-                "Absolument pas !"
+                "Absolument pas"+" " + message.author.username + "!",
             ];
 
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
