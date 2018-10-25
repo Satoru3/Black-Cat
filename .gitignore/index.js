@@ -34,7 +34,7 @@ bot.on('message', message => {
 	    .addField("__Compétence 3__","Blabkalblabla", true)
 	    .setColor("RANDOM")
 	    .setFooter("Page de l'Héroïne Ruby générée suite à une demande de"+" "+ message.author.username)
-	    .setThumbnail("http://prntscr.com/lajcls")
+	    .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/505159626459840512/H6rbMsZcmISiAAAAAElFTkSuQmCC.png")
 	message.channel.sendEmbed(embed);
 
     }	
@@ -44,28 +44,6 @@ bot.on('message', message => {
         console.log("La commande Salut à été effectuée.");  
     }
     
-    if (message.content.startsWith("*sondage")){
-    if (message.member.hasPermission("BAN_MEMBERS")) {
-			
-			let args = message.content.split(" ").slice(1);
-			let thingToEcho = args.join(" ")
-			var embed = new Discord.RichEmbed()
-			    .setDescription('Sondage')
-				.addField(thingToEcho, "Répondre avec :white_check_mark: ou :x: ! \n")
-				.setColor("0xB40404")
-				.setTimestamp()
-			message.channel.sendEmbed(embed)
-			.then(function (message){
-				message.react("?")
-				message.react("?")
-			}).catch(function(){
-				
-			});
-			message.delete()
-		}else{
-			return message.reply("Tu n'as pas la permission de faire ceci"+" "+ message.author.username)
-        }
-    }
 });
 
 bot.on("message", function(message) {
