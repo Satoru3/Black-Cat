@@ -25,11 +25,19 @@ bot.on('message', message => {
         message.channel.sendEmbed(embed);
     }
 	
-    if (message.content === prefix + "say"){
-      let say = args.join(' ');
-      let args = message.content.slice(prefix.length).trim().split(' ');
-      message.delete();
-      message.channel.send(say);
+    if (message.content === prefix + "ruby"){
+        var embed = new Discord.RichEmbed()
+	    .setTitle(":black_small_square: **Ruby** :black_small_square:")
+	    .setDescription("Une commande d'aide sur le Héros Ruby")
+            .addField"__Compétence 1__","Blablabla", true)
+            .addBlank
+	    .addField"__Compétence 2__","Blablalblalbal", true)
+	    .addBlank
+	    .addField"__Compétence 3__","Blabkalblabla", true)
+	    .setColor("RANDOM")
+	    .setFooter("Page de l'Héroïne Ruby générée suite à une demande de"+" "+ message.author.username)
+	    .setThumbnail("http://prntscr.com/lajcls")
+	message.channel.sendEmbed(embed);
 
     }	
 
