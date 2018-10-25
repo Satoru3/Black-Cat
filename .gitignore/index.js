@@ -41,8 +41,8 @@ bot.on('message', message => {
     }
 	
     if (message.content === prefix + "avatar"){
-      let user = message.mentions.users.first()
-      let embed = new Discord.RichEmbed()
+      let user = message.mentions.users.first() || message.author;
+      var embed = new Discord.RichEmbed()
           .setColor("RANDOM")
           .setTitle("Voici l'avatar de :" + " " + user.username)
           .setImage(user.displayAvatarURL)
