@@ -47,27 +47,6 @@ bot.on('message', message => {
           .setTitle("Voici l'avatar de :" + " " + user.username)
           .setImage(user.displayAvatarURL)
       message.channel.sendEmbed(embed);
-
-    }	
-	
-    if (message.content === prefix + "chat"){
-        let msg = await message.channel.send("Génération de l'image...")
-
-        let {body} = await superagent
-        .get('http://aws.random.cat/meow')
-        //console.log(body.file)
-        if(!{body}) return message.channel.send("Désolé... Il y a eu une erreur, essaye à nouveau !")
-        
-            var embed = new Discord.RichEmbed()
-            .setColor("RANDOM")
-            .setAuthor('Ruby', message.guild.iconURL)
-            .setImage(body.file)
-            .setTimestamp()
-            .setFooter("Image de chat générée suite à une demande de"+" "+ message.author.username)
-
-            message.channel.sendEmbed(embed);
-
-            msg.delete();
 	    
     }
 
