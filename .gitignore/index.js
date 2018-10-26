@@ -51,12 +51,15 @@ bot.on('message', message => {
     }	
 	
     if (message.content === prefix + "chat"){
-      const { body } = await superagent
+      let msg = await message.channel.send("Génération de l'image...")
+      
+      let {body} = await superagent
       .get('http://random.cat/meow');
       var embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setTitle("Miaooow :sadcat:")
       .setImage(body.file)
+      .setFooter("Image de chat générée suite à une demande de"+" "+ message.author.username)
       message.channel.sendEmbed(embed);
 	    
     }
