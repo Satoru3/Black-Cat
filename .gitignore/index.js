@@ -52,6 +52,18 @@ bot.on('message', message => {
 	    
     }
 
+    let msg = message.content.toLowerCase();
+    let args = message.content.slice(prefix.length).trim().split(' ');
+    let command = args.shift().toLowerCase();
+	
+    if (command === 'say') {
+	
+      let say = args.join(' ');
+      message.delete();
+      message.channel.send(say);
+	    
+    }
+
     if (message.content === "Salut"){
         message.reply("Bonjour à toi ! =)");
         console.log("La commande Salut à été effectuée.");  
