@@ -51,19 +51,23 @@ bot.on('message', message => {
     }	
 	
     if (message.content === prefix + "chat"){
-      let msg = await message.channel.send("Génération de l'image...")
-      
-      let {body} = await superagent
-      .get('http://random.cat/meow')
-      
-         let cEmbed = new Discord.RichEmbed()
-         .setColor("RANDOM")
-         .setTitle("Miaooow :sadcat:")
-         .setImage(body.file)
-         .setFooter("Image de chat générée suite à une demande de"+" "+ message.author.username)
-          message.channel.send({embed: cEmbed})
-	    
-	  msg.delete();
+        let msg = await message.channel.send("Génération de l'image...")
+
+        let {body} = await superagent
+        .get('http://aws.random.cat/meow')
+        //console.log(body.file)
+        if(!{body}) return message.channel.send("Désolé... Il y a eu une erreur, essaye à nouveau !")
+        
+            let cEmbed = new Discord.RichEmbed()
+            .setColor("RANDOM")
+            .setAuthor('Ruby', message.guild.iconURL)
+            .setImage(body.file)
+            .setTimestamp()
+            .setFooter("Image de chat générée suite à une demande de"+" "+ message.author.username)
+
+            message.channel.send({embed: cEmbed})
+
+            msg.delete();
 	    
     }
 
