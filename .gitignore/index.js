@@ -53,11 +53,11 @@ bot.on('message', message => {
     if (message.content === prefix + "chat"){
       const { body } = await superagent
       .get('http://random.cat/meow');
-      const embed = new Discord.RichEmbed()
+      var embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setTitle("Miaooow :sadcat:")
       .setImage(body.file)
-      message.channel.send({embed})
+      message.channel.sendEmbed(embed);
 	    
     }
 
