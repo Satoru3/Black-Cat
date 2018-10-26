@@ -54,7 +54,7 @@ bot.on('message', message => {
       let msg = await message.channel.send("Génération de l'image...")
       
       let {body} = await superagent
-      .get('http://random.cat/meow');
+      .get('http://random.cat/meow')
       var embed = new Discord.RichEmbed()
       .setColor("RANDOM")
       .setTitle("Miaooow :sadcat:")
