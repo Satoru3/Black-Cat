@@ -27,8 +27,8 @@ bot.on('message', message => {
 	
     if (message.content === prefix + "ruby"){
         var embed = new Discord.RichEmbed()
-	    .setTitle(":black_small_square: **Ruby** :black_small_square:")
-	    .setDescription("Une commande d'aide sur l'Héroïne Ruby")
+	    .setTitle(":black_small_square: **Combattante téméraire - Ruby :black_small_square: SSR :black_small_square: Attaquante Vent :black_small_square: Vitesse de  base 599 :black_small_square: Unité Gacha :black_small_square: CV. Hiyori Kono")
+	    .setDescription("Fille au sang chaud élevée par son père, le gérant d'un dojo dans une petite ville du Grand duché de Delcart. L'irritation que suscite chez elle l'injustice l'a poussée à se proclamer «médiatrice citoyenne». C'est vraiment super... mais attendez-vous tout de même à ce que ce soient ses poings plus que ses paroles qui règlent les différends ! Son père doit souvent rembourser les dégâts qu'elle cause, mais le fringant maître de dojo préfère tout prendre avec le sourire.")
             .addField("__Compétence 1__","Blablabla", true)
 	    .setImage("https://image.prntscr.com/image/9ymXlBV3QhGkc_Ek1whRFw.png")
 	    .addField("__Compétence 2__","Blablalblalbal", true)
