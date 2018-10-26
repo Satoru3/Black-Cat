@@ -24,7 +24,7 @@ bot.on('message', message => {
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed);
     }
-	
+	//Knights Chronicle Héros = Ruby.
     if (message.content === prefix + "ruby"){
         var embed = new Discord.RichEmbed()
 	    .setTitle(":black_small_square: Combattante téméraire - Ruby :black_small_square: SSR :black_small_square: Attaquante Vent :black_small_square: Vitesse de  base 599 :black_small_square: Unité Gacha :black_small_square: CV. Hiyori Kono")
@@ -43,11 +43,11 @@ bot.on('message', message => {
     }
 	
     if (message.content === prefix + "avatar"){
-      let user = message.mentions.users.first() || message.author;
-      var embed = new Discord.RichEmbed()
-          .setColor("RANDOM")
-          .setTitle("Voici l'avatar de :" + " " + user.username)
-          .setImage(user.displayAvatarURL)
+       let user = message.mentions.users.first() || message.author;
+           var embed = new Discord.RichEmbed()
+               .setColor("RANDOM")
+               .setTitle("Voici l'avatar de" + " " + user.username)
+               .setImage(user.displayAvatarURL)
       message.channel.sendEmbed(embed);
 	    
     }
