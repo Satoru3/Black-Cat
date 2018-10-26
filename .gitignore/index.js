@@ -17,7 +17,7 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`*kick`", true)
             .addField("__**Utilitaires**__","`*help`", true)
-            .addField("__**Fun**__","`*8ball`|`*avatar`", true)
+            .addField("__**Fun**__","`*8ball` `*avatar`", true)
             .addField("__**Jeux**__","`*help kc`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de"+" "+ message.author.username)
@@ -49,6 +49,17 @@ bot.on('message', message => {
       message.channel.sendEmbed(embed);
 
     }	
+	
+    if (message.content === prefix + "chat"){
+      const { body } = await superagent
+      .get('http://random.cat/meow');
+      const embed = new Discord.RichEmbed()
+      .setColor("RANDOM")
+      .setTitle("Miaooow :sadcat:")
+      .setImage(body.file)
+      message.channel.send({embed})
+	    
+    }
 
     if (message.content === "Salut"){
         message.reply("Bonjour à toi ! =)");
