@@ -17,7 +17,7 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`*kick`", true)
             .addField("__**Utilitaires**__","`*help`", true)
-            .addField("__**Fun**__","`*8ball` `*avatar`", true)
+            .addField("__**Fun**__","`*8ball` `*avatar` `*say`", true)
             .addField("__**Jeux**__","`*help kc`", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de"+" "+ message.author.username)
