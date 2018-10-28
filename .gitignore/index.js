@@ -63,7 +63,7 @@ bot.on('message', message => {
     }
 	// Commande d'avatar (A patch, mention bugué)
     if (message.content === prefix + "avatar"){
-       let user = message.mentions.users.first() || message.author;
+       let user = message.mentions.user.first() || message.author;
            var embed = new Discord.RichEmbed()
                .setColor("RANDOM")
                .setTitle("Avatar de :" + " " + user.username)
