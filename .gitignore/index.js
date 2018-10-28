@@ -16,7 +16,7 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`*kick`", true)
-            .addField("__**Utilitaires**__","`*help`", true)
+            .addField("__**Utilitaires**__","`*help` `*infosbot`", true)
             .addField("__**Fun**__","`*8ball` `*avatar` `*say`", true)
             .addField("__**Jeux**__","`*help kc`", true)
             .setColor("RANDOM")
@@ -87,12 +87,12 @@ bot.on('message', message => {
     if (message.content === prefix + "infosbot"){
         let boticon = bot.user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
-            .setDescription("Bot Information")
-            .setColor("0ED4DA")
+            .setDescription("Informations du bot")
+            .setColor("RANDOM")
             .setThumbnail(boticon)
-            .addField("Bot Name", bot.user.username)
-            .addField("Bot Create Date", bot.user.createdAt)
-            .addField("Servers", bot.guilds.size)
+            .addField("Nom du bot", bot.user.username)
+            .addField("Bot créé le :", bot.user.createdAt)
+            .addField("Nombre de serveurs", bot.guilds.size)
 
     message.channel.send(botembed)
 	    
