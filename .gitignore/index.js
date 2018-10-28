@@ -58,6 +58,7 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 3: Sword of the Heir ", "Attaque tous les ennemis avec une tempête d'épée et récupère de la santée proportionnellement aux dégâts infligés. Les dégâts infligés augmentent proportionnellement à la santée maximale du lanceur.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
 	message.channel.sendEmbed(embed);
+	console.log("La commande du Héros Ras viens d'être effectuée.");
 	    
     }
 	// Commande d'avatar (A patch, mention bugué)
@@ -84,15 +85,16 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "infosbot"){
-       let boticon = bot.user.displayAvatarURL;
-	   var embed = new Discord.RichEmbed()
-	       .setTitle("Informations du bot")
-	       .setColor("RANDOM")
-	       .setThumbnail(boticon)
-	       .addField("Nom du bot :", bot.user.username)
-	       .addField("Date de création du bot :", clin.user.createdAt)
-	       .addField("Nombre de serveurs :", bot.guilds.size)
-      message.channel.sendEmbed(embed);
+        let boticon = bot.user.displayAvatarURL;
+        let botembed = new Discord.RichEmbed()
+            .setDescription("Bot Information")
+            .setColor("0ED4DA")
+            .setThumbnail(boticon)
+            .addField("Bot Name", bot.user.username)
+            .addField("Bot Create Date", bot.user.createdAt)
+            .addField("Servers", bot.guilds.size)
+
+    message.channel.send(botembed)
 	    
     }
 	
