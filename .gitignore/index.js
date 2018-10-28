@@ -93,7 +93,6 @@ bot.on('message', message => {
             .addField("Nom du bot", bot.user.username)
             .addField("Bot créé le :", bot.user.createdAt)
             .addField("Nombre de serveurs :", bot.guilds.size)
-	    .addField("Statut :", `${bot.presence.status}`, true)
 
     message.channel.send(botembed)
 	    
