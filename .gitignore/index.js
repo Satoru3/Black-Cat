@@ -66,7 +66,7 @@ bot.on('message', message => {
        let user = message.mentions.users.first() || message.author;
            var embed = new Discord.RichEmbed()
                .setColor("RANDOM")
-               .setTitle("Voici l'avatar de" + " " + user.username)
+               .setTitle("Avatar de :" + " " + user.username)
                .setImage(user.displayAvatarURL)
       message.channel.sendEmbed(embed);
 	    
@@ -92,7 +92,7 @@ bot.on('message', message => {
             .setThumbnail(boticon)
             .addField("Nom du bot", bot.user.username)
             .addField("Bot créé le :", bot.user.createdAt)
-            .addField("Nombre de serveurs", bot.guilds.size)
+            .addField("Nombre de serveurs :", bot.guilds.size)
 
     message.channel.send(botembed)
 	    
