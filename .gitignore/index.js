@@ -11,7 +11,7 @@ bot.on('ready', function() {
 bot.login(process.env.TOKEN);
 
 bot.on('message', message => {
-    if (message.content === prefix + "help"){
+    if (message.content === prefix + "help"){ //Commande d'aide
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
@@ -43,7 +43,7 @@ bot.on('message', message => {
 	message.channel.sendEmbed(embed);
 	    
     }
-
+        // Epic Seven Héros = Ras
     if (message.content === prefix + "e7 ras"){
         var embed = new Discord.RichEmbed()
             .setTitle("Ras Elclare :black_small_square: Feu :black_small_square: Chevalier :black_small_square: Balance ")
@@ -58,9 +58,10 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence 3: Sword of the Heir ", "Attaque tous les ennemis avec une tempête d'épée et récupère de la santée proportionnellement aux dégâts infligés. Les dégâts infligés augmentent proportionnellement à la santée maximale du lanceur.", false)
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
 	message.channel.sendEmbed(embed);
+	console.log("La commande du Héros Ras viens d'être effectuée.");
 	    
     }
-	
+	// Commande d'avatar (A patch, mention bugué)
     if (message.content === prefix + "avatar"){
        let user = message.mentions.users.first() || message.author;
            var embed = new Discord.RichEmbed()
@@ -70,7 +71,7 @@ bot.on('message', message => {
       message.channel.sendEmbed(embed);
 	    
     }
-
+        // Commande de say
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(' ');
     let command = args.shift().toLowerCase();
@@ -79,10 +80,24 @@ bot.on('message', message => {
 	
       let say = args.join(' ');
       message.delete();
-      message.channel.send(say);
-	    
+      message.channel.send(say);    
+
     }
 
+    if (message.content === prefix + "infosbot"){
+       let boticon = bot.user.displayAvatarURL;
+	   var embed = new Discord.RichEmbed()
+	       .setTitle("Informations du bot")
+	       .setColor("RANDOM")
+	       .setThumbnail(boticon)
+	       .addField("Nom du bot :", bot.user.username)
+	       .addField("Date de création du bot :", clin.user.createdAt)
+	       .addField("Nombre de serveurs :", bot.guilds.size)
+      message.channel.sendEmbed(embed);
+	    
+    }
+	
+        // Commande tout à fait inutile.
     if (message.content === "Salut"){
         message.reply("Bonjour à toi ! =)");
         console.log("La commande Salut à été effectuée.");  
