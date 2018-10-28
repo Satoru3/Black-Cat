@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', function() {
-    bot.user.setActivity("ma commande est *help | V 1.1");
+    bot.user.setActivity("*help | V 1.1 | Commande *avatar en patch");
     console.log("Connecté");
 });
 
@@ -23,7 +23,9 @@ bot.on('message', message => {
             .setFooter("Page d'aide générée suite à une demande de"+" "+ message.author.username)
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed);
+	    
     }
+	
 	//Knights Chronicle Héros = Ruby.
     if (message.content === prefix + "ruby"){
         var embed = new Discord.RichEmbed()
@@ -43,6 +45,7 @@ bot.on('message', message => {
 	message.channel.sendEmbed(embed);
 	    
     }
+	
         // Epic Seven Héros = Ras
     if (message.content === prefix + "e7 ras"){
         var embed = new Discord.RichEmbed()
@@ -61,9 +64,10 @@ bot.on('message', message => {
 	console.log("La commande du Héros Ras viens d'être effectuée.");
 	    
     }
+	
 	// Commande d'avatar (A patch, mention bugué)
     if (message.content === prefix + "avatar"){
-       let user = message.mentions.user.first() || message.author;
+       let user = message.mentions.users.first() || message.author;
            var embed = new Discord.RichEmbed()
                .setColor("RANDOM")
                .setTitle("Avatar de :" + " " + user.username)
@@ -71,6 +75,7 @@ bot.on('message', message => {
       message.channel.sendEmbed(embed);
 	    
     }
+	
         // Commande de say
     let msg = message.content.toLowerCase();
     let args = message.content.slice(prefix.length).trim().split(' ');
