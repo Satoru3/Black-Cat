@@ -43,6 +43,23 @@ bot.on('message', message => {
 	message.channel.sendEmbed(embed);
 	    
     }
+
+    if (message.content === prefix + "kc ras"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Ras Elclare :black_small_square: Feu :black_small_square: Chevalier :black_small_square: Balance ")
+            .setDescription("L'héritier de la Convention, qui a dormi dans le Sanctuaire pendant des centaines d'années après la création du septième monde. Un être créé par la déesse __Diche__ à partir de sa propre chair. __Ras__ a vécu dans 6 mondes, et il est par conséquent incapable de se rappeler de tous les détails des autres mondes. A plusieurs reprises, __Ras__ a combattu l'Archidémon __Anghraf__ et il se prépare de nouveau à la bataille sur le 7ème monde. Pour se préparer à cette bataille, il rassemble les héritiers et leurs gardiens, reconstruit le sanctuaire, et rassemble la force dispersée de la déesse en un unique endroit pour protéger le monde des attaques de l'Archidémon. C'est le devoir de Ras.")
+            .setColor("RANDOM")
+            .setFooter("Fiche de l'Héros Ras générée suite à une demande de"+" "+ message.author.username + "." + " " + "Fiche mise à jour le 28/10.")
+            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/rass/rass_0000.png")
+            .setImage("https://j.gifs.com/32zmyM.gif")
+            .addField(":speech_balloon: Citation :", "C'est mon devoir. De protéger la vie à la place de la Déesse !", false)
+            .addField(":crossed_swords: Compétence 1: X-Slash", "Attaque l'ennemi avec une épée, les dégâts infligés augmentent par rapport à la santée maximale du lanceur.", false)
+            .addField(":crossed_swords: Compétence 2: Command Strike", "Attaque l'ennemi à plusieurs reprises, et déclenche une attaque simultanée avec l'allié le plus fort.", false)
+            .addField(":crossed_swords: Compétence 3: Sword of the Heir ", "Attaque tous les ennemis avec une tempête d'épée et récupère de la santée proportionnellement aux dégâts infligés. Les dégâts infligés augmentent proportionnellement à la santée maximale du lanceur.", false)
+            .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
+	message.channel.sendEmbed(embed);
+	    
+    }
 	
     if (message.content === prefix + "avatar"){
        let user = message.mentions.users.first() || message.author;
