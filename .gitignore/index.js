@@ -167,7 +167,7 @@ bot.on("message", function(message) {
             .setDescription(":8ball: 8ball")
             .addField("Question :", tte)
             .addField("Réponse :", reponse)
-            .setAuthor(message.author.username + message.author.displayAvatarURL)
+            .setAuthor(message.author.username + "https://cdn.discordapp.com/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
             .setThumbnail(message.author.avatarURL)
 	    .setFooter("Demandé par "+" "+ message.author.username)
             
