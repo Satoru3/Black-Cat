@@ -43,6 +43,16 @@ bot.on('message', message => {
 	    .setFooter("Toutes les compétences sont basées sur le Niv.1. Les skills Niv.2 à 6 arriveront ultérieurement. Le Héros est 6*." + " " + "Page de l'Héroïne Ruby générée suite à une demande de"+" "+ message.author.username + "." + " " + "Fiche mise à jour le 28/10")
 	    .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/505159626459840512/H6rbMsZcmISiAAAAAElFTkSuQmCC.png")
 	message.channel.sendEmbed(embed);
+
+        var embed = new Discord.RichEmbed()
+            .setTitle("Evaluation rapide de Ruby")
+            .setDescription("Insérer texte :issou:")
+            .addField("Insérer texte", "Insérer texte", true)
+	    .setThumbnail("https://cdn.discordapp.com/attachments/432232468465188874/505159626459840512/H6rbMsZcmISiAAAAAElFTkSuQmCC.png")
+            .setColor("RANDOM")
+	    .setFooter("Fiche d'évaluation de l'Héroïne Ruby, actualisée le 29/10 et demandé par " + message.author.username)
+	    .setTimestamp()
+        message.channel.sesndEmbed(embed);
 	    
     }
 
