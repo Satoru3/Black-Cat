@@ -169,7 +169,7 @@ bot.on("message", function(message) {
             .addField("Réponse :", reponse)
             .setAuthor(message.author.username, "https://cdn.discordapp.com/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
             .setThumbnail(message.author.avatarURL)
-	    .setFooter("Demandé par "+" "+ message.author.username)
+	    .setFooter("Demandé par "+" "+ message.author.username, "https://cdn.discordapp.com/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
             
 
 
