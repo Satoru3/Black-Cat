@@ -147,15 +147,19 @@ bot.on("message", function(message) {
             return message.reply("Pose moi une question ! :8ball:")};
 
             var replys = [
-                "Oui"+" " + message.author.username,
-                "Non"+" " + message.author.username,
-                "Peut-être"+" " + message.author.username,
-                "Je ne sais pas"+" " + message.author.username + "!",
-                "Sûrement"+" " + message.author.username + "...",
-                "Bien sûr"+" " + message.author.username + "!",
-		"Bien entendu"+" " + message.author.username,
-		"Es-tu fou"+" " + message.author.username + "?!",
+                "Oui " + message.author.username,
+                "Non " + message.author.username,
+                "Peut-être " + message.author.username,
+                "Je ne sais pas " + message.author.username + "!",
+                "Sûrement..." + message.author.username + "...",
+                "Bien sûr " + message.author.username + "!",
+		"Bien entendu " + message.author.username,
+		"Es-tu fou " + message.author.username + "?!",
                 "Absolument pas"+" " + message.author.username + "!",
+                "Sérieusement... t'es qui en fait " + message.author.username + "?!",
+                "..Je n'ai même pas envie de te répondre " + message.author.username + "!",
+                "Dois-je te dire la vérité " + message.author.username + "?",
+                
             ];
 
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
