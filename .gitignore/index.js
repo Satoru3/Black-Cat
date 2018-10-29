@@ -20,7 +20,7 @@ bot.on('message', message => {
             .addField("__**Fun**__","`*8ball` `*avatar` `*say`", true)
             .addField("__**Jeux**__","~~*help kc~~", true)
             .setColor("RANDOM")
-            .setFooter("Page d'aide générée suite à une demande de"+" "+ message.author.username)
+            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://image.prntscr.com/image/7_rvKMCDSQqIGx4GJo0s5Q.png")
         message.channel.sendEmbed(embed);
 	    
@@ -49,8 +49,8 @@ bot.on('message', message => {
 	//Knights Chronicle Héros = Morrigan.
     if (message.content === prefix + "morrigan"){
         var embed = new Discord.RichEmbed()
-	    .setTitle(":black_small_square: La massacreuse - Morrigan :black_small_square: SSR :black_small_square: Attaquante Feu :black_small_square: Vitesse de base ? :black_small_square: Unité Gacha :black_small_square: CV. Mitsuki Nakae")
-	    .setDescription("Fille au sang chaud élevée par son père, le gérant d'un dojo dans une petite ville du Grand duché de Delcart. L'irritation que suscite chez elle l'injustice l'a poussée à se proclamer «médiatrice citoyenne». C'est vraiment super... mais attendez-vous tout de même à ce que ce soient ses poings plus que ses paroles qui règlent les différends ! Son père doit souvent rembourser les dégâts qu'elle cause, mais le fringant maître de dojo préfère tout prendre avec le sourire.")
+	    .setTitle("La massacreuse - Morrigan :black_small_square: SSR :black_small_square: Attaquante Feu :black_small_square: Vitesse de base ? :black_small_square: Unité Gacha :black_small_square: CV. Mitsuki Nakae")
+	    .setDescription("Un membre des élites Draiden. Morrigan est née dans une famille noble de Garniel Est, mais a été reniée par sa famille une fois sa soif meurtrière de beaux garçons révélée au grand jour. Craignant que la nouvelle de sa punition n'entache à jamais la réputation familiale, ses proches ont décidé de l'exiler dans une région sauvage. C'est là qu'elle a croisé la route d'Amon, le premier homme qu'elle n'a réussi à tuer. Tombant complètement amoureuse de lui, elle a décidé à partir de ce jour de servir sous ses ordres dans la Junta Draiden. Il n'y a que deux membres de l'élite Draiden qui ont valeur à ses yeux : Amon et Verdandi, qui est presque aussi beau que lui.")
 	    .addField(":speech_balloon: **Compétence de chef: Nous sommes les meilleurs !**","Augmente de 60% l'ATQ des alliés de vent si le groupe est constitué de 5 héros de vent.", true)
             .addField(":thought_balloon: **Passif: C'est parti !**","80% de chances de supprimer les renforcements d'attaque et de défense au début du tour.", true)
 	    .addField(":cyclone: **Passif Héroïque: C'est parti !**","50% de chances de réduire tous les temps de recharge des compétences de 1 tour en cas d'attaque. Rétablit 20% des PV lorsque le temps de recharge est réduit.", true)
