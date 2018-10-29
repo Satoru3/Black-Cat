@@ -46,7 +46,7 @@ bot.on('message', message => {
 	    
     }
 
-	//Knights Chronicle Héros = Ruby.
+	//Knights Chronicle Héros = Morrigan.
     if (message.content === prefix + "morrigan"){
         var embed = new Discord.RichEmbed()
 	    .setTitle(":black_small_square: Combattante téméraire - Morrigan :black_small_square: SSR :black_small_square: Attaquante Feu :black_small_square: Vitesse de base ? :black_small_square: Unité Gacha :black_small_square: CV. Hiyori Kono")
@@ -54,7 +54,7 @@ bot.on('message', message => {
 	    .addField(":speech_balloon: **Compétence de chef: Nous sommes les meilleurs !**","Augmente de 60% l'ATQ des alliés de vent si le groupe est constitué de 5 héros de vent.", true)
             .addField(":thought_balloon: **Passif: C'est parti !**","80% de chances de supprimer les renforcements d'attaque et de défense au début du tour.", true)
 	    .addField(":cyclone: **Passif Héroïque: C'est parti !**","50% de chances de réduire tous les temps de recharge des compétences de 1 tour en cas d'attaque. Rétablit 20% des PV lorsque le temps de recharge est réduit.", true)
-	    .addField(":crossed_swords: **Compétence 1: Coup de pied rapide !**","Inflige des dégâts équivalents à 100% de l'ATQ à 1 cible. 40% de chances de réduire le temps de recharge de la compétence n°2 de 1 tour.", true)
+	    .addField(":crossed_swords: **Compétence 1: Épée carnivore **","Inflige des dégâts équivalents à 100% de l'ATQ à 1 ennemi. 35% de chances de faire saigner pour 30% de l'ATQ pendant 2 tours.", true)
 	    .addField(":crossed_swords: **Compétence 2: Coup de pied rotatif !** :hourglass: **3 tours**","Inflige des dégâts équivalents à 200% de l'ATQ à 1 cible. 65% de chances de réduire le temps de recharge de la compétence n°3 de 1 tour.", true)
 	    .addField(":crossed_swords: **Compétence 3: Coup de pied volant !** :hourglass: **5 tours**","Inflige des dégâts équivalents à 300% de l'ATQ à 1 cible.", true)
             .addField(":comet: **Visuel de l'animation de la compétence 3 :**",":arrow_down:", true)
