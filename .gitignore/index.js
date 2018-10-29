@@ -168,7 +168,7 @@ bot.on("message", function(message) {
             .addField("Question :", tte)
             .addField("Réponse :", reponse)
             .setThumbnail(message.author.avatarURL)
-	    .setFooter("Demandé par "+" "+ message.author.username + "message.author.displayAvatarURL")
+	    .setFooter("Demandé par "+" "+ message.author.username + "https://cdn.discordapp.com/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
             
 
 
