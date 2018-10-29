@@ -168,7 +168,7 @@ bot.on("message", function(message) {
             .addField("Question :", tte)
             .addField("Réponse :", reponse)
             .setThumbnail(message.author.avatarURL)
-	    .setFooter("Demandé par "+" "+ message.author.username + message.author.displayAvatar)
+	    .setFooter("Demandé par "+" "+ message.author.username + "message.author.displayAvatarURL")
             
 
 
