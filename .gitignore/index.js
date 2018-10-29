@@ -52,7 +52,7 @@ bot.on('message', message => {
             .setColor("RANDOM")
 	    .setFooter("Fiche d'évaluation de l'Héroïne Ruby, actualisée le 29/10 et demandé par " + message.author.username)
 	    .setTimestamp()
-        message.channel.sesndEmbed(embed);
+        message.channel.sendEmbed(embed);
 	    
     }
 
