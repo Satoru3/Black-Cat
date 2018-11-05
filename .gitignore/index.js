@@ -179,6 +179,8 @@ bot.on("message", function(message) {
                 "Dois-je te dire la vérité ?",
                 "Tu sais quoi ? Ferme-la !",
                 "Je suis fatigué de te répondre...",
+                "Tu es si magnifique... Tu m'éblouis !",
+                "Tu sais, je crois que je suis amoureux de toi.",
                 
             ];
 
