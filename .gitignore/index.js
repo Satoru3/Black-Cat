@@ -4,8 +4,8 @@ const bot = new Discord.Client();
 var prefix = ("*")
 
 bot.on('ready', function() {
-    bot.user.setActivity("*help | V 1.1 | Commande *avatar patché");
-    console.log("Connecté");
+    bot.user.setActivity("*help | V 1.1 | Commande *chaton ajouté.");
+    console.log("Connecté avec succès.");
 });
 
 bot.login(process.env.TOKEN);
@@ -100,12 +100,12 @@ bot.on('message', message => {
 	    
     }
 	
-	// Commande d'avatar (A patch, mention bugué)
+	// Commande d'avatar
     if (message.content.startsWith (prefix + "avatar")){
        let user = message.mentions.users.first() || message.author;
            var embed = new Discord.RichEmbed()
                .setColor("RANDOM")
-               .setTitle("Avatar de :" + " " + user.username)
+               .setTitle("Avatar de " + user.username)
                .setImage(user.displayAvatarURL)
       message.channel.sendEmbed(embed);
       console.log("La commande Avatar viens d'être effectuée avec succès par " + message.author.username);
@@ -125,7 +125,7 @@ bot.on('message', message => {
       console.log("La commande Say viens d'être effectuée avec succès par " + message.author.username);
 
     }
-
+        // Commande d'infos sur le bot
     if (message.content === prefix + "infosbot"){
         let boticon = bot.user.displayAvatarURL;
         let botembed = new Discord.RichEmbed()
