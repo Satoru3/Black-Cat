@@ -107,6 +107,8 @@ bot.on('message', message => {
                .setColor("RANDOM")
                .setTitle("Avatar de " + user.username)
                .setImage(user.displayAvatarURL)
+	       .setTimestamp()
+               .setFooter("Demandé par " + message.author.username, "https://cdn.discordapp.com/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
       message.channel.sendEmbed(embed);
       console.log("La commande Avatar viens d'être effectuée avec succès par " + message.author.username);
 	    
