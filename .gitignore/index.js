@@ -23,6 +23,7 @@ bot.on('message', message => {
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://media.discordapp.net/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
         message.channel.sendEmbed(embed);
+        console.log("La commande Help viens d'être effectuée avec succès");
 	    
     }
 	
@@ -53,6 +54,8 @@ bot.on('message', message => {
 	    .setFooter("Fiche d'évaluation de l'Héroïne Ruby, actualisée le 29/10 et demandé par " + message.author.username)
 	    .setTimestamp()
         message.channel.sendEmbed(embed);
+        console.log("La commande Help viens d'être effectuée avec succès");
+
 	    
     }
 
@@ -73,6 +76,7 @@ bot.on('message', message => {
 	    .setFooter("Toutes les compétences sont basées sur le Niv.1. Les skills Niv.2 à 6 arriveront ultérieurement. Le Héros est 6*. " + "Page de l'Héroïne Morrigan générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 29/10")
 	    .setThumbnail("https://image.prntscr.com/image/2irSx8SfQKS7Od2c86xUgA.png")
 	message.channel.sendEmbed(embed);
+        console.log("La commande Help viens d'être effectuée avec succès");
 
 
     }
@@ -104,6 +108,7 @@ bot.on('message', message => {
                .setTitle("Avatar de :" + " " + user.username)
                .setImage(user.displayAvatarURL)
       message.channel.sendEmbed(embed);
+      console.log("La commande Avatar viens d'être effectuée avec succès.");
 	    
     }
 	
@@ -117,6 +122,7 @@ bot.on('message', message => {
       let say = args.join(' ');
       message.delete();
       message.channel.send(say);    
+      console.log("La commande Say viens d'être effectuée avec succès.");
 
     }
 
@@ -131,6 +137,8 @@ bot.on('message', message => {
             .addField("Nombre de serveurs :", bot.guilds.size)
 
     message.channel.send(botembed)
+        console.log("La commande Help viens d'être effectuée avec succès");
+
 	    
     }
 	
@@ -184,5 +192,7 @@ bot.on("message", function(message) {
 
 
         message.channel.sendEmbed(bembed)
+        console.log("La commande Help viens d'être effectuée avec succès");
+
 
 }})
