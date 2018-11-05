@@ -218,21 +218,7 @@ bot.on("message", function(message) {
             var replys = [
                 "https://www.wanimo.com/veterinaire/images/articles/chat/chaton-diarrhee.jpg",
                 "https://www.catizz.com/medias/common/miaulement%20chat%20.jpg",
-                "Peut-être.",
-                "Je ne sais pas...",
-                "Sûrement...",
-                "Bien sûr.",
-		"Bien entendu.",
-		"Es-tu fou ?!",
-                "Absolument pas !!",
-                "Sérieusement... t'es qui en fait ?!",
-                "..Je n'ai même pas envie de te répondre !",
-                "Dois-je te dire la vérité ?",
-                "Tu sais quoi ? Ferme-la !",
-                "Je suis fatigué de te répondre...",
-                "Tu es si magnifique... Tu m'éblouis !",
-                "Tu sais, je crois que je suis amoureux de toi.",
-                "J'en ai marre d'être utilisé... Je ne suis pas un sextoy !",
+       
                 
             ];
 
