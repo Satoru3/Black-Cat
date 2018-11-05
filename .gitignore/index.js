@@ -199,7 +199,7 @@ bot.on("message", function(message) {
         message.channel.sendEmbed(bembed)
         console.log("La commande 8ball viens d'être effectuée avec succès par " + message.author.username);
 
-}};
+}});
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
