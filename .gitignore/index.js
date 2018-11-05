@@ -181,6 +181,7 @@ bot.on("message", function(message) {
                 "Je suis fatigué de te répondre...",
                 "Tu es si magnifique... Tu m'éblouis !",
                 "Tu sais, je crois que je suis amoureux de toi.",
+                "J'en ai marre d'être utilisé... Je ne suis pas un sextoy !",
                 
             ];
 
