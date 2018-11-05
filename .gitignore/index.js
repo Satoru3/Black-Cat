@@ -172,11 +172,13 @@ bot.on("message", function(message) {
                 "Sûrement...",
                 "Bien sûr",
 		"Bien entendu",
-		"Es-tu fou " + message.author.username + "?!",
-                "Absolument pas"+" " + message.author.username + "!",
-                "Sérieusement... t'es qui en fait " + message.author.username + "?!",
-                "..Je n'ai même pas envie de te répondre " + message.author.username + "!",
-                "Dois-je te dire la vérité " + message.author.username + "?",
+		"Es-tu fou ?!",
+                "Absolument pas !!",
+                "Sérieusement... t'es qui en fait ?!",
+                "..Je n'ai même pas envie de te répondre !",
+                "Dois-je te dire la vérité ?",
+                "Tu sais quoi ? Ferme-la !",
+                "Je suis fatigué de te répondre...",
                 
             ];
 
