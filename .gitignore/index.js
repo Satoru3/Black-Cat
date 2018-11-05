@@ -136,7 +136,7 @@ bot.on('message', message => {
 	
         // Commande tout à fait inutile.
     if (message.content === "Salut"){
-        message.reply("Hé, coucou " + message.author.username + "comment ça va ?");
+        message.channel.send("Hé, coucou " + message.author.username + " comment ça va ?");
         console.log("La commande Salut à été effectuée.");  
     }
     
