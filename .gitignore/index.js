@@ -23,7 +23,7 @@ bot.on('message', message => {
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
             .setThumbnail("https://media.discordapp.net/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
         message.channel.sendEmbed(embed);
-        console.log("La commande Help viens d'être effectuée avec succès");
+        console.log("La commande Help viens d'être effectuée avec succès par " + message.author.username);
 	    
     }
 	
@@ -54,7 +54,7 @@ bot.on('message', message => {
 	    .setFooter("Fiche d'évaluation de l'Héroïne Ruby, actualisée le 29/10 et demandé par " + message.author.username)
 	    .setTimestamp()
         message.channel.sendEmbed(embed);
-        console.log("La commande Ruby viens d'être effectuée avec succès");
+        console.log("La commande Ruby viens d'être effectuée avec succès par " + message.author.username);
 
 	    
     }
@@ -108,7 +108,7 @@ bot.on('message', message => {
                .setTitle("Avatar de :" + " " + user.username)
                .setImage(user.displayAvatarURL)
       message.channel.sendEmbed(embed);
-      console.log("La commande Avatar viens d'être effectuée avec succès.");
+      console.log("La commande Avatar viens d'être effectuée avec succès par " + message.author.username);
 	    
     }
 	
@@ -122,7 +122,7 @@ bot.on('message', message => {
       let say = args.join(' ');
       message.delete();
       message.channel.send(say);    
-      console.log("La commande Say viens d'être effectuée avec succès.");
+      console.log("La commande Say viens d'être effectuée avec succès par " + message.author.username);
 
     }
 
@@ -137,7 +137,7 @@ bot.on('message', message => {
             .addField("Nombre de serveurs :", bot.guilds.size)
 
     message.channel.send(botembed)
-        console.log("La commande Help viens d'être effectuée avec succès");
+        console.log("La commande Infosbot viens d'être effectuée avec succès par " + message.author.username);
 
 	    
     }
@@ -145,7 +145,7 @@ bot.on('message', message => {
         // Commande tout à fait inutile.
     if (message.content === "Salut"){
         message.channel.send("Hé, coucou " + message.author.username + " comment ça va ?");
-        console.log("La commande Salut à été effectuée.");  
+        console.log("La commande Salut viens d'être effectuée avec succès par " + message.author.username);  
     }
     
 });
@@ -192,6 +192,6 @@ bot.on("message", function(message) {
 
 
         message.channel.sendEmbed(bembed)
-        console.log("La commande Help viens d'être effectuée avec succès");
+        console.log("La commande 8ball viens d'être effectuée avec succès par " + message.author.username);
 
 }})
