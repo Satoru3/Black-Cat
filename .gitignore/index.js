@@ -199,4 +199,55 @@ bot.on("message", function(message) {
         message.channel.sendEmbed(bembed)
         console.log("La commande 8ball viens d'être effectuée avec succès par " + message.author.username);
 
-}})
+});
+
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (!message.content.startsWith(prefix)) return;
+
+    var args = message.content.substring(prefix.length).split(" ");
+
+    switch (args[0].toLowerCase()) {
+        case "8ball":
+        let args = message.content.split(" ").slice(1);
+        let tte = args.join(" ")
+        if (!tte){
+            return message.channel.send("Pose moi une question " + message.author.username + "! :8ball:")};
+
+            var replys = [
+                "Oui.",
+                "Non.",
+                "Peut-être.",
+                "Je ne sais pas...",
+                "Sûrement...",
+                "Bien sûr.",
+		"Bien entendu.",
+		"Es-tu fou ?!",
+                "Absolument pas !!",
+                "Sérieusement... t'es qui en fait ?!",
+                "..Je n'ai même pas envie de te répondre !",
+                "Dois-je te dire la vérité ?",
+                "Tu sais quoi ? Ferme-la !",
+                "Je suis fatigué de te répondre...",
+                "Tu es si magnifique... Tu m'éblouis !",
+                "Tu sais, je crois que je suis amoureux de toi.",
+                "J'en ai marre d'être utilisé... Je ne suis pas un sextoy !",
+                
+            ];
+
+            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            var bembed = new Discord.RichEmbed()
+            .setDescription(":8ball: 8ball")
+            .addField(message.author.username + " :", tte)
+            .addField("Janus :", reponse)
+            .setThumbnail(message.author.avatarURL)
+            .setTimestamp()
+	    .setFooter("Demandé par " + message.author.username, "https://cdn.discordapp.com/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
+            
+
+
+        message.channel.sendEmbed(bembed)
+        console.log("La commande 8ball viens d'être effectuée avec succès par " + message.author.username);
+
+    }})
