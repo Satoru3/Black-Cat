@@ -194,5 +194,4 @@ bot.on("message", function(message) {
         message.channel.sendEmbed(bembed)
         console.log("La commande Help viens d'être effectuée avec succès");
 
-
 }})
