@@ -165,13 +165,13 @@ bot.on("message", function(message) {
             return message.channel.send("Pose moi une question " + message.author.username + "! :8ball:")};
 
             var replys = [
-                "Oui",
-                "Non",
-                "Peut-être ",
-                "Je ne sais pas ",
+                "Oui.",
+                "Non.",
+                "Peut-être.",
+                "Je ne sais pas...",
                 "Sûrement...",
-                "Bien sûr",
-		"Bien entendu",
+                "Bien sûr.",
+		"Bien entendu.",
 		"Es-tu fou ?!",
                 "Absolument pas !!",
                 "Sérieusement... t'es qui en fait ?!",
