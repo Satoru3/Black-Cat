@@ -225,7 +225,7 @@ bot.on("message", function(message) {
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
             .setDescription("Whaow, un petit chat !")
-            .setImage("Ce chat :blobheart:", reponse)
+            .setImage(reponse)
             .setThumbnail(message.author.avatarURL)
             .setTimestamp()
 	    .setFooter("Demandé par " + message.author.username, "https://cdn.discordapp.com/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
