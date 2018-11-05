@@ -54,7 +54,7 @@ bot.on('message', message => {
 	    .setFooter("Fiche d'évaluation de l'Héroïne Ruby, actualisée le 29/10 et demandé par " + message.author.username)
 	    .setTimestamp()
         message.channel.sendEmbed(embed);
-        console.log("La commande Help viens d'être effectuée avec succès");
+        console.log("La commande Ruby viens d'être effectuée avec succès");
 
 	    
     }
@@ -76,7 +76,7 @@ bot.on('message', message => {
 	    .setFooter("Toutes les compétences sont basées sur le Niv.1. Les skills Niv.2 à 6 arriveront ultérieurement. Le Héros est 6*. " + "Page de l'Héroïne Morrigan générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 29/10")
 	    .setThumbnail("https://image.prntscr.com/image/2irSx8SfQKS7Od2c86xUgA.png")
 	message.channel.sendEmbed(embed);
-        console.log("La commande Help viens d'être effectuée avec succès");
+        console.log("La commande Morrigan viens d'être effectuée à succès par " + message.author.username);
 
 
     }
