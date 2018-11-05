@@ -162,7 +162,7 @@ bot.on("message", function(message) {
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
         if (!tte){
-            return message.reply("Pose moi une question ! :8ball:")};
+            return message.channel.send("Pose moi une question " + message.author.username + "! :8ball:")};
 
             var replys = [
                 "Oui " + message.author.username,
@@ -183,7 +183,7 @@ bot.on("message", function(message) {
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
             .setDescription(":8ball: 8ball")
-            .addField("Question :", tte)
+            .addField(message.author.username + ":", tte)
             .addField("Réponse :", reponse)
             .setThumbnail(message.author.avatarURL)
             .setTimestamp()
