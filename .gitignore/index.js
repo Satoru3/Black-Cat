@@ -17,7 +17,7 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","~~*kick~~", true)
             .addField("__**Utilitaires**__","`*help` `*infosbot`", true)
-            .addField("__**Fun**__","`*8ball` `*avatar` `*say`", true)
+            .addField("__**Fun**__","`*8ball` `*avatar` `*say` `*chaton`", true)
             .addField("__**Jeux**__","~~*help kc~~", true)
             .setColor("RANDOM")
             .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
@@ -209,19 +209,24 @@ bot.on("message", function(message) {
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "chat":
+        case "chaton":
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
         if (!tte){
-            return message.channel.send("Désolé, tu dois rajouter un argument au pif derrière ta commande pour le moment. :sadcat:")};
+            return message.channel.send("Désolé, tu dois rajouter un argument au pif derrière ta commande pour le moment. :cat:")};
 
             var replys = [
                 "https://www.wanimo.com/veterinaire/images/articles/chat/chaton-diarrhee.jpg",
                 "https://www.catizz.com/medias/common/miaulement%20chat%20.jpg",
                 "https://jardinage.lemonde.fr/images/dossiers/2017-02/chaton-161407.jpg",
                 "https://conseils-veto.com/wp-content/uploads/2018/02/chat-malade.png",
+                "http://recueil-de-png.r.e.pic.centerblog.net/22f09c18.png",
+                "https://static.wamiz.fr/images/articles/facebook/article/eduquer-un-chat-fb-59ad52663bd71.jpg",
+                "https://jardinage.lemonde.fr/images/dossiers/2017-08/chaton-161238.jpg",
+                "https://media.giphy.com/media/14v0b6U1vucP1m/giphy.gif",
+                "https://thumbs.gfycat.com/WhirlwindHarshBighorn-size_restricted.gif",
+
        
-                
             ];
 
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
@@ -234,6 +239,6 @@ bot.on("message", function(message) {
 
 
         message.channel.sendEmbed(bembed)
-        console.log("La commande chat viens d'être effectuée avec succès par " + message.author.username);
+        console.log("La commande chaton viens d'être effectuée avec succès par " + message.author.username);
 
     }})
