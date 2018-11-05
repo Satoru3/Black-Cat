@@ -213,11 +213,13 @@ bot.on("message", function(message) {
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
         if (!tte){
-            return message.channel.send("Pose moi une question " + message.author.username + "! :8ball:")};
+            return message.channel.send("Désolé, tu dois rajouter un argument au pif derrière ta commande pour le moment. :sadcat:")};
 
             var replys = [
                 "https://www.wanimo.com/veterinaire/images/articles/chat/chaton-diarrhee.jpg",
                 "https://www.catizz.com/medias/common/miaulement%20chat%20.jpg",
+                "https://jardinage.lemonde.fr/images/dossiers/2017-02/chaton-161407.jpg",
+                "https://conseils-veto.com/wp-content/uploads/2018/02/chat-malade.png",
        
                 
             ];
