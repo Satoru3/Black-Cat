@@ -227,6 +227,11 @@ bot.on("message", function(message) {
                 "https://jardinage.lemonde.fr/images/dossiers/2017-08/chaton-161238.jpg",
                 "https://media.giphy.com/media/14v0b6U1vucP1m/giphy.gif",
                 "https://thumbs.gfycat.com/WhirlwindHarshBighorn-size_restricted.gif",
+                "https://img3.grazia.fr/var/grazia/storage/images/media/images/what-s-the-buzz/gifs-chats/gif3/13466158-1-fre-FR/Gif3_width545.gif",
+                "https://static.mmzstatic.com/wp-content/uploads/2013/08/gifchat24.gif",
+                "https://data.photofunky.net/output/image/b/7/9/9/b79903/photofunky.gif",
+                "https://archzine.fr/wp-content/uploads/2016/01/le-plus-mignon-chaton-petit-chaton-mignon-chaton-image.jpg",
+                "http://madame.legorafi.fr/wp-content/uploads/2016/10/iStock_68465967_MEDIUM-800x600.jpg",
 
        
             ];
