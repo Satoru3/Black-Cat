@@ -262,6 +262,10 @@ bot.on('message', msg => {
 	   else {
 	      msg.member.addRole(role)
 	      msg.reply(`Ajout du rôle Gros Château`)
+	   }
+       }
+    }
+})
 
 
        
