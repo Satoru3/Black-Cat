@@ -5,7 +5,7 @@ const { getMember, formatDate } = require("../../functions.js");
 module.exports = {
     name: "whois",
     aliases: ["who", "user", "info"],
-    description: "Returns user information",
+    description: "Informations de l'utilisateur",
     usage: "[username | id | mention]",
     run: (client, message, args) => {
         const member = getMember(message, args.join(" "));
@@ -24,19 +24,19 @@ module.exports = {
             .setThumbnail(member.user.displayAvatarURL)
             .setColor(member.displayHexColor === '#000000' ? '#ffffff' : member.displayHexColor)
 
-            .addField('Member information:', stripIndents`**- Display name:** ${member.displayName}
-            **- Joined at:** ${joined}
-            **- Roles:** ${roles}`, true)
+            .addField('Information du membre:', stripIndents`**- Nom:** ${member.displayName}
+            **- A rejoins le serveur le:** ${joined}
+            **- Rôles:** ${roles}`, true)
 
             .addField('User information:', stripIndents`**- ID:** ${member.user.id}
-            **- Username**: ${member.user.username}
+            **- Nom d'utilisateur**: ${member.user.username}
             **- Tag**: ${member.user.tag}
-            **- Created at**: ${created}`, true)
+            **- Compte créé le**: ${created}`, true)
             
             .setTimestamp()
 
         if (member.user.presence.game) 
-            embed.addField('Currently playing', stripIndents`** Name:** ${member.user.presence.game.name}`);
+            embed.addField('En train de jouer à', stripIndents`** Nom:** ${member.user.presence.game.name}`);
 
         message.channel.send(embed);
     }
