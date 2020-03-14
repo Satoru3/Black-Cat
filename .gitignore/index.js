@@ -21,8 +21,8 @@ client.on("ready", () => {
     client.user.setPresence({
         status: "online",
         game: {
-            name: "me getting developed",
-            type: "STREAMING"
+            name: "*help | V.2.0",
+            type: "WATCHING"
         }
     }); 
 });
