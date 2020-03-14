@@ -5,7 +5,7 @@ const { promptMessage } = require("../../functions.js");
 module.exports = {
     name: "kick",
     category: "moderation",
-    description: "Kicks the member",
+    description: "Expulse le membre.",
     usage: "<id | mention>",
     run: async (client, message, args) => {
         const logChannel = message.guild.channels.find(c => c.name === "logs") || message.channel;
@@ -14,45 +14,45 @@ module.exports = {
 
         // No args
         if (!args[0]) {
-            return message.reply("Please provide a person to kick.")
+            return message.reply("Tu dois obligatoirement mentionner une personne à expulser.")
                 .then(m => m.delete(5000));
         }
 
-        // No reason
+        // Aucune raison donnée.
         if (!args[1]) {
-            return message.reply("Please provide a reason to kick.")
+            return message.reply("Une raison pour expulser serait utile.")
                 .then(m => m.delete(5000));
         }
 
-        // No author permissions
+        // L'utilisateur n'a pas la permission.
         if (!message.member.hasPermission("KICK_MEMBERS")) {
-            return message.reply("❌ You do not have permissions to kick members. Please contact a staff member")
+            return message.reply("❌ Hé, tu t'es pris pour qui ? Tu n'as pas la permission d'expulser, contacte une personne t'étant supérieure.")
                 .then(m => m.delete(5000));
         }
 
-        // No bot permissions
+        // Le bot n'a pas la permission.
         if (!message.guild.me.hasPermission("KICK_MEMBERS")) {
-            return message.reply("❌ I do not have permissions to kick members. Please contact a staff member")
+            return message.reply("❌ Hmm... C'est assez difficile à admettre, mais je n'ai pas cette permission.")
                 .then(m => m.delete(5000));
         }
 
         const toKick = message.mentions.members.first() || message.guild.members.get(args[0]);
 
-        // No member found
+        // Aucun membre trouvé.
         if (!toKick) {
-            return message.reply("Couldn't find that member, try again")
+            return message.reply("Ce membre est inconnu au bataillon, réessaye.")
                 .then(m => m.delete(5000));
         }
 
-        // Can't kick urself
+        // Impossible de s'auto-expulser.
         if (toKick.id === message.author.id) {
-            return message.reply("You can't kick yourself...")
+            return message.reply("Wow, plus débile, tu meurs.")
                 .then(m => m.delete(5000));
         }
 
-        // Check if the user's kickable
+        // L'utilisateur est-il expulsable?
         if (!toKick.kickable) {
-            return message.reply("I can't kick that person due to role hierarchy, I suppose.")
+            return message.reply("Hm... Ça m'embête de l'admettre, mais je dois avouer que cette personne est trop haut placé.")
                 .then(m => m.delete(5000));
         }
                 
@@ -61,34 +61,34 @@ module.exports = {
             .setThumbnail(toKick.user.displayAvatarURL)
             .setFooter(message.member.displayName, message.author.displayAvatarURL)
             .setTimestamp()
-            .setDescription(stripIndents`**- Kicked member:** ${toKick} (${toKick.id})
-            **- Kicked by:** ${message.member} (${message.member.id})
-            **- Reason:** ${args.slice(1).join(" ")}`);
+            .setDescription(stripIndents`**- Membre expulsé:** ${toKick} (${toKick.id})
+            **- Expulsé par:** ${message.member} (${message.member.id})
+            **- Raison:** ${args.slice(1).join(" ")}`);
 
         const promptEmbed = new RichEmbed()
             .setColor("GREEN")
-            .setAuthor(`This verification becomes invalid after 30s.`)
-            .setDescription(`Do you want to kick ${toKick}?`)
+            .setAuthor(`Cette vérification deviendra invalide dans 30 secondes..`)
+            .setDescription(`Es-tu sûr d'expulser ${toKick}?`)
 
-        // Send the message
+        // Envoi le message.
         await message.channel.send(promptEmbed).then(async msg => {
-            // Await the reactions and the reaction collector
+            // Attend la réaction.
             const emoji = await promptMessage(msg, message.author, 30, ["✅", "❌"]);
 
-            // The verification stuffs
+            // Vérification
             if (emoji === "✅") {
                 msg.delete();
 
                 toKick.kick(args.slice(1).join(" "))
                     .catch(err => {
-                        if (err) return message.channel.send(`Well.... the kick didn't work out. Here's the error ${err}`)
+                        if (err) return message.channel.send(`...L'expulsion n'a pas fonctionné, erreur: ${err}`)
                     });
 
                 logChannel.send(embed);
             } else if (emoji === "❌") {
                 msg.delete();
 
-                message.reply(`Kick canceled.`)
+                message.reply(`Expulsion abandonnée.`)
                     .then(m => m.delete(10000));
             }
         });
