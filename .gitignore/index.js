@@ -9,25 +9,3 @@ bot.on('ready', function() {
 });
 
 bot.login(process.env.TOKEN);
-
-bot.on('message', msg => {
-    if(msg.content[0] === prefix) {
-       if(msg.content === prefix + '7DS') {
-	  let role = msg.guild.roles.find('name', '')
-	  
-	  if(msg.member.roles.find('name', '7DS: Grand Cross')) {
-	      msg.member.removeRole(role)
-	      msg.reply(`Le rôle @7DS: Grand Cross t'a été retiré.`)
-	  }
-	   else {
-	      msg.member.addRole(role)
-	      msg.reply(`Le rôle @7DS: Grand Cross t'a été ajouté.`)
-	   }
-       }
-    }
-})
-
-
-       
-      
-       
