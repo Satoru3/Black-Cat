@@ -5,7 +5,7 @@ var prefix = ("*")
 
 bot.on('ready', function() {
     bot.user.setActivity("*help | V.2.0 |");
-    console.log("Connecté avec succès.");
+    console.log("Le bot a été connecté avec succès.");
 });
 
 bot.login(process.env.TOKEN);
