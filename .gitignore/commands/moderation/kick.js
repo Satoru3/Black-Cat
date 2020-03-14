@@ -8,7 +8,7 @@ module.exports = {
     description: "Expulse le membre.",
     usage: "<id | mention>",
     run: async (client, message, args) => {
-        const logChannel = message.guild.channel.find(c => c.name === "logs") || message.channel;
+        const logChannel = message.guild.channels.find(c => c.name === "logs") || message.channel;
 
         if (message.deletable) message.delete();
 
