@@ -5,7 +5,7 @@ module.exports = {
     name: "help",
     aliases: ["h"],
     category: "info",
-    description: "Returns all commands, or one specific command info",
+    description: "Montre toutes les commandes, ou donne des informations sur une commande spécifique.",
     usage: "[command | alias]",
     run: async (client, message, args) => {
         if (args[0]) {
@@ -39,18 +39,18 @@ function getCMD(client, message, input) {
 
     const cmd = client.commands.get(input.toLowerCase()) || client.commands.get(client.aliases.get(input.toLowerCase()));
     
-    let info = `No information found for command **${input.toLowerCase()}**`;
+    let info = `Aucune information n'a été trouvée pour la commande: **${input.toLowerCase()}**`;
 
     if (!cmd) {
         return message.channel.send(embed.setColor("RED").setDescription(info));
     }
 
-    if (cmd.name) info = `**Command name**: ${cmd.name}`;
-    if (cmd.aliases) info += `\n**Aliases**: ${cmd.aliases.map(a => `\`${a}\``).join(", ")}`;
+    if (cmd.name) info = `**Nom de la commande**: ${cmd.name}`;
+    if (cmd.aliases) info += `\n**Alias**: ${cmd.aliases.map(a => `\`${a}\``).join(", ")}`;
     if (cmd.description) info += `\n**Description**: ${cmd.description}`;
     if (cmd.usage) {
-        info += `\n**Usage**: ${cmd.usage}`;
-        embed.setFooter(`Syntax: <> = required, [] = optional`);
+        info += `\n**Utilisation**: ${cmd.usage}`;
+        embed.setFooter(`Syntaxe: <> = requis, [] = optionnel`);
     }
 
     return message.channel.send(embed.setColor("GREEN").setDescription(info));
