@@ -3,12 +3,12 @@ const { getMember } = require("../../functions.js");
 
 module.exports = {
     name: "love",
-    aliases: ["affinity"],
+    aliases: ["crush"],
     category: "fun",
-    description: "Calculates the love affinity you have for another person.",
+    description: "Calcule ton affinité avec une autre personne !",
     usage: "[mention | id | username]",
     run: async (client, message, args) => {
-        // Get a member from mention, id, or username
+
         let person = getMember(message, args[0]);
 
         if (!person || message.author.id === person.id) {
@@ -23,8 +23,8 @@ module.exports = {
 
         const embed = new RichEmbed()
             .setColor("#ffb6c1")
-            .addField(`☁ **${person.displayName}** loves **${message.member.displayName}** this much:`,
-            `💟 ${Math.floor(love)}%\n\n${loveLevel}`);
+            .addField(`L'affinité entre **${person.displayName}** et **${message.member.displayName}** est de:`,
+            `💟 ${Math.floor(love)}%\n\n${loveLevel}. Quel amour !`);
 
         message.channel.send(embed);
     }
