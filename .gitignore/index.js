@@ -31,7 +31,7 @@ bot.on('message', message => {
     if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("**$sez**","5 <:etoile:580331911608664084> <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
+            .addField("**$kaiser**","5 <:etoile:580331911608664084> <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
             .addField("**$iseria**","5 <:etoile:580331911608664084> <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
             .addField("**$yuna**","5 <:etoile:580331911608664084> <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
             .addField("**$tywin**","5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868> <:elementeau:506109829455282176>", true)
@@ -114,13 +114,13 @@ bot.on('message', message => {
 	   
     }
 	
-        // Epic Seven Héros = Ras
+        // Hero Cantare = Kaiser
     if (message.content === prefix + "kaiser"){
         var embed = new Discord.RichEmbed()
             .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Kaiser__ est une régulière de Tower of God.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héroïne Kaizer générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 08/06.")
+            .setFooter("Fiche de l'Héroïne Kaiser générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 08/06.")
             .setThumbnail("")
             .setImage("https://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNzIg/MDAxNTkxNjA0OTAxMTE0.crs5QK0F1eSbu06CFBmQ7-vuyydWKESBqNfRdWZvbb8g.bigwYAWNxEjsm7QNnroTmBuovPiv1re4vpG_ottk2aog.GIF/%EC%B9%B4%EC%9D%B4%EC%A0%80.gif?type=w800")
             .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
@@ -128,12 +128,12 @@ bot.on('message', message => {
             .addField(":crossed_swords: Chain 2: Armor Inventory", "Attaque tous les ennemis avec 100% de la puissance d'attaque et inflige des dégâts additionnels correspondants à 20% de la santé maximale de Kaiser. Augmente la défense de tous les alliés de 50% pendant 2 tours.", false)
             .addField(":crossed_swords: Chain 3: Loup Bleu, Fenril. ", "Attaque tous les ennemis avec 120% de la puissance d'attaque, et inflige des dégâts additionnels correspondants à 35% de la santé manquante de Kaiser. Obtient **une** immunité aux dégâts.", false)
             .addField(":crossed_swords: Passif 1: Maître d'étage. ", "Augmente la vie de 15%, la défense de 10% et les dégâts infligés de 10%", false)
-            .addField(":crossed_swords: Passif 2: Masque du maître. ", "Chaque attaque augmente la défense de 20% (cumulable 20x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque de tous les ennemis de 30% et les chances de critique de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis de 20% pendant 3 tours.", false)
-	    .addField(":ranpower: Statistique de base: ", "**Attaque**: ? | **Défense**: ? | **Santé**: ? | **Vitesse**: ?", false)
+            .addField(":crossed_swords: Passif 2: Masque du maître. ", "Chaque attaque augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque de tous les ennemis de 30% et les chances de critique de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis de 20% pendant 3 tours.", false)
+	    .addField(":ranpower: Statistiques de base: ", "**Attaque**: ? | **Défense**: ? | **Santé**: ? | **Vitesse**: ?", false)
 
 	message.channel.sendEmbed(embed)
 
-	console.log("La commande de l'Héroïne Kaizer viens d'être effectuée.");
+	console.log("La commande de l'Héroïne Kaiser viens d'être effectuée.");
 
     }
 
