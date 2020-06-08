@@ -118,7 +118,7 @@ bot.on('message', message => {
     if (message.content === prefix + "kaiser"){
         var embed = new Discord.RichEmbed()
             .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
-            .setDescription("__Kaiser__ est une régulière de Tower of God. C'est une fisherman. Elle fait partie de l'équipe de Baam et se trouve actuellement à l'étage 52.")
+            .setDescription("__Kaiser__ est une régulière de Tower of God.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héroïne Kaizer générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 08/06.")
             .setThumbnail("")
