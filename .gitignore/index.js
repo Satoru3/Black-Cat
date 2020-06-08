@@ -18,11 +18,11 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`$kick` \n ~~$mute~~ \n `$ban` \n `$purge`", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
-            .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `$quizz` [**New**] \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
-            .addField("__**Epic Seven**__","`$héros` \n `$site` \n `$tierlist` \n `$catalyst` \n `$reliques` \n `$camp` \n `$calc` \n `$mapraid`", true)
+            .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `$quizz` [**New**]", true)
+            .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n ~~$reliques~~", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
-            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
+            .setThumbnail("")
         message.channel.sendEmbed(embed);
         console.log("Page d'aide générée suite à la demande de " + message.author.username);
 	
@@ -31,7 +31,7 @@ bot.on('message', message => {
     if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("**$kaiser**","5 <:etoile:580331911608664084> <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
+            .addField("**$kaiser**","<:ss:719641320343470150> :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585>", true)
             .addField("**$iseria**","5 <:etoile:580331911608664084> <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
             .addField("**$yuna**","5 <:etoile:580331911608664084> <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
             .addField("**$tywin**","5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868> <:elementeau:506109829455282176>", true)
@@ -91,25 +91,39 @@ bot.on('message', message => {
            .addField("Comment postuler dans une guilde ?","Pour postuler dans une guilde sur le discord, faite une demande de recrutement en détaillant votre compte autant que possible, et vous-même dans #recherche-guilde. Vous pouvez également regardez le #recrutement-guilde et MP les chefs / recruteurs des guildes qui sont actuellement en train de recruter.")
            .setFooter("Partie I FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19.")
         message.channel.sendEmbed(embed);
-
-       var bembed = new Discord.RichEmbed()
-           .setTitle("Foire aux Questions [FAQ] Partie 2")
-           .addField("__**Divers**__","Questions diverses sur le jeu, sur la communauté, etc.")
-           .addField("Est-il possible de jouer à Epic 7 sur émulateur ?","Oui, il est possible de jouer au jeu sur la plupart des émulateurs.")
-           .addField("Je joue sur Nox, et j'ai des carrés blanc qui apparaissent, qu'est-ce que je dois faire ?","Il y a actuellement un problème avec tous les émulateurs avec le mode de graphique DirectX, pour régler ce problème vous devez faire tourner votre émulateur sur OpenGL (Cela risque toutefois d'être légèrement moins rapide). Ce bug peut rester même après avoir changé de mode graphique, dans ce cas-là, supprimez cette instance de votre émulateur, et re-créez en une !")
-           .addField("Comment optimisez les FPS et la fluidité de son jeu sur __Android__","Aller dans vos paramètres > Tout en bas 'À propos' > Numéro de version (vous cliquez 7 fois pour activer le mode développeur) > Revenez dans vos paramètres > Options développeurs > Cocher la case 'Forcer MSAA 4x'")
-           .setFooter("Partie II FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19.")
-       message.channel.sendEmbed(bembed);
 	   
     }
 	
         // Hero Cantare = Kaiser
+    if (message.content.toLowerCase === prefix + "kaiser"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("__Kaiser__ est une régulière de Tower of God.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.1 | Devenez plus fort, et grimpez la tour, élus.")
+            .setThumbnail("")
+            .setImage("https://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNzIg/MDAxNTkxNjA0OTAxMTE0.crs5QK0F1eSbu06CFBmQ7-vuyydWKESBqNfRdWZvbb8g.bigwYAWNxEjsm7QNnroTmBuovPiv1re4vpG_ottk2aog.GIF/%EC%B9%B4%EC%9D%B4%EC%A0%80.gif?type=w800")
+            .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
+            .addField("<:c1:719664266797383680> Permutation", "Attaque un ennemi avec 130% de la puissance d'attaque, si l'attaque de la cible est plus élevée que la votre, réduit l'attaque de celle-ci de 30% pendant 2 tours et provoque pendant 1 tour.", false)
+            .addField("<:c2:719664268722831421> Armor Inventory", "Attaque tous les ennemis avec 100% de la puissance d'attaque et inflige des dégâts additionnels correspondants à 20% de la santé maximale de Kaiser. Augmente la défense de tous les alliés de 50% pendant 2 tours.", false)
+            .addField("<:c3:719664266776412160> Loup Bleu, Fenril. ", "Attaque tous les ennemis avec 120% de la puissance d'attaque, et inflige des dégâts additionnels correspondants à 35% de la santé manquante de Kaiser. Obtient **une** immunité aux dégâts.", false)
+            .addField("<:passif:719664266969612379> 1: Maître d'étage. ", "Augmente la vie de 15%, la défense de 10% et les dégâts infligés de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Masque du maître. ", "Chaque attaque augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque de tous les ennemis de 30% et les chances de critique de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis de 20% pendant 3 tours.", false)
+	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: ? | **Défense**: ? | **Santé**: ? | **Vitesse**: ?", false)
+
+	message.channel.sendEmbed(embed)
+
+	console.log("La commande de l'Héroïne Kaiser viens d'être effectuée.");
+
+    }
+	
+	        // Hero Cantare = Kaiser
     if (message.content === prefix + "kaiser"){
         var embed = new Discord.RichEmbed()
             .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Kaiser__ est une régulière de Tower of God.")
             .setColor("RANDOM")
-            .setFooter("Fiche mise à jour le 08/06. Devenez plus fort, et grimpez la tour, élus.")
+            .setFooter("Khun Ran v0.1 | Devenez plus fort, et grimpez la tour, élus.")
             .setThumbnail("")
             .setImage("https://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNzIg/MDAxNTkxNjA0OTAxMTE0.crs5QK0F1eSbu06CFBmQ7-vuyydWKESBqNfRdWZvbb8g.bigwYAWNxEjsm7QNnroTmBuovPiv1re4vpG_ottk2aog.GIF/%EC%B9%B4%EC%9D%B4%EC%A0%80.gif?type=w800")
             .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
