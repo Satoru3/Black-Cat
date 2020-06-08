@@ -117,17 +117,18 @@ bot.on('message', message => {
         // Epic Seven Héros = Ras
     if (message.content === prefix + "Kaiser"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Kaiser :black_small_square: /!\ :black_small_square: /!\ :black_small_square: SS")
+            .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Kaiser__ est une régulière de Tower of God. C'est une fisherman. Elle fait partie de l'équipe de Baam et se trouve actuellement à l'étage 52.")
             .setColor("RANDOM")
             .setFooter("Fiche de l'Héroïne Kaizer générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 08/06.")
-            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/rass/rass_0000.png")
-            .setImage("https://j.gifs.com/YvzDMp.gif")
-            .addField(":speech_balloon: Citation :", "C'est mon devoir. De protéger la vie à la place de la Déesse !", false)
-            .addField(":crossed_swords: Compétence 1: X-Slash", "Attaque l'ennemi avec une épée, les dégâts infligés augmentent par rapport à la santée maximale du lanceur.", false)
-            .addField(":crossed_swords: Compétence 2: Command Strike", "Attaque l'ennemi à plusieurs reprises, et déclenche une attaque simultanée avec l'allié le plus fort.", false)
-            .addField(":crossed_swords: Compétence 3: Sword of the Heir ", "Attaque tous les ennemis avec une tempête d'épée et récupère de la santée proportionnellement aux dégâts infligés. Les dégâts infligés augmentent proportionnellement à la santée maximale du lanceur.", false)
-            .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
+            .setThumbnail("")
+            .setImage("Uhttps://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNzIg/MDAxNTkxNjA0OTAxMTE0.crs5QK0F1eSbu06CFBmQ7-vuyydWKESBqNfRdWZvbb8g.bigwYAWNxEjsm7QNnroTmBuovPiv1re4vpG_ottk2aog.GIF/%EC%B9%B4%EC%9D%B4%EC%A0%80.gif?type=w800")
+            .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
+            .addField(":crossed_swords: Chain 1: Permutation", "Attaque un ennemi avec 130% de la puissance d'attaque, si l'attaque de la cible est plus élevée que la votre, réduit l'attaque de celle-ci de 30% pendant 2 tours et provoque pendant 1 tour.", false)
+            .addField(":crossed_swords: Chain 2: Armor Inventory", "Attaque tous les ennemis avec 100% de la puissance d'attaque et inflige des dégâts additionnels correspondants à 20% de la santé maximale de Kaiser. Augmente la défense de tous les alliés de 50% pendant 2 tours.", false)
+            .addField(":crossed_swords: Chain 3: Loup Bleu, Fenril. ", "Attaque tous les ennemis avec 120% de la puissance d'attaque, et inflige des dégâts additionnels correspondants à 35% de la santé manquante de Kaiser. Obtient **une** immunité aux dégâts.", false)
+            .addField(":crossed_swords: Passif 1: Maître d'étage. ", "Augmente la vie de 15%, la défense de 10% et les dégâts infligés de 10%", false)
+            .addField(":crossed_swords: Passif 2: Masque du maître. ", "Chaque attaque augmente la défense de 20% (cumulable 20x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque de tous les ennemis de 30% et les chances de critique de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis de 20% pendant 3 tours.", false)
 	message.channel.sendEmbed(embed)
 
 	console.log("La commande de l'Héroïne Kaizer viens d'être effectuée.");
