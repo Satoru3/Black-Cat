@@ -19,7 +19,7 @@ bot.on('message', message => {
             .addField("__**Modération**__","`$kick` \n ~~$mute~~ \n `$ban` \n `$purge`", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
             .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `$quizz` [**New**] \n ~~$e7 daily~~ \n ~~$e7 roll~~ ", true)
-            .addField("__**Epic Seven**__","`$personnages` \n `$site` \n `$tierlist` \n `$catalyst` \n `$artefacts` \n `$camp` \n `$calc` \n `$mapraid`", true)
+            .addField("__**Epic Seven**__","`$héros` \n `$site` \n `$tierlist` \n `$catalyst` \n `$reliques` \n `$camp` \n `$calc` \n `$mapraid`", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -28,7 +28,7 @@ bot.on('message', message => {
 	
     }
 
-    if (message.content === prefix + "personnages"){ //Commande relative aux personnages d'Epic Seven
+    if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
             .addField("**$sez**","5 <:etoile:580331911608664084> <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
@@ -115,12 +115,12 @@ bot.on('message', message => {
     }
 	
         // Epic Seven Héros = Ras
-    if (message.content === prefix + "ras"){
+    if (message.content === prefix + "Kaiser"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Ras Elclare :black_small_square: <:elementfeu:506109794608742401> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Balance :black_small_square: 3<:etoile:580331911608664084>")
-            .setDescription("L'héritier de la Convention, qui a dormi dans le Sanctuaire pendant des centaines d'années après la création du septième monde. Un être créé par la déesse __Diche__ à partir de sa propre chair. __Ras__ a vécu dans 6 mondes, et il est par conséquent incapable de se rappeler de tous les détails des autres mondes. A plusieurs reprises, __Ras__ a combattu l'Archidémon __Anghraf__ et il se prépare de nouveau à la bataille sur le 7ème monde. Pour se préparer à cette bataille, il rassemble les héritiers et leurs gardiens, reconstruit le sanctuaire, et rassemble la force dispersée de la déesse en un unique endroit pour protéger le monde des attaques de l'Archidémon. C'est le devoir de __Ras__.")
+            .setTitle("Kaiser :black_small_square: /!\ :black_small_square: /!\ :black_small_square: SS")
+            .setDescription("__Kaiser__ est une régulière de Tower of God. C'est une fisherman. Elle fait partie de l'équipe de Baam et se trouve actuellement à l'étage 52.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héros Ras générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
+            .setFooter("Fiche de l'Héroïne Kaizer générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 08/06.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/rass/rass_0000.png")
             .setImage("https://j.gifs.com/YvzDMp.gif")
             .addField(":speech_balloon: Citation :", "C'est mon devoir. De protéger la vie à la place de la Déesse !", false)
@@ -130,7 +130,7 @@ bot.on('message', message => {
             .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
 	message.channel.sendEmbed(embed)
 
-	console.log("La commande de l'Héros Ras viens d'être effectuée.");
+	console.log("La commande de l'Héroïne Kaizer viens d'être effectuée.");
 
     }
 
