@@ -115,7 +115,7 @@ bot.on('message', message => {
     }
 	
         // Epic Seven Héros = Ras
-    if (message.content === prefix + "Kaiser"){
+    if (message.content === prefix + "kaiser"){
         var embed = new Discord.RichEmbed()
             .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Kaiser__ est une régulière de Tower of God. C'est une fisherman. Elle fait partie de l'équipe de Baam et se trouve actuellement à l'étage 52.")
