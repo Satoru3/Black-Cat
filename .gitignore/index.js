@@ -65,17 +65,6 @@ bot.on('message', message => {
 		
     }
 
-        if (message.content === prefix + "sorties"){ //Commande relative aux artefacts d'Epic Seven
-        var embed = new Discord.RichEmbed()
-            .setTitle(":black_small_square: **Adhésion aux sorties** :black_small_square:")
-            .addField("Réagissez à la réaction appropriée pour recevoir une notification lors de la sortie d'un projet spécifique !","<:UriahMilk:711978620242886736> **Uriah** \n <:BFD2:711980026865778800> **Born from Death** \n <:Ooparts:711972771214655660> **OOPARTS** \n <:artwhaow:711970468676239440> **The Beginning After the End**", true)
-            .setColor("RANDOM")
-            .setFooter("Réagissez à l'émote approprié pour être notifié d'une sortie spécifique.")
-            .setThumbnail("https://mangadex.org/images/groups/7681.jpg?1558197908")
-	message.channel.sendEmbed(embed);
-        console.log("Page d'abonnement générée par" + message.author.username);
-
-   }
 
    if (message.content === prefix + "E7 faq"){
        var embed = new Discord.RichEmbed()
@@ -129,7 +118,7 @@ bot.on('message', message => {
             .addField(":crossed_swords: Chain 3: Loup Bleu, Fenril. ", "Attaque tous les ennemis avec 120% de la puissance d'attaque, et inflige des dégâts additionnels correspondants à 35% de la santé manquante de Kaiser. Obtient **une** immunité aux dégâts.", false)
             .addField(":crossed_swords: Passif 1: Maître d'étage. ", "Augmente la vie de 15%, la défense de 10% et les dégâts infligés de 10%", false)
             .addField(":crossed_swords: Passif 2: Masque du maître. ", "Chaque attaque augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque de tous les ennemis de 30% et les chances de critique de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis de 20% pendant 3 tours.", false)
-	    .addField(":ranpower: Statistiques de base: ", "**Attaque**: ? | **Défense**: ? | **Santé**: ? | **Vitesse**: ?", false)
+	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: ? | **Défense**: ? | **Santé**: ? | **Vitesse**: ?", false)
 
 	message.channel.sendEmbed(embed)
 
