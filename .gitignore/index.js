@@ -95,7 +95,7 @@ bot.on('message', message => {
     }
 	
         // Hero Cantare = Kaiser
-    if (message.content.toLowerCase(prefix + "kaiser"){
+     if (message.content === prefix + "kaiser"){
         var embed = new Discord.RichEmbed()
             .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Kaiser__ est une régulière de Tower of God.")
