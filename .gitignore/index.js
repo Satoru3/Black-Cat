@@ -117,26 +117,26 @@ bot.on('message', message => {
 
     }
 	
-	        // Hero Cantare = Kaiser
-    if (message.content === prefix + "kajiser"){
+	        // Hero Cantare = Elaine
+    if (message.content === prefix + "elaine"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
-            .setDescription("__Kaiser__ est une régulière de Tower of God.")
+            .setTitle("Elaine :black_small_square: <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Lo Po Bia __Elaine__ est une régulière de Tower of God.")
             .setColor("RANDOM")
             .setFooter("Khun Ran v0.1 | Devenez plus fort, et grimpez la tour, élus.")
             .setThumbnail("")
-            .setImage("https://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNzIg/MDAxNTkxNjA0OTAxMTE0.crs5QK0F1eSbu06CFBmQ7-vuyydWKESBqNfRdWZvbb8g.bigwYAWNxEjsm7QNnroTmBuovPiv1re4vpG_ottk2aog.GIF/%EC%B9%B4%EC%9D%B4%EC%A0%80.gif?type=w800")
+            .setImage("https://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNDIg/MDAxNTkxNjA0OTU0MDAy.7MbKg1dGVyDpfAEI5SL2bj1cxlo2pMPHEg3ZGiU5ndkg.21a-ohnEdYj_mtx9dI11FJmGtFBXbvGeKMtmmTbQrYIg.GIF/%EC%97%98%EB%A0%88%EC%9D%B8.gif?type=w800")
             .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
-            .addField("<:c1:719664266797383680> Permutation", "Attaque un ennemi avec 130% de la puissance d'attaque, si l'attaque de la cible est plus élevée que la votre, réduit l'attaque de celle-ci de 30% pendant 2 tours et provoque pendant 1 tour.", false)
-            .addField("<:c2:719664268722831421> Armor Inventory", "Attaque tous les ennemis avec 100% de la puissance d'attaque et inflige des dégâts additionnels correspondants à 20% de la santé maximale de Kaiser. Augmente la défense de tous les alliés de 50% pendant 2 tours.", false)
-            .addField("<:c3:719664266776412160> Loup Bleu, Fenril. ", "Attaque tous les ennemis avec 120% de la puissance d'attaque, et inflige des dégâts additionnels correspondants à 35% de la santé manquante de Kaiser. Obtient **une** immunité aux dégâts.", false)
-            .addField("<:passif:719664266969612379> 1: Maître d'étage. ", "Augmente la vie de 15%, la défense de 10% et les dégâts infligés de 10%", false)
-            .addField("<:passif:719664266969612379> 2: Masque du maître. ", "Chaque attaque augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque de tous les ennemis de 30% et les chances de critique de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis de 20% pendant 3 tours.", false)
-	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: ? | **Défense**: ? | **Santé**: ? | **Vitesse**: ?", false)
+            .addField("<:c1:719664266797383680> Aiguille rouge", "Attaque deux adversaires avec 110% de la puissance d'attaque. Si l'adversaire est débuffé, inflige des dégâts additionnels équivalent à 35% de la puissance d'attaque. Si l'adversaire est affecté par Bleeding (Saignement), inflige des dégâts additionnels équivalent à 20% de la puissance d'attaque.", false)
+            .addField("<:c2:719664268722831421> Griffe de Fenrir", "Attaque deux adversaires avec 150% de la puissance d'attaque et inflige Bleeding (Saignement) pour 30% de la puissance d'attaque pendant 2 tours. Augmente les chances de critique de 20% pour tous les alliés pendant 2 tours.", false)
+            .addField("<:c3:719664266776412160> Aiguille: Restriction du fil rouge", "Attaque tous les ennemis avec 40% de la puissance d'attaque trois fois. Si l'adversaire est affecté par Bleeding (Saignement), inflige des dégâts additionnels équivalent à 30% de la puissance d'attaque pour chaque débuff appliqué à l'adversaire. (Max. 10 débuffs.)", false)
+            .addField("<:passif:719664266969612379> 1: Clan du Loup Gris ", "Augmente l'attaque de 15%, la santé de 10%, la précision des débuffs de 10% et les chances de critique de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Esprit du Loup ", "Si la cible est affecté par Bleeding (Saignement), inflige Bleeding (Saignement) pour 30% de la puissance d'attaque pendant 2 tours et garanti le critique sur 2 adversaires. Quand un allié ou un adversaire est éliminé, Elaine devient immunisée aux dégâts pendant 1 tour, et inflige le statut Unrecoverable (Impossibilité de heal) et 3 Bleeding (Saignement) pendant 2 tours à tous les adversaires.", false)
+	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: 22598 | **Défense**: 628 | **Santé**: 103708 | **Vitesse**: 484", false)
 
 	message.channel.sendEmbed(embed)
 
-	console.log("La commande de l'Héroïne Kaiser viens d'être effectuée.");
+	console.log("La commande de l'Héroïne Elaine viens d'être effectuée.");
 
     }
 
