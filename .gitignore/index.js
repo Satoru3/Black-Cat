@@ -104,12 +104,12 @@ bot.on('message', message => {
             .setThumbnail("")
             .setImage("https://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNzIg/MDAxNTkxNjA0OTAxMTE0.crs5QK0F1eSbu06CFBmQ7-vuyydWKESBqNfRdWZvbb8g.bigwYAWNxEjsm7QNnroTmBuovPiv1re4vpG_ottk2aog.GIF/%EC%B9%B4%EC%9D%B4%EC%A0%80.gif?type=w800")
             .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
-            .addField("<:c1:719664266797383680> Permutation", "Attaque un ennemi avec 130% de la puissance d'attaque, si l'attaque de la cible est plus élevée que la votre, réduit l'attaque de celle-ci de 30% pendant 2 tours et provoque pendant 1 tour.", false)
+            .addField("<:c1:719664266797383680> Permutation", "Attaque un ennemi de la ligne arrière avec 130% de la puissance d'attaque, si l'attaque de la cible est plus élevée que la votre, réduit l'attaque de celle-ci de 30% pendant 2 tours et provoque pendant 1 tour.", false)
             .addField("<:c2:719664268722831421> Armor Inventory", "Attaque tous les ennemis avec 100% de la puissance d'attaque et inflige des dégâts additionnels correspondants à 20% de la santé maximale de Kaiser. Augmente la défense de tous les alliés de 50% pendant 2 tours.", false)
-            .addField("<:c3:719664266776412160> Loup Bleu, Fenril. ", "Attaque tous les ennemis avec 120% de la puissance d'attaque, et inflige des dégâts additionnels correspondants à 35% de la santé manquante de Kaiser. Obtient **une** immunité aux dégâts.", false)
-            .addField("<:passif:719664266969612379> 1: Maître d'étage. ", "Augmente la vie de 15%, la défense de 10% et les dégâts infligés de 10%", false)
-            .addField("<:passif:719664266969612379> 2: Masque du maître. ", "Chaque attaque augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque de tous les ennemis de 30% et les chances de critique de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis de 20% pendant 3 tours.", false)
-	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: ? | **Défense**: ? | **Santé**: ? | **Vitesse**: ?", false)
+            .addField("<:c3:719664266776412160> Loup Bleu, Fenrir. ", "Attaque tous les ennemis avec 120% de la puissance d'attaque, et inflige des dégâts additionnels correspondants à 35% de la santé manquante de Kaiser. Obtient 1 tour d'immunité aux dégâts.", false)
+            .addField("<:passif:719664266969612379> 1: Maître de station. ", "Augmente la vie de 15%, la défense de 15% et renvoi 10% des dégâts.", false)
+            .addField("<:passif:719664266969612379> 2: Masque du maître. ", "Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis correspondant à 20% de la santé maximale pendant 3 tours.", false)
+	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: 18645 | **Défense**: 692 | **Santé**: 131156 | **Vitesse**: 484", false)
 
 	message.channel.sendEmbed(embed)
 
