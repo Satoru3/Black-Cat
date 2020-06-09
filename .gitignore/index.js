@@ -31,17 +31,14 @@ bot.on('message', message => {
     if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-            .addField("**$kaiser**","<:ss:719641320343470150> :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585>", true)
+	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
+            .addField("<:ss:719641320343470150>","Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> \n Elaine <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875>", true)
             .addField("**$iseria**","5 <:etoile:580331911608664084> <:e7tireur:506111368135442435> <:elementbroccoli:506109743694086154>", true)
-            .addField("**$yuna**","5 <:etoile:580331911608664084> <:e7tireur:506111368135442435> <:elementeau:506109829455282176>", true)
-            .addField("**$tywin**","5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868> <:elementeau:506109829455282176>", true)
-            .addField("**$karin**","En cours. 4 <:etoile:580331911608664084> <:e7assassin:506111331473031188> <:elementeau:506109829455282176>", true)
-            .addField("**$ras**","3 <:etoile:580331911608664084> <:e7chevalier:506111403489230868> <:elementfeu:506109794608742401>", true)
             .setColor("RANDOM")
-            .setFooter("Page d'aide générée suite à une demande de "+ message.author.username)
-            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
+            .setFooter("Page des héros générée suite à une demande de "+ message.author.username)
+            .setThumbnail("")
 	message.channel.sendEmbed(embed);
-        console.log("Page de personnage générée suite à une demande de " + message.author.username);
+        console.log("Page des personnages générée suite à une demande de " + message.author.username);
 
     }
 	
