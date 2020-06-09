@@ -32,7 +32,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
 	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
-            .addField("<:ss:719641320343470150>","Kaiser <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: ($kaiser) \n Elaine <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> :black_small_square: ($elaine)", true)
+            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> :black_small_square: ($elaine)", true)
 	    .setColor("RANDOM")
             .setFooter("Page des héros générée suite à une demande de "+ message.author.username)
             .setThumbnail("")
