@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.1 | Ajouts des persos SS en cours.");
+    bot.user.setActivity("$help | V 0.2 | Prime King Uma & Max Level Warrior ajouté.");
     console.log("Je suis connecté !");
 
 });
@@ -32,7 +32,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
 	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
-            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> :black_small_square: ($elaine)", true)
+            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> :black_small_square: ($elaine) \n Prime King Uma :black_small_square: <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> :black_small_square: ($prime king uma) \n Max Level Warrior :black_small_square: <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> :black_small_square: ($max level warrior)", true)
 	    .setColor("RANDOM")
             .setFooter("Page des héros générée suite à une demande de "+ message.author.username)
             .setThumbnail("")
@@ -45,14 +45,6 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Artefacts** :black_small_square:")
             .addField("**$sigurd**","Sigurd Scythe 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
-            .addField("**$durandal**","Durandal 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
-            .addField("**$uberius**","Uberius's Tooth 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
-            .addField("**$border**","Border Coin 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
-            .addField("**$junkyard**","Junkyard Dog 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032> <:arkyriche:528289398521987102>", true)
-	    .addField("**$holy**","Holy Sacrifice 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
-            .addField("**$elbris**","Elbris Ritual Sword 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
-	    .addField("**$noble**","Noble Oath 5 <:etoile:580331911608664084> <:e7chevalier:506111403489230868>", true)
-	    .addField("<:arkyriche:528289398521987102>","Artéfact limité, disponible pendant une certaine période.", true)
             .setColor("RANDOM")
             .setFooter("Page d'Artefacts 1/1 " + "Actualisé le 16/05/19")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
@@ -78,13 +70,6 @@ bot.on('message', message => {
            .addField("Est-ce qu'utiliser la fonction 'Purify' réinitialise l'Abyss ?","Non, l'Abyss ne se réinitialise jamais.")
            .addBlankField()
            .addField("__**Communauté**__","Questions sur la partie communautaire.")
-           .addField("Il y a t-il un site proposant des guides sur le jeu ?","Nous avons créé un site proposant divers guides traduit en français. Celui-ci sera souvent mis à jour. http://epic7guide.pcriot.com/")
-           .addField("Qu'est-ce que les @Guide de Ritania ?","Les @Guide de Ritania sont chargés de vous aider, si vous avez besoin d'aide, n'hésitez pas à leur demander de l'aide grâce au ping du rôle dans le salon #astuces-questions. Tous abus du ping sera sanctionné.")
-           .addField("Il y a t-il des bots disponibles dédié à Epic Seven ?","Oui, il y a actuellement 2 bots sur Epic Seven disponible sur le discord. Le premier est @Iseria Bot qui est mis à jour très souvent, sa seule commande pour le moment est *7character* <NAME>. L'autre est en français mais étant donné la masse de traduction à faire les mises à jour sont plus rares, pour en savoir plus effectuez la commande *$personnages* ou *$help*")
-           .addField("J'ai un compte où je ne joue plus dessus / que j'abandonne, j'aimerais le donner/vendre, est-ce possible ?","Bien ce que ce discord ne soit pas officiel, nous sommes en respect des ToS de Epic Seven, par conséquent, les dons / ventes de compte sont totalement interdites, nous ne voulons rien voir concernant ceux-ci sur le discord.")
-           .addField("Est-ce un discord officiel ?","Non, nous ne sommes en aucun cas affilié a Smilegate Megaport ou même a Super Creative. Nous sommes de simple fans essayant de faire vivre la communauté française du jeu. Pour toute demande officielle, merci de contactez le support du jeu.")
-           .addField("Je cherche le lien de la tierlist / du guide des catalysts, où puis-je les trouver ?","Effectuez les commandes *$tierlist* &/ou *$catalyst*, cela vous procurera les liens !")
-           .addField("Comment postuler dans une guilde ?","Pour postuler dans une guilde sur le discord, faite une demande de recrutement en détaillant votre compte autant que possible, et vous-même dans #recherche-guilde. Vous pouvez également regardez le #recrutement-guilde et MP les chefs / recruteurs des guildes qui sont actuellement en train de recruter.")
            .setFooter("Partie I FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19.")
         message.channel.sendEmbed(embed);
 	   
@@ -136,27 +121,53 @@ bot.on('message', message => {
 
     }
 
-        // Epic Seven Héros = Yuna
-    if (message.content === prefix + "yuna"){
+	        // Hero Cantare = Max Level Warrior
+    if (message.content === prefix + "max level warrior"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Yuna Woo :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
+            .setTitle("Max Level Warrior :black_small_square: <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("__Max Level Warrior__, sous le pseudo Hardcore Leveling Warrior, est un des personnages pricipaux de Hardcore Leveling Warrior.")
             .setColor("RANDOM")
-            .setFooter("Fiche de l'Héroïne Yuna générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
-            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/yuna/yuna_0000.png")
-            .setImage("https://nsa39.casimages.com/img/2018/11/07/181107071807674654.gif")
-            .addField(":speech_balloon: Citation :", "Je vais tout réparer ! Si je ne casse pas tout d'abord !", false)
-            .addField(":crossed_swords: Compétence 1: Homing Laser", "Attaque tous les ennemis avec un drone. L'état 'Préparation au combat' augmente de 6% par rapport aux nombres d'ennemis. A partir de 3 ennemis, moins il y en a, plus les dégâts infligés sont importants.", false)
-            .addField(":crossed_swords: Compétence 2: Upgrade", "Augmente l'attaque de tous les alliés avec un drone pendant 2 tours.", false)
-            .addField(":crossed_swords: Compétence 3: Meteor Cannon", "Attaque tous les ennemis avec un puissant canon géant infligeant d'énormes dégâts. A partir de 3 ennemis, moins il y en a, plus les dégâts infligés sont importants.", false)
-            .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
+	    .setFooter("Khun Ran v0.2 | Devenez plus fort, et grimpez la tour, élus.")
+            .setThumbnail("https://i.imgur.com/NGclWGx.png")
+            .setImage("https://i.imgur.com/MbltoqH.mp4")
+            .addField(":speech_balloon: Citation :", "Je t'ai ramené une surprise !", false)
+            .addField("<:c1:719664266797383680> Pièce chanceuse", "Attaque l'adversaire avec les PV's les plus faible avec 115% de la puissance d'attaque, et augmente l'attaque du héros de 20-50% pendant 2 tours.", false)
+            .addField("<:c2:719664268722831421> Feu de l'enfer", "Attaque 1 adversaire de la ligne du devant, et 1 autre de celle de derrière avec 130% de la puissance d'attaque et se soigne à hauteur de 50% des dégâts causés.", false)
+            .addField("<:c3:719664266776412160> All-in", "Attaque l'adversaire avec les PV's les plus faible avec 170% de la puissance d'attaque et inflige des dégâts supplémentaires à hauteur de 80% des pv's perdus du héros. Si l'adversaire est éliminé, l'attaque inflige les mêmes dégâts supplémentaires aux autres ennemis.", false)
+            .addField("<:passif:719664266969612379> 1: Homme chanceux", "Augmente la défense de 20%, la santé de 30%, et les chances de critique de 15%", false)
+            .addField("<:passif:719664266969612379> 2: Évasion limite", "Évite l'élimination en récupérant 20% de PV lorsque le héros est proche d'être éliminé. (S'active 1x)", false)
+	    .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
+	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**ATQ**: 21042 | **DEF**: 754 | **PV**: 125330 | **VIT**: 484", false)
+
 	message.channel.sendEmbed(embed)
 
-	console.log("La commande de l'Héros Yuna viens d'être effectuée.");
+	console.log("La commande de l'Héros Max Level Warrior viens d'être effectuée.");
+
+    }
+        // Hero Cantare = Prime King Uma
+     if (message.content === prefix + "prime king uma"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Prime King Uma :black_small_square: <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Prime King __Uma__ est une Roi Démon, et un personnage récurrent de The God of Highschool. Elle est la 'soeur' (pas de sang) de Jecheondaeseong.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.2 | Devenez plus fort, et grimpez la tour, élus.")
+            .setThumbnail("https://i.imgur.com/oV14Viz.png")
+            .setImage("https://i.imgur.com/rlvqKAP.gif")
+            .addField(":speech_balloon: Citation :", "Je suppose que c'est un au revoir pour l'instant.", false)
+            .addField("<:c1:719664266797383680> Home Run !", "Attaque 1 adversaire avec 130% de l'ATQ et récupère 50% des dégâts infligés en santé. Inflige des dégâts additionnels équivalent à 15% de la santé si l'adversaire a un débuff.", false)
+            .addField("<:c2:719664268722831421> En avant !", "Attaque tous les adversaires avec 30% de ses PV's, et a 60% de chance de les provoquer pendant 1 tour. Puis attaque l'adversaire avec l'ATQ la plus élevée, infligeant des dégâts égaux à 120% de l'ATQ.", false)
+            .addField("<:c3:719664266776412160> Vas-y, Pacho !", "Attaque tous les ennemis avec 115% de l'ATQ, absorbe 5 malus des alliés, puis supprime tous les malus du héros et inflige des dégâts additionnels correspondant à 40% de l'ATQ sur l'adversaire possédant la plus haute ATQ pour chaque malus supprimé.", false)
+            .addField("<:passif:719664266969612379> 1: Dalguji n°2", "Augmente l'attaque de 10%, la santé de 10% et les chances de contre-attaque de 15%. Est immunisé pendant 1 tour au début du combat.", false)
+            .addField("<:passif:719664266969612379> 2: Vache rouge", "Récupère 20% des PV's quand une attaque dépasse les 20% des PV's. Un bonus de 10% de l'ATQ (Jusqu'à 50%) et de 20% de la DEF (Jusqu'à 100%) est accumulé à chaque fois que le héros attaque ou se fait attaquer. (Appliqué à chaque chain.)", false)
+	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: 20282 | **Défense**: 773 | **Santé**: 122641 | **Vitesse**: 484", false)
+
+	message.channel.sendEmbed(embed)
+
+	console.log("La commande de l'Héroïne Prime King Uma viens d'être effectuée.");
 
     }
 
-        // Epic Seven Héros = Iseria
+        // Epic Seven Héros = Uma
     if (message.content === prefix + "iseria"){
         var embed = new Discord.RichEmbed()
             .setTitle("Iseria Arisophodel :black_small_square: <:elementbroccoli:506109743694086154> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion :black_small_square: 5<:etoile:580331911608664084>")
