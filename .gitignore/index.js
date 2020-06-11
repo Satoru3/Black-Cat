@@ -129,7 +129,7 @@ bot.on('message', message => {
             .setColor("RANDOM")
 	    .setFooter("Khun Ran v0.2 | Devenez plus fort, et grimpez la tour, élus.")
             .setThumbnail("https://i.imgur.com/NGclWGx.png")
-            .setImage("https://i.imgur.com/MbltoqH.mp4")
+            .setImage("https://i.imgur.com/LHkbbsk.gif")
             .addField(":speech_balloon: Citation :", "Je t'ai ramené une surprise !", false)
             .addField("<:c1:719664266797383680> Pièce chanceuse", "Attaque l'adversaire avec les PV's les plus faible avec 115% de la puissance d'attaque, et augmente l'attaque du héros de 20-50% pendant 2 tours.", false)
             .addField("<:c2:719664268722831421> Feu de l'enfer", "Attaque 1 adversaire de la ligne du devant, et 1 autre de celle de derrière avec 130% de la puissance d'attaque et se soigne à hauteur de 50% des dégâts causés.", false)
