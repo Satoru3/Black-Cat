@@ -28,7 +28,7 @@ bot.on('message', message => {
 	    	
     }
 
-    if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Epic Seven
+    if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Hero Cantare
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
 	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
@@ -63,11 +63,6 @@ bot.on('message', message => {
            .addField("Comment marche le système de reroll ?","Après avoir terminé le stage 1-10, quand vous irez à la taverne, vous serez notifié d'une icone violette à droite de l'écran. Après avoir cliquer sur cette icone, vous pourrez vous initier au système de reroll. Le système est simple, vous avez 30 chances pour avoir 11 unités. Vous pouvez décliner un pull à tout moment mais une fois arrivé à la 30e chance, ça s'arrêtera avec ce que vous avez. Vous ne pouvez pas revenir en arrière donc si vous déclinez un pull, il sera perdu à tout jamais.")
            .addField("J'ai reroll plus de 50 fois, mais je n'ai toujours pas eu la fille trop canon avec la faux, que faire ?","C'est tout à fait normal, les unités de type Dark et Light sont réservés à l'end-game. Tant que vous n'avez pas terminé le stage 10-10, vous ne pourrez pas accéder au portail des Dark et Light.")
            .addField("Quelles sont les unités importantes à avoir pour bien commencer le jeu ?","Rendez-vous sur cette page : http://epic7guide.pcriot.com/unites-importantes/")
-           .addField("Où est-ce que je peux trouver des Molagorago(s) [Rouge] ?","Depuis une mise à jour, cette molagora est unique disponible au Shop contre 4 Molagoras normales.")
-           .addField("Je viens juste d'apercevoir Huchi dans le labyrinthe, où est-il maintenant ?","Huchi apparaît au même endroit tous les jours. Il est également possible de lui rendre visite sans gaspiller de *Labyrinth Compass* en abandonnant, au lieu de prendre un *Clear Portal*. *Oui, vous gardez les objets achetés.*")
-           .addField("Qu'est-ce que l'option 'Purify' dans l'Abyss ?","C'est une fonction qui utilise une de vos tentatives quotidiennes contre les récompenses affichées en bas à gauche. Plus vous êtes à un étage supérieur dans l'abysse, plus les récompenses seront meilleures.")
-           .addField("Quand dois-je utiliser cette fonction ?","Quand tu ne peux pas avancez plus loin dans l'Abyss, alors utilise cette fonction. Utilise également cette fonction si tu constates que tu n'as plus le temps d'avancer avant le reset quotidien !")
-           .addField("Est-ce qu'utiliser la fonction 'Purify' réinitialise l'Abyss ?","Non, l'Abyss ne se réinitialise jamais.")
            .addBlankField()
            .addField("__**Communauté**__","Questions sur la partie communautaire.")
            .setFooter("Partie I FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19.")
@@ -141,7 +136,7 @@ bot.on('message', message => {
             .addField("<:c3:719664266776412160> All-in", "Attaque l'adversaire avec les PV's les plus faible avec 170% de la puissance d'attaque et inflige des dégâts supplémentaires à hauteur de 80% des pv's perdus du héros. Si l'adversaire est éliminé, l'attaque inflige les mêmes dégâts supplémentaires aux autres ennemis.", false)
             .addField("<:passif:719664266969612379> 1: Homme chanceux", "Augmente la défense de 20%, la santé de 30%, et les chances de critique de 15%", false)
             .addField("<:passif:719664266969612379> 2: Évasion limite", "Évite l'élimination en récupérant 20% de PV lorsque le héros est proche d'être éliminé. (S'active 1x)", false)
-	        .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
+	    .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
             .addField("ATQ", "21042", true)
             .addField("DEF", "754", true)
             .addField("PV", "125330", true)
@@ -187,17 +182,21 @@ bot.on('message', message => {
         .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, élus.")
         .setThumbnail("https://i.imgur.com/HGTeVIH.png")
         .setImage("https://i.imgur.com/5zPu089.gif")
-        .addField(":speech_balloon: Citation :", "Je suis Jyu Viole Grace, un des candidats slayers de FUG, Zahard et ses proches... Je vis pour leur mort. C'est pourquoi aucun de vous ne peut devenir mon coéquipier. Je suis votre ennemi.", false)
+        .addField(":speech_balloon: Citation :", "Je suis Jyu Viole Grace, un des candidats slayer de FUG, Zahard et ses proches... Je vis pour leur mort. C'est pourquoi aucun de vous ne peut devenir mon coéquipier. Je suis votre ennemi.", false)
         .addField("<:c1:719664266797383680> Arts Martiaux de la Famille Ha", "Attaque l'adversaire possédant la plus grande attaque avec 130% de l'ATQ et inflige des dégâts additionnels égaux à 10% de l'ATQ 2 fois. Pour chaque dégâts additionnels, il y a 50% de chance de réduire l'attaque de 30% pendant 2 tours.", false)
         .addField("<:c2:719664268722831421> Style Piercing de la Famille Ha", "Enlève tous les bonus d'un adversaire de la ligne avant et arrière et les empêche de recevoir des bonus pendant 1 tour. Puis, perce avec 150% de l'ATQ l'adversaire.", false)
         .addField("<:c3:719664266776412160> Poing Flamboyant du Style d'Hayeol", "Perce tous les adversaires avec 120% de l'ATQ, et inflige 170% de dégâts additionnels à l'adversaire possédant les PV's les plus haut, puis étourdis cet adversaire pendant 1 tour.", false)
         .addField("<:passif:719664266969612379> 1: Percuteur Shinsu", "Augmente l'attaque de 15%, la santé de 15%, détourne 10% des dégâts, et augmente les chances de coup critique de 5%.", false)
         .addField("<:passif:719664266969612379> 2: Candidat Slayer", "Augmente de 15% l'ATQ & de 15% les dégâts critique en attaquant si le héros n'est pas sous l'effet d'un malus (jusqu'à 75%), retire 1 malus si le héros en a un, récupère 10% de PV et génère un bouclier avec 10% de PV pendant 2 tours.", false)
-        .addField("<:passif:719664266969612379> Canon rayonnant", "Attaque tous les adversaires avec 100% de l'ATQ et attaque en plus 1 adversaire au hasard, infligeant des dégâts égaux à 20% de l'ATQ 5 fois. L'adversaire qui est touché par l'attaque aléatoire a 30 % de probabilité d'être étourdis pendant un tour.", false)
+        .addField("<:sp:720742202757873745> Canon rayonnant", "Attaque tous les adversaires avec 100% de l'ATQ et attaque en plus 1 adversaire au hasard, infligeant des dégâts égaux à 20% de l'ATQ 5 fois. L'adversaire qui est touché par l'attaque aléatoire a 30 % de probabilité d'être étourdis pendant un tour.", false)
         .addField("ATQ", "18935", true)
         .addField("DEF", "828", true)
         .addField("PV", "143092", true)
         .addField("VIT", "445", true)
+	.addField("Taux Crit", "20%", true)
+	.addField("Blocage", "33%", true)
+        .addField("Résist. Malus", "23%", true)
+	.addField("Déviation DGT", "34%", true)
 
 	message.channel.sendEmbed(embed)
 
