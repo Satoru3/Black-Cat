@@ -31,9 +31,9 @@ bot.on('message', message => {
     if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Hero Cantare
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
-            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> ($viole)", true)
-	    .setColor("RANDOM")
+	        .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
+            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> ($queen no name)", true)
+	        .setColor("RANDOM")
             .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
             .setThumbnail("")
 	message.channel.sendEmbed(embed);
@@ -136,7 +136,7 @@ bot.on('message', message => {
             .addField("<:c3:719664266776412160> All-in", "Attaque l'adversaire avec les PV's les plus faible avec 170% de la puissance d'attaque et inflige des dégâts supplémentaires à hauteur de 80% des pv's perdus du héros. Si l'adversaire est éliminé, l'attaque inflige les mêmes dégâts supplémentaires aux autres ennemis.", false)
             .addField("<:passif:719664266969612379> 1: Homme chanceux", "Augmente la défense de 20%, la santé de 30%, et les chances de critique de 15%", false)
             .addField("<:passif:719664266969612379> 2: Évasion limite", "Évite l'élimination en récupérant 20% de PV lorsque le héros est proche d'être éliminé. (S'active 1x)", false)
-	    .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
+	        .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
             .addField("ATQ", "21042", true)
             .addField("DEF", "754", true)
             .addField("PV", "125330", true)
@@ -193,17 +193,17 @@ bot.on('message', message => {
         .addField("DEF", "828", true)
         .addField("PV", "143092", true)
         .addField("VIT", "445", true)
-	.addField("Taux Crit", "20%", true)
-	.addField("Blocage", "33%", true)
+	    .addField("Taux Crit", "20%", true)
+	    .addField("Blocage", "33%", true)
         .addField("Résist. Malus", "23%", true)
-	.addField("Déviation DGT", "34%", true)
+     	.addField("Déviation DGT", "34%", true)
 
 	message.channel.sendEmbed(embed)
 
 	console.log("La commande de l'Héros Jyu Viole Grace viens d'être effectuée.");
 
     }
-	
+
         // Hero Cantare = Queen No Name
         if (message.content === prefix + "queen no name"){
             var embed = new Discord.RichEmbed()
@@ -214,12 +214,12 @@ bot.on('message', message => {
             .setThumbnail("https://i.imgur.com/lTSFMfY.png")
             .setImage("https://i.imgur.com/v9syQKz.gif")
             .addField(":speech_balloon: Citation", "Plus sournois que les démons.... et plus avide que les dragons. C'est humain.", false)
-            .addField("<:c1:719664266797383680> Entaille cauchemardesque", ".", false)
-            .addField("<:c2:719664268722831421> Tir de couverture", ".", false)
-            .addField("<:c3:719664266776412160> Ouvrons le feu, pour la guerre !", "Attaque tous les ennemis 3 fois avec 50% de l'ATQ. Chaque attaque inflige 60% de dégâts additionnels à un adversaire aléatoire. Récupère 2 Mana si un adversaire est éliminé par cette attaque.", false)
-            .addField("<:passif:719664266969612379> 1: ", "Augmente l'attaque de 15%, la santé de 15% et détourne 10% des dégâts.", false)
-            .addField("<:passif:719664266969612379> 2: Karma", ".", false)
-            .addField("<:sp:720742202757873745> ", ".", false)
+            .addField("<:c1:719664266797383680> Entaille cauchemardesque", "Attaque 2 adversaires aléatoirement avec 110% de l'ATQ et inflige 30% de dégâts additionnels s'ils n'ont aucun bonus avec 50% de chances sur chaque adversaire de retirer un bonus s'ils en ont.", false)
+            .addField("<:c2:719664268722831421> Tir de couverture", "Attaque tous les adversaires avec 150% de l'ATQ et augmente le moral de tous les alliés pour attribuer un bonus sur les [dégâts des compétences] de 30% pendant 2 tours.", false)
+            .addField("<:c3:719664266776412160> Ouvrons le feu, pour la guerre !", "Attaque tous les adversaires 3 fois avec 50% de l'ATQ. Chaque attaque inflige 60% de dégâts additionnels à un adversaire aléatoire. Récupère 2 Mana si un adversaire est éliminé par cette attaque.", false)
+            .addField("<:passif:719664266969612379> 1: La Force de New-Nightmare", "Augmente l'attaque de 15%, la santé de 15% et détourne 10% des dégâts.", false)
+            .addField("<:passif:719664266969612379> 2: Karma", "Le héros devient immunisé aux dégâts pendant 1 tour lorsqu'un allié ou un adversaire est éliminé. Restaure les PV's d'un allié à hauteur de 50% des PV's de Queen No Name lorsque celle-ci est éliminée, et rends l'allié immunisé aux dégâts une fois.", false)
+            .addField("<:sp:720742202757873745> Allez, Nightmare !", "Attaque tous les adversaires avec 140% de l'ATQ avec une attaque absolue qui ignore le détournement des dégâts et la résistances aux malus de 50%, et inflige [Confusion] pendant 1 tour à un adversaire aléatoire.", false)
             .addField("ATQ", "22199", true)
             .addField("DEF", "811", true)
             .addField("PV", "123636", true)
@@ -231,7 +231,7 @@ bot.on('message', message => {
     
         message.channel.sendEmbed(embed)
     
-        console.log("La commande de l'Héros Queen No Name viens d'être effectuée.");
+        console.log("La commande de l'Héroïne Queen No Name viens d'être effectuée.");
     
         }
 
