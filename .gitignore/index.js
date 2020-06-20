@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.2 | Prime King Uma & Max Level Warrior ajouté.");
+    bot.user.setActivity("$help | V 0.3 | Ajout de la commande $site, corrections de certaines fautes & commandes.");
     console.log("Je suis connecté !");
 
 });
@@ -16,7 +16,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
-            .addField("__**Modération**__","`$kick` \n ~~$mute~~ \n `$ban` \n `$purge`", true)
+            .addField("__**Modération**__","`$kick` \n `$ban` \n `$purge`", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
             .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `$quizz` [**New**]", true)
             .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n ~~$reliques~~", true)
@@ -31,10 +31,10 @@ bot.on('message', message => {
     if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
+	        .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
             .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> :black_small_square: ($elaine) \n **Prime King Uma** <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> ($max level warrior)", true)
-	    .setColor("RANDOM")
-            .setFooter("Page des héros générée suite à une demande de "+ message.author.username)
+	        .setColor("RANDOM")
+            .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, élus."+ message.author.username)
             .setThumbnail("")
 	message.channel.sendEmbed(embed);
         console.log("Page des personnages générée suite à une demande de " + message.author.username);
@@ -81,17 +81,19 @@ bot.on('message', message => {
             .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Kaiser__ est une régulière de Tower of God.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.1 | Devenez plus fort, et grimpez la tour, élus.")
+            .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, élus.")
             .setThumbnail("")
             .setImage("https://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNzIg/MDAxNTkxNjA0OTAxMTE0.crs5QK0F1eSbu06CFBmQ7-vuyydWKESBqNfRdWZvbb8g.bigwYAWNxEjsm7QNnroTmBuovPiv1re4vpG_ottk2aog.GIF/%EC%B9%B4%EC%9D%B4%EC%A0%80.gif?type=w800")
             .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
             .addField("<:c1:719664266797383680> Permutation", "Attaque un ennemi de la ligne arrière avec 130% de la puissance d'attaque, si l'attaque de la cible est plus élevée que la votre, réduit l'attaque de celle-ci de 30% pendant 2 tours et provoque pendant 1 tour.", false)
             .addField("<:c2:719664268722831421> Armor Inventory", "Attaque tous les ennemis avec 100% de la puissance d'attaque et inflige des dégâts additionnels correspondants à 20% de la santé maximale de Kaiser. Augmente la défense de tous les alliés de 50% pendant 2 tours.", false)
             .addField("<:c3:719664266776412160> Loup Bleu, Fenrir. ", "Attaque tous les ennemis avec 120% de la puissance d'attaque, et inflige des dégâts additionnels correspondants à 35% de la santé manquante de Kaiser. Obtient 1 tour d'immunité aux dégâts.", false)
-            .addField("<:passif:719664266969612379> 1: Maître de station. ", "Augmente la vie de 15%, la défense de 15% et renvoi 10% des dégâts.", false)
+            .addField("<:passif:719664266969612379> 1: Maître de station. ", "Augmente la vie de 15%, la défense de 15% et détourne 10% des dégâts.", false)
             .addField("<:passif:719664266969612379> 2: Masque du maître. ", "Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis correspondant à 20% de la santé maximale pendant 3 tours.", false)
-	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: 18645 | **Défense**: 692 | **Santé**: 131156 | **Vitesse**: 484", false)
-
+            .addField("ATQ", "18645", true)
+            .addField("DEF", "692", true)
+            .addField("PV", "131156", true)
+            .addField("VIT", "484", true)
 	message.channel.sendEmbed(embed)
 
 	console.log("La commande de l'Héroïne Kaiser viens d'être effectuée.");
@@ -104,16 +106,19 @@ bot.on('message', message => {
             .setTitle("Elaine :black_small_square: <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Lo Po Bia __Elaine__ est une régulière de Tower of God.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.1 | Devenez plus fort, et grimpez la tour, élus.")
+            .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, élus.")
             .setThumbnail("https://i.imgur.com/dWXEhUj.png")
             .setImage("https://i.imgur.com/sHem9nJ.gif")
             .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
             .addField("<:c1:719664266797383680> Aiguille rouge", "Attaque deux adversaires avec 110% de la puissance d'attaque. Si l'adversaire est débuffé, inflige des dégâts additionnels équivalent à 35% de la puissance d'attaque. Si l'adversaire est affecté par Bleeding (Saignement), inflige des dégâts additionnels équivalent à 20% de la puissance d'attaque.", false)
             .addField("<:c2:719664268722831421> Griffe de Fenrir", "Attaque deux adversaires avec 150% de la puissance d'attaque et inflige Bleeding (Saignement) pour 30% de la puissance d'attaque pendant 2 tours. Augmente les chances de critique de 20% pour tous les alliés pendant 2 tours.", false)
             .addField("<:c3:719664266776412160> Aiguille: Restriction du fil rouge", "Attaque tous les ennemis avec 40% de la puissance d'attaque trois fois. Si l'adversaire est affecté par Bleeding (Saignement), inflige des dégâts additionnels équivalent à 30% de la puissance d'attaque pour chaque débuff appliqué à l'adversaire. (Max. 10 débuffs.)", false)
-            .addField("<:passif:719664266969612379> 1: Clan du Loup Gris ", "Augmente l'attaque de 15%, la santé de 10%, la précision des débuffs de 10% et les chances de critique de 10%", false)
+            .addField("<:passif:719664266969612379> 1: Clan du Loup Gris ", "Augmente l'attaque de 15%, la santé de 10%, la précision des débuffs de 10% et les chances de dégâts critique de 10%", false)
             .addField("<:passif:719664266969612379> 2: Esprit du Loup ", "Si la cible est affecté par Bleeding (Saignement), inflige Bleeding (Saignement) pour 30% de la puissance d'attaque pendant 2 tours et garanti le critique sur 2 adversaires. Quand un allié ou un adversaire est éliminé, Elaine devient immunisée aux dégâts pendant 1 tour, et inflige le statut Unrecoverable (Impossibilité de heal) et 3 Bleeding (Saignement) pendant 2 tours à tous les adversaires.", false)
-	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: 22598 | **Défense**: 628 | **Santé**: 103708 | **Vitesse**: 484", false)
+            .addField("ATQ", "22598", true)
+            .addField("DEF", "628", true)
+            .addField("PV", "103708", true)
+            .addField("VIT", "484", true)
 
 	message.channel.sendEmbed(embed)
 
@@ -127,7 +132,7 @@ bot.on('message', message => {
             .setTitle("Max Level Warrior :black_small_square: <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Max Level Warrior__, sous le pseudo Hardcore Leveling Warrior, est un des personnages pricipaux de Hardcore Leveling Warrior.")
             .setColor("RANDOM")
-	    .setFooter("Khun Ran v0.2 | Devenez plus fort, et grimpez la tour, élus.")
+	        .setFooter("Khun Ran v0.3 | Combattez pour monter de niveau, joueur !")
             .setThumbnail("https://i.imgur.com/NGclWGx.png")
             .setImage("https://i.imgur.com/LHkbbsk.gif")
             .addField(":speech_balloon: Citation :", "Je t'ai ramené une surprise !", false)
@@ -136,8 +141,11 @@ bot.on('message', message => {
             .addField("<:c3:719664266776412160> All-in", "Attaque l'adversaire avec les PV's les plus faible avec 170% de la puissance d'attaque et inflige des dégâts supplémentaires à hauteur de 80% des pv's perdus du héros. Si l'adversaire est éliminé, l'attaque inflige les mêmes dégâts supplémentaires aux autres ennemis.", false)
             .addField("<:passif:719664266969612379> 1: Homme chanceux", "Augmente la défense de 20%, la santé de 30%, et les chances de critique de 15%", false)
             .addField("<:passif:719664266969612379> 2: Évasion limite", "Évite l'élimination en récupérant 20% de PV lorsque le héros est proche d'être éliminé. (S'active 1x)", false)
-	    .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
-	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**ATQ**: 21042 | **DEF**: 754 | **PV**: 125330 | **VIT**: 484", false)
+	        .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
+            .addField("ATQ", "21042", true)
+            .addField("DEF", "754", true)
+            .addField("PV", "125330", true)
+            .addField("VIT", "484", true)
 
 	message.channel.sendEmbed(embed)
 
@@ -150,7 +158,7 @@ bot.on('message', message => {
             .setTitle("Prime King Uma :black_small_square: <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Prime King __Uma__ est une Roi Démon, et un personnage récurrent de The God of Highschool. Elle est la 'soeur' (pas de sang) de Jecheondaeseong.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.2 | Devenez plus fort, et grimpez la tour, élus.")
+            .setFooter("Khun Ran v0.3 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
             .setThumbnail("https://i.imgur.com/oV14Viz.png")
             .setImage("https://i.imgur.com/rlvqKAP.gif")
             .addField(":speech_balloon: Citation :", "Je suppose que c'est un au revoir pour l'instant.", false)
@@ -159,7 +167,10 @@ bot.on('message', message => {
             .addField("<:c3:719664266776412160> Vas-y, Pacho !", "Attaque tous les ennemis avec 115% de l'ATQ, absorbe 5 malus des alliés, puis supprime tous les malus du héros et inflige des dégâts additionnels correspondant à 40% de l'ATQ sur l'adversaire possédant la plus haute ATQ pour chaque malus supprimé.", false)
             .addField("<:passif:719664266969612379> 1: Dalguji n°2", "Augmente l'attaque de 10%, la santé de 10% et les chances de contre-attaque de 15%. Est immunisé pendant 1 tour au début du combat.", false)
             .addField("<:passif:719664266969612379> 2: Vache rouge", "Récupère 20% des PV's quand une attaque dépasse les 20% des PV's. Un bonus de 10% de l'ATQ (Jusqu'à 50%) et de 20% de la DEF (Jusqu'à 100%) est accumulé à chaque fois que le héros attaque ou se fait attaquer. (Appliqué à chaque chain.)", false)
-	    .addField("<:ranpower:716059979018404122> Statistiques de base: ", "**Attaque**: 20282 | **Défense**: 773 | **Santé**: 122641 | **Vitesse**: 484", false)
+            .addField("ATQ", "20282", true)
+            .addField("DEF", "773", true)
+            .addField("PV", "122641", true)
+            .addField("VIT", "484", true)
 
 	message.channel.sendEmbed(embed)
 
@@ -167,23 +178,30 @@ bot.on('message', message => {
 
     }
 
-        // Epic Seven Héros = Uma
-    if (message.content === prefix + "iseria"){
+        // Hero Cantare = Viole
+    if (message.content === prefix + "viole"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Iseria Arisophodel :black_small_square: <:elementbroccoli:506109743694086154> :black_small_square: <:e7tireur:506111368135442435> :black_small_square: Lion :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("Présidente du conseil des étudiants de Reingar. Toujours en bonne santé, et débordande de curiosité, __Yuna__ a gagné en popularité en dirigeant le conseil des étudiants en difficulté, et en faisant avancer les choses rapidement. Pourtant... Très peu de gens en dehors du conseil des étudiants savent qu'en réalité __Yuna__ préfère agir comme une étudiante, et est une fautrice de troubles occasionnel. Elle aime tout ce qui est métallique ou mécanique et fait de drôles d'expériences scientifiques. Mais elle n'aime pas les créatures à fourrure.")
-            .setColor("RANDOM")
-            .setFooter("Fiche de l'Héroïne Iseria générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
-            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/yuna/yuna_0000.png")
-            .setImage("https://nsa39.casimages.com/img/2018/11/07/181107071807674654.gif")
-            .addField(":speech_balloon: Citation :", "Je vais tout réparer ! Si je ne casse pas tout d'abord !", false)
-            .addField(":crossed_swords: Compétence 1: Homing Laser", "Attaque tous les ennemis avec un drone. L'état 'Préparation au combat' augmente de 6% par rapport aux nombres d'ennemis. A partir de 3 ennemis, moins il y en a, plus les dégâts infligés sont importants.", false)
-            .addField(":crossed_swords: Compétence 2: Upgrade", "Augmente l'attaque de tous les alliés avec un drone pendant 2 tours.", false)
-            .addField(":crossed_swords: Compétence 3: Meteor Cannon", "Inflige des dégâts mortels à l'ennemi. Moins la cible a de santé, plus les dégâts infligés sont importants. Si l'ennemi est défait, les dégâts relatifs à l'attaque du lanceur sont infligés à tous les ennemis.", false)
-            .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
+        .setTitle("Jyu Viole Grace :black_small_square: <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Jyu __Viole__ Grace est un candidat slayer, et un protagoniste de Tower of God pendant quelques temps.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, élus.")
+        .setThumbnail("https://i.imgur.com/HGTeVIH.png")
+        .setImage("https://i.imgur.com/5zPu089.gif")
+        .addField(":speech_balloon: Citation :", "Je suis Jyu Viole Grace, un des candidats slayers de FUG, Zahard et ses proches... Je vis pour leur mort. C'est pourquoi aucun de vous ne peut devenir mon coéquipier. Je suis votre ennemi.", false)
+        .addField("<:c1:719664266797383680> Arts Martiaux de la Famille Ha", "Attaque l'adversaire possédant la plus grande attaque avec 130% de l'ATQ et inflige des dégâts additionnels égaux à 10% de l'ATQ 2 fois. Pour chaque dégâts additionnels, il y a 50% de chance de réduire l'attaque de 30% pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Style Piercing de la Famille Ha", "Enlève tous les bonus d'un adversaire de la ligne avant et arrière et les empêche de recevoir des bonus pendant 1 tour. Puis, perce avec 150% de l'ATQ l'adversaire.", false)
+        .addField("<:c3:719664266776412160> Poing Flamboyant du Style d'Hayeol", "Perce tous les adversaires avec 120% de l'ATQ, et inflige 170% de dégâts additionnels à l'adversaire possédant les PV's les plus haut, puis étourdis cet adversaire pendant 1 tour.", false)
+        .addField("<:passif:719664266969612379> 1: Percuteur Shinsu", "Augmente l'attaque de 15%, la santé de 15%, détourne 10% des dégâts, et augmente les chances de coup critique de 5%.", false)
+        .addField("<:passif:719664266969612379> 2: Candidat Slayer", "Augmente de 15% l'ATQ & de 15% les dégâts critique en attaquant si le héros n'est pas sous l'effet d'un malus (jusqu'à 75%), retire 1 malus si le héros en a un, récupère 10% de PV et génère un bouclier avec 10% de PV pendant 2 tours.", false)
+        .addField("<:passif:719664266969612379> Canon rayonnant", "Attaque tous les adversaires avec 100% de l'ATQ et attaque en plus 1 adversaire au hasard, infligeant des dégâts égaux à 20% de l'ATQ 5 fois. L'adversaire qui est touché par l'attaque aléatoire a 30 % de probabilité d'être étourdis pendant un tour.", false)
+        .addField("ATQ", "18935", true)
+        .addField("DEF", "828", true)
+        .addField("PV", "143092", true)
+        .addField("VIT", "445", true)
+
 	message.channel.sendEmbed(embed)
 
-	console.log("La commande de l'Héroïne Iseria viens d'être effectuée.");
+	console.log("La commande de l'Héros Jyu Viole Grace viens d'être effectuée.");
 
     }
 
@@ -390,7 +408,7 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence Niv.1", "**50%** de chance d'accorder un buff aléatoire au lanceur pendant 1 tour à la fin de son tour. (Parmi: Augmentation de l'Attaque, de la Défense, de la Vitesse ou des chances de coup Critique. Barrière, Immunité, Soins continus ou résistance au coup critique)", false)
             .addField(":crossed_swords: Compétence Niv.Max", "**100%** de chance d'accorder un buff aléatoire au lanceur pendant 1 tour à la fin de son tour. (Parmi: Augmentation de l'Attaque, de la Défense, de la Vitesse ou des chances de coup Critique. Barrière, Immunité, Soins continus ou résistance au coup critique)", false)
             .addField(":crossed_swords: Statistiques basique", "Attaque : **9** | Vie : **76**", false)
-	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
+	        .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
 	message.channel.sendEmbed(embed)
 	    
     }
@@ -426,13 +444,13 @@ bot.on('message', message => {
     }
 
     if (message.content === prefix + "tierlist"){ // Tier List
-       message.channel.send("```Lien de la tierlist :``` \n :arrow_right: <https://bit.ly/2GgJM1J> \n ```Autre tierlist :``` \n :arrow_right: <https://epic7x.com/tier-list/>")
+       message.channel.send("**Lien de la tierlist :** \n :arrow_right: \n **Autre tierlist :** \n :arrow_right:")
 
     }
 
 
-    if (message.content === prefix + "site"){ //Site EpicSevenFrance
-       message.channel.send("```Lien du site :``` \n :arrow_right: <http://epicsevenfrance.pcriot.com/> \n Site malheureusement fermé, nous verrons pour une possible réouverture.")
+    if (message.content === prefix + "site"){ //Site Hero Cantare
+       message.channel.send("**Lien du site de la version globale:** \n :arrow_right: <https://www.herocantareglobal.com//>")
     }
 
     if (message.content === prefix + "catalyst"){ //Guide Catalyst
@@ -456,7 +474,7 @@ bot.on('message', message => {
             .setColor("RANDOM")
             .setFooter("Carte du Raid Labyrinth demandé par " + message.author.username + ". " + "Commande mise à jour le 15/05/19.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
-	    .setImage("https://i.imgur.com/CFIBXxY.jpg")
+	        .setImage("https://i.imgur.com/CFIBXxY.jpg")
 	message.channel.sendEmbed(embed)
 	    
     }
@@ -470,7 +488,7 @@ bot.on('message', message => {
             .addField("Nom du bot", bot.user.username)
             .addField("Bot créé le :", bot.user.createdAt)
             .addField("Nombre de serveurs :", bot.guilds.size)
-	    .addField("Bot créé par : ","@Vanitas#7248", true)
+	        .addField("Bot créé par : ","@Vanitas#7248", true)
 
     message.channel.send(botembed)
 	    
@@ -499,8 +517,8 @@ bot.on("message", function(message) {
                 "Je ne sais pas...",
                 "Sûrement...",
                 "Bien sûr.",
-		"Bien entendu.",
-		"Es-tu fou ?!",
+	        	"Bien entendu.",
+	        	"Es-tu fou ?!",
                 "Absolument pas !!",
                 "Sérieusement... t'es qui en fait ?!",
                 "..Je n'ai même pas envie de te répondre !",
@@ -508,14 +526,14 @@ bot.on("message", function(message) {
                 "Tu sais quoi ? Ferme-la !",
                 "Je suis fatigué de te répondre...",
                 "Tu es si magnifique... Tu m'éblouis !",
-		"Je m'ennuie... Tu es si ennuyant !",
-		".......... Pardon, tu m'as parlé ?",
-		"...Désolé... ce n'est pas que tu ne m'intéresses pas, mais.. malheureusement si.",
-		"Si tu veux, je vend des vies.",
-		".....",
-		"Simple question: Tu peux la mettre en veilleuse ?",
-		"Tu ressembles à Enott...",
-		"Tu fais parti de la Hurado Family ? Vu ta tronche, ça ne m'étonnerait même pas.",
+    	     	"Je m'ennuie... Tu es si ennuyant !",
+	        	".......... Pardon, tu m'as parlé ?",
+	        	"...Désolé... ce n'est pas que tu ne m'intéresses pas, mais.. malheureusement si.",
+	          	"Si tu veux, je vend des vies.",
+	         	".....",
+	        	"Simple question: Tu peux la mettre en veilleuse ?",
+	         	"Tu ressembles à Enott...",
+	         	"Tu fais parti de la Hurado Family ? Vu ta tronche, ça ne m'étonnerait même pas.",
                 "Je pense que cela n'a pas d'importance.",
                 "Tu n'avais vraiment rien d'autre à me demander ?",
                 "Aucune idée. Et toi, connais-tu le synonyme de synonyme ?",
@@ -616,107 +634,6 @@ bot.on("message", async message => {
     { q: "De quel personnage cette phrase est-elle issue: I'll kill you, and you, and you ! HAAHAHAHAHAHAHA", a: ['Clarissa', 'clarissa'] },
     { q: 'De quel personnage cette phrase est-elle issue: Dancing Blade !', a: ['Vildred', 'vildred'] },
     { q: 'De quel personnage cette phrase est-elle issue: Bones to sand... Blood to dust.', a: ['Baal & Sezan', 'baal et sezan'] },
-    { q: 'De quel personnage cette phrase est-elle issue: Look at me... I said look at me !', a: ['Challenger Dominiel', 'ML Dominiel'] },
-    { q: "De quel personnage cette phrase est-elle issue: I can feel my strength overflowing... This is amazing ! **I feel so stroooooong !!**", a: ['Guider Aither', 'ML Aither', 'ML Trap'] },
-    { q: 'De quel personnage cette phrase est-elle issue: This will be the last moon they see.', a: ['Kise', 'kise'] },
-    { q: "De quel personnage cette phrase est-elle issue: I can't stop now !", a: ['Sez', 'sez'] },
-    { q: "De quel personnage cette phrase est-elle issue: A roaming heart, forever wandering.", a: ['Kayron', 'kayron'] },
-    { q: 'De quel personnage cette phrase est-elle issue: Ashes to ashes, dust to dust.', a: ['Kayron', 'kayron'] },
-    { q: "De quel personnage cette phrase est-elle issue: I present to you, the greatest magic.", a: ['Bellona', 'bellona'] },
-    { q: "De quel personnage cette phrase est-elle issue: Hello ! It's me, ||Yuna|| !", a: ['Yuna', 'yuna'] },
-    { q: 'De quel personnage cette phrase est-elle issue: With the light, disappear.', a: ['Ludwig', 'ludwig'] },
-    { q: "De quel personnage cette phrase est-elle issue: Didn't I tell you? Just put your faith in me.", a: ['Vildred', 'vildred'] },
-    { q: "De quel personnage cette phrase est-elle issue: I wanna save the world with the mercy of healing", a: ['Achates', 'achates'] },
-    { q: "De quel personnage cette phrase est-elle issue: I'm still not strong enough but i'll keep doing my best.", a: ['Achates', 'achates'] },
-    { q: "De quel personnage cette phrase est-elle issue: A new friendship begins with one, two, three, tada !", a: ['Shooting Star Achates', 'ML Achates'] },
-    { q: "De quel personnage cette phrase est-elle issue: The lady of the swamp has arrived !", a: ['Charlotte', 'charlotte'] },
-    { q: "De quel personnage cette phrase est-elle issue: My Goddess... give me the power to vanquish the evil.", a: ['Diene', 'diene'] },
-    { q: 'De quel personnage cette phrase est-elle issue: May these evils... be punished.', a: ['Diene', 'diene'] },
-    { q: "De quel personnage cette phrase est-elle issue: My lady... Stop calling me **fool** !", a: ['Baal & Sezan', 'baal et sezan'] },
-    { q: "De quel personnage cette phrase est-elle issue: There is no salvation for those who fall in battle.", a: ['Kayron', 'kayron'] },
-    { q: 'De quel personnage cette phrase est-elle issue: Everything disappears.', a: ['Kayron', 'kayron'] },
-    { q: "De quel personnage cette phrase est-elle issue: You can't hide from my gun.", a: ['Schuri', 'schuri'] },
-    { q: "De quel personnage cette phrase est-elle issue: Shadows, fall.", a: ['Ludwig', 'ludwig'] },
-    { q: 'De quel personnage cette phrase est-elle issue: Shall we begin the fireworks show ?', a: ['Serila', 'serila'] },
-    { q: "De quel personnage cette phrase est-elle issue: The hell scythe will slice you in two !", a: ['Haste', 'haste'] },
-    { q: "De quel personnage cette phrase est-elle issue: Kal ! It's your turn !", a: ['Celestial Mercedes', 'ML Mercedes'] },
-    { q: 'De quel personnage cette phrase est-elle issue: Ah ah ! Victory is mine !', a: ['Ravi', 'ravi'] },
-    { q: "De quel personnage cette phrase est-elle issue: Are you prepare to die ?", a: ['Sez', 'sez'] },
-    { q: "De quel personnage cette phrase est-elle issue: My turn to fight !", a: ['Sez', 'sez'] },
-    { q: "De quel personnage cette phrase est-elle issue: I'm already prepared.", a: ['Sez', 'sez'] },
-    { q: "De quel personnage cette phrase est-elle issue: This is my justice !", a: ['Vildred', 'vildred'] },
-    { q: "De quel personnage cette phrase est-elle issue: Alright. Shall we clean up.", a: ['Vildred', 'vildred'] },
-    { q: "De quel personnage cette phrase est-elle issue: It's my turn !", a: ['Vildred', 'vildred'] },
-    { q: "De quel personnage cette phrase est-elle issue: Did you have nothing left to say ?", a: ['Vildred', 'vildred'] },
-    { q: "De quel personnage cette phrase est-elle issue: Aaaah ! This is my victory.", a: ['Vildred', 'vildred'] },
-    { q: "De quel personnage cette phrase est-elle issue: Queen Ceci...please don't leave me.", a: ['Shadow Rose', 'Ml Rose'] },
-    { q: "De quel personnage cette phrase est-elle issue: Aaaah ! Blade Ascent !", a: ['Vildred', 'vildred'] },
-    { q: "De quel personnage cette phrase est-elle issue: Haha. Uups. Sorry. Sorry... my bad.", a: ['Vildred', 'vildred'] },
-    { q: "De quel personnage cette phrase est-elle issue: For Queen Ceci !", a: ['Shadow Rose', 'Ml Rose'] },
-    { q: "De quel personnage cette phrase est-elle issue: Oh ! You need my help ! Cool let's go !", a: ['Yufine', 'yufine'] },
-    { q: "De quel personnage cette phrase est-elle issue: Victory is always mine !", a: ['Yufine', 'yufine'] },
-    { q: "De quel personnage cette phrase est-elle issue: Burn ! Bye bye !", a: ['Aramintha', 'aramintha'] },
-    { q: "De quel personnage cette phrase est-elle issue: Rest in peace.", a: ['Aramintha', 'aramintha'] },
-    { q: "De quel personnage cette phrase est-elle issue: Please to meet you. Let's work together.", a: ['Aramintha', 'aramintha'] },
-    { q: "De quel personnage cette phrase est-elle issue: Leave it to me!", a: ['Aramintha', 'Tywin'] },
-    { q: "De quel personnage cette phrase est-elle issue: Bring in on.", a: ['Aramintha', 'aramintha'] },
-    { q: "De quel personnage cette phrase est-elle issue: Shall we begin.", a: ['Aramintha', 'aramintha'] },
-    { q: "De quel personnage cette phrase est-elle issue: I will continue to do my best.", a: ['Tywin', 'tywin'] },
-    { q: "De quel personnage cette phrase est-elle issue: Please forgive me.", a: ['Tywin', 'tywin'] },
-    { q: "De quel personnage cette phrase est-elle issue: I'm always ready.", a: ['Tywin', 'tywin'] },
-    { q: "De quel personnage cette phrase est-elle issue: Thank you. I will keep doing my best.", a: ['Cecilia', 'cecilia'] },
-    { q: "De quel personnage cette phrase est-elle issue: I am ||Cecilia||, please feel free call me ||Ceci||.", a: ['Cecilia', 'cecilia'] },
-    { q: "De quel personnage cette phrase est-elle issue: I will break you, I won’t be defeated", a: ['Cecilia', 'cecilia'] },
-    { q: "De quel personnage cette phrase est-elle issue: Lance of Steel, now it’s time of judgment !", a: ['Cecilia', 'cecilia'] },
-    { q: "De quel personnage cette phrase est-elle issue: Disappear, get out of my way !", a: ['Cecilia', 'cecilia'] },
-    { q: "De quel personnage cette phrase est-elle issue: I will be victorious.", a: ['Cecilia', 'cecilia'] },
-    { q: "De quel personnage cette phrase est-elle issue: Now it's the time of judgment.", a: ['Cecilia', 'cecilia'] },
-    { q: "De quel personnage cette phrase est-elle issue: Light. Life.", a: ['Angelica', 'angelica'] },
-    { q: "De quel personnage cette phrase est-elle issue: All is as the Goddess wills it", a: ['Angelica', 'angelica'] },
-    { q: "De quel personnage cette phrase est-elle issue: Sense it's be a while, take care of me.", a: ['Angelica', 'angelica'] },
-    { q: "De quel personnage cette phrase est-elle issue: Oh no. I lost. Well it can be out.", a: ['Angelica', 'angelica'] },
-    { q: "De quel personnage cette phrase est-elle issue: The Goddess wills it.", a: ['Angelica', 'angelica'] },
-    { q: "De quel personnage cette phrase est-elle issue: I'll do my best !", a: ['Montmorancy', 'montmorancy'] },
-    { q: "De quel personnage cette phrase est-elle issue: Do you need some help ?", a: ['Montmorancy', 'montmorancy'] },
-    { q: "De quel personnage cette phrase est-elle issue: We still have time to recover. Let's try again !", a: ['Ras', 'ras'] },
-    { q: "De quel personnage cette phrase est-elle issue: By my command... Victory !", a: ['Ras', 'ras'] },
-    { q: "De quel personnage cette phrase est-elle issue: You can't escape !", a: ['Ras', 'ras'] },
-    { q: "De quel personnage cette phrase est-elle issue: I can't lose !", a: ['Ras', 'ras'] },
-    { q: "De quel personnage cette phrase est-elle issue: I take you on.", a: ['Ras', 'ras'] },
-    { q: "De quel personnage cette phrase est-elle issue: Fate is on my side.", a: ['Ras', 'ras'] },
-    { q: "De quel personnage cette phrase est-elle issue: Yameteeeee !", a: ['Dizzy', 'dizzy'] },
-    { q: "De quel personnage cette phrase est-elle issue: Look at my sword, not my face.", a: ['Violet', 'violet'] },
-    { q: "De quel personnage cette phrase est-elle issue: I know I’m beautiful.", a: ['Violet', 'violet'] },
-    { q: "De quel personnage cette phrase est-elle issue: Be grateful that you can fight with me.", a: ['Violet', 'violet'] },
-    { q: "De quel personnage cette phrase est-elle issue: My sword will pierce your heart.", a: ['Violet', 'violet'] },
-    { q: "De quel personnage cette phrase est-elle issue: Run ~ before it's too late.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
-    { q: "De quel personnage cette phrase est-elle issue: Now. Bring in on.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
-    { q: "De quel personnage cette phrase est-elle issue: Fine. I let you win, this time.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
-    { q: "De quel personnage cette phrase est-elle issue: This is what you get ; for ruining my vacation !", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
-    { q: "De quel personnage cette phrase est-elle issue: Well. Shall we go back to the beach ?", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
-    { q: "De quel personnage cette phrase est-elle issue: Let's start with something light.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
-    { q: "De quel personnage cette phrase est-elle issue: It's too late to backup now.", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
-    { q: "De quel personnage cette phrase est-elle issue: I'm getting tired of you. Bye bye now !", a: ['Seaside Bellona', 'seaside bellona', 'ss bellona', 'bellona plage'] },
-    { q: "De quel personnage cette phrase est-elle issue: Unleash... my power !", a: ['Vivian', 'vivian'] },
-    { q: "De quel personnage cette phrase est-elle issue: Distraction... answer my call !", a: ['Vivian', 'vivian'] },
-    { q: "De quel personnage cette phrase est-elle issue: Forbidden spell... destroy all !", a: ['Vivian', 'vivian'] },
-    { q: "De quel personnage cette phrase est-elle issue: Very... interesting.", a: ['Vivian', 'vivian'] },
-    { q: "De quel personnage cette phrase est-elle issue: How dare you !", a: ['Vivian', 'vivian'] },
-    { q: "De quel personnage cette phrase est-elle issue: All is done !", a: ['Vivian', 'vivian'] },
-    { q: "De quel personnage cette phrase est-elle issue: You regret facing me !", a: ['Vivian', 'vivian'] },
-    { q: "De quel personnage cette phrase est-elle issue: Can't you handle this ?", a: ['Vivian', 'vivian'] },
-    { q: "De quel personnage cette phrase est-elle issue: ||Destina's|| protection !", a: ['Destina', 'destina'] },
-    { q: "De quel personnage cette phrase est-elle issue: Luminescence... glory.", a: ['Destina', 'destina'] },
-
-
-
-
-
-
-
-
-
-
 
 
   ];
