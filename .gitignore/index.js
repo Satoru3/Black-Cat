@@ -408,7 +408,7 @@ bot.on('message', message => {
             .addField(":crossed_swords: Compétence Niv.1", "**50%** de chance d'accorder un buff aléatoire au lanceur pendant 1 tour à la fin de son tour. (Parmi: Augmentation de l'Attaque, de la Défense, de la Vitesse ou des chances de coup Critique. Barrière, Immunité, Soins continus ou résistance au coup critique)", false)
             .addField(":crossed_swords: Compétence Niv.Max", "**100%** de chance d'accorder un buff aléatoire au lanceur pendant 1 tour à la fin de son tour. (Parmi: Augmentation de l'Attaque, de la Défense, de la Vitesse ou des chances de coup Critique. Barrière, Immunité, Soins continus ou résistance au coup critique)", false)
             .addField(":crossed_swords: Statistiques basique", "Attaque : **9** | Vie : **76**", false)
-	        .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
+	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
 	message.channel.sendEmbed(embed)
 	    
     }
@@ -474,7 +474,7 @@ bot.on('message', message => {
             .setColor("RANDOM")
             .setFooter("Carte du Raid Labyrinth demandé par " + message.author.username + ". " + "Commande mise à jour le 15/05/19.")
             .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
-	        .setImage("https://i.imgur.com/CFIBXxY.jpg")
+	    .setImage("https://i.imgur.com/CFIBXxY.jpg")
 	message.channel.sendEmbed(embed)
 	    
     }
@@ -488,7 +488,7 @@ bot.on('message', message => {
             .addField("Nom du bot", bot.user.username)
             .addField("Bot créé le :", bot.user.createdAt)
             .addField("Nombre de serveurs :", bot.guilds.size)
-	        .addField("Bot créé par : ","@Vanitas#7248", true)
+	    .addField("Bot créé par : ","@Vanitas#7248", true)
 
     message.channel.send(botembed)
 	    
@@ -517,8 +517,8 @@ bot.on("message", function(message) {
                 "Je ne sais pas...",
                 "Sûrement...",
                 "Bien sûr.",
-	        	"Bien entendu.",
-	        	"Es-tu fou ?!",
+	        "Bien entendu.",
+	        "Es-tu fou ?!",
                 "Absolument pas !!",
                 "Sérieusement... t'es qui en fait ?!",
                 "..Je n'ai même pas envie de te répondre !",
@@ -527,13 +527,13 @@ bot.on("message", function(message) {
                 "Je suis fatigué de te répondre...",
                 "Tu es si magnifique... Tu m'éblouis !",
     	     	"Je m'ennuie... Tu es si ennuyant !",
-	        	".......... Pardon, tu m'as parlé ?",
-	        	"...Désolé... ce n'est pas que tu ne m'intéresses pas, mais.. malheureusement si.",
-	          	"Si tu veux, je vend des vies.",
-	         	".....",
-	        	"Simple question: Tu peux la mettre en veilleuse ?",
-	         	"Tu ressembles à Enott...",
-	         	"Tu fais parti de la Hurado Family ? Vu ta tronche, ça ne m'étonnerait même pas.",
+	        ".......... Pardon, tu m'as parlé ?",
+	        "...Désolé... ce n'est pas que tu ne m'intéresses pas, mais.. malheureusement si.",
+	        "Si tu veux, je vend des vies.",
+	        ".....",
+	        "Simple question: Tu peux la mettre en veilleuse ?",
+	        "Tu ressembles à Enott...",
+	        "Tu fais parti de la Hurado Family ? Vu ta tronche, ça ne m'étonnerait même pas.",
                 "Je pense que cela n'a pas d'importance.",
                 "Tu n'avais vraiment rien d'autre à me demander ?",
                 "Aucune idée. Et toi, connais-tu le synonyme de synonyme ?",
