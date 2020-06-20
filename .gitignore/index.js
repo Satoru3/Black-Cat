@@ -204,7 +204,7 @@ bot.on('message', message => {
 
     }
 	
-	        // Hero Cantare = Queen No Name
+        // Hero Cantare = Queen No Name
         if (message.content === prefix + "queen no name"){
             var embed = new Discord.RichEmbed()
             .setTitle("Queen No Name :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> :black_small_square: <:ss:719641320343470150>")
@@ -213,13 +213,13 @@ bot.on('message', message => {
             .setFooter("Khun Ran v0.3 | Combattez pour monter de niveau, joueur !")
             .setThumbnail("https://i.imgur.com/lTSFMfY.png")
             .setImage("https://i.imgur.com/v9syQKz.gif")
-            .addField(":speech_balloon: Citation :", ".", false)
-            .addField("<:c1:719664266797383680> ", ".", false)
-            .addField("<:c2:719664268722831421> ", ".", false)
-            .addField("<:c3:719664266776412160> ", ".", false)
-            .addField("<:passif:719664266969612379> 1: ", ".", false)
-            .addField("<:passif:719664266969612379> 2: ", ".", false)
-            .addField("<:sp:720742202757873745> ", ".", false)
+            .addField(":speech_balloon: Citation", "Plus sournois que les démons.... et plus avide que les dragons. C'est humain.", false)
+            .addField("<:c1:719664266797383680> Entaille cauchemardesque", "", false)
+            .addField("<:c2:719664268722831421> Tir de couverture", "", false)
+            .addField("<:c3:719664266776412160> Ouvrons le feu, pour la guerre !", "Attaque tous les ennemis 3 fois avec 50% de l'ATQ. Chaque attaque inflige 60% de dégâts additionnels à un adversaire aléatoire. Récupère 2 Mana si un adversaire est éliminé par cette attaque.", false)
+            .addField("<:passif:719664266969612379> 1: ", "Augmente l'attaque de 15%, la santé de 15% et détourne 10% des dégâts.", false)
+            .addField("<:passif:719664266969612379> 2: Karma", "", false)
+            .addField("<:sp:720742202757873745> ", "", false)
             .addField("ATQ", "22199", true)
             .addField("DEF", "811", true)
             .addField("PV", "123636", true)
@@ -231,7 +231,7 @@ bot.on('message', message => {
     
         message.channel.sendEmbed(embed)
     
-        console.log("La commande de l'Héroïne Queen No Name viens d'être effectuée.");
+        console.log("La commande de l'Héros Queen No Name viens d'être effectuée.");
     
         }
 
