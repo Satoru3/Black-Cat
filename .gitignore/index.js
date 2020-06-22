@@ -282,7 +282,7 @@ if (message.content === prefix + "unleashed raizel"){
     .addField("<:c3:719664266776412160> Trou noir", "Attaque tous les adversaires avec 120% de l'ATQ et utilise 15% de ses PV's restants pour infliger des dégâts additionnels équivalent à 250% des PV's utilisés. La prochaine attaque de tous les alliés ignore 40% de résistance aux malus et de déviation des dégâts.", false)
     .addField("<:passif:719664266969612379> 1: Brisement du sceau", "Augmente la santé de 25%, la défense de 10% et la déviation des dégâts de 15%.", false)
     .addField("<:passif:719664266969612379> 2: Souverain du Sang", "Deviens invincible pendant 1 tour lorsque les PV's passent en dessous de 25% et en récupère 50%. Tous les adversaires reçoivent des dégâts équivalent à 10% des PV's maximum du Héros, et leur vitesse est réduite de 100 pendant 2 tours.", false)
-    .addField("<:sp:720742202757873745> CHamp de Sang: Contrôle", "Utilise 10% de ses PV's pour infliger des dégâts équivalent à 150% de ses PV's utilisés pour attaquer l'adversaire avec les PV's les plus haut et augmente l'ATQ de tous les alliés à hauteur de 50% des PV's utilisés pendant 2 tours", false)
+    .addField("<:sp:720742202757873745> Champ de Sang: Contrôle", "Utilise 10% de ses PV's pour infliger des dégâts équivalent à 150% de ses PV's utilisés pour attaquer l'adversaire avec les PV's les plus haut et augmente l'ATQ de tous les alliés à hauteur de 50% des PV's utilisés pendant 2 tours.", false)
     .addField("ATQ", "19846", true)
     .addField("DEF", "892", true)
     .addField("PV", "138150", true)
