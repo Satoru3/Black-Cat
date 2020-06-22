@@ -4,7 +4,8 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.3 | Ajout de la commande $site, corrections de certaines fautes & commandes.");
+    bot.user.setActivity("$help | V 0.4 | Yeon's Flame Khun ($flame khun) ajouté.");
+
     console.log("Je suis connecté !");
 
 });
