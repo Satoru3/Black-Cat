@@ -240,7 +240,7 @@ bot.on('message', message => {
     if (message.content === prefix + "flame khun"){
         var embed = new Discord.RichEmbed()
         .setTitle("Yeon's Flame Khun :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
-        .setDescription("Yeon's Flame __Khun__ est un régulier de Tower of God. Il est le meilleur ami de Khun, et est un des protagonistes de la série.")
+        .setDescription("Yeon's Flame __Khun__ est un régulier de Tower of God. Il est le meilleur ami de Baam, et est un des protagonistes de la série.")
         .setColor("RANDOM")
         .setFooter("Khun Ran v0.4 | Devenez plus fort, et grimpez la tour, élus.")
         .setThumbnail("https://i.imgur.com/eW0LR11.png")
