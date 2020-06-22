@@ -32,7 +32,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
 	        .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
-            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> ($queen no name)", true)
+            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> ($queen no name) \n **Yeon's Flame Khun** :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> ($flame khun)", true)
 	        .setColor("RANDOM")
             .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
             .setThumbnail("")
@@ -234,6 +234,37 @@ bot.on('message', message => {
         console.log("La commande de l'Héroïne Queen No Name viens d'être effectuée.");
     
         }
+	
+    // Hero Cantare = Yeon's Flame Khun
+    if (message.content === prefix + "flame khun"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Yeon's Flame Khun :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Yeon's Flame __Khun__ est un régulier de Tower of God. Il est le meilleur ami de Khun, et est un des protagonistes de la série.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.4 | Devenez plus fort, et grimpez la tour, élus.")
+        .setThumbnail("https://i.imgur.com/eW0LR11.png")
+        .setImage("https://i.imgur.com/vctn6HY.gif")
+        .addField(":speech_balloon: Citation", "Je ne serais pas gouverné. Je créai mes propres règles. C'est l'état d'esprit d'un dirigeant.", false)
+        .addField("<:c1:719664266797383680> Ignition", "Attaque tous les ennemis avec 70% de l'ATQ et augmente de 30% l'ATQ de l'allié possédant l'ATQ la plus élevée pendant 2 tours", false)
+        .addField("<:c2:719664268722831421> Flamme de Yeon: Feu brûlant", "Augmente l'ATQ de tous les alliés de 10% (jusqu'à 30%) et attaque tous les ennemis avec 120% de l'ATQ. Inflige 3 brûlures qui font des dégâts équivalent à 30% de l'ATQ pendant 2 tours", false)
+        .addField("<:c3:719664266776412160> Flamme de Yeon: Éruption", "Attaque tous les ennemis avec 140% de l'ATQ et diminue leur vitesse de 100% pendant 2 tours. Confère un coup critique garanti à tous les alliés pour leur prochaine attaque", false)
+        .addField("<:passif:719664266969612379> 1: Flamme bleue", "Augmente l'ATQ de 15%, la santé de 15% et la vitesse de 10%.", false)
+        .addField("<:passif:719664266969612379> 2: Oiseau enflammé", "Réanime 1 allié qui a été éliminé quand Khun utilise une compétence 2chain et quand Khun est proche de l'élimination, récupère 100% des PV's et confère à Khun Isolation du champ de bataille (Ignore les dégâts) pendant un tour. (Chaque effet peut avoir lieu 1x.)", false)
+        .addField("ATQ", "26646", true)
+        .addField("DEF", "532 ", true)
+        .addField("PV", "109416", true)
+        .addField("VIT", "448", true)
+        .addField("Taux Crit", "30%", true)
+        .addField("Dégâts Crit", "10%", true)
+        .addField("Blocage", "33%", true)
+        .addField("Résist. Malus", "23%", true)
+        .addField("Déviation DGT", "19%", true)
+
+    message.channel.sendEmbed(embed)
+
+    console.log("La commande de l'Héros Yeon's Flame Khun viens d'être effectuée.");
+
+    }
 
         // Epic Seven Héros = Sez
     if (message.content === prefix + "sez"){
@@ -255,46 +286,6 @@ bot.on('message', message => {
 
     }
 
-        // Epic Seven Héros = Tywin
-    if (message.content === prefix + "tywin"){
-        var embed = new Discord.RichEmbed()
-            .setTitle("Tywin Herad :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: Bélier :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("En traduction.")
-            .setColor("RANDOM")
-            .setFooter("Fiche de l'Héros Tywin générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
-            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/taiwin/taiwin_0000.png")
-            .setImage("https://j.gifs.com/kZGmrv.gif")
-            .addField(":speech_balloon: Citation :", "Je te suivrai de tout mon coeur.", false)
-            .addField(":crossed_swords: Compétence 1: Sword Storm", "En traduction.", false)
-            .addField(":crossed_swords: Compétence 2: Commanding Shout", "En traduction.", false)
-            .addField(":crossed_swords: Compétence 3: Full-Scale Attack", "En traduction.", false)
-            .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed)
-	    
-	console.log("La commande de l'Héros Tywin viens d'être effectuée.");
-	    
-    }
-
-
-        // Epic Seven Héros = Karin
-    if (message.content === prefix + "karin"){
-        var embed = new Discord.RichEmbed()
-            .setTitle("Karin Fantaria :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Lion :black_small_square: 4<:etoile:580331911608664084>")
-            .setDescription("Alors que le clair de lune révélait un personnage tenant une faux, les spectateurs étonnés s'exclamèrent 'Le Dieu de la Mort est descendu !'")
-            .setColor("RANDOM")
-            .setFooter("Artefact Sigurd Scythe " + message.author.username + ". " + "Fiche mise à jour le 25/11.")
-            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/karin/karin_0000.png")
-            .setImage("https://j.gifs.com/kZGmrv.gif")
-            .addField(":speech_balloon: Citation :", "Non connue.", false)
-            .addField(":crossed_swords: Compétence 1: Sequential Cutter", "En traduction.", false)
-            .addField(":crossed_swords: Compétence 2: Blade Art: Flash", "En traduction.", false)
-            .addField(":crossed_swords: Compétence 3: Blade Art: Thunder", "En traduction.", false)
-            .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed)
-	    
-	console.log("La commande de l'Héroïne Karin viens d'être effectuée.");
-
-    }
 	
 	        // Epic Seven Artefact = Sigurd Scythe
     if (message.content === prefix + "sigurd"){
