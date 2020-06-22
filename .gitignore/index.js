@@ -32,9 +32,9 @@ bot.on('message', message => {
     if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Hero Cantare
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-	        .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
-            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> ($queen no name) \n **Yeon's Flame Khun** :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> ($flame khun)", true)
-	        .setColor("RANDOM")
+	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
+            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> ($queen no name) \n **Yeon's Flame Khun** :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> ($flame khun) \n **Unleashed Raizel** :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> ($unleashed raizel)", true)
+	    .setColor("RANDOM")
             .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
             .setThumbnail("")
 	message.channel.sendEmbed(embed);
@@ -266,6 +266,38 @@ bot.on('message', message => {
     console.log("La commande de l'Héros Yeon's Flame Khun viens d'être effectuée.");
 
     }
+	
+	// Hero Cantare = Unleashed Raizel
+if (message.content === prefix + "unleashed raizel"){
+    var embed = new Discord.RichEmbed()
+    .setTitle("Unleashed Raizel :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> :black_small_square: <:ss:719641320343470150>")
+    .setDescription("Unleashed __Raizel__ est le personnage principal de Noblesse.")
+    .setColor("RANDOM")
+    .setFooter("Khun Ran v0.4 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+    .setThumbnail("https://i.imgur.com/kwMfqwu.png")
+    .setImage("https://i.imgur.com/Le3UW9p.gif")
+    .addField(":speech_balloon: Citation", "Noblesse oblige.", false)
+    .addField("<:c1:719664266797383680> Champ de Sang: Libération", "Attaque 2 adversaires avec 120% de l'ATQ, utilise 10% de ses PV's restants pour infliger des dégâts additionnels équivalent à 150% des PV's utilisés.", false)
+    .addField("<:c2:719664268722831421> Phénix de Sang", "Attaque tous les adversaires avec 105% de l'ATQ et inflige [soins impossible] avec 90% de chances pendant 2 tours. Utilise 10% de ses PV's restants pour infliger des dégâts additionnels équivalent à 200% des PV's utilisés.", false)
+    .addField("<:c3:719664266776412160> Trou noir", "Attaque tous les adversaires avec 120% de l'ATQ et utilise 15% de ses PV's restants pour infliger des dégâts additionnels équivalent à 250% des PV's utilisés. La prochaine attaque de tous les alliés ignore 40% de résistance aux malus et de déviation des dégâts.", false)
+    .addField("<:passif:719664266969612379> 1: Brisement du sceau", "Augmente la santé de 25%, la défense de 10% et la déviation des dégâts de 15%.", false)
+    .addField("<:passif:719664266969612379> 2: Souverain du Sang", "Deviens invincible pendant 1 tour lorsque les PV's passent en dessous de 25% et en récupère 50%. Tous les adversaires reçoivent des dégâts équivalent à 10% des PV's maximum du Héros, et leur vitesse est réduite de 100 pendant 2 tours.", false)
+    .addField("<:sp:720742202757873745> CHamp de Sang: Contrôle", "Utilise 10% de ses PV's pour infliger des dégâts équivalent à 150% de ses PV's utilisés pour attaquer l'adversaire avec les PV's les plus haut et augmente l'ATQ de tous les alliés à hauteur de 50% des PV's utilisés pendant 2 tours", false)
+    .addField("ATQ", "19846", true)
+    .addField("DEF", "892", true)
+    .addField("PV", "138150", true)
+    .addField("VIT", "496", true)
+    .addField("Taux Crit", "15%", true)
+    .addField("Dégâts Crit", "0%", true)
+    .addField("Blocage", "33%", true)
+    .addField("Résist. Malus", "28%", true)
+    .addField("Déviation DGT", "39%", true)
+
+message.channel.sendEmbed(embed)
+
+console.log("La commande de l'Héros Unleashed Raizel viens d'être effectuée.");
+
+}
 
         // Epic Seven Héros = Sez
     if (message.content === prefix + "sez"){
