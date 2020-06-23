@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.4 | Yeon's Flame Khun ($flame khun) & Unleashed Raizel ($unleashed raizel) ajoutés.");
+    bot.user.setActivity("$help | V 0.4 | Yeon's Flame Khun ($flame khun), Unleashed Raizel ($unleashed raizel) & Raizel ($raizel) ajoutés.");
 
     console.log("Je suis connecté !");
 
@@ -32,11 +32,12 @@ bot.on('message', message => {
     if (message.content === prefix + "héros"){ //Commande relative aux personnages d'Hero Cantare
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
-	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
+	        .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
             .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> :black_small_square: <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> ($queen no name) \n **Yeon's Flame Khun** :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> ($flame khun) \n **Unleashed Raizel** :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> ($unleashed raizel)", true)
-	    .setColor("RANDOM")
-            .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
-            .setThumbnail("")
+            .addField("<:a_:724817244789538819>","**Raizel** <:ice:719781844949925898> :black_small_square: <:evil:724805535727353856> ($raizel)")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.4 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
+            .setThumbnail("https://i.imgur.com/kwMfqwu.png")
 	message.channel.sendEmbed(embed);
         console.log("Page des personnages générée suite à une demande de " + message.author.username);
 
@@ -194,7 +195,7 @@ bot.on('message', message => {
         .addField("DEF", "828", true)
         .addField("PV", "143092", true)
         .addField("VIT", "445", true)
-	    .addField("Taux Crit", "20%", true)
+        .addField("Taux Crit", "20%", true)
 	    .addField("Blocage", "33%", true)
         .addField("Résist. Malus", "23%", true)
      	.addField("Déviation DGT", "34%", true)
@@ -271,7 +272,7 @@ bot.on('message', message => {
 if (message.content === prefix + "unleashed raizel"){
     var embed = new Discord.RichEmbed()
     .setTitle("Unleashed Raizel :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> :black_small_square: <:ss:719641320343470150>")
-    .setDescription("Unleashed __Raizel__ est le personnage principal de Noblesse.")
+    .setDescription("Unleashed __Raizel__ est le protagoniste de Noblesse.")
     .setColor("RANDOM")
     .setFooter("Khun Ran v0.4 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
     .setThumbnail("https://i.imgur.com/kwMfqwu.png")
@@ -296,6 +297,37 @@ if (message.content === prefix + "unleashed raizel"){
 message.channel.sendEmbed(embed)
 
 console.log("La commande de l'Héros Unleashed Raizel viens d'être effectuée.");
+
+}
+
+// Hero Cantare = Raizel
+if (message.content === prefix + "raizel"){
+    var embed = new Discord.RichEmbed()
+    .setTitle("Raizel :black_small_square: <:ice:719781844949925898> :black_small_square: <:evil:724805535727353856> :black_small_square: <:a_:724817244789538819>")
+    .setDescription("Cadis Etrama Di __Raizel__ est le protagoniste de Noblesse.")
+    .setColor("RANDOM")
+    .setFooter("Khun Ran v0.4 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+    .setThumbnail("https://i.imgur.com/9BmU9ET.png")
+    .setImage("https://i.imgur.com/lH8cE16.png")
+    .addField(":speech_balloon: Citation", "Noblesse oblige.", false)
+    .addField("<:c1:719664266797383680> Autorité du Maître", "Attaque 1 adversaire aléatoire de la ligne adverse avec 115% de l'ATQ et réduit l'ATQ de celui-ci de 30% avec 65% de chances pendant 2 tours.", false)
+    .addField("<:c2:719664268722831421> Pouvoir psychique", "Attaque tous les adversaires avec 110% de l'ATQ et augmente la durée de leur malus de 1 tour.", false)
+    .addField("<:c3:719664266776412160> Champ de Sang: Activation", "Attaque tous les adversaires avec 110% de l'ATQ et les réduit au silence pendant 1 tour. Octroit un bouclier à tous les alliés avec 40% de ses PV's pendant 2 tours.", false)
+    .addField("<:passif:719664266969612379> 1: Noblesse", "Augmente l'attaque de 10% et la santé de 20%", false)
+    .addField("<:passif:719664266969612379> 2: Maître du regard", "Stoppe le niveau de puissance de l'adversaire ayant l'ATQ la plus élevée au début du combat pour contrecarrer son attaque.", false)
+    .addField("ATQ", "16183", true)
+    .addField("DEF", "593", true)
+    .addField("PV", "113397", true)
+    .addField("VIT", "362", true)
+    .addField("Taux Crit", "15%", true)
+    .addField("Armor Crash", "5%", true)
+    .addField("Blocage", "33%", true)
+    .addField("Résist. Malus", "23%", true)
+    .addField("Déviation DGT", "24%", true)
+
+message.channel.sendEmbed(embed)
+
+console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 
 }
 
