@@ -56,18 +56,12 @@ bot.on('message', message => {
     }
 
 
-   if (message.content === prefix + "E7 faq"){
+   if (message.content === prefix + "maj", "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Foire aux Questions [FAQ] Partie 1")
-           .addField("__**Jeu**__","Questions concernant le jeu en lui-même.")
-           .addField("Qu'est-ce que la Readiness et l'Effectiveness ?","La Readiness, c'est la vitesse d'attaque que vous trouvez pendant vos combats à gauche (la barre avec les personnages). Plus vous en avez, plus votre personnage tapera souvent (sa vitesse de tour sera supérieure). L'effectiveness est une stat qui réduit la stat 'Effect Resistance' du personnage en face. (Par exemple, si Silk a 80% de chance de proc son débuff sur l'adversaire, et que l'adversaire a 40% d'effect resistance, si celle-ci a 20% d'effectiveness, l'effect resistance de l'adversaire va être diminué de 20%. Ce qui nous donnera donc 80 - 20%, Silk aura 60% de chance d'appliquer son débuff.)")
-           .addField("Comment puis-je accéder au rerolling ?","La fonctionnalité de reroll est débloqué après avoir terminé le stage 1-10.")
-           .addField("Comment marche le système de reroll ?","Après avoir terminé le stage 1-10, quand vous irez à la taverne, vous serez notifié d'une icone violette à droite de l'écran. Après avoir cliquer sur cette icone, vous pourrez vous initier au système de reroll. Le système est simple, vous avez 30 chances pour avoir 11 unités. Vous pouvez décliner un pull à tout moment mais une fois arrivé à la 30e chance, ça s'arrêtera avec ce que vous avez. Vous ne pouvez pas revenir en arrière donc si vous déclinez un pull, il sera perdu à tout jamais.")
-           .addField("J'ai reroll plus de 50 fois, mais je n'ai toujours pas eu la fille trop canon avec la faux, que faire ?","C'est tout à fait normal, les unités de type Dark et Light sont réservés à l'end-game. Tant que vous n'avez pas terminé le stage 10-10, vous ne pourrez pas accéder au portail des Dark et Light.")
-           .addField("Quelles sont les unités importantes à avoir pour bien commencer le jeu ?","Rendez-vous sur cette page : http://epic7guide.pcriot.com/unites-importantes/")
-           .addBlankField()
-           .addField("__**Communauté**__","Questions sur la partie communautaire.")
-           .setFooter("Partie I FAQ du Discord Epic Seven FR. Mise à jour le 02/01/19.")
+           .setTitle("Récapitulatif de la dernière mise à jour du 28/06")
+           .addField("__**Correction(s)**__","Correction du second passif de Kaiser 'Masque du Maître': \n __Avant__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les ~~ennemis~~ correspondant à 20% de la santé maximale pendant 3 tours. \n __Après__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les **alliés** correspondant à 20% de la santé maximale pendant 3 tours.")
+           .addField("__**Ajouts de héros**__", "Aucun ajout à cette mise à jour.")
+           .addField("__**Nouvelles commandes__","La commande $màj a été ajoutée.")
         message.channel.sendEmbed(embed);
 	   
     }
@@ -86,7 +80,7 @@ bot.on('message', message => {
             .addField("<:c2:719664268722831421> Armor Inventory", "Attaque tous les ennemis avec 100% de la puissance d'attaque et inflige des dégâts additionnels correspondants à 20% de la santé maximale de Kaiser. Augmente la défense de tous les alliés de 50% pendant 2 tours.", false)
             .addField("<:c3:719664266776412160> Loup Bleu, Fenrir. ", "Attaque tous les ennemis avec 120% de la puissance d'attaque, et inflige des dégâts additionnels correspondants à 35% de la santé manquante de Kaiser. Obtient 1 tour d'immunité aux dégâts.", false)
             .addField("<:passif:719664266969612379> 1: Maître de station. ", "Augmente la vie de 15%, la défense de 15% et détourne 10% des dégâts.", false)
-            .addField("<:passif:719664266969612379> 2: Masque du maître. ", "Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les ennemis correspondant à 20% de la santé maximale pendant 3 tours.", false)
+            .addField("<:passif:719664266969612379> 2: Masque du maître. ", "Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les alliés correspondant à 20% de la santé maximale pendant 3 tours.", false)
             .addField("ATQ", "18645", true)
             .addField("DEF", "692", true)
             .addField("PV", "131156", true)
