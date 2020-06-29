@@ -59,9 +59,9 @@ bot.on('message', message => {
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la mise à jour du 28/06 à 06H00")
-           .addField("__**Correction(s)**__","Correction du second passif de Kaiser 'Masque du Maître': \n __Avant__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les ~~ennemis~~ correspondant à 20% de la santé maximale pendant 3 tours. \n __Après__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les **alliés** correspondant à 20% de la santé maximale pendant 3 tours. \n Ajout des statistiques manquantes de Kaiser.")
+           .addField("__**Correction(s)**__","➤ Correction du second passif de Kaiser 'Masque du Maître': \n __Avant__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les ~~ennemis~~ correspondant à 20% de la santé maximale pendant 3 tours. \n __Après__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les **alliés** correspondant à 20% de la santé maximale pendant 3 tours. \n ➤ Ajout des statistiques manquantes de Kaiser.")
            .addField("__**Ajouts de héros**__", "Aucun ajout à cette mise à jour.")
-           .addField("__**Nouvelles commandes**__","La commande $màj a été ajoutée.")
+           .addField("__**Nouvelles commandes**__","➤ La commande $màj a été ajoutée.")
         message.channel.sendEmbed(embed);
 	   
     }
