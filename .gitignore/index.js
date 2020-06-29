@@ -58,8 +58,8 @@ bot.on('message', message => {
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la dernière mise à jour du 28/06")
-           .addField("__**Correction(s)**__","Correction du second passif de Kaiser 'Masque du Maître': \n __Avant__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les ~~ennemis~~ correspondant à 20% de la santé maximale pendant 3 tours. \n __Après__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les **alliés** correspondant à 20% de la santé maximale pendant 3 tours.")
+           .setTitle("Récapitulatif de la mise à jour du 28/06 à 06H00")
+           .addField("__**Correction(s)**__","Correction du second passif de Kaiser 'Masque du Maître': \n __Avant__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les ~~ennemis~~ correspondant à 20% de la santé maximale pendant 3 tours. \n __Après__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les **alliés** correspondant à 20% de la santé maximale pendant 3 tours. \n Ajout des statistiques manquantes de Kaiser.")
            .addField("__**Ajouts de héros**__", "Aucun ajout à cette mise à jour.")
            .addField("__**Nouvelles commandes**__","La commande $màj a été ajoutée.")
         message.channel.sendEmbed(embed);
@@ -72,7 +72,7 @@ bot.on('message', message => {
             .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Kaiser__ est une régulière de Tower of God.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.3 | Devenez plus fort, et grimpez la tour, élus.")
+            .setFooter("Khun Ran v0.4 | Devenez plus fort, et grimpez la tour, élus.")
             .setThumbnail("")
             .setImage("https://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNzIg/MDAxNTkxNjA0OTAxMTE0.crs5QK0F1eSbu06CFBmQ7-vuyydWKESBqNfRdWZvbb8g.bigwYAWNxEjsm7QNnroTmBuovPiv1re4vpG_ottk2aog.GIF/%EC%B9%B4%EC%9D%B4%EC%A0%80.gif?type=w800")
             .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
@@ -85,6 +85,12 @@ bot.on('message', message => {
             .addField("DEF", "692", true)
             .addField("PV", "131156", true)
             .addField("VIT", "484", true)
+	    .addField("Blocage", "33%", true)
+	    .addField("Taux Crit", "20%", true)
+            .addField("Dégâts Crit", "5%", true)
+	    .addField("Résist. Malus", "28%", true)
+	    .addField("Déviation DGT", "29%", true)
+	
 	message.channel.sendEmbed(embed)
 
 	console.log("La commande de l'Héroïne Kaiser viens d'être effectuée.");
@@ -132,7 +138,7 @@ bot.on('message', message => {
             .addField("<:c3:719664266776412160> All-in", "Attaque l'adversaire avec les PV's les plus faible avec 170% de la puissance d'attaque et inflige des dégâts supplémentaires à hauteur de 80% des pv's perdus du héros. Si l'adversaire est éliminé, l'attaque inflige les mêmes dégâts supplémentaires aux autres ennemis.", false)
             .addField("<:passif:719664266969612379> 1: Homme chanceux", "Augmente la défense de 20%, la santé de 30%, et les chances de critique de 15%", false)
             .addField("<:passif:719664266969612379> 2: Évasion limite", "Évite l'élimination en récupérant 20% de PV lorsque le héros est proche d'être éliminé. (S'active 1x)", false)
-	        .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
+	    .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
             .addField("ATQ", "21042", true)
             .addField("DEF", "754", true)
             .addField("PV", "125330", true)
@@ -190,7 +196,7 @@ bot.on('message', message => {
         .addField("PV", "143092", true)
         .addField("VIT", "445", true)
         .addField("Taux Crit", "20%", true)
-	    .addField("Blocage", "33%", true)
+	.addField("Blocage", "33%", true)
         .addField("Résist. Malus", "23%", true)
      	.addField("Déviation DGT", "34%", true)
 
