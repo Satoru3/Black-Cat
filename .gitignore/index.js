@@ -18,8 +18,8 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`$kick` \n `$ban` \n `$purge`", true)
-            .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~", true)
-            .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `$quizz` [**New**]", true)
+            .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~ \n `$màj` [**New**]", true)
+            .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `~~$quizz~~`", true)
             .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n ~~$reliques~~", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
@@ -56,7 +56,7 @@ bot.on('message', message => {
     }
 
 
-   if (message.content === prefix + "màj" "maj"){
+   if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la dernière mise à jour du 28/06")
            .addField("__**Correction(s)**__","Correction du second passif de Kaiser 'Masque du Maître': \n __Avant__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les ~~ennemis~~ correspondant à 20% de la santé maximale pendant 3 tours. \n __Après__: Chaque attaque reçue augmente la défense de 20% (cumulable 10x). Quand la santé de Kaiser tombe à 50% ou moins, réduit l'attaque et les chances de critique de tous les ennemis de 30% pendant 2 tours. Applique un bouclier sur tous les **alliés** correspondant à 20% de la santé maximale pendant 3 tours.")
