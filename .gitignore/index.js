@@ -657,7 +657,7 @@ bot.on("message", function(message) {
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-        case "chaton":
+        case "chaton", "chat":
         let args = message.content.split(" ").slice(1);
         let tte = args.join(" ")
         if (!tte){
