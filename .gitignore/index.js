@@ -60,9 +60,9 @@ bot.on('message', message => {
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la mise à jour 0.5 du 04/07 à 19H00")
-           .addField("__**Correction(s)**__","➤ Ajout des statistiques complète de Elaine. \n ➤ La déviation dégâts, ou le détournement des dégâts est désormais appelé 'Réduction dégâts' (Damage Reflection). \n ➤ Correction de formulation diverses.")
-           .addField("__**Modification(s)**__","➤ Clarification sur la compétence de Raizel: Maître du Regard \n __Avant__: ~~Stoppe le niveau de puissance de~~ l'adversaire ayant l'ATQ la plus élevée au début du combat pour contrecarrer son attaque. \n __Après__: **Inflige 'Thwart' sur** l'adversaire ayant l'ATQ la plus élevée au début du combat pour contrecarrer son attaque. \n ➤ La commande $héros a été mise à jour: Muzaka, Frankenstein, Seira ajoutés. (Seulement sur le $héros, les héros ne sont pas encore traduis et arriveront entre le 04 & 05/07)")
-           .addField("__**Ajout(s) de héros**__", "Aucun.")
+           .addField("__**Correction(s)**__","➤ Ajout des statistiques complète de Elaine & Max Level Warrior \n ➤ La déviation dégâts, ou le détournement des dégâts est désormais appelé 'Réduction dégâts' (Damage Reflection). \n ➤ Correction de formulation diverses.")
+           .addField("__**Modification(s)**__","➤ Clarification sur la compétence de Raizel: Maître du Regard \n __Avant__: ~~Stoppe le niveau de puissance de~~ l'adversaire ayant l'ATQ la plus élevée au début du combat pour contrecarrer son attaque. \n __Après__: **Inflige 'Thwart' sur** l'adversaire ayant l'ATQ la plus élevée au début du combat pour contrecarrer son attaque. \n ➤ La commande $héros a été mise à jour: Muzaka, Frankenstein, Seira ajoutés.")
+           .addField("__**Ajout(s) de héros**__", "➤ Muzaka \n ➤ Seira")
            .addField("__**Nouvelle(s) commande(s)**__","Aucune.")
         message.channel.sendEmbed(embed);
 	   
@@ -74,9 +74,9 @@ bot.on('message', message => {
             .setTitle("Kaiser :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Kaiser__ est une régulière de Tower of God.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.4 | Devenez plus fort, et grimpez la tour, élus.")
-            .setThumbnail("")
-            .setImage("https://cafeptthumb-phinf.pstatic.net/MjAyMDA2MDhfNzIg/MDAxNTkxNjA0OTAxMTE0.crs5QK0F1eSbu06CFBmQ7-vuyydWKESBqNfRdWZvbb8g.bigwYAWNxEjsm7QNnroTmBuovPiv1re4vpG_ottk2aog.GIF/%EC%B9%B4%EC%9D%B4%EC%A0%80.gif?type=w800")
+            .setFooter("Khun Ran v0.5 | Devenez plus fort, et grimpez la tour, élus.")
+            .setThumbnail("https://i.imgur.com/9Ccn5z9.png")
+            .setImage("https://i.imgur.com/piw3ixK.gif")
             .addField(":speech_balloon: Citation :", "Si j'étais de ta famille, j'utiliserais toute l'argent à ma disposition pour te faire sortir d'ici. Tes talents en valent sûrement la peine.", false)
             .addField("<:c1:719664266797383680> Permutation", "Attaque un ennemi de la ligne arrière avec 130% de la puissance d'attaque, si l'attaque de la cible est plus élevée que la votre, réduit l'attaque de celle-ci de 30% pendant 2 tours et provoque pendant 1 tour.", false)
             .addField("<:c2:719664268722831421> Armor Inventory", "Attaque tous les ennemis avec 100% de la puissance d'attaque et inflige des dégâts additionnels correspondants à 20% de la santé maximale de Kaiser. Augmente la défense de tous les alliés de 50% pendant 2 tours.", false)
@@ -151,6 +151,12 @@ bot.on('message', message => {
             .addField("DEF", "754", true)
             .addField("PV", "125330", true)
             .addField("VIT", "484", true)
+			.addField("Blocage", "33%", true)
+            .addField("Taux Crit", "23%", true)
+            .addField("Dégâts Crit", "15%", true)
+            .addField("Armor Crash", "15%", true)
+            .addField("Résist. Malus", "23%", true)
+            .addField("Réduction dégâts", "24%", true)
 
 	message.channel.sendEmbed(embed)
 
@@ -337,25 +343,67 @@ message.channel.sendEmbed(embed)
 
 console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 
-}
+}  
 
-        // Epic Seven Héros = Sez
-    if (message.content === prefix + "sez"){
+ // Hero Cantare = Muzaka
+    if (message.content === prefix + "muzaka"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Sez Gaien :black_small_square: <:elementeau:506109829455282176> :black_small_square: <:e7assassin:506111331473031188> :black_small_square: Vierge :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("Tueur en série en attente d'être exécuté, __Sez__ a été enrôlé dans l'Unité d'Extermination Inconnue en raison des pouvoirs obscurs qui lui avaient été donnés par le Roi Démon Il est calme et confiant, avec une tendance au cynisme. Prêt à tuer quiconque ou quoi que ce soit qu'il considère comme une menace, __Sez__ est une arme vivante. C'est ce trait de sa personnalité qui lui a valu le surnom de 'Berserker' lors de sa fuite. Il est habituellement calme, préférant être seul. Et bien qu'il soit méprisant envers ceux qui ne le connaissent pas bien, il écoute toujours leurs opinions.")
-            .setColor("RANDOM")
-            .setFooter("Fiche de l'Héros Sez générée suite à une demande de " + message.author.username + ". " + "Fiche mise à jour le 24/11.")
-            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/world/brand/images/character/sez/sez_0000.png")
-            .setImage("https://j.gifs.com/kZGmrv.gif")
-            .addField(":speech_balloon: Citation :", "Je vais te traîner dans l'abysse.", false)
-            .addField(":crossed_swords: Compétence 1: Dark Shadow", "Pénètre l'ennemi avec une énergie sombre. 50% de chances de rendre l'ennemi impossible a heal pendant 1 tour. Moins la cible a de santé, plus les dégâts infligés sont importants.", false)
-            .addField(":crossed_swords: Compétence 2: Encroach", "Si la santé d'un ennemi est inférieure à 50% après avoir été attaqué avec 'Dark Shadow', le lanceur effectue une seconde attaque qui frappe tous les ennemis. L'attaque supplémentaire a 50% de chances de rendre les cibles impossible a heal pendant 1 tour. Cet effet ne peut être activé qu'une seule fois au tour du lanceur.", false)
-            .addField(":crossed_swords: Compétence 3: Death Sentence", "Inflige des dégâts mortels à l'ennemi. Moins la cible a de santé, plus les dégâts infligés sont importants. Si l'ennemi est défait, les dégâts relatifs à l'attaque du lanceur sont infligés à tous les ennemis.", false)
-            .addField(":comet: Vidéo d'introduction du personnage", ":arrow_down:", true)
-	message.channel.sendEmbed(embed)
+        .setTitle("Muzaka :black_small_square: <:nature:719638081195475114> :black_small_square: <:artmartiaux:723903194819985459> :black_small_square: <:s_:724831181341720586>")
+        .setDescription("__Muzaka__ est l'ancien Lord des Loup Garous.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.5 | Surpassez-vous, maîtrisez votre nature, et combattez pour votre Lord.")
+        .setThumbnail("https://i.imgur.com/BLmMuzE.png")
+        .setImage("https://i.imgur.com/CGOKPox.png")
+        .addField(":speech_balloon: Citation", "Oh... Mon ~~ Raizel... Nous nous rencontrons à nouveau.", false)
+        .addField("<:c1:719664266797383680> Contre-attaque", "Attaque 2 adversaires de la ligne arrière avec 105% de l'ATQ et se soigne à hauteur de 15% des dégâts infligés. Déclenche une contre-attaque la prochaine fois qu'il sera attaqué.", false)
+        .addField("<:c2:719664268722831421> Chasse", "Perce tous les adversaires (ignore DEF) avec 130% de l'ATQ, les dégâts augmentent jusqu'à 80% suivant la réduction du nombre d'adversaires.", false)
+        .addField("<:c3:719664266776412160> Rugissement", "Attaque l'adversaire avec la santé la plus élevée avec 200% de l'ATQ, inflige des dégâts additionnels basés sur 35% de la santé maximale, inflige 'Thwart' pour contrecarrer la prochaine attaque de l'adversaire.", false)
+        .addField("<:passif:719664266969612379> 1: Souverain de la meute", " Augmente l'ATQ de 10%, la santé de 15% et la réduction des dégâts de 10%", false)
+        .addField("<:passif:719664266969612379> 2: Hurlement", "Supprime 1 malus à la fin du tour s'il y en a, restaure 10% de la santé de tous les alliés, et immunise Muzaka aux dégâts pendant 1 tour.", false)
+        .addField("ATQ", "14307", true)
+        .addField("DEF", "720", true)
+        .addField("PV", "134534", true)
+        .addField("VIT", "395", true)
+	.addField("Blocage", "33%", true)
+        .addField("Taux Crit", "15%", true)
+        .addField("Résist. Malus", "23%", true)
+        .addField("Réduction dégâts", "34%", true)
 
-	console.log("La commande de l'Héros Sez viens d'être effectuée.");
+    message.channel.sendEmbed(embed)
+
+    console.log("La commande de l'Héros Muzaka viens d'être effectuée.");
+
+    }
+	
+	 // Hero Cantare = Seira
+    if (message.content === prefix + "seira"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Seira :black_small_square: <:nature:719638081195475114> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("__Seira__ est une Noble ainsi qu'une étudiante à l'académie Ye Ran. Elle est également un des 8 chefs de clans.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.5 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setThumbnail("https://i.imgur.com/th1QxyB.png")
+        .setImage("https://i.imgur.com/w3onuiJ.gif")
+        .addField(":speech_balloon: Citation", "Je n'ai aucun intérêt en ta faux de la mort.", false)
+        .addField("<:c1:719664266797383680> Griffe tranchante", "Attaque un adversaire avec 140% de l'ATQ et augmente les chances de critique de 30% pendant 2 tours", false)
+        .addField("<:c2:719664268722831421> Coup de pied retourné arrière", "Attaque l'adversaire possédant la santé la plus élevée avec 210% de l'ATQ et inflige 2 saignements avec 30% de l'ATQ pendant 2 tours. Si la cible est affecté par un saignement, génère 30% de dégâts supplémentaires.", false)
+        .addField("<:c3:719664266776412160> Faux de la Mort: Tranchant de la pleine lune", "Attaque tous les adversaires avec 135% de l'ATQ et diminue leur attaque de 30%. Inflige deux saignements supplémentaires si la cible est déjà affecté par un saignement.", false)
+        .addField("<:passif:719664266969612379> 1: Chef du Clan Loyard", " Augmente l'ATQ de 20%, la santé de 10% et les chances de coup critique de 15%.", false)
+        .addField("<:passif:719664266969612379> 2: Lame aiguisée", "Si un coup critique se produit, inflige un saignement à hauteur de 30% de l'ATQ pendant 2 tours. Si la cible est affectée par un saignement, l'attaque devient une attaque absolue (ignorant la réduction de dégâts et la défense de 30%). Devient immunisé aux dégâts une fois lorsque la santé tombe en dessous de 50%.", false)
+        .addField("<:sp:720742202757873745> Faux de la Mort", "Attaque l'adversaire avec la santé la plus élevée à hauteur de 180% de l'ATQ et inflige aléatoirement jusqu'à 4 saignements sur tous les adversaires. Active une immunité aux dégâts pour 1 coup.", false)
+	.addField("ATQ", "22537", true)
+        .addField("DEF", "628", true)
+        .addField("PV", "103095", true)
+        .addField("VIT", "484", true)
+	.addField("Blocage", "33%", true)
+        .addField("Taux Crit", "33%", true)
+	.addField("Armor Crash", "15%", true)
+        .addField("Résist. Malus", "23%", true)
+        .addField("Réduction dégâts", "19%", true)
+
+    message.channel.sendEmbed(embed)
+
+    console.log("La commande de l'Héroïne Seira viens d'être effectuée.");
 
     }
 
