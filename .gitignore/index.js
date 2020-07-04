@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.4 | Yeon's Flame Khun ($flame khun), Unleashed Raizel ($unleashed raizel) & Raizel ($raizel) ajoutés.");
+    bot.user.setActivity("$help | V 0.5 | $màj pour voir les détails");
 
     console.log("Je suis connecté !");
 
