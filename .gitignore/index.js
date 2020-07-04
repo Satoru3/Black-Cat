@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.5 | $màj pour voir les détails");
+    bot.user.setActivity("$help | V 0.5 | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -60,15 +60,13 @@ bot.on('message', message => {
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la mise à jour 0.5 du 04/07 à 19H00")
-           .addField("__**Correction(s)**__","➤ Ajout des statistiques complète de Elaine. \n ➤ La déviation des dégâts, ou le détournement des dégâts est désormais appelé 'Réduction dégâts' (Damage Reflection). \n ➤ Correction de formulation diverses.")
+           .addField("__**Correction(s)**__","➤ Ajout des statistiques complète de Elaine. \n ➤ La déviation dégâts, ou le détournement des dégâts est désormais appelé 'Réduction dégâts' (Damage Reflection). \n ➤ Correction de formulation diverses.")
            .addField("__**Modification(s)**__","➤ Clarification sur la compétence de Raizel: Maître du Regard \n __Avant__: ~~Stoppe le niveau de puissance de~~ l'adversaire ayant l'ATQ la plus élevée au début du combat pour contrecarrer son attaque. \n __Après__: **Inflige 'Thwart' sur** l'adversaire ayant l'ATQ la plus élevée au début du combat pour contrecarrer son attaque. \n ➤ La commande $héros a été mise à jour: Muzaka, Frankenstein, Seira ajoutés. (Seulement sur le $héros, les héros ne sont pas encore traduis et arriveront entre le 04 & 05/07)")
            .addField("__**Ajout(s) de héros**__", "Aucun.")
            .addField("__**Nouvelle(s) commande(s)**__","Aucune.")
         message.channel.sendEmbed(embed);
 	   
     }
-	
-	
 	
         // Hero Cantare = Kaiser
      if (message.content === prefix + "kaiser"){
