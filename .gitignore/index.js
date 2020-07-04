@@ -68,6 +68,8 @@ bot.on('message', message => {
 	   
     }
 	
+	
+	
         // Hero Cantare = Kaiser
      if (message.content === prefix + "kaiser"){
         var embed = new Discord.RichEmbed()
