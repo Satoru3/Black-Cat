@@ -659,9 +659,6 @@ bot.on("message", function(message) {
     switch (args[0].toLowerCase()) {
         case "chaton", "chat":
         let args = message.content.split(" ").slice(1);
-        let tte = args.join(" ")
-        if (!tte){
-            return message.channel.send("Désolé, tu dois rajouter un argument au pif derrière ta commande pour le moment. :cat:")};
 
             var replys = [
                 "https://www.wanimo.com/veterinaire/images/articles/chat/chaton-diarrhee.jpg",
