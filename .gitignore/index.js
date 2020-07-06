@@ -416,7 +416,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .setFooter("Khun Ran v0.6 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
         .setThumbnail("https://i.imgur.com/kTISvE4.png")
         .setImage("https://i.imgur.com/xrDj1e9.gif")
-        .addField(":speech_balloon: Citation", "Il semble que je ne suis pas trop en retard., false)
+        .addField(":speech_balloon: Citation", "Il semble que je ne suis pas trop en retard.", false)
         .addField("<:c1:719664266797383680>", "Attaque 2 adversaires avec 105% de l'ATQ, avant d'avoir 70% de chance de générer 1 [Brûlure] équivalente à 30% de l'ATQ pendant 2 tours. Si l'adversaire est déjà affecté par une malus, inflige [Augmentation des dégâts des malus] pendant 1 tour.", false)
         .addField("<:c2:719664268722831421>", "Attaque tous les adversaires avec 115% de l'ATQ, avant de générer 2 [Brûlures] équivalentes à 30% de l'ATQ  pendant 2 tours. Si l'adversaire est déjà affecté par une brûlure, inflige [Soins impossible] pendant 2 tours et 40% de dégâts supplémentaires.", false)
         .addField("<:c3:719664266776412160>", "Attaque tous les adversaires avec 130% de l'ATQ et inflige 50% de dégâts supplémentaires aux adversaires affectés par un malus, avant de faire exploser toutes les [Brûlures] pour 40% de dégâts supplémentaires par unité.", false)
