@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.5 | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.6 | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -33,7 +33,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
 	        .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
-            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> <:dieu:723941755996733583> ($queen no name) \n **Yeon's Flame Khun** <:feu:719638080780501073> <:element:724668549028905073> ($flame khun) \n **Unleashed Raizel** <:dark:723941756109979760> <:dieu:723941755996733583> ($unleashed raizel) \n **Seira** <:nature:719638081195475114> <:weapon:719781844744142875> ($seira)", true)
+            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> <:dieu:723941755996733583> ($queen no name) \n **Yeon's Flame Khun** <:feu:719638080780501073> <:element:724668549028905073> ($flame khun) \n **Unleashed Raizel** <:dark:723941756109979760> <:dieu:723941755996733583> ($unleashed raizel) \n **Seira** <:nature:719638081195475114> <:weapon:719781844744142875> ($seira) \n **Nine Tails Ilpyo Park** <:feu:719638080780501073> <:element:724668549028905073>" ($nine tails), true)
             .addField("<:s_:724831181341720586>","**Frankenstein** <:feu:719638080780501073> <:element:724668549028905073> (Ajout le 05/07) \n **Muzaka** <:nature:719638081195475114> <:artmartiaux:723903194819985459> ($muzaka)")
             .addField("<:a_:724817244789538819>","**Raizel** <:ice:719781844949925898> <:evil:724805535727353856> ($raizel)")
             .setColor("RANDOM")
@@ -59,11 +59,11 @@ bot.on('message', message => {
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la mise à jour 0.5 du 04/07")
-           .addField("__**Correction(s)**__","➤ Ajout des statistiques complète de Elaine & Max Level Warrior \n ➤ Corrections de la thumbnail & du gif de Kaiser.  \n ➤ La déviation dégâts, ou le détournement des dégâts est désormais appelé 'Réduction dégâts' (Damage Reflection). \n ➤ Correction de formulation diverses.")
-           .addField("__**Modification(s)**__","➤ Clarification sur la compétence de Raizel: Maître du Regard \n __Avant__: ~~Stoppe le niveau de puissance de~~ l'adversaire ayant l'ATQ la plus élevée au début du combat pour contrecarrer son attaque. \n __Après__: **Inflige 'Thwart' sur** l'adversaire ayant l'ATQ la plus élevée au début du combat pour contrecarrer son attaque. \n ➤ La commande $héros a été mise à jour: Muzaka, Frankenstein, Seira ajoutés.")
-           .addField("__**Ajout(s) de héros**__", "➤ Muzaka \n ➤ Seira")
-           .addField("__**Nouvelle(s) commande(s)**__","Aucune.")
+           .setTitle("Récapitulatif de la mise à jour 0.6 du 06/07")
+           .addField("__**Correction(s)**__","➤ Correction diverses.")
+           .addField("__**Modification(s)**__","➤ Aucune.")
+           .addField("__**Ajout(s) de héros**__", "➤ Nine Tails Ilpyo Park")
+           .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
         message.channel.sendEmbed(embed);
 	   
     }
@@ -87,8 +87,8 @@ bot.on('message', message => {
             .addField("DEF", "692", true)
             .addField("PV", "131156", true)
             .addField("VIT", "484", true)
-	    .addField("Blocage", "33%", true)
-	    .addField("Taux Crit", "20%", true)
+	        .addField("Blocage", "33%", true)
+	        .addField("Taux Crit", "20%", true)
             .addField("Dégâts Crit", "5%", true)
             .addField("Résist. Malus", "28%", true)
             .addField("Réduction dégâts", "29%", true)
@@ -364,7 +364,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .addField("DEF", "720", true)
         .addField("PV", "134534", true)
         .addField("VIT", "395", true)
-	.addField("Blocage", "33%", true)
+		.addField("Blocage", "33%", true)
         .addField("Taux Crit", "15%", true)
         .addField("Résist. Malus", "23%", true)
         .addField("Réduction dégâts", "34%", true)
@@ -404,6 +404,37 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
     message.channel.sendEmbed(embed)
 
     console.log("La commande de l'Héroïne Seira viens d'être effectuée.");
+
+    }
+	
+		 // Hero Cantare = Nine Tails Ilpyo Park
+    if (message.content === prefix + "nine tails ilpyo park"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Nine Tails Ilpyo Park :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Nine Tails__Ilpyo Park__ est un personnage secondaire récurrent de The God of Highschool, il peut être considéré comme un rival de Mori Jin, et est un participant puissant des tournois.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.6 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+        .setThumbnail("https://i.imgur.com/th1QxyB.png")
+        .setImage("https://i.imgur.com/w3onuiJ.gif")
+        .addField(":speech_balloon: Citation", "Je n'ai aucun intérêt en ta faux de la mort.", false)
+        .addField("<:c1:719664266797383680>", "Attaque 2 adversaires avec 105% de l'ATQ, avant d'avoir 70% de chance de générer 1 [Brûlure] équivalente à 30% de l'ATQ pendant 2 tours. Si l'adversaire est déjà affecté par une malus, inflige [Augmentation des dégâts des malus] pendant 1 tour.", false)
+        .addField("<:c2:719664268722831421>", "Attaque tous les adversaires avec 115% de l'ATQ, avant de générer 2 [Brûlures] équivalentes à 30% de l'ATQ  pendant 2 tours. Si l'adversaire est déjà affecté par une brûlure, inflige [Soins impossible] pendant 2 tours et 40% de dégâts supplémentaires.", false)
+        .addField("<:c3:719664266776412160>", "Attaque tous les adversaires avec 130% de l'ATQ et inflige 50% de dégâts supplémentaires aux adversaires affectés par un malus, avant de faire exploser toutes les [Brûlures] pour 40% de dégâts supplémentaires par unité.", false)
+        .addField("<:passif:719664266969612379> 1: Renard noir", " Augmente l'ATQ de 15%, la précision des débuffs de 15%, la santé de 10% et la réduction des dégâts de 5%", false)
+        .addField("<:passif:719664266969612379> 2: 9ème Queue: Activation !", "À la fin du tour, si Ilpyo Park est affecté par un malus, le supprime et octroit un bouclier équivalent à 20% de la santé maximale. Si Ilpyo Park meurt par une [Brûlure], le réanime et le rends immortel pendant 1 tour. S'active 1x.", false)
+		.addField("ATQ", "Placeholder", true)
+        .addField("DEF", "/", true)
+        .addField("PV", "/", true)
+        .addField("VIT", "/", true)
+		.addField("Blocage", "%", true)
+        .addField("Taux Crit", "%", true)
+		.addField("Armor Crash", "%", true)
+        .addField("Résist. Malus", "%", true)
+        .addField("Réduction dégâts", "%", true)
+
+    message.channel.sendEmbed(embed)
+
+    console.log("La commande de l'Héros Nine Tails Ilpyo Park viens d'être effectuée.");
 
     }
 
