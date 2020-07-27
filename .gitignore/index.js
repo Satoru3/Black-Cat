@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.6 | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.7 [27/07] | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -59,10 +59,10 @@ bot.on('message', message => {
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la mise à jour 0.6 du 06/07")
-           .addField("__**Correction(s)**__","➤ Correction diverses.")
-           .addField("__**Modification(s)**__","➤ Aucune.")
-           .addField("__**Ajout(s) de héros**__", "➤ Nine Tails Ilpyo Park")
+           .setTitle("Récapitulatif de la mise à jour 0.7 du 27/07")
+           .addField("__**Correction(s)**__","➤ Ajouts des statistiques manquantes de Prime King Uma")
+           .addField("__**Modification(s)**__","➤ Des alias ont été ajoutés pour Prime King Uma, Unleashed Raizel, Max Level Warrior, Jyu Viole Grace et Queen No Name.")
+           .addField("__**Ajout(s) de héros**__", "➤ Pure Green Arin")
            .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
         message.channel.sendEmbed(embed);
 	   
@@ -151,7 +151,7 @@ bot.on('message', message => {
             .addField("DEF", "754", true)
             .addField("PV", "125330", true)
             .addField("VIT", "484", true)
-			.addField("Blocage", "33%", true)
+	        .addField("Blocage", "33%", true)
             .addField("Taux Crit", "23%", true)
             .addField("Dégâts Crit", "15%", true)
             .addField("Armor Crash", "15%", true)
@@ -163,13 +163,47 @@ bot.on('message', message => {
 	console.log("La commande de l'Héros Max Level Warrior viens d'être effectuée.");
 
     }
+	
+		        // Hero Cantare = Max Level Warrior
+    if (message.content === prefix + "mlw"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Max Level Warrior :black_small_square: <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("__Max Level Warrior__, sous le pseudo Hardcore Leveling Warrior, est un des personnages pricipaux de Hardcore Leveling Warrior.")
+            .setColor("RANDOM")
+	        .setFooter("Khun Ran v0.5 | Combattez pour monter de niveau, joueur !")
+            .setThumbnail("https://i.imgur.com/NGclWGx.png")
+            .setImage("https://i.imgur.com/LHkbbsk.gif")
+            .addField(":speech_balloon: Citation :", "Je t'ai ramené une surprise !", false)
+            .addField("<:c1:719664266797383680> Pièce chanceuse", "Attaque l'adversaire avec les PV's les plus faible avec 115% de la puissance d'attaque, et augmente l'attaque du héros de 20-50% pendant 2 tours.", false)
+            .addField("<:c2:719664268722831421> Feu de l'enfer", "Attaque 1 adversaire de la ligne du devant, et 1 autre de celle de derrière avec 130% de la puissance d'attaque et se soigne à hauteur de 50% des dégâts causés.", false)
+            .addField("<:c3:719664266776412160> All-in", "Attaque l'adversaire avec les PV's les plus faible avec 170% de la puissance d'attaque et inflige des dégâts supplémentaires à hauteur de 80% des pv's perdus du héros. Si l'adversaire est éliminé, l'attaque inflige les mêmes dégâts supplémentaires aux autres adversaires.", false)
+            .addField("<:passif:719664266969612379> 1: Homme chanceux", "Augmente la défense de 20%, la santé de 30%, et les chances de critique de 15%", false)
+            .addField("<:passif:719664266969612379> 2: Évasion limite", "Évite l'élimination en récupérant 20% de PV lorsque le héros est proche d'être éliminé. (S'active 1x)", false)
+	        .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
+            .addField("ATQ", "21042", true)
+            .addField("DEF", "754", true)
+            .addField("PV", "125330", true)
+            .addField("VIT", "484", true)
+	        .addField("Blocage", "33%", true)
+            .addField("Taux Crit", "23%", true)
+            .addField("Dégâts Crit", "15%", true)
+            .addField("Armor Crash", "15%", true)
+            .addField("Résist. Malus", "23%", true)
+            .addField("Réduction dégâts", "24%", true)
+
+	message.channel.sendEmbed(embed)
+
+	console.log("La commande de l'Héros Max Level Warrior viens d'être effectuée.");
+
+    }
+	
         // Hero Cantare = Prime King Uma
      if (message.content === prefix + "prime king uma"){
         var embed = new Discord.RichEmbed()
             .setTitle("Prime King Uma :black_small_square: <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Prime King __Uma__ est une Roi Démon, et un personnage récurrent de The God of Highschool. Elle est la 'soeur' (pas de sang) de Jecheondaeseong.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.3 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+            .setFooter("Khun Ran v0.7 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
             .setThumbnail("https://i.imgur.com/oV14Viz.png")
             .setImage("https://i.imgur.com/rlvqKAP.gif")
             .addField(":speech_balloon: Citation :", "Je suppose que c'est un au revoir pour l'instant.", false)
@@ -182,6 +216,79 @@ bot.on('message', message => {
             .addField("DEF", "773", true)
             .addField("PV", "122641", true)
             .addField("VIT", "484", true)
+            .addField("Blocage", "33%", true)
+            .addField("Taux Crit", "20%", true)
+            .addField("Dégâts Crit", "5%")
+            .addField("Armor Crash", "5%", true)
+            .addField("Résist. Malus", "28%", true)
+            .addField("Réduction dégâts", "19%", true)
+            .addField("Contre attaque", "15%", true)
+
+	message.channel.sendEmbed(embed)
+
+	console.log("La commande de l'Héroïne Prime King Uma viens d'être effectuée.");
+
+    }
+	
+	        // Hero Cantare = Prime King Uma
+     if (message.content === prefix + "pku"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Prime King Uma :black_small_square: <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Prime King __Uma__ est une Roi Démon, et un personnage récurrent de The God of Highschool. Elle est la 'soeur' (pas de sang) de Jecheondaeseong.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.7 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+            .setThumbnail("https://i.imgur.com/oV14Viz.png")
+            .setImage("https://i.imgur.com/rlvqKAP.gif")
+            .addField(":speech_balloon: Citation :", "Je suppose que c'est un au revoir pour l'instant.", false)
+            .addField("<:c1:719664266797383680> Home Run !", "Attaque 1 adversaire avec 130% de l'ATQ et récupère 50% des dégâts infligés en santé. Inflige des dégâts additionnels équivalent à 15% de la santé si l'adversaire a un débuff.", false)
+            .addField("<:c2:719664268722831421> En avant !", "Attaque tous les adversaires avec 30% de ses PV's, et a 60% de chance de les provoquer pendant 1 tour. Puis attaque l'adversaire avec l'ATQ la plus élevée, infligeant des dégâts égaux à 120% de l'ATQ.", false)
+            .addField("<:c3:719664266776412160> Vas-y, Pacho !", "Attaque tous les ennemis avec 115% de l'ATQ, absorbe 5 malus des alliés, puis supprime tous les malus du héros et inflige des dégâts additionnels correspondant à 40% de l'ATQ sur l'adversaire possédant la plus haute ATQ pour chaque malus supprimé.", false)
+            .addField("<:passif:719664266969612379> 1: Dalguji n°2", "Augmente l'attaque de 10%, la santé de 10% et les chances de contre-attaque de 15%. Est immunisé pendant 1 tour au début du combat.", false)
+            .addField("<:passif:719664266969612379> 2: Vache rouge", "Récupère 20% des PV's quand une attaque dépasse les 20% des PV's. Un bonus de 10% de l'ATQ (Jusqu'à 50%) et de 20% de la DEF (Jusqu'à 100%) est accumulé à chaque fois que le héros attaque ou se fait attaquer. (Appliqué à chaque chain.)", false)
+            .addField("ATQ", "20282", true)
+            .addField("DEF", "773", true)
+            .addField("PV", "122641", true)
+            .addField("VIT", "484", true)
+            .addField("Blocage", "33%", true)
+            .addField("Taux Crit", "20%", true)
+            .addField("Dégâts Crit", "5%")
+            .addField("Armor Crash", "5%", true)
+            .addField("Résist. Malus", "28%", true)
+            .addField("Réduction dégâts", "19%", true)
+            .addField("Contre attaque", "15%", true)
+
+	message.channel.sendEmbed(embed)
+
+	console.log("La commande de l'Héroïne Prime King Uma viens d'être effectuée.");
+
+    }
+	
+	        // Hero Cantare = Prime King Uma
+     if (message.content === prefix + "prime"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Prime King Uma :black_small_square: <:feu:719638080780501073> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Prime King __Uma__ est une Roi Démon, et un personnage récurrent de The God of Highschool. Elle est la 'soeur' (pas de sang) de Jecheondaeseong.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.7 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+            .setThumbnail("https://i.imgur.com/oV14Viz.png")
+            .setImage("https://i.imgur.com/rlvqKAP.gif")
+            .addField(":speech_balloon: Citation :", "Je suppose que c'est un au revoir pour l'instant.", false)
+            .addField("<:c1:719664266797383680> Home Run !", "Attaque 1 adversaire avec 130% de l'ATQ et récupère 50% des dégâts infligés en santé. Inflige des dégâts additionnels équivalent à 15% de la santé si l'adversaire a un débuff.", false)
+            .addField("<:c2:719664268722831421> En avant !", "Attaque tous les adversaires avec 30% de ses PV's, et a 60% de chance de les provoquer pendant 1 tour. Puis attaque l'adversaire avec l'ATQ la plus élevée, infligeant des dégâts égaux à 120% de l'ATQ.", false)
+            .addField("<:c3:719664266776412160> Vas-y, Pacho !", "Attaque tous les ennemis avec 115% de l'ATQ, absorbe 5 malus des alliés, puis supprime tous les malus du héros et inflige des dégâts additionnels correspondant à 40% de l'ATQ sur l'adversaire possédant la plus haute ATQ pour chaque malus supprimé.", false)
+            .addField("<:passif:719664266969612379> 1: Dalguji n°2", "Augmente l'attaque de 10%, la santé de 10% et les chances de contre-attaque de 15%. Est immunisé pendant 1 tour au début du combat.", false)
+            .addField("<:passif:719664266969612379> 2: Vache rouge", "Récupère 20% des PV's quand une attaque dépasse les 20% des PV's. Un bonus de 10% de l'ATQ (Jusqu'à 50%) et de 20% de la DEF (Jusqu'à 100%) est accumulé à chaque fois que le héros attaque ou se fait attaquer. (Appliqué à chaque chain.)", false)
+            .addField("ATQ", "20282", true)
+            .addField("DEF", "773", true)
+            .addField("PV", "122641", true)
+            .addField("VIT", "484", true)
+            .addField("Blocage", "33%", true)
+            .addField("Taux Crit", "20%", true)
+            .addField("Dégâts Crit", "5%")
+            .addField("Armor Crash", "5%", true)
+            .addField("Résist. Malus", "28%", true)
+            .addField("Réduction dégâts", "19%", true)
+            .addField("Contre attaque", "15%", true)
 
 	message.channel.sendEmbed(embed)
 
@@ -220,8 +327,134 @@ bot.on('message', message => {
 
     }
 
+        // Hero Cantare = Viole
+    if (message.content === prefix + "jyu viole grace"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Jyu Viole Grace :black_small_square: <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Jyu __Viole__ Grace est un candidat slayer, et un protagoniste de Tower of God pendant quelques temps.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.5 | Devenez plus fort, et grimpez la tour, élus.")
+        .setThumbnail("https://i.imgur.com/HGTeVIH.png")
+        .setImage("https://i.imgur.com/5zPu089.gif")
+        .addField(":speech_balloon: Citation :", "Je suis Jyu Viole Grace, un des candidats slayer de FUG, Zahard et ses proches... Je vis pour leur mort. C'est pourquoi aucun de vous ne peut devenir mon coéquipier. Je suis votre ennemi.", false)
+        .addField("<:c1:719664266797383680> Arts Martiaux de la Famille Ha", "Attaque l'adversaire possédant la plus grande attaque avec 130% de l'ATQ et inflige des dégâts additionnels égaux à 10% de l'ATQ 2 fois. Pour chaque dégâts additionnels, il y a 50% de chance de réduire l'attaque de 30% pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Style Piercing de la Famille Ha", "Enlève tous les bonus d'un adversaire de la ligne avant et arrière et les empêche de recevoir des bonus pendant 1 tour. Puis, perce avec 150% de l'ATQ l'adversaire.", false)
+        .addField("<:c3:719664266776412160> Poing Flamboyant du Style d'Hayeol", "Perce tous les adversaires avec 120% de l'ATQ, et inflige 170% de dégâts additionnels à l'adversaire possédant les PV's les plus haut, puis étourdis cet adversaire pendant 1 tour.", false)
+        .addField("<:passif:719664266969612379> 1: Percuteur Shinsu", "Augmente l'attaque de 15%, la santé de 15%, la réduction des dégâts de 10%, et augmente les chances de coup critique de 5%.", false)
+        .addField("<:passif:719664266969612379> 2: Candidat Slayer", "Augmente de 15% l'ATQ & de 15% les dégâts critique en attaquant si le héros n'est pas sous l'effet d'un malus (jusqu'à 75%), retire 1 malus si le héros en a un, récupère 10% de PV et génère un bouclier avec 10% de PV pendant 2 tours.", false)
+        .addField("<:sp:720742202757873745> Canon rayonnant", "Attaque tous les adversaires avec 100% de l'ATQ et attaque en plus 1 adversaire au hasard, infligeant des dégâts égaux à 20% de l'ATQ 5 fois. L'adversaire qui est touché par l'attaque aléatoire a 30 % de probabilité d'être étourdis pendant un tour.", false)
+        .addField("ATQ", "18935", true)
+        .addField("DEF", "828", true)
+        .addField("PV", "143092", true)
+        .addField("VIT", "445", true)
+        .addField("Taux Crit", "20%", true)
+    	.addField("Blocage", "33%", true)
+        .addField("Résist. Malus", "23%", true)
+     	.addField("Réduction dégâts", "34%", true)
+
+	message.channel.sendEmbed(embed)
+
+	console.log("La commande de l'Héros Jyu Viole Grace viens d'être effectuée.");
+
+    }
+
+        // Hero Cantare = Viole
+    if (message.content === prefix + "jue viole grace"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Jyu Viole Grace :black_small_square: <:ice:719781844949925898> :black_small_square: <:artmartiaux:723903194819985459> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Jyu __Viole__ Grace est un candidat slayer, et un protagoniste de Tower of God pendant quelques temps.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.5 | Devenez plus fort, et grimpez la tour, élus.")
+        .setThumbnail("https://i.imgur.com/HGTeVIH.png")
+        .setImage("https://i.imgur.com/5zPu089.gif")
+        .addField(":speech_balloon: Citation :", "Je suis Jyu Viole Grace, un des candidats slayer de FUG, Zahard et ses proches... Je vis pour leur mort. C'est pourquoi aucun de vous ne peut devenir mon coéquipier. Je suis votre ennemi.", false)
+        .addField("<:c1:719664266797383680> Arts Martiaux de la Famille Ha", "Attaque l'adversaire possédant la plus grande attaque avec 130% de l'ATQ et inflige des dégâts additionnels égaux à 10% de l'ATQ 2 fois. Pour chaque dégâts additionnels, il y a 50% de chance de réduire l'attaque de 30% pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Style Piercing de la Famille Ha", "Enlève tous les bonus d'un adversaire de la ligne avant et arrière et les empêche de recevoir des bonus pendant 1 tour. Puis, perce avec 150% de l'ATQ l'adversaire.", false)
+        .addField("<:c3:719664266776412160> Poing Flamboyant du Style d'Hayeol", "Perce tous les adversaires avec 120% de l'ATQ, et inflige 170% de dégâts additionnels à l'adversaire possédant les PV's les plus haut, puis étourdis cet adversaire pendant 1 tour.", false)
+        .addField("<:passif:719664266969612379> 1: Percuteur Shinsu", "Augmente l'attaque de 15%, la santé de 15%, la réduction des dégâts de 10%, et augmente les chances de coup critique de 5%.", false)
+        .addField("<:passif:719664266969612379> 2: Candidat Slayer", "Augmente de 15% l'ATQ & de 15% les dégâts critique en attaquant si le héros n'est pas sous l'effet d'un malus (jusqu'à 75%), retire 1 malus si le héros en a un, récupère 10% de PV et génère un bouclier avec 10% de PV pendant 2 tours.", false)
+        .addField("<:sp:720742202757873745> Canon rayonnant", "Attaque tous les adversaires avec 100% de l'ATQ et attaque en plus 1 adversaire au hasard, infligeant des dégâts égaux à 20% de l'ATQ 5 fois. L'adversaire qui est touché par l'attaque aléatoire a 30 % de probabilité d'être étourdis pendant un tour.", false)
+        .addField("ATQ", "18935", true)
+        .addField("DEF", "828", true)
+        .addField("PV", "143092", true)
+        .addField("VIT", "445", true)
+        .addField("Taux Crit", "20%", true)
+    	.addField("Blocage", "33%", true)
+        .addField("Résist. Malus", "23%", true)
+     	.addField("Réduction dégâts", "34%", true)
+
+	message.channel.sendEmbed(embed)
+
+	console.log("La commande de l'Héros Jyu Viole Grace viens d'être effectuée.");
+
+    }
+
         // Hero Cantare = Queen No Name
         if (message.content === prefix + "queen no name"){
+            var embed = new Discord.RichEmbed()
+            .setTitle("Queen No Name :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Queen __No Name__ est la reine de la guilde New Nightmare.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.5 | Combattez pour monter de niveau, joueur !")
+            .setThumbnail("https://i.imgur.com/lTSFMfY.png")
+            .setImage("https://i.imgur.com/v9syQKz.gif")
+            .addField(":speech_balloon: Citation", "Plus sournois que les démons.... et plus avide que les dragons. C'est humain.", false)
+            .addField("<:c1:719664266797383680> Entaille cauchemardesque", "Attaque 2 adversaires aléatoirement avec 110% de l'ATQ et inflige 30% de dégâts additionnels s'ils n'ont aucun bonus avec 50% de chances sur chaque adversaire de retirer un bonus s'ils en ont.", false)
+            .addField("<:c2:719664268722831421> Tir de couverture", "Attaque tous les adversaires avec 150% de l'ATQ et augmente le moral de tous les alliés pour attribuer un bonus sur les [dégâts des compétences] de 30% pendant 2 tours.", false)
+            .addField("<:c3:719664266776412160> Ouvrons le feu, pour la guerre !", "Attaque tous les adversaires 3 fois avec 50% de l'ATQ. Chaque attaque inflige 60% de dégâts additionnels à un adversaire aléatoire. Récupère 2 Mana si un adversaire est éliminé par cette attaque.", false)
+            .addField("<:passif:719664266969612379> 1: La Force de New-Nightmare", "Augmente l'attaque de 15%, la santé de 15% et la réduction des dégâts de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Karma", "Le héros devient immunisé aux dégâts pendant 1 tour lorsqu'un allié ou un adversaire est éliminé. Restaure les PV's d'un allié à hauteur de 50% des PV's de Queen No Name lorsque celle-ci est éliminée, et rends l'allié immunisé aux dégâts une fois.", false)
+            .addField("<:sp:720742202757873745> Allez, Nightmare !", "Attaque tous les adversaires avec 140% de l'ATQ avec une attaque absolue qui ignore la réduction des dégâts et la résistance aux malus de 50%, et inflige [Confusion] pendant 1 tour à un adversaire aléatoire.", false)
+            .addField("ATQ", "22199", true)
+            .addField("DEF", "811", true)
+            .addField("PV", "123636", true)
+            .addField("VIT", "496", true)
+            .addField("Taux Crit", "15%", true)
+            .addField("Blocage", "33%", true)
+            .addField("Résist. Malus", "28%", true)
+            .addField("Réduction dégâts", "29%", true)
+    
+        message.channel.sendEmbed(embed)
+    
+        console.log("La commande de l'Héroïne Queen No Name viens d'être effectuée.");
+    
+        }
+	
+	
+        // Hero Cantare = Queen No Name
+        if (message.content === prefix + "qnn"){
+            var embed = new Discord.RichEmbed()
+            .setTitle("Queen No Name :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Queen __No Name__ est la reine de la guilde New Nightmare.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.5 | Combattez pour monter de niveau, joueur !")
+            .setThumbnail("https://i.imgur.com/lTSFMfY.png")
+            .setImage("https://i.imgur.com/v9syQKz.gif")
+            .addField(":speech_balloon: Citation", "Plus sournois que les démons.... et plus avide que les dragons. C'est humain.", false)
+            .addField("<:c1:719664266797383680> Entaille cauchemardesque", "Attaque 2 adversaires aléatoirement avec 110% de l'ATQ et inflige 30% de dégâts additionnels s'ils n'ont aucun bonus avec 50% de chances sur chaque adversaire de retirer un bonus s'ils en ont.", false)
+            .addField("<:c2:719664268722831421> Tir de couverture", "Attaque tous les adversaires avec 150% de l'ATQ et augmente le moral de tous les alliés pour attribuer un bonus sur les [dégâts des compétences] de 30% pendant 2 tours.", false)
+            .addField("<:c3:719664266776412160> Ouvrons le feu, pour la guerre !", "Attaque tous les adversaires 3 fois avec 50% de l'ATQ. Chaque attaque inflige 60% de dégâts additionnels à un adversaire aléatoire. Récupère 2 Mana si un adversaire est éliminé par cette attaque.", false)
+            .addField("<:passif:719664266969612379> 1: La Force de New-Nightmare", "Augmente l'attaque de 15%, la santé de 15% et la réduction des dégâts de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Karma", "Le héros devient immunisé aux dégâts pendant 1 tour lorsqu'un allié ou un adversaire est éliminé. Restaure les PV's d'un allié à hauteur de 50% des PV's de Queen No Name lorsque celle-ci est éliminée, et rends l'allié immunisé aux dégâts une fois.", false)
+            .addField("<:sp:720742202757873745> Allez, Nightmare !", "Attaque tous les adversaires avec 140% de l'ATQ avec une attaque absolue qui ignore la réduction des dégâts et la résistance aux malus de 50%, et inflige [Confusion] pendant 1 tour à un adversaire aléatoire.", false)
+            .addField("ATQ", "22199", true)
+            .addField("DEF", "811", true)
+            .addField("PV", "123636", true)
+            .addField("VIT", "496", true)
+            .addField("Taux Crit", "15%", true)
+            .addField("Blocage", "33%", true)
+            .addField("Résist. Malus", "28%", true)
+            .addField("Réduction dégâts", "29%", true)
+    
+        message.channel.sendEmbed(embed)
+    
+        console.log("La commande de l'Héroïne Queen No Name viens d'être effectuée.");
+    
+        }
+	
+	
+        // Hero Cantare = Queen No Name
+        if (message.content === prefix + "queen"){
             var embed = new Discord.RichEmbed()
             .setTitle("Queen No Name :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Queen __No Name__ est la reine de la guilde New Nightmare.")
@@ -313,6 +546,38 @@ message.channel.sendEmbed(embed)
 console.log("La commande de l'Héros Unleashed Raizel viens d'être effectuée.");
 
 }
+	
+	// Hero Cantare = Unleashed Raizel
+if (message.content === prefix + "unleashed"){
+    var embed = new Discord.RichEmbed()
+    .setTitle("Unleashed Raizel :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> :black_small_square: <:ss:719641320343470150>")
+    .setDescription("Unleashed __Raizel__ est le protagoniste de Noblesse.")
+    .setColor("RANDOM")
+    .setFooter("Khun Ran v0.5 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+    .setThumbnail("https://i.imgur.com/kwMfqwu.png")
+    .setImage("https://i.imgur.com/Le3UW9p.gif")
+    .addField(":speech_balloon: Citation", "Noblesse oblige.", false)
+    .addField("<:c1:719664266797383680> Champ de Sang: Libération", "Attaque 2 adversaires avec 120% de l'ATQ, utilise 10% de ses PV's restants pour infliger des dégâts additionnels équivalent à 150% des PV's utilisés.", false)
+    .addField("<:c2:719664268722831421> Phénix de Sang", "Attaque tous les adversaires avec 105% de l'ATQ et inflige [soins impossible] avec 90% de chances pendant 2 tours. Utilise 10% de ses PV's restants pour infliger des dégâts additionnels équivalent à 200% des PV's utilisés.", false)
+    .addField("<:c3:719664266776412160> Trou noir", "Attaque tous les adversaires avec 120% de l'ATQ et utilise 15% de ses PV's restants pour infliger des dégâts additionnels équivalent à 250% des PV's utilisés. La prochaine attaque de tous les alliés ignore 40% de résistance aux malus et de réduction des dégâts.", false)
+    .addField("<:passif:719664266969612379> 1: Brisement du sceau", "Augmente la santé de 25%, la défense de 10% et la réduction des dégâts de 15%.", false)
+    .addField("<:passif:719664266969612379> 2: Souverain du Sang", "Deviens invincible pendant 1 tour lorsque les PV's passent en dessous de 25% et en récupère 50%. Tous les adversaires reçoivent des dégâts équivalent à 10% des PV's maximum du Héros, et leur vitesse est réduite de 100 pendant 2 tours.", false)
+    .addField("<:sp:720742202757873745> Champ de Sang: Contrôle", "Utilise 10% de ses PV's pour infliger des dégâts équivalent à 150% de ses PV's utilisés pour attaquer l'adversaire avec les PV's les plus haut et augmente l'ATQ de tous les alliés à hauteur de 50% des PV's utilisés pendant 2 tours.", false)
+    .addField("ATQ", "19846", true)
+    .addField("DEF", "892", true)
+    .addField("PV", "138150", true)
+    .addField("VIT", "496", true)
+    .addField("Taux Crit", "15%", true)
+    .addField("Dégâts Crit", "0%", true)
+    .addField("Blocage", "33%", true)
+    .addField("Résist. Malus", "28%", true)
+    .addField("Réduction dégâts", "39%", true)
+
+message.channel.sendEmbed(embed)
+
+console.log("La commande de l'Héros Unleashed Raizel viens d'être effectuée.");
+
+}
 
 // Hero Cantare = Raizel
 if (message.content === prefix + "raizel"){
@@ -364,7 +629,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .addField("DEF", "720", true)
         .addField("PV", "134534", true)
         .addField("VIT", "395", true)
-	.addField("Blocage", "33%", true)
+	    .addField("Blocage", "33%", true)
         .addField("Taux Crit", "15%", true)
         .addField("Résist. Malus", "23%", true)
         .addField("Réduction dégâts", "34%", true)
@@ -391,13 +656,13 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .addField("<:passif:719664266969612379> 1: Chef du Clan Loyard", " Augmente l'ATQ de 20%, la santé de 10% et les chances de coup critique de 15%.", false)
         .addField("<:passif:719664266969612379> 2: Lame aiguisée", "Si un coup critique se produit, inflige un saignement à hauteur de 30% de l'ATQ pendant 2 tours. Si la cible est affectée par un saignement, l'attaque devient une attaque absolue (ignorant la réduction de dégâts et la défense de 30%). Devient immunisé aux dégâts une fois lorsque la santé tombe en dessous de 50%.", false)
         .addField("<:sp:720742202757873745> Faux de la Mort", "Attaque l'adversaire avec la santé la plus élevée à hauteur de 180% de l'ATQ et inflige aléatoirement jusqu'à 4 saignements sur tous les adversaires. Active une immunité aux dégâts pour 1 coup.", false)
-	.addField("ATQ", "22537", true)
+	    .addField("ATQ", "22537", true)
         .addField("DEF", "628", true)
         .addField("PV", "103095", true)
         .addField("VIT", "484", true)
-	.addField("Blocage", "33%", true)
+	    .addField("Blocage", "33%", true)
         .addField("Taux Crit", "33%", true)
-	.addField("Armor Crash", "15%", true)
+	    .addField("Armor Crash", "15%", true)
         .addField("Résist. Malus", "23%", true)
         .addField("Réduction dégâts", "19%", true)
 
@@ -422,13 +687,13 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .addField("<:c3:719664266776412160> Technique secrète ultime du style Ssamsu: Coup de pied flamboyant - Troisième étape: Triple frappe enflammée du nirvana", "Attaque tous les adversaires avec 130% de l'ATQ et inflige 50% de dégâts supplémentaires aux adversaires affectés par un malus, avant de faire exploser toutes les [Brûlures] pour 40% de dégâts supplémentaires par [Brûlure].", false)
         .addField("<:passif:719664266969612379> 1: Renard noir", " Augmente l'ATQ de 15%, la précision des débuffs de 15%, la santé de 10% et la réduction des dégâts de 5%", false)
         .addField("<:passif:719664266969612379> 2: 9ème Queue: Activation !", "À la fin du tour, si Ilpyo Park est affecté par un malus, le supprime et octroit un bouclier équivalent à 20% de la santé maximale. Si Ilpyo Park meurt par une [Brûlure], le réanime et le rends immortel pendant 1 tour. S'active 1x.", false)
-	.addField("ATQ", "24289", true)
+	    .addField("ATQ", "24289", true)
         .addField("DEF", "532", true)
         .addField("PV", "104659", true)
         .addField("VIT", "407", true)
-	.addField("Blocage", "%", true)
+	    .addField("Blocage", "%", true)
         .addField("Taux Crit", "%", true)
-	.addField("Armor Crash", "%", true)
+    	.addField("Armor Crash", "%", true)
         .addField("Résist. Malus", "%", true)
         .addField("Réduction dégâts", "%", true)
 
@@ -453,19 +718,139 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .addField("<:c3:719664266776412160> Technique secrète ultime du style Ssamsu: Coup de pied flamboyant - Troisième étape: Triple frappe enflammée du nirvana", "Attaque tous les adversaires avec 130% de l'ATQ et inflige 50% de dégâts supplémentaires aux adversaires affectés par un malus, avant de faire exploser toutes les [Brûlures] pour 40% de dégâts supplémentaires par [Brûlure].", false)
         .addField("<:passif:719664266969612379> 1: Renard noir", " Augmente l'ATQ de 15%, la précision des débuffs de 15%, la santé de 10% et la réduction des dégâts de 5%", false)
         .addField("<:passif:719664266969612379> 2: 9ème Queue: Activation !", "À la fin du tour, si Ilpyo Park est affecté par un malus, le supprime et octroit un bouclier équivalent à 20% de la santé maximale. Si Ilpyo Park meurt par une [Brûlure], le réanime et le rends immortel pendant 1 tour. S'active 1x.", false)
-	.addField("ATQ", "24289", true)
+	    .addField("ATQ", "24289", true)
         .addField("DEF", "532", true)
         .addField("PV", "104659", true)
         .addField("VIT", "407", true)
-	.addField("Blocage", "%", true)
+    	.addField("Blocage", "%", true)
         .addField("Taux Crit", "%", true)
-	.addField("Armor Crash", "%", true)
+	    .addField("Armor Crash", "%", true)
         .addField("Résist. Malus", "%", true)
         .addField("Réduction dégâts", "%", true)
 
     message.channel.sendEmbed(embed)
 
     console.log("La commande de l'Héros Nine Tails Ilpyo Park viens d'être effectuée.");
+
+    }
+
+        // Hero Cantare = Pure Green Arin
+        if (message.content === prefix + "pure green arin"){
+            var embed = new Discord.RichEmbed()
+            .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setThumbnail("https://i.imgur.com/zZraoSj.png")
+            .setImage("https://i.imgur.com/YjpTHXy.gif")
+            .addField(":speech_balloon: Citation", "Aucune.", false)
+            .addField("<:c1:719664266797383680> ", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés pour [7% de la santé d'Arin]. Octroit [Soins continus] pendant 2 tours, si un allié possède déjà [Soins continus], restaure immédiatement 4% de la santé", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] pendant 2 tours. Si [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés de 15% et octroit [Soins continus] pendant 3 tours.", false)
+            .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
+            .addField("ATQ", "20115", true)
+            .addField("DEF", "1015", true)
+            .addField("PV", "129011", true)
+            .addField("VIT", "407", true)
+            .addField("Taux Crit", "%", true)
+            .addField("Blocage", "%", true)
+            .addField("Résist. Malus", "%", true)
+            .addField("Déviation DGT", "%", true)
+    
+        message.channel.sendEmbed(embed)
+    
+        console.log("La commande de l'Héros Pure Green Arin viens d'être effectuée.");
+
+    }
+
+// Hero Cantare = Pure Green Arin
+if (message.content === prefix + "ss arin"){
+    var embed = new Discord.RichEmbed()
+    .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+    .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+    .setColor("RANDOM")
+    .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+    .setThumbnail("https://i.imgur.com/zZraoSj.png")
+    .setImage("https://i.imgur.com/YjpTHXy.gif")
+    .addField(":speech_balloon: Citation", "Aucune.", false)
+    .addField("<:c1:719664266797383680> ", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés pour [7% de la santé d'Arin]. Octroit [Soins continus] pendant 2 tours, si un allié possède déjà [Soins continus], restaure immédiatement 4% de la santé", false)
+    .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] pendant 2 tours. Si [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+    .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés de 15% et octroit [Soins continus] pendant 3 tours.", false)
+    .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
+    .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
+    .addField("ATQ", "20115", true)
+    .addField("DEF", "1015", true)
+    .addField("PV", "129011", true)
+    .addField("VIT", "407", true)
+    .addField("Taux Crit", "%", true)
+    .addField("Blocage", "%", true)
+    .addField("Résist. Malus", "%", true)
+    .addField("Déviation DGT", "%", true)
+
+message.channel.sendEmbed(embed)
+
+console.log("La commande de l'Héros Pure Green Arin viens d'être effectuée.");
+
+    }
+
+// Hero Cantare = Pure Green Arin
+if (message.content === prefix + "pure green"){
+    var embed = new Discord.RichEmbed()
+    .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+    .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+    .setColor("RANDOM")
+    .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+    .setThumbnail("https://i.imgur.com/zZraoSj.png")
+    .setImage("https://i.imgur.com/YjpTHXy.gif")
+    .addField(":speech_balloon: Citation", "Aucune.", false)
+    .addField("<:c1:719664266797383680> ", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés pour [7% de la santé d'Arin]. Octroit [Soins continus] pendant 2 tours, si un allié possède déjà [Soins continus], restaure immédiatement 4% de la santé", false)
+    .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] pendant 2 tours. Si [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+    .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés de 15% et octroit [Soins continus] pendant 3 tours.", false)
+    .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
+    .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
+    .addField("ATQ", "20115", true)
+    .addField("DEF", "1015", true)
+    .addField("PV", "129011", true)
+    .addField("VIT", "407", true)
+    .addField("Taux Crit", "%", true)
+    .addField("Blocage", "%", true)
+    .addField("Résist. Malus", "%", true)
+    .addField("Déviation DGT", "%", true)
+
+message.channel.sendEmbed(embed)
+
+console.log("La commande de l'Héros Pure Green Arin viens d'être effectuée.");
+
+    }
+
+    // Hero Cantare = Pure Green Arin
+if (message.content === prefix + "pure"){
+    var embed = new Discord.RichEmbed()
+    .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+    .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+    .setColor("RANDOM")
+    .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+    .setThumbnail("https://i.imgur.com/zZraoSj.png")
+    .setImage("https://i.imgur.com/YjpTHXy.gif")
+    .addField(":speech_balloon: Citation", "Aucune.", false)
+    .addField("<:c1:719664266797383680> ", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés pour [7% de la santé d'Arin]. Octroit [Soins continus] pendant 2 tours, si un allié possède déjà [Soins continus], restaure immédiatement 4% de la santé", false)
+    .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] pendant 2 tours. Si [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+    .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés de 15% et octroit [Soins continus] pendant 3 tours.", false)
+    .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
+    .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
+    .addField("ATQ", "20115", true)
+    .addField("DEF", "1015", true)
+    .addField("PV", "129011", true)
+    .addField("VIT", "407", true)
+    .addField("Taux Crit", "%", true)
+    .addField("Blocage", "%", true)
+    .addField("Résist. Malus", "%", true)
+    .addField("Déviation DGT", "%", true)
+
+message.channel.sendEmbed(embed)
+
+console.log("La commande de l'Héros Pure Green Arin viens d'être effectuée.");
 
     }
 
