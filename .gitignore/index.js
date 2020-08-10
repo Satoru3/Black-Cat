@@ -181,7 +181,7 @@ bot.on('message', message => {
             .setTitle("Max Level Warrior :black_small_square: <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Max Level Warrior__, sous le pseudo Hardcore Leveling Warrior, est un des personnages pricipaux de Hardcore Leveling Warrior.")
             .setColor("RANDOM")
-	        .setFooter("Khun Ran v0.5 | Combattez pour monter de niveau, joueur !")
+	    .setFooter("Khun Ran v0.8 | Combattez pour monter de niveau, joueur !")
             .setThumbnail("https://i.imgur.com/NGclWGx.png")
             .setImage("https://i.imgur.com/LHkbbsk.gif")
             .addField(":speech_balloon: Citation :", "Je t'ai ramené une surprise !", false)
@@ -190,29 +190,30 @@ bot.on('message', message => {
             .addField("<:c3:719664266776412160> All-in", "Attaque l'adversaire avec les PV's les plus faible avec 170% de la puissance d'attaque et inflige des dégâts supplémentaires à hauteur de 80% des pv's perdus du héros. Si l'adversaire est éliminé, l'attaque inflige les mêmes dégâts supplémentaires aux autres adversaires.", false)
             .addField("<:passif:719664266969612379> 1: Homme chanceux", "Augmente la défense de 20%, la santé de 30%, et les chances de critique de 15%", false)
             .addField("<:passif:719664266969612379> 2: Évasion limite", "Évite l'élimination en récupérant 20% de PV lorsque le héros est proche d'être éliminé. (S'active 1x)", false)
-	        .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
+	    .addField("<:sp:720742202757873745> Lacération", "Attaque 1 adversaire possédant les PV's les plus élevés avec 275% de la puissance d'attaque. Cette attaque résulte constamment en un coup critique.", false)
             .addField("ATQ", "21042", true)
             .addField("DEF", "754", true)
             .addField("PV", "125330", true)
             .addField("VIT", "484", true)
-	        .addField("Blocage", "33%", true)
+	     .addField("Blocage", "33%", true)
             .addField("Taux Crit", "23%", true)
             .addField("Dégâts Crit", "15%", true)
             .addField("Armor Crash", "15%", true)
             .addField("Résist. Malus", "23%", true)
             .addField("Réduction dégâts", "24%", true)
-
+	
 	message.channel.sendEmbed(embed)
 
-            var bembed = new Discord.RichEmbed()
+        var bembed = new Discord.RichEmbed()
             .setTitle("Épée du dragon rouge")
             .setColor("RANDOM")
-	        .setFooter("Équipement exclusif de Max Level Warrior.")
+	    .setFooter("Équipement exclusif de Max Level Warrior. ")
             .setThumbnail("https://i.imgur.com/iFRzcK1.png")
-            .setImage("https://i.imgur.com/Jv16kjo.png")
+            .setImage("https://i.imgur.com/jbKdjhN.png")
             .setDescription("La vitesse est améliorée de X à X proportionnellement aux PV manquants.")
+	    .addField("Statistique améliorée:", "Santé.", true)
 
-    message.channel.sendEmbed(bembed)
+	message.channel.sendEmbed(bembed)
 
 	console.log("La commande de l'Héros Max Level Warrior viens d'être effectuée.");
 
