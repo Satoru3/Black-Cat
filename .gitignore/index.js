@@ -60,7 +60,7 @@ bot.on('message', message => {
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la mise à jour 0.7 du 27/07")
-           .addField("__**Correction(s)**__","➤ Correction de la statistique de PV, amélioration de la clarté des compétences, ajouts des noms de compétences manquants, et ajouts des % liés aux régénérations liées à l'héroïne Prime King Uma")
+           .addField("__**Correction(s)**__","➤ Correction de la statistique de PV, amélioration de la clarté des compétences, ajouts des noms de compétences manquants, et ajouts des % liés aux régénérations liées à l'héroïne Pure Green Arin")
            .addField("__**Modification(s)**__","➤ En effectuant la commande $mlw ou $max level warrior (etc.) de l'héros Max Level Warrior, son équipement exclusif sera également affiché.")
            .addField("__**Ajout(s) de héros**__", "➤ Aucun.")
            .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
