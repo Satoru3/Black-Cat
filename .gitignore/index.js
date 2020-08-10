@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.7 [27/07] | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.8 [11/08] | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -20,7 +20,7 @@ bot.on('message', message => {
             .addField("__**Modération**__","`$kick` \n `$ban` \n `$purge`", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~ \n `$màj` [**New**]", true)
             .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `~~$quizz~~`", true)
-            .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n ~~$reliques~~", true)
+            .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n ~~$ee~~", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
             .setThumbnail("")
@@ -60,9 +60,9 @@ bot.on('message', message => {
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la mise à jour 0.7 du 27/07")
-           .addField("__**Correction(s)**__","➤ Ajouts des statistiques manquantes de Prime King Uma")
-           .addField("__**Modification(s)**__","➤ Des alias ont été ajoutés pour Prime King Uma, Unleashed Raizel, Max Level Warrior, Jyu Viole Grace et Queen No Name.")
-           .addField("__**Ajout(s) de héros**__", "➤ Pure Green Arin")
+           .addField("__**Correction(s)**__","➤ Correction de la statistique de PV, amélioration de la clarté des compétences, ajouts des noms de compétences manquants, et ajouts des % liés aux régénérations liées à l'héroïne Prime King Uma")
+           .addField("__**Modification(s)**__","➤ En effectuant la commande $mlw ou $max level warrior (etc.) de l'héros Max Level Warrior, son équipement exclusif sera également affiché.")
+           .addField("__**Ajout(s) de héros**__", "➤ Aucun.")
            .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
         message.channel.sendEmbed(embed);
 	   
@@ -137,7 +137,7 @@ bot.on('message', message => {
             .setTitle("Max Level Warrior :black_small_square: <:feu:719638080780501073> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
             .setDescription("__Max Level Warrior__, sous le pseudo Hardcore Leveling Warrior, est un des personnages pricipaux de Hardcore Leveling Warrior.")
             .setColor("RANDOM")
-	        .setFooter("Khun Ran v0.5 | Combattez pour monter de niveau, joueur !")
+	        .setFooter("Khun Ran v0.8 | Combattez pour monter de niveau, joueur !")
             .setThumbnail("https://i.imgur.com/NGclWGx.png")
             .setImage("https://i.imgur.com/LHkbbsk.gif")
             .addField(":speech_balloon: Citation :", "Je t'ai ramené une surprise !", false)
@@ -159,6 +159,16 @@ bot.on('message', message => {
             .addField("Réduction dégâts", "24%", true)
 
 	message.channel.sendEmbed(embed)
+
+        var bembed = new Discord.RichEmbed()
+            .setTitle("Épée du dragon rouge")
+            .setColor("RANDOM")
+	        .setFooter("Équipement exclusif de Max Level Warrior.")
+            .setThumbnail("https://i.imgur.com/iFRzcK1.png")
+            .setImage("https://i.imgur.com/Jv16kjo.png")
+            .setDescription("La vitesse est améliorée de X à X proportionnellement aux PV manquants.")
+
+    message.channel.sendEmbed(bembed)
 
 	console.log("La commande de l'Héros Max Level Warrior viens d'être effectuée.");
 
@@ -192,6 +202,16 @@ bot.on('message', message => {
             .addField("Réduction dégâts", "24%", true)
 
 	message.channel.sendEmbed(embed)
+
+            var bembed = new Discord.RichEmbed()
+            .setTitle("Épée du dragon rouge")
+            .setColor("RANDOM")
+	        .setFooter("Équipement exclusif de Max Level Warrior.")
+            .setThumbnail("https://i.imgur.com/iFRzcK1.png")
+            .setImage("https://i.imgur.com/Jv16kjo.png")
+            .setDescription("La vitesse est améliorée de X à X proportionnellement aux PV manquants.")
+
+    message.channel.sendEmbed(bembed)
 
 	console.log("La commande de l'Héros Max Level Warrior viens d'être effectuée.");
 
@@ -744,14 +764,14 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setThumbnail("https://i.imgur.com/zZraoSj.png")
             .setImage("https://i.imgur.com/YjpTHXy.gif")
             .addField(":speech_balloon: Citation", "Aucune.", false)
-            .addField("<:c1:719664266797383680> ", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés pour [7% de la santé d'Arin]. Octroit [Soins continus] pendant 2 tours, si un allié possède déjà [Soins continus], restaure immédiatement 4% de la santé.", false)
-            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] pendant 2 tours. Si [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
-            .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] pendant 3 tours.", false)
+            .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
             .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
-            .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
+            .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
             .addField("ATQ", "20115", true)
             .addField("DEF", "1015", true)
-            .addField("PV", "129011", true)
+            .addField("PV", "129251", true)
             .addField("VIT", "407", true)
             .addField("Taux Crit", "%", true)
             .addField("Blocage", "%", true)
@@ -760,97 +780,97 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
     
         message.channel.sendEmbed(embed)
     
-        console.log("La commande de l'Héros Pure Green Arin viens d'être effectuée.");
+        console.log("La commande de l'Héroïne Pure Green Arin viens d'être effectuée.");
 
     }
 
-// Hero Cantare = Pure Green Arin
-if (message.content === prefix + "ss arin"){
-    var embed = new Discord.RichEmbed()
-    .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
-    .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
-    .setColor("RANDOM")
-    .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
-    .setThumbnail("https://i.imgur.com/zZraoSj.png")
-    .setImage("https://i.imgur.com/YjpTHXy.gif")
-    .addField(":speech_balloon: Citation", "Aucune.", false)
-    .addField("<:c1:719664266797383680> ", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés pour [7% de la santé d'Arin]. Octroit [Soins continus] pendant 2 tours, si un allié possède déjà [Soins continus], restaure immédiatement 4% de la santé.", false)
-    .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] pendant 2 tours. Si [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
-    .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] pendant 3 tours.", false)
-    .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
-    .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
-    .addField("ATQ", "20115", true)
-    .addField("DEF", "1015", true)
-    .addField("PV", "129011", true)
-    .addField("VIT", "407", true)
-    .addField("Taux Crit", "%", true)
-    .addField("Blocage", "%", true)
-    .addField("Résist. Malus", "%", true)
-    .addField("Déviation DGT", "%", true)
-
-message.channel.sendEmbed(embed)
-
-console.log("La commande de l'Héros Pure Green Arin viens d'être effectuée.");
-
-    }
-
-// Hero Cantare = Pure Green Arin
-if (message.content === prefix + "pure green"){
-    var embed = new Discord.RichEmbed()
-    .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
-    .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
-    .setColor("RANDOM")
-    .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
-    .setThumbnail("https://i.imgur.com/zZraoSj.png")
-    .setImage("https://i.imgur.com/YjpTHXy.gif")
-    .addField(":speech_balloon: Citation", "Aucune.", false)
-    .addField("<:c1:719664266797383680> ", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés pour [7% de la santé d'Arin]. Octroit [Soins continus] pendant 2 tours, si un allié possède déjà [Soins continus], restaure immédiatement 4% de la santé.", false)
-    .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] pendant 2 tours. Si [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
-    .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] pendant 3 tours.", false)
-    .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
-    .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
-    .addField("ATQ", "20115", true)
-    .addField("DEF", "1015", true)
-    .addField("PV", "129011", true)
-    .addField("VIT", "407", true)
-    .addField("Taux Crit", "%", true)
-    .addField("Blocage", "%", true)
-    .addField("Résist. Malus", "%", true)
-    .addField("Déviation DGT", "%", true)
-
-message.channel.sendEmbed(embed)
-
-console.log("La commande de l'Héros Pure Green Arin viens d'être effectuée.");
+        // Hero Cantare = Pure Green Arin
+        if (message.content === prefix + "ss arin"){
+            var embed = new Discord.RichEmbed()
+            .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setThumbnail("https://i.imgur.com/zZraoSj.png")
+            .setImage("https://i.imgur.com/YjpTHXy.gif")
+            .addField(":speech_balloon: Citation", "Aucune.", false)
+            .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
+            .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
+            .addField("ATQ", "20115", true)
+            .addField("DEF", "1015", true)
+            .addField("PV", "129251", true)
+            .addField("VIT", "407", true)
+            .addField("Taux Crit", "%", true)
+            .addField("Blocage", "%", true)
+            .addField("Résist. Malus", "%", true)
+            .addField("Déviation DGT", "%", true)
+    
+        message.channel.sendEmbed(embed)
+    
+        console.log("La commande de l'Héroïne Pure Green Arin viens d'être effectuée.");
 
     }
 
-    // Hero Cantare = Pure Green Arin
-if (message.content === prefix + "pure"){
-    var embed = new Discord.RichEmbed()
-    .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
-    .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
-    .setColor("RANDOM")
-    .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
-    .setThumbnail("https://i.imgur.com/zZraoSj.png")
-    .setImage("https://i.imgur.com/YjpTHXy.gif")
-    .addField(":speech_balloon: Citation", "Aucune.", false)
-    .addField("<:c1:719664266797383680> ", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés pour [7% de la santé d'Arin]. Octroit [Soins continus] pendant 2 tours, si un allié possède déjà [Soins continus], restaure immédiatement 4% de la santé.", false)
-    .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] pendant 2 tours. Si [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
-    .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] pendant 3 tours.", false)
-    .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
-    .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
-    .addField("ATQ", "20115", true)
-    .addField("DEF", "1015", true)
-    .addField("PV", "129011", true)
-    .addField("VIT", "407", true)
-    .addField("Taux Crit", "%", true)
-    .addField("Blocage", "%", true)
-    .addField("Résist. Malus", "%", true)
-    .addField("Déviation DGT", "%", true)
+        // Hero Cantare = Pure Green Arin
+        if (message.content === prefix + "pure green"){
+            var embed = new Discord.RichEmbed()
+            .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setThumbnail("https://i.imgur.com/zZraoSj.png")
+            .setImage("https://i.imgur.com/YjpTHXy.gif")
+            .addField(":speech_balloon: Citation", "Aucune.", false)
+            .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
+            .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
+            .addField("ATQ", "20115", true)
+            .addField("DEF", "1015", true)
+            .addField("PV", "129251", true)
+            .addField("VIT", "407", true)
+            .addField("Taux Crit", "%", true)
+            .addField("Blocage", "%", true)
+            .addField("Résist. Malus", "%", true)
+            .addField("Déviation DGT", "%", true)
+    
+        message.channel.sendEmbed(embed)
+    
+        console.log("La commande de l'Héroïne Pure Green Arin viens d'être effectuée.");
 
-message.channel.sendEmbed(embed)
+    }
 
-console.log("La commande de l'Héros Pure Green Arin viens d'être effectuée.");
+        // Hero Cantare = Pure Green Arin
+        if (message.content === prefix + "pure"){
+            var embed = new Discord.RichEmbed()
+            .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.7 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setThumbnail("https://i.imgur.com/zZraoSj.png")
+            .setImage("https://i.imgur.com/YjpTHXy.gif")
+            .addField(":speech_balloon: Citation", "Aucune.", false)
+            .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
+            .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
+            .addField("ATQ", "20115", true)
+            .addField("DEF", "1015", true)
+            .addField("PV", "129251", true)
+            .addField("VIT", "407", true)
+            .addField("Taux Crit", "%", true)
+            .addField("Blocage", "%", true)
+            .addField("Résist. Malus", "%", true)
+            .addField("Déviation DGT", "%", true)
+    
+        message.channel.sendEmbed(embed)
+    
+        console.log("La commande de l'Héroïne Pure Green Arin viens d'être effectuée.");
 
     }
 
