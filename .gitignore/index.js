@@ -210,7 +210,7 @@ bot.on('message', message => {
 	    .setFooter("Équipement exclusif de Max Level Warrior. ")
             .setThumbnail("https://i.imgur.com/iFRzcK1.png")
             .setImage("https://i.imgur.com/jbKdjhN.png")
-            .setDescription("La vitesse est améliorée de X à X proportionnellement aux PV manquants.")
+            .setDescription("La vitesse est améliorée de X à X proportionnellement aux PV manquants. \n \n **La statistique améliorée est la santé.**")
 	    .addField("Statistique améliorée:", "Santé.", true)
 
 	message.channel.sendEmbed(bembed)
