@@ -167,7 +167,6 @@ bot.on('message', message => {
             .setThumbnail("https://i.imgur.com/iFRzcK1.png")
             .setImage("https://i.imgur.com/jbKdjhN.png")
             .setDescription("La vitesse est améliorée de X à X proportionnellement aux PV manquants. \n \n **Statistique améliorée:** Santé")
-	    .addField("Statistique améliorée:", "Santé.", true)
 
 	message.channel.sendEmbed(bembed)
 
@@ -211,7 +210,6 @@ bot.on('message', message => {
             .setThumbnail("https://i.imgur.com/iFRzcK1.png")
             .setImage("https://i.imgur.com/jbKdjhN.png")
             .setDescription("La vitesse est améliorée de X à X proportionnellement aux PV manquants. \n \n **Statistique améliorée:** Santé")
-	    .addField("Statistique améliorée:", "Santé.", true)
 
 	message.channel.sendEmbed(bembed)
 
