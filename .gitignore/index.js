@@ -47,7 +47,7 @@ bot.on('message', message => {
         if (message.content === prefix + "ee"){ //Commande relative aux artefacts d'Epic Seven
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Équipements exclusifs** :black_small_square:")
-	    .setTitle("Pour l'instant, le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule.")
+	    .setDescription("Pour l'instant, le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule.")
             .addField("<:feu:719638080780501073>","➤ Max Level Warrior (Épée du dragon rouge | $ee mlw) \n ➤ God-Killer Zero (Lance de l'obscurité totale | $ee gk0) \n ➤ Maschenny (Lance de la sérénité | $ee maschenny)", true)
             .setColor("RANDOM")
             .setFooter("Khun Ran v0.9 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
