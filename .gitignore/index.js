@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.9 [13/08] | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.9.5 [13/08] | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
