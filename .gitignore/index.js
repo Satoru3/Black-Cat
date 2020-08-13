@@ -49,8 +49,9 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Équipements exclusifs** :black_small_square:")
 	    .setDescription("Pour l'instant, le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule.")
             .addField("<:feu:719638080780501073>","➤ **Max Level Warrior** (__Épée du dragon rouge__ | $ee mlw) \n ➤ **God-Killer Zero** (__Lance de l'obscurité totale__ | $ee gk0) \n ➤ **Maschenny** (__Lance de la sérénité__ | $ee maschenny)", true)
-            .setColor("RANDOM")
-            .setFooter("Khun Ran v0.9 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .addField("<:ice:719781844949925898>","➤ **Master Pooh Upooh** (__Parchemin du Roi des Fées__ | $ee mpu)", true)
+	    .setColor("RANDOM")
+            .setFooter("Khun Ran v0.9.5 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/v9syQKz.gif")
 	message.channel.sendEmbed(embed);
         console.log("Page des équipemens exclusifs générés suite à la demande de " + message.author.username);
@@ -60,11 +61,11 @@ bot.on('message', message => {
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la mise à jour 0.9 du 13/08")
+           .setTitle("Récapitulatif de la mise à jour 0.9.5 du 13/08")
            .addField("__**Correction(s)**__","➤ Aucune.")
-           .addField("__**Modification(s)**__","➤ La description de l'effet de saignement de la <:c1:719664266797383680> de Seira a été améliorée.")
-           .addField("__**Ajout(s) de héros**__", "➤ Frankenstein \n ➤ M-21 \n ➤ Équipement exclusif de God-Killer Zero (Lance de l'obscurité totale) \n ➤ Équipement exclusif de Maschenny (Lance de la sérénité)")
-           .addField("__**Nouvelle(s) commande(s)**__","➤ $ee")
+           .addField("__**Modification(s)**__","➤ Aucune.")
+           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ King Dark \n ➤ Équipement exclusif de Master Pooh Upooh (Parchemin du Roi des Fées)")
+           .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune")
         message.channel.sendEmbed(embed);
 	   
     }
@@ -885,7 +886,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         if (message.content === prefix + "pure green arin"){
             var embed = new Discord.RichEmbed()
             .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
-            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
             .setColor("RANDOM")
             .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/zZraoSj.png")
@@ -915,7 +916,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         if (message.content === prefix + "ss arin"){
             var embed = new Discord.RichEmbed()
             .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
-            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
             .setColor("RANDOM")
             .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/zZraoSj.png")
@@ -945,7 +946,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         if (message.content === prefix + "pure green"){
             var embed = new Discord.RichEmbed()
             .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
-            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
             .setColor("RANDOM")
             .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/zZraoSj.png")
@@ -975,7 +976,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         if (message.content === prefix + "pure"){
             var embed = new Discord.RichEmbed()
             .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
-            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare. [**Traduction non définitive.**]")
+            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
             .setColor("RANDOM")
             .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/zZraoSj.png")
@@ -994,6 +995,66 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .addField("Blocage", "%", true)
             .addField("Résist. Malus", "%", true)
             .addField("Déviation DGT", "%", true)
+    
+        message.channel.sendEmbed(embed)
+    
+        console.log("La commande de l'Héroïne Pure Green Arin viens d'être effectuée.");
+
+    }
+	
+	        // Hero Cantare = Pure Green Arin
+        if (message.content === prefix + "pure"){
+            var embed = new Discord.RichEmbed()
+            .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setThumbnail("https://i.imgur.com/zZraoSj.png")
+            .setImage("https://i.imgur.com/YjpTHXy.gif")
+            .addField(":speech_balloon: Citation", "Aucune.", false)
+            .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
+            .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
+            .addField("ATQ", "20115", true)
+            .addField("DEF", "1015", true)
+            .addField("PV", "129251", true)
+            .addField("VIT", "407", true)
+            .addField("Taux Crit", "%", true)
+            .addField("Blocage", "%", true)
+            .addField("Résist. Malus", "%", true)
+            .addField("Déviation DGT", "%", true)
+    
+        message.channel.sendEmbed(embed)
+    
+        console.log("La commande de l'Héroïne Pure Green Arin viens d'être effectuée.");
+
+    }       
+	
+	// Hero Cantare = Pure Green Arin
+        if (message.content === prefix + "king dark"){
+            var embed = new Discord.RichEmbed()
+            .setTitle("Nigga :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("On raconte qu'il vient des profondeurs des ténèbres... et que son rôle est de tout ~~détruire~~ hmm, ups, il n'a pas de rôle.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.8 | Avancez, évoluez, et devenez le plus nul d'Hero Cantare!")
+            .setThumbnail("https://i.imgur.com/VgDmg1O.png")
+            .setImage("https://i.imgur.com/32wKCeW.jpg")
+            .addField(":speech_balloon: Citation", "Une p'tite léchouille?... Uhmm..ah...", false)
+            .addField("<:c1:719664266797383680> Sale fou", "T'as cru t'étais qui? Attaque à coup de langue à hauteur de 300% de l'ATQ les deux adversaires ayant l'attaque la plus élevée. Inflige [Excitation] pendant 1 tour pour garantir le coup critique, et étourdir l'ennemi.", false)
+            .addField("<:c2:719664268722831421> Hmm...ah", "Effectue un strip stease, infligeant [Excitation] pendant 1 tour à tous les ennemis.", false)
+            .addField("<:c3:719664266776412160> Hmm... Tu veux y rent-", "Se prépare à l'entrée... censure censure, censure. Met K-O immédiatemment l'ennemi ayant l'ATQ la plus élevée.", false)
+            .addField("<:passif:719664266969612379> 1: Excitation de Buzay", "Augmente la santé de 200%, la défense de 50%, la réduction de dégâts de 70% et la résistance aux malus de 40%", false)
+            .addField("<:passif:719664266969612379> 2: Technique spéciale de drague!", "Lorsque la santé passe en dessous des 90/50/40%, octroit un bouclier à tous les alliés équivalent à 30% de la santé du héros, puis octroit [Soins continus à hauteur de 40% des PV] aux deux alliés ayant la santé la plus faible. Puis, inflige [Excitation] à l'allié ayant l'ATQ la plus élévée, avant d'attaquer avec 150% de l'ATQ.", false)
+            .addField("ATQ", "50115", true)
+            .addField("DEF", "1302", true)
+            .addField("PV", "320210", true)
+            .addField("VIT", "605", true)
+            .addField("Taux Crit", "53%", true)
+            .addField("Blocage", "67%", true)
+            .addField("Résist. Malus", "93%", true)
+            .addField("Déviation DGT", "70%", true)
     
         message.channel.sendEmbed(embed)
     
@@ -1079,67 +1140,67 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 
     }
 	
-	
-					        // Epic Seven Artefact = Junkyard Dog
-    if (message.content === prefix + "junkyard"){
+		// Hero Cantare Equipement Exclusif / Master Pooh Upooh
+    if (message.content === prefix + "ee master pooh upooh"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Junkyard Dog :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084> :black_small_square: <:arkyriche:528289398521987102>")
-            .setDescription("Une arme créée pour concratiser la capacité de l'Outrage. Il s'agit d'une combinaison du Fireseal et de la Flashing Tooth, qui est l'un des trésors sacrés détenu à l'origine par le Conclave sur la planète de Sol.(**Cet artéfact était limité, et disponible seulement pendant la collaboration avec Guilty Gear**)")
+            .setTitle("Parchemin du Roi des Fées")
             .setColor("RANDOM")
-            .setFooter("Artefact limité Junkyard Dog demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
-            .setThumbnail("https://epic7x.com/wp-content/uploads/2019/04/sol-badguy-artifact-full.png")
-            .addField(":crossed_swords: Compétence Niv.1", "**25%** de chance de burn l'ennemi pendant 2 tours après avoir utilisé une compétence basique. (Compétence 1)", false)
-            .addField(":crossed_swords: Compétence Niv.Max", "**50%** de chance de burn l'ennemi pendant 2 tours après avoir utilisé une compétence basique. (Compétence 1)", false)
-            .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
-	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
-	message.channel.sendEmbed(embed)
-	    
-    }
-	
-				        // Epic Seven Artefact = Holy Sacrifice
-    if (message.content === prefix + "holy"){
-        var embed = new Discord.RichEmbed()
-            .setTitle("Holy Sacrifice :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("La Statue de la Grâce est donnée aux chevaliers qui gagnent la faveur de la déesse,  celle-ci les sauveras une fois avant de se briser en morçeaux. Écrit par Barrett [Trésor du Saint Empire, p15]")
-            .setColor("RANDOM")
-            .setFooter("Artefact Holy Sacrifice demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
-            .setThumbnail("https://www.zupimages.net/up/19/01/un9a.jpg")
-            .addField(":crossed_swords: Compétence Niv.1", "**50%** de chance d'être réanimé avec 25% de vie après la mort. Ne peut-être utilisé qu'une seule fois par stage.", false)
-            .addField(":crossed_swords: Compétence Niv.Max", "**100%** de chance d'être réanimé avec 25% de vie après la mort. Ne peut-être utilisé qu'une seule fois par stage.", false)
-            .addField(":crossed_swords: Statistiques basique", "Attaque : **9** | Vie : **76**", false)
-	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
+	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
+            .setThumbnail("https://i.imgur.com/F8cXXOu.png")
+            .setImage("https://i.imgur.com/E24MCI0.png")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
 	
-				// Epic Seven Artefact = Elbris Ritual Sword
-    if (message.content === prefix + "elbris"){
+			// Hero Cantare Equipement Exclusif / Master Pooh Upooh
+    if (message.content === prefix + "ee pooh upooh"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Elbris Ritual Sword :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("Épée de cérémonie transmise par les Elfes depuis des milliers d'années, la lame est imprégnée de plusieurs sources de magie. Celui possédant cette épée devient le roi des Elfes.")
+            .setTitle("Parchemin du Roi des Fées")
             .setColor("RANDOM")
-            .setFooter("Artefact Elbris Ritual Sword demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
-            .setThumbnail("https://zupimages.net/up/19/01/d1hj.jpg")
-            .addField(":crossed_swords: Compétence Niv.1", "**10%** de chance de contre-attaquer quand un allié est attaqué.", false)
-            .addField(":crossed_swords: Compétence Niv.Max", "**20%** de chance de contre-attaquer quand un allié est attaqué.", false)
-            .addField(":crossed_swords: Statistiques basique", "Attaque : **15** | Vie : **54**", false)
-	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **195** | Vie : **702**", false)
+	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
+            .setThumbnail("https://i.imgur.com/F8cXXOu.png")
+            .setImage("https://i.imgur.com/E24MCI0.png")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
 	
-			  // Epic Seven Artefact = Noble Oath
-    if (message.content === prefix + "noble"){
+			// Hero Cantare Equipement Exclusif / Master Pooh Upooh
+    if (message.content === prefix + "ee pooh"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Noble Oath :black_small_square: <:e7chevalier:506111403489230868> :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("Un emblème donné aux membres de l'Ordre d'Ezera après qu'ils se soient engagés à consacrer leur vie à la Déesse. Ceux donnés aux chevaliers ressemblent à un écusson, tandis que ceux donnés aux prêtres ressemblent à un chapelet.")
+            .setTitle("Parchemin du Roi des Fées")
             .setColor("RANDOM")
-            .setFooter("Artefact Noble Oath demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
-            .setThumbnail("https://zupimages.net/up/19/01/z2z8.jpg")
-            .addField(":crossed_swords: Compétence Niv.1", "Quand la vie diminue, la défense et l'effect resistance augmente de **25%**", false)
-            .addField(":crossed_swords: Compétence Niv.Max", "Quand la vie diminue, la défense et l'effect resistance augmente de **50%**", false)
-            .addField(":crossed_swords: Statistiques basique", "Attaque : **9** | Vie : **76**", false)
-	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **117** | Vie : **988**", false)
+	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
+            .setThumbnail("https://i.imgur.com/F8cXXOu.png")
+            .setImage("https://i.imgur.com/E24MCI0.png")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+			// Hero Cantare Equipement Exclusif / Master Pooh Upooh
+    if (message.content === prefix + "ee upooh"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Parchemin du Roi des Fées")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
+            .setThumbnail("https://i.imgur.com/F8cXXOu.png")
+            .setImage("https://i.imgur.com/E24MCI0.png")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+			// Hero Cantare Equipement Exclusif / Master Pooh Upooh
+    if (message.content === prefix + "ee mpu"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Parchemin du Roi des Fées")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
+            .setThumbnail("https://i.imgur.com/F8cXXOu.png")
+            .setImage("https://i.imgur.com/E24MCI0.png")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
