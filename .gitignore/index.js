@@ -49,7 +49,7 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Équipements exclusifs** :black_small_square:")
 	    .setDescription("Pour l'instant, le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule.")
             .addField("<:feu:719638080780501073>","➤ **Max Level Warrior** (__Épée du dragon rouge__ | $ee mlw) \n ➤ **God-Killer Zero** (__Lance de l'obscurité totale__ | $ee gk0) \n ➤ **Maschenny** (__Lance de la sérénité__ | $ee maschenny)", true)
-            .addField("<:ice:719781844949925898>","➤ **Master Pooh Upooh** (__Parchemin du Roi des Fées__ | $ee mpu)", true)
+            .addField("<:ice:719781844949925898>","➤ **Master Pooh Upooh** (__Parchemin du Roi des Fées__ | $ee mpu)", false)
 	    .setColor("RANDOM")
             .setFooter("Khun Ran v0.9.5 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/v9syQKz.gif")
