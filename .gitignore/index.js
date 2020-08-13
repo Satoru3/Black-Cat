@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.8 [11/08] | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.9 [13/08] | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -20,7 +20,7 @@ bot.on('message', message => {
             .addField("__**Modération**__","`$kick` \n `$ban` \n `$purge`", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~ \n `$màj` [**New**]", true)
             .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `~~$quizz~~`", true)
-            .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n ~~$ee~~", true)
+            .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n `$ee`", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
             .setThumbnail("")
@@ -34,38 +34,165 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
 	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
             .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> <:dieu:723941755996733583> ($queen no name) \n **Yeon's Flame Khun** <:feu:719638080780501073> <:element:724668549028905073> ($flame khun) \n **Unleashed Raizel** <:dark:723941756109979760> <:dieu:723941755996733583> ($unleashed raizel) \n **Seira** <:nature:719638081195475114> <:weapon:719781844744142875> ($seira) \n **Nine Tails Ilpyo Park** <:feu:719638080780501073> <:element:724668549028905073> ($nine tails) \n **Pure Green Arin** <:ice:719781844949925898> <:element:724668549028905073> ($ss arin)", true)
-            .addField("<:s_:724831181341720586>","**Frankenstein** <:feu:719638080780501073> <:element:724668549028905073> (Ajout le 05/07) \n **Muzaka** <:nature:719638081195475114> <:artmartiaux:723903194819985459> ($muzaka)")
+            .addField("<:s_:724831181341720586>","**Frankenstein** <:feu:719638080780501073> <:element:724668549028905073> ($frankenstein) \n **Muzaka** <:nature:719638081195475114> <:artmartiaux:723903194819985459> ($muzaka) \n M-21 <:nature:719638081195475114> <:competence:719638081162051585> ($m-21)")
             .addField("<:a_:724817244789538819>","**Raizel** <:ice:719781844949925898> <:evil:724805535727353856> ($raizel)")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.7 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
+            .setFooter("Khun Ran v0.9 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
             .setThumbnail("https://i.imgur.com/kwMfqwu.png")
 	message.channel.sendEmbed(embed);
         console.log("Page des personnages générée suite à une demande de " + message.author.username);
 
     }
 	
-        if (message.content === prefix + "artefacts"){ //Commande relative aux artefacts d'Epic Seven
+        if (message.content === prefix + "ee"){ //Commande relative aux artefacts d'Epic Seven
         var embed = new Discord.RichEmbed()
-            .setTitle(":black_small_square: **Artefacts** :black_small_square:")
-            .addField("**$sigurd**","Sigurd Scythe 5 <:etoile:580331911608664084> <:e7combattant:506111308635308032>", true)
+            .setTitle(":black_small_square: **Équipements exclusifs** :black_small_square:")
+	    .setTitle("Pour l'instant, le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule.")
+            .addField("<:feu:719638080780501073>","➤ Max Level Warrior (Épée du dragon rouge | $ee mlw) \n ➤ God-Killer Zero (Lance de l'obscurité totale | $ee gk0) \n ➤ Maschenny (Lance de la sérénité | $ee maschenny)", true)
             .setColor("RANDOM")
-            .setFooter("Page d'Artefacts 1/1 " + "Actualisé le 16/05/19")
-            .setThumbnail("https://static.smilegatemegaport.com/event/live/epic7/brand/assets/images/common/bi.png")
+            .setFooter("Khun Ran v0.9 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setThumbnail("https://i.imgur.com/v9syQKz.gif")
 	message.channel.sendEmbed(embed);
-        console.log("Page de personnage générée suite à une demande de " + message.author.username);
+        console.log("Page des équipemens exclusifs générés suite à la demande de " + message.author.username);
 		
     }
 
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la mise à jour 0.8 du 11/08")
-           .addField("__**Correction(s)**__","➤ Correction de la statistique de PV, amélioration de la clarté des compétences, ajouts des noms de compétences manquants, et ajouts des % liés aux régénérations liées à l'héroïne Pure Green Arin")
-           .addField("__**Modification(s)**__","➤ En effectuant la commande $mlw ou $max level warrior (etc.) de l'héros Max Level Warrior, son équipement exclusif sera également affiché.")
-           .addField("__**Ajout(s) de héros**__", "➤ Aucun.")
-           .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
+           .setTitle("Récapitulatif de la mise à jour 0.9 du 13/08")
+           .addField("__**Correction(s)**__","➤ Aucune.")
+           .addField("__**Modification(s)**__","➤ La description de l'effet de saignement de la <:c1:719664266797383680> de Seira a été améliorée.")
+           .addField("__**Ajout(s) de héros**__", "➤ Frankenstein \n ➤ M-21 \n ➤ Équipement exclusif de God-Killer Zero (Lance de l'obscurité totale) \n ➤ Équipement exclusif de Maschenny (Lance de la sérénité)")
+           .addField("__**Nouvelle(s) commande(s)**__","➤ $ee")
         message.channel.sendEmbed(embed);
 	   
+    }
+	
+		 // Hero Cantare = M-21
+    if (message.content === prefix + "m21"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("M-21 :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:s_:724831181341720586>")
+        .setDescription("__M-21__ est un membre du groupe de Raizel dans Noblesse, il est un humain modifié.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.9 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setThumbnail("https://i.imgur.com/Wzq48L5.png")
+        .setImage("https://i.imgur.com/c3J9VyE.png")
+        .addField(":speech_balloon: Citation", "Je n'ai jamais voulu d'un tel pouvoir !!", false)
+        .addField("<:c1:719664266797383680> Fausse entaille", "Attaque 1 adversaire de la ligne arrière avec [115% d'ATQ] et a 80% de chance d'infliger un [Saignement] infligeant des dégâts à hauteur de 30% de l'ATQ pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Écrasement en spirale", "Attaque tous les adversaires de la ligne arrière avec [120% de l'ATQ] et inflige des dégâts additionnels à hauteur de [55% de l'ATQ] si l'adversaire est sous l'effet d'un malus.", false)
+        .addField("<:c3:719664266776412160> Mode Hyper complet", "Attaque tous les adversaires avec [160% de l'ATQ]. Les dégâts sont augmentés jusqu'à 100% proportionnellement à la réduction du nombre d'adversaires.", false)
+        .addField("<:passif:719664266969612379> 1: Rugissement du loup", " Augmente l'ATQ et la santé de 15%.", false)
+        .addField("<:passif:719664266969612379> 2: Coeur de Loup-Garou", "L'ATQ est améliorée jusqu'à 50% proportionnellement aux PV restants. Lorsque le héros est touché, augmente [l'ATQ de 30%] pendant 2 tours.", false)
+	.addField("ATQ", "18952", true)
+        .addField("DEF", "547", true)
+        .addField("PV", "114679", true)
+        .addField("VIT", "429", true)
+	.addField("Blocage", "33%", true)
+        .addField("Taux Crit", "20%", true)
+	.addField("Dégâts Crit", "5%", true)
+	.addField("Armor Crash", "5%", true)
+        .addField("Résist. Malus", "28%", true)
+        .addField("Réduction dégâts", "19%", true)
+
+    message.channel.sendEmbed(embed)
+
+    console.log("La commande de l'Héros M-21 viens d'être effectuée.");
+
+    }
+	
+			 // Hero Cantare = M-21
+    if (message.content === prefix + "m-21"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("M-21 :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:s_:724831181341720586>")
+        .setDescription("__M-21__ est un membre du groupe de Raizel dans Noblesse, il est un humain modifié.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.9 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setThumbnail("https://i.imgur.com/Wzq48L5.png")
+        .setImage("https://i.imgur.com/c3J9VyE.png")
+        .addField(":speech_balloon: Citation", "Je n'ai jamais voulu d'un tel pouvoir !!", false)
+        .addField("<:c1:719664266797383680> Fausse entaille", "Attaque 1 adversaire de la ligne arrière avec [115% d'ATQ] et a 80% de chance d'infliger un [Saignement] infligeant des dégâts à hauteur de 30% de l'ATQ pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Écrasement en spirale", "Attaque tous les adversaires de la ligne arrière avec [120% de l'ATQ] et inflige des dégâts additionnels à hauteur de [55% de l'ATQ] si l'adversaire est sous l'effet d'un malus.", false)
+        .addField("<:c3:719664266776412160> Mode Hyper complet", "Attaque tous les adversaires avec [160% de l'ATQ]. Les dégâts sont augmentés jusqu'à 100% proportionnellement à la réduction du nombre d'adversaires.", false)
+        .addField("<:passif:719664266969612379> 1: Rugissement du loup", " Augmente l'ATQ et la santé de 15%.", false)
+        .addField("<:passif:719664266969612379> 2: Coeur de Loup-Garou", "L'ATQ est améliorée jusqu'à 50% proportionnellement aux PV restants. Lorsque le héros est touché, augmente [l'ATQ de 30%] pendant 2 tours.", false)
+	.addField("ATQ", "18952", true)
+        .addField("DEF", "547", true)
+        .addField("PV", "114679", true)
+        .addField("VIT", "429", true)
+	.addField("Blocage", "33%", true)
+        .addField("Taux Crit", "20%", true)
+	.addField("Dégâts Crit", "5%", true)
+	.addField("Armor Crash", "5%", true)
+        .addField("Résist. Malus", "28%", true)
+        .addField("Réduction dégâts", "19%", true)
+
+    message.channel.sendEmbed(embed)
+
+    console.log("La commande de l'Héros M-21 viens d'être effectuée.");
+
+    }
+	
+	 // Hero Cantare = Frankenstein
+    if (message.content === prefix + "frankenstein"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Seira :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:s_:724831181341720586>")
+        .setDescription("__Frankenstein__ est le deutéragoniste de Noblesse, il est le servant dévoué de Raizel ; et est un humain modifié.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.9 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setThumbnail("https://i.imgur.com/eJzzXBH.png")
+        .setImage("https://i.imgur.com/AOdcb0D.png")
+        .addField(":speech_balloon: Citation", "Oui, maître.", false)
+        .addField("<:c1:719664266797383680> Entaille ténébreuse", "Attaque 1 adversaire de la ligne arrière avec [115% d'ATQ] et a 80% de chance d'infliger une Contamination qui augmente les dégâts des malus de 100% pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Érosion", "Attaque l'adversaire possédant la santé la plus élevée avec [210% de l'ATQ] et inflige 1 [Poison] infligeant des dégâts à hauteur de 30% de l'ATQ pendant 2 tours. Si la cible est déjà affecté par [Poison], étourdit la cible pendant 1 tour.", false)
+        .addField("<:c3:719664266776412160> Lance Sombre", "Attaque tous les adversaires avec [135% de l'ATQ] et réduit leur ATQ de 30% pendant 2 tours. Si l'adversaire est affecté par un malus, inflige [40% de dégâts supplémentaires.]", false)
+        .addField("<:passif:719664266969612379> 1: Le Président", " Augmente l'ATQ de 10%, la santé de 10% et les chances de coup critique de 10%.", false)
+        .addField("<:passif:719664266969612379> 2: Savant fou", "L'ATQ est améliorée de 10% (jusqu'à 50%) à chaque fois que le héros est attaqué. Inflige [Poison] à hauteur de 30% de l'ATQ pendant 2 tours lorsqu'un coup critique se produit.", false)
+	.addField("ATQ", "20202", true)
+        .addField("DEF", "463", true)
+        .addField("PV", "98900", true)
+        .addField("VIT", "362", true)
+	.addField("Blocage", "33%", true)
+        .addField("Taux Crit", "25%", true)
+	.addField("Dégâts Crit", "10%", true)
+        .addField("Résist. Malus", "23%", true)
+        .addField("Réduction dégâts", "19%", true)
+
+    message.channel.sendEmbed(embed)
+
+    console.log("La commande de l'Héros Frankenstein viens d'être effectuée.");
+
+    }
+	
+		 // Hero Cantare = Frankenstein
+    if (message.content === prefix + "frank"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Seira :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:s_:724831181341720586>")
+        .setDescription("__Frankenstein__ est le deutéragoniste de Noblesse, il est le servant dévoué de Raizel ; et est un humain modifié.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.9 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setThumbnail("https://i.imgur.com/eJzzXBH.png")
+        .setImage("https://i.imgur.com/AOdcb0D.png")
+        .addField(":speech_balloon: Citation", "Oui, maître.", false)
+        .addField("<:c1:719664266797383680> Entaille ténébreuse", "Attaque 1 adversaire de la ligne arrière avec [115% d'ATQ] et a 80% de chance d'infliger une Contamination qui augmente les dégâts des malus de 100% pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Érosion", "Attaque l'adversaire possédant la santé la plus élevée avec [210% de l'ATQ] et inflige 1 [Poison] infligeant des dégâts à hauteur de 30% de l'ATQ pendant 2 tours. Si la cible est déjà affecté par [Poison], étourdit la cible pendant 1 tour.", false)
+        .addField("<:c3:719664266776412160> Lance Sombre", "Attaque tous les adversaires avec [135% de l'ATQ] et réduit leur ATQ de 30% pendant 2 tours. Si l'adversaire est affecté par un malus, inflige [40% de dégâts supplémentaires.]", false)
+        .addField("<:passif:719664266969612379> 1: Le Président", " Augmente l'ATQ de 10%, la santé de 10% et les chances de coup critique de 10%.", false)
+        .addField("<:passif:719664266969612379> 2: Savant fou", "L'ATQ est améliorée de 10% (jusqu'à 50%) à chaque fois que le héros est attaqué. Inflige [Poison] à hauteur de 30% de l'ATQ pendant 2 tours lorsqu'un coup critique se produit.", false)
+	.addField("ATQ", "20202", true)
+        .addField("DEF", "463", true)
+        .addField("PV", "98900", true)
+        .addField("VIT", "362", true)
+	.addField("Blocage", "33%", true)
+        .addField("Taux Crit", "25%", true)
+	.addField("Dégâts Crit", "10%", true)
+        .addField("Résist. Malus", "23%", true)
+        .addField("Réduction dégâts", "19%", true)
+
+    message.channel.sendEmbed(embed)
+
+    console.log("La commande de l'Héros Frankenstein viens d'être effectuée.");
+
     }
 	
         // Hero Cantare = Kaiser
@@ -87,8 +214,8 @@ bot.on('message', message => {
             .addField("DEF", "692", true)
             .addField("PV", "131156", true)
             .addField("VIT", "484", true)
-	        .addField("Blocage", "33%", true)
-	        .addField("Taux Crit", "20%", true)
+	    .addField("Blocage", "33%", true)
+	    .addField("Taux Crit", "20%", true)
             .addField("Dégâts Crit", "5%", true)
             .addField("Résist. Malus", "28%", true)
             .addField("Réduction dégâts", "29%", true)
@@ -666,12 +793,12 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .setTitle("Seira :black_small_square: <:nature:719638081195475114> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
         .setDescription("__Seira__ est une Noble ainsi qu'une étudiante à l'académie Ye Ran. Elle est également un des 8 chefs de clans.")
         .setColor("RANDOM")
-        .setFooter("Khun Ran v0.5 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setFooter("Khun Ran v0.9 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
         .setThumbnail("https://i.imgur.com/th1QxyB.png")
         .setImage("https://i.imgur.com/w3onuiJ.gif")
         .addField(":speech_balloon: Citation", "Je n'ai aucun intérêt en ta faux de la mort.", false)
         .addField("<:c1:719664266797383680> Griffe tranchante", "Attaque un adversaire avec 140% de l'ATQ et augmente les chances de critique de 30% pendant 2 tours", false)
-        .addField("<:c2:719664268722831421> Coup de pied retourné arrière", "Attaque l'adversaire possédant la santé la plus élevée avec 210% de l'ATQ et inflige 2 saignements avec 30% de l'ATQ pendant 2 tours. Si la cible est affecté par un saignement, génère 30% de dégâts supplémentaires.", false)
+        .addField("<:c2:719664268722831421> Coup de pied retourné arrière", "Attaque l'adversaire possédant la santé la plus élevée avec 210% de l'ATQ et inflige 2 saignements infligeant des dégâts à hauteur de 30% de l'ATQ pendant 2 tours. Si la cible est affecté par un saignement, génère 30% de dégâts supplémentaires.", false)
         .addField("<:c3:719664266776412160> Faux de la Mort: Tranchant de la pleine lune", "Attaque tous les adversaires avec 135% de l'ATQ et diminue leur attaque de 30%. Inflige deux saignements supplémentaires si la cible est déjà affecté par un saignement.", false)
         .addField("<:passif:719664266969612379> 1: Chef du Clan Loyard", " Augmente l'ATQ de 20%, la santé de 10% et les chances de coup critique de 15%.", false)
         .addField("<:passif:719664266969612379> 2: Lame aiguisée", "Si un coup critique se produit, inflige un saignement à hauteur de 30% de l'ATQ pendant 2 tours. Si la cible est affectée par un saignement, l'attaque devient une attaque absolue (ignorant la réduction de dégâts et la défense de 30%). Devient immunisé aux dégâts une fois lorsque la santé tombe en dessous de 50%.", false)
@@ -875,72 +1002,83 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
     }
 
 	
-	        // Epic Seven Artefact = Sigurd Scythe
-    if (message.content === prefix + "sigurd"){
+	        // Hero Cantare Equipement Exclusif / Max Level Warrior
+    if (message.content === prefix + "ee mlw"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Sigurd Scythe :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("Alors que le clair de lune révélait une personne tenant une faux, les spectateurs étonnés s'exclamèrent 'Le Dieu de la Mort est descendu !'")
+            .setTitle("Épée du dragon rouge")
             .setColor("RANDOM")
-            .setFooter("Artefact Sigurd Scythe demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
-            .setThumbnail("https://www.zupimages.net/up/19/01/wchj.jpg")
-            .addField(":crossed_swords: Compétence Niv.1", "Lorsque la vie du lanceur est inférieure à 50%, augmente l'attaque de 25% et absorbe **25%** des dégâts infligés pour les convertir en vie.", false)
-            .addField(":crossed_swords: Compétence Niv.Max", "Lorsque la vie du lanceur est inférieure à 50%, augmente l'attaque de 25% et absorbe **50%** des dégâts infligés pour les convertir en vie.", false)
-            .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
-	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
-	    .addField(":crossed_swords: Notes", "PVE : **S** | PVP : **SS**", false)
-	    .addField(":crossed_swords: Quelques personnages pouvant l'utiliser", "Ravi, Ken...", false)
-	    .addField(":crossed_swords: Commentaires", "Un des meilleurs artefacts tanky réservé au warrior. Utilisable sur Ravi, et sur les warriors n'ayant pas de vol de vie comme Ken. Ne pas utilisez sur des warrior comme Sigret, Yufine et tous les warriors n'étant pas très résistant à cause de l'exigence des -50% de vie. Bonne synergie avec le set Lifesteal. Peut soigner votre personnage proche de la mort totalement ou presque. Peut faire de gros dégâts. ", false)
+	    .setFooter("Équipement exclusif de Max Level Warrior. ")
+            .setThumbnail("https://i.imgur.com/iFRzcK1.png")
+            .setImage("https://i.imgur.com/jbKdjhN.png")
+            .setDescription("La vitesse est améliorée de X à X proportionnellement aux PV manquants. \n \n **Statistique améliorée:** Santé")
+	message.channel.sendEmbed(embed)
+
+    }
+		        // Hero Cantare Equipement Exclusif / Max Level Warrior
+    if (message.content === prefix + "ee max level warrior"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Épée du dragon rouge")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Max Level Warrior. ")
+            .setThumbnail("https://i.imgur.com/iFRzcK1.png")
+            .setImage("https://i.imgur.com/jbKdjhN.png")
+            .setDescription("La vitesse est améliorée de X à X proportionnellement aux PV manquants. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
 	
-		        // Epic Seven Artefact = Durandal
-    if (message.content === prefix + "durandal"){
+		        // Hero Cantare Equipement Exclusif / God-Killer Zero
+    if (message.content === prefix + "ee gk0"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Durandal :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("La lueur émise par l'épée protège son propriétaire de toutes blessures.")
+            .setTitle("Lance de l'obscurité totale")
             .setColor("RANDOM")
-            .setFooter("Artefact Durandal demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
-            .setThumbnail("https://www.zupimages.net/up/19/01/fzpf.jpg")
-            .addField(":crossed_swords: Compétence Niv.1", "Si la vie du lanceur est inférieure à 75%, la Combat Readiness augmente de **8%** quand celui-ci est attaqué.", false)
-            .addField(":crossed_swords: Compétence Niv.Max", "Si la vie du lanceur est inférieure à 75%, la Combat Readiness augmente de **16%** quand celui-ci est attaqué", false)
-            .addField(":crossed_swords: Statistiques basique", "Attaque : **18** | Vie : **43**", false)
-	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **234** | Vie : **559**", false)
+	    .setFooter("Équipement exclusif de God-Killer Zero. ")
+            .setThumbnail("https://i.imgur.com/hOENdJ8.png")
+            .setImage("https://i.imgur.com/g33NUMU.png")
+            .setDescription("Lorsqu'attaqué, inflige [Brûlure] à l'adversaire avec % de chance. \n \n **Statistique améliorée:** Précision des malus")
 	message.channel.sendEmbed(embed)
 
     }
 	
-			        // Epic Seven Artefact = Uberious's Tooth
-    if (message.content === prefix + "uberius"){
+		        // Hero Cantare Equipement Exclusif / God-Killer Zero
+    if (message.content === prefix + "ee godkiller 0"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Uberius's Tooth :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("Trésor de la famille royale de Wintenberg fabriqué à partir des restes du dragon Uberius. On dit qu'il est capable de déchirer une armure de dragon.")
+            .setTitle("Lance de l'obscurité totale")
             .setColor("RANDOM")
-            .setFooter("Artefact Uberius's Tooth demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
-            .setThumbnail("https://zupimages.net/up/19/01/b7ks.jpg")
-            .addField(":crossed_swords: Compétence Niv.1", "**50%** de chance d'infliger des dégâts supplémentaires si un coup critique est infligé lors d'une attaque basique. Les dégâts supplémentaires sont proportionnels à l'attaque du lanceur.", false)
-            .addField(":crossed_swords: Compétence Niv.Max", "**100%** de chance d'infliger des dégâts supplémentaires si un coup critique est infligé lors d'une attaque basique. Les dégâts supplémentaires sont proportionnels à l'attaque du lanceur.", false)
-            .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
-	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
+	    .setFooter("Équipement exclusif de God-Killer Zero. ")
+            .setThumbnail("https://i.imgur.com/hOENdJ8.png")
+            .setImage("https://i.imgur.com/g33NUMU.png")
+            .setDescription("Lorsqu'attaqué, inflige [Brûlure] à l'adversaire avec % de chance. \n \n **Statistique améliorée:** Précision des malus")
 	message.channel.sendEmbed(embed)
 
     }
 	
-				        // Epic Seven Artefact = Border Coin
-    if (message.content === prefix + "border"){
+			        // Hero Cantare Equipement Exclusif / God-Killer Zero
+    if (message.content === prefix + "ee godkiller zero"){
         var embed = new Discord.RichEmbed()
-            .setTitle("Border Coin :black_small_square: <:e7combattant:506111308635308032> :black_small_square: 5<:etoile:580331911608664084>")
-            .setDescription("Face, je ferai comme si je n'avais rien vu et te laisserai partir, mais pile... D'innombrables personnes ont mis en jeu leur fortune sur cette ancienne pièce d'or.")
+            .setTitle("Lance de l'obscurité totale")
             .setColor("RANDOM")
-            .setFooter("Artefact Border Coin demandé par " + message.author.username + ". " + "Fiche mise à jour le 21/05/19.")
-            .setThumbnail("https://epic7x.com/wp-content/uploads/2019/03/zFjICyn.png")
-            .addField(":crossed_swords: Compétence Niv.1", "Augmente l'attaque de **7,5%** lors de l'utilisation d'une compétence n'infligeant pas de dégâts. L'effet peut se cumuler jusqu'à 3 fois.", false)
-            .addField(":crossed_swords: Compétence Niv.Max", "Augmente l'attaque de **15%** lors de l'utilisation d'une compétence n'infligeant pas de dégâts. L'effet peut se cumuler jusqu'à 3 fois.", false)
-            .addField(":crossed_swords: Statistiques basique", "Attaque : **21** | Vie : **32**", false)
-	    .addField(":crossed_swords: Statistiques Niv.Max", "Attaque : **273** | Vie : **416**", false)
+	    .setFooter("Équipement exclusif de God-Killer Zero. ")
+            .setThumbnail("https://i.imgur.com/hOENdJ8.png")
+            .setImage("https://i.imgur.com/g33NUMU.png")
+            .setDescription("Lorsqu'attaqué, inflige [Brûlure] à l'adversaire avec % de chance. \n \n **Statistique améliorée:** Précision des malus")
 	message.channel.sendEmbed(embed)
-	    
+
+    }		
+	
+	// Hero Cantare Equipement Exclusif / Maschenny
+    if (message.content === prefix + "ee maschenny"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Lance de la sérénité")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Maschenny.")
+            .setThumbnail("https://i.imgur.com/1JZsaqA.png")
+            .setImage("https://i.imgur.com/dnxlTlg.png")
+            .setDescription("Lorsque Yellow May est activé, % chance de provoquer les adversaires pendant 1 tour. \n \n **Statistique améliorée:** Attaque")
+	message.channel.sendEmbed(embed)
+
     }
+	
 	
 					        // Epic Seven Artefact = Junkyard Dog
     if (message.content === prefix + "junkyard"){
