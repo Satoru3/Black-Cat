@@ -632,6 +632,37 @@ bot.on('message', message => {
     
         }
 	
+	        // Hero Cantare = Queen No Name
+        if (message.content === prefix + "pute sans nom"){
+            var embed = new Discord.RichEmbed()
+            .setTitle("Queen No Name :black_small_square: <:dark:723941756109979760> :black_small_square: <:dieu:723941755996733583> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Queen __No Name__ est la reine de la guilde New Nightmare.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.5 | Combattez pour monter de niveau, joueur !")
+            .setThumbnail("https://i.imgur.com/lTSFMfY.png")
+            .setImage("https://i.imgur.com/v9syQKz.gif")
+            .addField(":speech_balloon: Citation", "Plus sournois que les démons.... et plus avide que les dragons. C'est humain.", false)
+            .addField("<:c1:719664266797383680> Entaille cauchemardesque", "Attaque 2 adversaires aléatoirement avec 110% de l'ATQ et inflige 30% de dégâts additionnels s'ils n'ont aucun bonus avec 50% de chances sur chaque adversaire de retirer un bonus s'ils en ont.", false)
+            .addField("<:c2:719664268722831421> Tir de couverture", "Attaque tous les adversaires avec 150% de l'ATQ et augmente le moral de tous les alliés pour attribuer un bonus sur les [dégâts des compétences] de 30% pendant 2 tours.", false)
+            .addField("<:c3:719664266776412160> Ouvrons le feu, pour la guerre !", "Attaque tous les adversaires 3 fois avec 50% de l'ATQ. Chaque attaque inflige 60% de dégâts additionnels à un adversaire aléatoire. Récupère 2 Mana si un adversaire est éliminé par cette attaque.", false)
+            .addField("<:passif:719664266969612379> 1: La Force de New-Nightmare", "Augmente l'attaque de 15%, la santé de 15% et la réduction des dégâts de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Karma", "Le héros devient immunisé aux dégâts pendant 1 tour lorsqu'un allié ou un adversaire est éliminé. Restaure les PV's d'un allié à hauteur de 50% des PV's de Queen No Name lorsque celle-ci est éliminée, et rends l'allié immunisé aux dégâts une fois.", false)
+            .addField("<:sp:720742202757873745> Allez, Nightmare !", "Attaque tous les adversaires avec 140% de l'ATQ avec une attaque absolue qui ignore la réduction des dégâts et la résistance aux malus de 50%, et inflige [Confusion] pendant 1 tour à un adversaire aléatoire.", false)
+            .addField("ATQ", "22199", true)
+            .addField("DEF", "811", true)
+            .addField("PV", "123636", true)
+            .addField("VIT", "496", true)
+            .addField("Taux Crit", "15%", true)
+            .addField("Blocage", "33%", true)
+            .addField("Résist. Malus", "28%", true)
+            .addField("Réduction dégâts", "29%", true)
+    
+        message.channel.sendEmbed(embed)
+    
+        console.log("La commande de l'Héroïne Queen No Name viens d'être effectuée.");
+    
+        }
+	
     // Hero Cantare = Yeon's Flame Khun
     if (message.content === prefix + "flame khun"){
         var embed = new Discord.RichEmbed()
@@ -1043,7 +1074,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setImage("https://i.imgur.com/32wKCeW.jpg")
             .addField(":speech_balloon: Citation", "Une p'tite léchouille?... Uhmm..ah...", false)
             .addField("<:c1:719664266797383680> Sale fou", "T'as cru t'étais qui? Attaque à coup de langue à hauteur de 300% de l'ATQ les deux adversaires ayant l'attaque la plus élevée. Inflige [Excitation] pendant 1 tour pour garantir le coup critique, et étourdir l'ennemi.", false)
-            .addField("<:c2:719664268722831421> Hmm...ah", "Effectue un strip stease, infligeant [Excitation] pendant 1 tour à tous les ennemis.", false)
+            .addField("<:c2:719664268722831421> Hmm...ah", "Effectue un strip tease, infligeant [Excitation] pendant 1 tour à tous les ennemis.", false)
             .addField("<:c3:719664266776412160> Hmm... Tu veux y rent-", "Se prépare à l'entrée... censure censure, censure. Met K-O immédiatemment l'ennemi ayant l'ATQ la plus élevée.", false)
             .addField("<:passif:719664266969612379> 1: Excitation de Buzay", "Augmente la santé de 200%, la défense de 50%, la réduction de dégâts de 70% et la résistance aux malus de 40%", false)
             .addField("<:passif:719664266969612379> 2: Technique spéciale de drague!", "Lorsque la santé passe en dessous des 90/50/40%, octroit un bouclier à tous les alliés équivalent à 30% de la santé du héros, puis octroit [Soins continus à hauteur de 40% des PV] aux deux alliés ayant la santé la plus faible. Puis, inflige [Excitation] à l'allié ayant l'ATQ la plus élévée, avant d'attaquer avec 150% de l'ATQ.", false)
