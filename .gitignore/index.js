@@ -136,7 +136,7 @@ bot.on('message', message => {
 	 // Hero Cantare = Frankenstein
     if (message.content === prefix + "frankenstein"){
         var embed = new Discord.RichEmbed()
-        .setTitle("Seira :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:s_:724831181341720586>")
+        .setTitle("Frankenstein :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:s_:724831181341720586>")
         .setDescription("__Frankenstein__ est le deutéragoniste de Noblesse, il est le servant dévoué de Raizel ; et est un humain modifié.")
         .setColor("RANDOM")
         .setFooter("Khun Ran v0.9 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
@@ -167,7 +167,7 @@ bot.on('message', message => {
 		 // Hero Cantare = Frankenstein
     if (message.content === prefix + "frank"){
         var embed = new Discord.RichEmbed()
-        .setTitle("Seira :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:s_:724831181341720586>")
+        .setTitle("Frankenstein :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:s_:724831181341720586>")
         .setDescription("__Frankenstein__ est le deutéragoniste de Noblesse, il est le servant dévoué de Raizel ; et est un humain modifié.")
         .setColor("RANDOM")
         .setFooter("Khun Ran v0.9 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
