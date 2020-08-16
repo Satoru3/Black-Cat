@@ -68,7 +68,7 @@ bot.on('message', message => {
            .addField("__**Correction(s)**__","➤ Modification des réponses non adaptées dans le $26ball")
            .addField("__**Modification(s)**__","➤ $ee modifiée.")
            .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Équipement exclusif d'Hilda (Familier dimensionnel)")
-           .addField("__**Nouvelle(s) commande(s)**__","➤ $quisuisje")
+           .addField("__**Nouvelle(s) commande(s)**__","➤ $quisuisje (32 images actuellement)")
         message.channel.sendEmbed(embed);
 	   
     }
@@ -1447,6 +1447,13 @@ bot.on("message", function(message) {
 		"https://i.imgur.com/WiuKzkr.png",
 		"https://i.imgur.com/84SmpqH.png",
 		"https://i.imgur.com/NnAKhDg.png",
+		"https://i.imgur.com/bPE7uMy.png",
+		"https://i.imgur.com/9EWwhXC.png",
+		"https://i.imgur.com/eMoBPN7.png",
+		"https://i.imgur.com/KEwJSkB.png",
+		"https://i.imgur.com/FHMTIGQ.png",
+		"https://i.imgur.com/qfJBOJa.png",
+		"https://i.imgur.com/7b5E07e.png",
 
        
             ];
@@ -1456,12 +1463,12 @@ bot.on("message", function(message) {
             .setDescription("Hmm... cela te convient, j'imagine?")
             .setImage(reponse)
             .setTimestamp()
-	    .setFooter("Requête demandée par ${message.author.tag}")
+	    .setFooter(`Requête demandée par ${message.author.tag}`)
             
 
 
         message.channel.sendEmbed(bembed)
-        console.log("La commande chaton viens d'être effectuée avec succès par " + message.author.username);
+        console.log("La commande quisuisje viens d'être effectuée avec succès par " + message.author.username);
 
 }});
 
