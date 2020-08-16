@@ -65,7 +65,7 @@ bot.on('message', message => {
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la mise à jour 0.10 du 16/08")
-           .addField("__**Correction(s)**__","➤ Aucune.")
+           .addField("__**Correction(s)**__","➤ Modification des réponses non adaptées dans le $26ball")
            .addField("__**Modification(s)**__","➤ $ee modifiée.")
            .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Équipement exclusif d'Hilda (Familier dimensionnel)")
            .addField("__**Nouvelle(s) commande(s)**__","➤ $quisuisje")
@@ -1438,6 +1438,15 @@ bot.on("message", function(message) {
                 "https://i.imgur.com/NGclWGx.png",
 		"https://i.imgur.com/dWXEhUj.png",
 		"https://i.imgur.com/VgDmg1O.png",
+		"https://i.imgur.com/LoyrFje.png",
+		"https://i.imgur.com/4HkEVBR.png",
+		"https://i.imgur.com/YZaCAGM.png",
+		"https://i.imgur.com/5eeB0fC.png",
+		"https://i.imgur.com/kRyLOCi.png",
+		"https://i.imgur.com/x5MlocK.png",
+		"https://i.imgur.com/WiuKzkr.png",
+		"https://i.imgur.com/84SmpqH.png",
+		"https://i.imgur.com/NnAKhDg.png",
 
        
             ];
