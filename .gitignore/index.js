@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.9.5 [13/08] | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.10 [16/08] | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -18,9 +18,9 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`$kick` \n `$ban` \n `$purge`", true)
-            .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~ \n `$màj` [**New**]", true)
-            .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `~~$quizz~~`", true)
-            .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n `$ee`", true)
+            .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~ \n `$màj`", true)
+            .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `~~$quizz~~` \n `quisuisje` [**New**]", true)
+            .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n `$ee` [**New**]", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
             .setThumbnail("")
@@ -37,7 +37,7 @@ bot.on('message', message => {
             .addField("<:s_:724831181341720586>","**Frankenstein** <:feu:719638080780501073> <:element:724668549028905073> ($frankenstein) \n **Muzaka** <:nature:719638081195475114> <:artmartiaux:723903194819985459> ($muzaka) \n **M-21** <:nature:719638081195475114> <:competence:719638081162051585> ($m-21)")
             .addField("<:a_:724817244789538819>","**Raizel** <:ice:719781844949925898> <:evil:724805535727353856> ($raizel)")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.9 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
+            .setFooter("Khun Ran v0.10 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
             .setThumbnail("https://i.imgur.com/kwMfqwu.png")
 	message.channel.sendEmbed(embed);
         console.log("Page des personnages générée suite à une demande de " + message.author.username);
@@ -50,8 +50,11 @@ bot.on('message', message => {
 	    .setDescription("Pour l'instant, le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule.")
             .addField("<:feu:719638080780501073>","➤ **Max Level Warrior** (__Épée du dragon rouge__ | $ee mlw) \n ➤ **God-Killer Zero** (__Lance de l'obscurité totale__ | $ee gk0) \n ➤ **Maschenny** (__Lance de la sérénité__ | $ee maschenny)", true)
             .addField("<:ice:719781844949925898>","➤ **Master Pooh Upooh** (__Parchemin du Roi des Fées__ | $ee mpu)", false)
+	    .addField("<:nature:719638081195475114>","➤ **Actuellement aucun équipement exclusif**", false)
+	    .addField("<:dark:723941756109979760>","➤ **Hilda** (__Familier dimensionnel__ | $ee hilda)", false)
+	    .addField("À venir","➤ **Urek Mazino** (__À venir__ | $ee urek (À venir))", false)
 	    .setColor("RANDOM")
-            .setFooter("Khun Ran v0.9.5 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setFooter("Khun Ran v0.10 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/v9syQKz.gif")
 	message.channel.sendEmbed(embed);
         console.log("Page des équipemens exclusifs générés suite à la demande de " + message.author.username);
@@ -61,11 +64,11 @@ bot.on('message', message => {
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la mise à jour 0.9.5 du 13/08")
+           .setTitle("Récapitulatif de la mise à jour 0.10 du 16/08")
            .addField("__**Correction(s)**__","➤ Aucune.")
-           .addField("__**Modification(s)**__","➤ Aucune.")
-           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ King Dark \n ➤ Équipement exclusif de Master Pooh Upooh (Parchemin du Roi des Fées)")
-           .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune")
+           .addField("__**Modification(s)**__","➤ $ee modifiée.")
+           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Équipement exclusif d'Hilda (Familier dimensionnel)")
+           .addField("__**Nouvelle(s) commande(s)**__","➤ $quisuisje")
         message.channel.sendEmbed(embed);
 	   
     }
@@ -1235,6 +1238,19 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	message.channel.sendEmbed(embed)
 
     }
+	
+				// Hero Cantare Equipement Exclusif / Hilda
+    if (message.content === prefix + "ee hilda"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Familier dimensionnel")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif d'Hilda")
+            .setThumbnail("https://i.imgur.com/7J8XVbB.png")
+            .setImage("https://i.imgur.com/1mP6FxI.png")
+            .setDescription("% d'infliger [Poison] en attaquant. \n \n **Statistique améliorée:** Santé")
+	message.channel.sendEmbed(embed)
+
+    }
 
 				  // Epic Seven Artefact = Justice for All
     if (message.content === prefix + "justice"){
@@ -1372,8 +1388,8 @@ bot.on("message", function(message) {
 	        ".....",
 	        "Simple question: Tu peux la mettre en veilleuse ?",
 	        "Tu ressembles à Enott...",
-	        "Tu fais parti de la Hurado Family ? Vu ta tronche, ça ne m'étonnerait même pas.",
-                "Je pense que cela n'a pas d'importance.",
+	        "Tu m'déranges, ça se voit ? Juste pour ça, j'espère que tu te taperas Daisy, chéri.",
+                "Tu crois que j'en ai quelque chose à branler?",
                 "Tu n'avais vraiment rien d'autre à me demander ?",
                 "Aucune idée. Et toi, connais-tu le synonyme de synonyme ?",
                 
@@ -1402,34 +1418,36 @@ bot.on("message", function(message) {
     var args = message.content.substring(prefix.length).split(" ");
 
     switch (args[0].toLowerCase()) {
-	    case "chaton":
+	    case "quisuisje":
         let args = message.content.split(" ").slice(1);
 
             var replys = [
-                "https://www.wanimo.com/veterinaire/images/articles/chat/chaton-diarrhee.jpg",
-                "https://www.catizz.com/medias/common/miaulement%20chat%20.jpg",
-                "https://jardinage.lemonde.fr/images/dossiers/2017-02/chaton-161407.jpg",
-                "https://conseils-veto.com/wp-content/uploads/2018/02/chat-malade.png",
-                "http://recueil-de-png.r.e.pic.centerblog.net/22f09c18.png",
-                "https://static.wamiz.fr/images/articles/facebook/article/eduquer-un-chat-fb-59ad52663bd71.jpg",
-                "https://jardinage.lemonde.fr/images/dossiers/2017-08/chaton-161238.jpg",
-                "https://media.giphy.com/media/14v0b6U1vucP1m/giphy.gif",
-                "https://thumbs.gfycat.com/WhirlwindHarshBighorn-size_restricted.gif",
-                "https://img3.grazia.fr/var/grazia/storage/images/media/images/what-s-the-buzz/gifs-chats/gif3/13466158-1-fre-FR/Gif3_width545.gif",
-                "https://static.mmzstatic.com/wp-content/uploads/2013/08/gifchat24.gif",
-                "https://data.photofunky.net/output/image/b/7/9/9/b79903/photofunky.gif",
-                "https://archzine.fr/wp-content/uploads/2016/01/le-plus-mignon-chaton-petit-chaton-mignon-chaton-image.jpg",
-                "http://madame.legorafi.fr/wp-content/uploads/2016/10/iStock_68465967_MEDIUM-800x600.jpg",
+                "https://i.imgur.com/zZraoSj.png",
+                "https://i.imgur.com/eJzzXBH.png",
+                "https://i.imgur.com/Wzq48L5.png",
+                "https://i.imgur.com/kTISvE4.png",
+                "https://i.imgur.com/9Ccn5z9.png",
+                "https://i.imgur.com/th1QxyB.png",
+                "https://i.imgur.com/BLmMuzE.png",
+                "https://i.imgur.com/9BmU9ET.png",
+                "https://i.imgur.com/eW0LR11.png",
+                "https://i.imgur.com/kwMfqwu.png",
+                "https://i.imgur.com/lTSFMfY.png",
+                "https://i.imgur.com/HGTeVIH.png",
+                "https://i.imgur.com/oV14Viz.png",
+                "https://i.imgur.com/NGclWGx.png",
+		"https://i.imgur.com/dWXEhUj.png",
+		"https://i.imgur.com/VgDmg1O.png",
 
        
             ];
 
             let reponse = (replys[Math.floor(Math.random() * replys.length)])
             var bembed = new Discord.RichEmbed()
-            .setDescription("Whaow, un petit chat !")
+            .setDescription("Hmm... cela te convient, j'imagine?")
             .setImage(reponse)
             .setTimestamp()
-	    .setFooter("Demandé par " + message.author.username, "https://cdn.discordapp.com/attachments/432232468465188874/506295453239869440/Screenshot_11.png")
+	    .setFooter("Requête demandée par ${message.author.tag}")
             
 
 
