@@ -1587,7 +1587,7 @@ bot.on("message", async message => {
 
   }
 	    
-    }
+    })
 			 
     if (command === "kick") {
 
