@@ -1472,38 +1472,6 @@ bot.on("message", function(message) {
 
 }});
 
-bot.on("message", function(message) {
-    if (message.author.equals(bot.user)) return;
-
-    if (!message.content.startsWith(prefix)) return;
-
-    var args = message.content.substring(prefix.length).split(" ");
-
-    switch (args[0].toLowerCase()) {
-	    case "humournoir":
-        let args = message.content.split(" ").slice(1);
-
-            var replys = [
-                "Que dis-t-on en Afrique quand un lieu est bondé ? ||Il est noir de monde...||",
-                "Quel est la différence entre Jésus et un tableau de Picasso ? ||Le tableau s'accroche avec un seul clou||",
-
-       
-            ];
-
-            let reponse = (replys[Math.floor(Math.random() * replys.length)])
-            var bembed = new Discord.RichEmbed()
-            .setDescription("Humour noir")
-            .addField(reponse)
-            .setTimestamp()
-	    .setFooter(`Requête demandée par ${message.author.tag}`)
-            
-
-
-        message.channel.sendEmbed(bembed)
-        console.log("La commande quisuisje viens d'être effectuée avec succès par " + message.author.username);
-
-}});
-
 bot.on("message", async message => {
  
   if(message.author.bot) return;
@@ -1639,11 +1607,20 @@ bot.on("message", async message => {
            if (message.content.toLowerCase().includes(blacklist[i].toLowerCase())) Texte = true;
     }
 	
-	    if(message.content === prefix + "humournoir2"){ //Total 95 questions.
+	    if(message.content === prefix + "humournoir"){ //Total 95 questions.
  
  let quiz = [
     { q: 'Que dis-t-on en Afrique quand un lieu est bondé ?', a: ['||Il est noir de monde...||'] },
     { q: 'Quel est la différence entre Jésus et un tableau de Picasso ?', a: [`||Le tableau s'accroche avec un seul clou||`] },
+    { q: 'Une fillette est retrouvée égorgée dans la rue… L’enquêteur questionne le légiste : Elle a été violée ?', a: [`||– Non pas encore, j’attendais votre autorisation.||`] },
+    { q: `Un homme à l'hôpital dit à son infirmière : Vous êtes mon infirmière préférée, voudriez-vous passer me voir quand je serai sorti de l'hôpital ?`, a: [`||Je suis désolée, mais j'ai horreur, des cimetières.||`] },
+    { q: 'A quel endroit se trouvent les tétraplégiques ?', a: [`||Là où on les as laissés..||`] },
+    { q: 'Quel est le point commun entre des chaussures et des juifs ?', a: [`||Il y en a plus en 39 qu’en 45||`] },
+    { q: 'Tout est bon dans le cochon', a: [`||Je ne mangerai pas ta mère pour autant.||`] },
+    { q: '– Maman, maman, je ne veux plus dormir avec mon petit frère.', a: [`||– Tais-toi ! Je t’ai déjà dit qu’on avait pas assez d’argent pour l’enterrer.||`] },
+    { q: `Qu'est ce qu'un pruneau ?`, a: [`||Un synonyme de personne âgée : qui est ridée et qui fait chier||`] },
+    { q: 'Que font 1+2-1x2?', a: [`||Le nombre de jambe d'un manchot.||`] },
+
 
 	
   ];
