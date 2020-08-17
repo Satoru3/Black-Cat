@@ -1650,7 +1650,7 @@ bot.on("message", async message => {
 
   let item = quiz[Math.floor(Math.random() * quiz.length)];
     return message.channel.send({embed: new Discord.RichEmbed()
-                                  .setTitle(`${item.q}\`)
+                                  .setTitle(`${item.q}`)
                                   .setDescription(`${item.a}`)
                                   .setColor('RANDOM')
                                 })
