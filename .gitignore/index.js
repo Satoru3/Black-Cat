@@ -1575,7 +1575,10 @@ bot.on("message", async message => {
     { q: 'Quel est la différence entre Jésus et un tableau de Picasso ?', a: [`||Le tableau s'accroche avec un seul clou||`] },
 
   let item = quiz[Math.floor(Math.random() * quiz.length)];
-
+  await message.channel.send(item.q);
+  try {
+    let collected = await message.channel.awaitMessages(answer => item.a.includes(answer.content.toLowerCase()), options);
+    let winnerMessage = collected.first();
     return message.channel.send({embed: new Discord.RichEmbed()
                                   .setAuthor(`Gagnant: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
                                   .setTitle(`Réponse correcte: \`${winnerMessage.content}\``)
