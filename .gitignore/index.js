@@ -1472,6 +1472,38 @@ bot.on("message", function(message) {
 
 }});
 
+bot.on("message", function(message) {
+    if (message.author.equals(bot.user)) return;
+
+    if (!message.content.startsWith(prefix)) return;
+
+    var args = message.content.substring(prefix.length).split(" ");
+
+    switch (args[0].toLowerCase()) {
+	    case "humournoir":
+        let args = message.content.split(" ").slice(1);
+
+            var replys = [
+                "Que dis-t-on en Afrique quand un lieu est bondé ? ||Il est noir de monde...||",
+                "Quel est la différence entre Jésus et un tableau de Picasso ? ||Le tableau s'accroche avec un seul clou||",
+
+       
+            ];
+
+            let reponse = (replys[Math.floor(Math.random() * replys.length)])
+            var bembed = new Discord.RichEmbed()
+            .setDescription("Humour noir")
+            .addField(reponse)
+            .setTimestamp()
+	    .setFooter(`Requête demandée par ${message.author.tag}`)
+            
+
+
+        message.channel.sendEmbed(bembed)
+        console.log("La commande quisuisje viens d'être effectuée avec succès par " + message.author.username);
+
+}});
+
 bot.on("message", async message => {
  
   if(message.author.bot) return;
@@ -1592,23 +1624,4 @@ bot.on("message", async message => {
 
 }
 
-});
-
-bot.on('message', msg => {
-    if (msg.content === prefix + "white"){
-	    
-       let role = msg.guild.roles.find('name', 'Doggo')
-       
-       if(msg.member.roles.find('name', 'Doggo')) {
-	   msg.member.removeRole(role)
-	   msg.reply(`Rôle retiré.`)
-	       
-       }
-	else {
-	   msg.member.addRole(role)
-           msg.reply(`Rôle ajouté.`)
-	}
-	    
-    }
-	
 });
