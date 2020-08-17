@@ -1650,7 +1650,6 @@ bot.on("message", async message => {
 
   let item = quiz[Math.floor(Math.random() * quiz.length)];
     return message.channel.send({embed: new Discord.RichEmbed()
-                                  .setAuthor(`Gagnant: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
                                   .setTitle(`Réponse correcte: \`${winnerMessage.content}\``)
                                   .setFooter(`Question: ${item.q}`)
                                   .setColor('RANDOM')
