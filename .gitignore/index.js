@@ -1578,7 +1578,7 @@ bot.on("message", async message => {
   
   if(command === "purge") {
 
-    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("Désolé, mais tu n'as pas la permission de **gérer les messages** !")
+    if (!message.member.hasPermission("SEND_MESSAGES")) return message.channel.send("Désolé, mais tu n'as pas la permission de **gérer les messages** !")
 
     if (!args[0]) return message.channel.send('Tu dois spécifier un nombre de message.');
     if (args[0] < 1) return message.channel.send('Tu dois spécifier un nombre de message supérieur à 1.');
