@@ -1597,9 +1597,9 @@ bot.on("message", async message => {
 bot.on('message', msg => {
     if (msg.content === prefix + "white"){
 	    
-       let role = msg.guild.roles.find('name', 'Capitaine des Pistonnés')
+       let role = msg.guild.roles.find('name', 'Doggo')
        
-       if(msg.member.roles.find('name', 'Capitaine des Pistonnés')) {
+       if(msg.member.roles.find('name', 'Doggo')) {
 	   msg.member.removeRole(role)
 	   msg.reply(`Rôle retiré.`)
 	       
