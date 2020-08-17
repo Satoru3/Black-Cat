@@ -1613,7 +1613,7 @@ bot.on("message", async message => {
     { q: 'Que dis-t-on en Afrique quand un lieu est bondé ?', a: ['||Il est noir de monde...||'] },
     { q: 'Quel est la différence entre Jésus et un tableau de Picasso ?', a: [`||Le tableau s'accroche avec un seul clou||`] },
     { q: 'Une fillette est retrouvée égorgée dans la rue… L’enquêteur questionne le légiste : Elle a été violée ?', a: [`||– Non pas encore, j’attendais votre autorisation.||`] },
-    { q: `Un homme à l'hôpital dit à son infirmière : Vous êtes mon infirmière préférée, voudriez-vous passer me voir quand je serai sorti de l'hôpital ?`, a: [`||Je suis désolée, mais j'ai horreur, des cimetières.||`] },
+    { q: `Un homme à l'hôpital dit à son infirmière : Vous êtes mon infirmière préférée, voudriez-vous passer me voir quand je serai sorti de l'hôpital ?`, a: [`||Je suis désolée, mais j'ai horreur des cimetières.||`] },
     { q: 'A quel endroit se trouvent les tétraplégiques ?', a: [`||Là où on les as laissés..||`] },
     { q: 'Quel est le point commun entre des chaussures et des juifs ?', a: [`||Il y en a plus en 39 qu’en 45||`] },
     { q: 'Tout est bon dans le cochon', a: [`||Je ne mangerai pas ta mère pour autant.||`] },
