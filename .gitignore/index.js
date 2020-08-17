@@ -1567,27 +1567,6 @@ bot.on("message", async message => {
   }
 	    
     }
-
-	    if(message.content === prefix + "humournoir2"){ //Total 95 questions.
- 
- let quiz = [
-    { q: 'Que dis-t-on en Afrique quand un lieu est bondé ?', a: ['||Il est noir de monde...||'] },
-    { q: 'Quel est la différence entre Jésus et un tableau de Picasso ?', a: [`||Le tableau s'accroche avec un seul clou||`] },
-
-	
-  ];
-
-  let item = quiz[Math.floor(Math.random() * quiz.length)];
-    return message.channel.send({embed: new Discord.RichEmbed()
-                                  .setAuthor(`Gagnant: ${winnerMessage.author.tag}`, winnerMessage.author.displayAvatarURL)
-                                  .setTitle(`Réponse correcte: \`${winnerMessage.content}\``)
-                                  .setFooter(`Question: ${item.q}`)
-                                  .setColor('RANDOM')
-                                })
-
-  }
-	    
-    })
 			 
     if (command === "kick") {
 
