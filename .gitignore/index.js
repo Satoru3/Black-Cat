@@ -1595,7 +1595,7 @@ bot.on("message", async message => {
 });
 
 bot.on('message', msg => {
-    if (message.content === prefix + "white"){
+    if (msg.content === prefix + "white"){
 	    
        let role = msg.guild.roles.find('name', 'Capitaine des Pistonnés')
        
