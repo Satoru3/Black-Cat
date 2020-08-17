@@ -1593,3 +1593,22 @@ bot.on("message", async message => {
 }
 
 });
+
+bot.on('message', msg => {
+    if (message.content === prefix + "white"){
+	    
+       let role = msg.guild.roles.find('name', 'Capitaine des Pistonnés')
+       
+       if(msg.member.roles.find('name', 'Capitaine des Pistonnés')) {
+	   msg.member.removeRole(role)
+	   msg.reply(`Rôle retiré.`)
+	       
+       }
+	else {
+	   msg.member.addRole(role)
+           msg.reply(`Rôle ajouté.`)
+	}
+	    
+    }
+	
+};
