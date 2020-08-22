@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.10 [16/08] | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.11 [22/08] | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -19,8 +19,8 @@ bot.on('message', message => {
             .setDescription("Voici les différentes catégories de la page d'aide")
             .addField("__**Modération**__","`$kick` \n `$ban` \n `$purge`", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~ \n `$màj`", true)
-            .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `~~$quizz~~` \n `quisuisje` [**New**]", true)
-            .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n `$ee` [**New**]", true)
+            .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `~~$quizz~~` \n `quisuisje`", true)
+            .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n `$ee`", true)
             .setColor("RANDOM")
             .setFooter(`Page d'aide générée suite à une demande de ${message.author.tag}`)
             .setThumbnail("")
@@ -33,11 +33,11 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
 	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
-            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> <:dieu:723941755996733583> ($queen no name) \n **Yeon's Flame Khun** <:feu:719638080780501073> <:element:724668549028905073> ($flame khun) \n **Unleashed Raizel** <:dark:723941756109979760> <:dieu:723941755996733583> ($unleashed raizel) \n **Seira** <:nature:719638081195475114> <:weapon:719781844744142875> ($seira) \n **Nine Tails Ilpyo Park** <:feu:719638080780501073> <:element:724668549028905073> ($nine tails) \n **Pure Green Arin** <:ice:719781844949925898> <:element:724668549028905073> ($ss arin)", true)
+            .addField("<:ss:719641320343470150>","**Kaiser** <:nature:719638081195475114> <:competence:719638081162051585> ($kaiser) \n **Elaine** <:ice:719781844949925898> <:weapon:719781844744142875> ($elaine) \n **Prime King Uma** <:feu:719638080780501073> <:competence:719638081162051585> ($prime king uma) \n **Max Level Warrior** <:feu:719638080780501073> <:weapon:719781844744142875> ($max level warrior) \n **Jyu Viole Grace** <:ice:719781844949925898> <:artmartiaux:723903194819985459> ($viole) \n **Queen No Name** <:dark:723941756109979760> <:dieu:723941755996733583> ($queen no name) \n **Yeon's Flame Khun** <:feu:719638080780501073> <:element:724668549028905073> ($flame khun) \n **Unleashed Raizel** <:dark:723941756109979760> <:dieu:723941755996733583> ($unleashed raizel) \n **Seira** <:nature:719638081195475114> <:weapon:719781844744142875> ($seira) \n **Nine Tails Ilpyo Park** <:feu:719638080780501073> <:element:724668549028905073> ($nine tails) \n **Pure Green Arin** <:ice:719781844949925898> <:element:724668549028905073> ($ss arin) \n **Black-March Bam** <:light:746561115395326013> <:evil:724805535727353856> ($bm bam)", true)
             .addField("<:s_:724831181341720586>","**Frankenstein** <:feu:719638080780501073> <:element:724668549028905073> ($frankenstein) \n **Muzaka** <:nature:719638081195475114> <:artmartiaux:723903194819985459> ($muzaka) \n **M-21** <:nature:719638081195475114> <:competence:719638081162051585> ($m-21)")
             .addField("<:a_:724817244789538819>","**Raizel** <:ice:719781844949925898> <:evil:724805535727353856> ($raizel)")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.10 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
+            .setFooter("Khun Ran v0.11 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
             .setThumbnail("https://i.imgur.com/kwMfqwu.png")
 	message.channel.sendEmbed(embed);
         console.log("Page des personnages générée suite à une demande de " + message.author.username);
@@ -51,10 +51,11 @@ bot.on('message', message => {
             .addField("<:feu:719638080780501073>","➤ **Max Level Warrior** (__Épée du dragon rouge__ | $ee mlw) \n ➤ **God-Killer Zero** (__Lance de l'obscurité totale__ | $ee gk0) \n ➤ **Maschenny** (__Lance de la sérénité__ | $ee maschenny)", true)
             .addField("<:ice:719781844949925898>","➤ **Master Pooh Upooh** (__Parchemin du Roi des Fées__ | $ee mpu)", false)
 	    .addField("<:nature:719638081195475114>","➤ **Actuellement aucun équipement exclusif**", false)
+	    .addField("<:light:746561115395326013>","➤ **Black-March Bam** (__Ailes de l'Animal Sacré Transformé__ | $ee bm bam) \n ➤ **Endorsi** (__Coeur Bong-Bong__ | $ee endorsi)", false)
 	    .addField("<:dark:723941756109979760>","➤ **Hilda** (__Familier dimensionnel__ | $ee hilda)", false)
-	    .addField("À venir","➤ **Urek Mazino** (__À venir__ | $ee urek (À venir))", false)
+	    .addField("À venir","➤ **Idol Rockcrawler** (__À venir__ | $ee idol (À venir)) \n ➤ **Daisy** (__À venir__ | $ee daisy (À venir)) \n ➤ **Odette** (__À venir__ | $ee odette (À venir))", false)
 	    .setColor("RANDOM")
-            .setFooter("Khun Ran v0.10 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setFooter("Khun Ran v0.11 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/v9syQKz.gif")
 	message.channel.sendEmbed(embed);
         console.log("Page des équipemens exclusifs générés suite à la demande de " + message.author.username);
@@ -64,11 +65,11 @@ bot.on('message', message => {
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la mise à jour 0.10 du 16/08")
-           .addField("__**Correction(s)**__","➤ Modification des réponses non adaptées dans le $26ball")
-           .addField("__**Modification(s)**__","➤ $ee modifiée.")
-           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Équipement exclusif d'Hilda (Familier dimensionnel)")
-           .addField("__**Nouvelle(s) commande(s)**__","➤ $quisuisje (32 images actuellement)")
+           .setTitle("Récapitulatif de la mise à jour 0.11 du 22/08")
+           .addField("__**Correction(s)**__","➤ Correction d'une erreur de typo sur Pure Green Arin.")
+           .addField("__**Modification(s)**__","➤ Ajouts des statistiques manquantes de Nine Tails Ilpyo Park & Pure Green Arin.")
+           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Ajout de l'héros Black-March Bam \n ➤ Équipement exclusif de Black-March Bam (Ailes de l'Animal Sacré Transformé) \n ➤ Équipement exclusif d'Endorsi (Coeur Bong-Bong)")
+           .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
         message.channel.sendEmbed(embed);
 	   
     }
@@ -134,6 +135,88 @@ bot.on('message', message => {
     message.channel.sendEmbed(embed)
 
     console.log("La commande de l'Héros M-21 viens d'être effectuée.");
+
+    }
+	
+	     if (message.content === prefix + "black march bam"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Black-March Bam :black_small_square: <:light:746561115395326013> :black_small_square: <:evil:724805535727353856> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Black-March __Bam__ est le protagoniste principal de Tower of God. Il est un irrégulier.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.11 | Devenez plus fort, et grimpez la tour, élus.")
+            .setThumbnail("https://i.imgur.com/6vbuphJ.png")
+            .setImage("https://i.imgur.com/KY0GXhr.gif")
+            .addField(":speech_balloon: Citation :", "Si je dois me battre, je me battrai pour protéger ce qui m'est précieux.", false)
+            .addField("<:c1:719664266797383680> Black-March: Flamme écarlate", "Attaque un adversaire avec [140% de l'ATQ] et octroit un bouclier équivalent à 20% des PV pendant 1 tour. Octroit le même effet (bouclier) à un allié si le lanceur est sous l'effet Black-March.", false)
+            .addField("<:c2:719664268722831421> Extrême: Aviron bleu", "Attaque deux adversaires avec [140% de l'ATQ] et inflige [130% de dégâts additionnels] si l'adversaire est un Boss. Réduit la défense de [90%] pendant 2 tours si le lanceur est sous l'effet Black-March.", false)
+            .addField("<:c3:719664266776412160> Style Black-March: Papillon Ailé Noir", "Attaque un adversaire de la ligne arrière avec [270% de l'ATQ] et augmente l'ATQ de tous les alliés de [30% de l'ATQ du lanceur] pendant 3 tours. Lorsque le lanceur est sous l'effet de Black-March, inflige des dégâts égaux à [110% de l'ATQ (170% si l'adversaire est un Boss)] à tous les adversaires via le malus 'Wave'", false)
+            .addField("<:passif:719664266969612379> 1: Trou noir sphérique de Shinsu", "Augmente l'attaque de 20%, les chances de coup critique de 15% et la santé de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Déclenchement de Black-March ", "Lorsque la santé passe en dessous des 50%, octroit [Immunité aux dégâts] pendant 1 tour et invoque Black-March. (Statut Black-March: Augmentation de l'ATQ de 50%, de la précision des malus de 30% et ajoute l'élément Ténèbre.) (S'active 1x)", false)
+            .addField("<:sp:720742202757873745> Poussière d'étoile", "Effectue une attaque **perçante** sur l'adversaire ayant la plus haute ATQ avec [250% de l'ATQ] et s'octroit [Immunité aux dégâts] pendant 1 tour. Inflige [50% de dégâts supplémentaires] lorsque le lanceur est sous l'effet Black-March.", false)
+	    .addField("ATQ", "22997", true)
+            .addField("DEF", "901", true)
+            .addField("PV", "131371", true)
+            .addField("VIT", "503", true)
+	    .addField("Blocage", "33%", true)
+	    .addField("Taux Crit", "30%", true)
+            .addField("Armor Crash", "5%", true)
+            .addField("Résist. Malus", "23%", true)
+            .addField("Réduction dégâts", "29%", true)
+	
+	message.channel.sendEmbed(embed)
+		    
+        var bembed = new Discord.RichEmbed()
+            .setTitle("Ailes de l'Animal Sacré Transformé")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Black-March Bam")
+            .setThumbnail("https://i.imgur.com/skAqvue.png")
+            .setImage("https://i.imgur.com/dd2ci3y.png")
+            .setDescription("En entrant dans le statut 'Black-March', obtient un bonus d'ATQ de min% à max%. \n \n **Statistique améliorée:** Attaque")
+
+	message.channel.sendEmbed(bembed)
+
+	console.log("La commande de l'Héros Black-March Bam viens d'être effectuée.");
+
+    }
+	
+		     if (message.content === prefix + "bm bam"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Black-March Bam :black_small_square: <:light:746561115395326013> :black_small_square: <:evil:724805535727353856> :black_small_square: <:ss:719641320343470150>")
+            .setDescription("Black-March __Bam__ est le protagoniste principal de Tower of God. Il est un irrégulier.")
+            .setColor("RANDOM")
+            .setFooter("Khun Ran v0.11 | Devenez plus fort, et grimpez la tour, élus.")
+            .setThumbnail("https://i.imgur.com/6vbuphJ.png")
+            .setImage("https://i.imgur.com/KY0GXhr.gif")
+            .addField(":speech_balloon: Citation :", "Si je dois me battre, je me battrai pour protéger ce qui m'est précieux.", false)
+            .addField("<:c1:719664266797383680> Black-March: Flamme écarlate", "Attaque un adversaire avec [140% de l'ATQ] et octroit un bouclier équivalent à 20% des PV pendant 1 tour. Octroit le même effet (bouclier) à un allié si le lanceur est sous l'effet Black-March.", false)
+            .addField("<:c2:719664268722831421> Extrême: Aviron bleu", "Attaque deux adversaires avec [140% de l'ATQ] et inflige [130% de dégâts additionnels] si l'adversaire est un Boss. Réduit la défense de [90%] pendant 2 tours si le lanceur est sous l'effet Black-March.", false)
+            .addField("<:c3:719664266776412160> Style Black-March: Papillon Ailé Noir", "Attaque un adversaire de la ligne arrière avec [270% de l'ATQ] et augmente l'ATQ de tous les alliés de [30% de l'ATQ du lanceur] pendant 3 tours. Lorsque le lanceur est sous l'effet de Black-March, inflige des dégâts égaux à [110% de l'ATQ (170% si l'adversaire est un Boss)] à tous les adversaires via le malus 'Wave'", false)
+            .addField("<:passif:719664266969612379> 1: Trou noir sphérique de Shinsu", "Augmente l'attaque de 20%, les chances de coup critique de 15% et la santé de 10%", false)
+            .addField("<:passif:719664266969612379> 2: Déclenchement de Black-March ", "Lorsque la santé passe en dessous des 50%, octroit [Immunité aux dégâts] pendant 1 tour et invoque Black-March. (Statut Black-March: Augmentation de l'ATQ de 50%, de la précision des malus de 30% et ajoute l'élément Ténèbre.) (S'active 1x)", false)
+            .addField("<:sp:720742202757873745> Poussière d'étoile", "Effectue une attaque **perçante** sur l'adversaire ayant la plus haute ATQ avec [250% de l'ATQ] et s'octroit [Immunité aux dégâts] pendant 1 tour. Inflige [50% de dégâts supplémentaires] lorsque le lanceur est sous l'effet Black-March.", false)
+	    .addField("ATQ", "22997", true)
+            .addField("DEF", "901", true)
+            .addField("PV", "131371", true)
+            .addField("VIT", "503", true)
+	    .addField("Blocage", "33%", true)
+	    .addField("Taux Crit", "30%", true)
+            .addField("Armor Crash", "5%", true)
+            .addField("Résist. Malus", "23%", true)
+            .addField("Réduction dégâts", "29%", true)
+	
+	message.channel.sendEmbed(embed)
+		    
+        var bembed = new Discord.RichEmbed()
+            .setTitle("Ailes de l'Animal Sacré Transformé")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Black-March Bam")
+            .setThumbnail("https://i.imgur.com/skAqvue.png")
+            .setImage("https://i.imgur.com/dd2ci3y.png")
+            .setDescription("En entrant dans le statut 'Black-March', obtient un bonus d'ATQ de min% à max%. \n \n **Statistique améliorée:** Attaque")
+
+	message.channel.sendEmbed(bembed)
+
+	console.log("La commande de l'Héros Black-March Bam viens d'être effectuée.");
 
     }
 	
@@ -860,7 +943,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .setTitle("Nine Tails Ilpyo Park :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
         .setDescription("Nine Tails __Ilpyo Park__ est un personnage secondaire récurrent de The God of Highschool, il peut être considéré comme un rival de Mori Jin, et est un participant puissant des tournois.")
         .setColor("RANDOM")
-        .setFooter("Khun Ran v0.6 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+        .setFooter("Khun Ran v0.11 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
         .setThumbnail("https://i.imgur.com/kTISvE4.png")
         .setImage("https://i.imgur.com/xrDj1e9.gif")
         .addField(":speech_balloon: Citation", "Il semble que je ne sois pas trop en retard.", false)
@@ -869,15 +952,15 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .addField("<:c3:719664266776412160> Technique secrète ultime du style Ssamsu: Coup de pied flamboyant - Troisième étape: Triple frappe enflammée du nirvana", "Attaque tous les adversaires avec 130% de l'ATQ et inflige 50% de dégâts supplémentaires aux adversaires affectés par un malus, avant de faire exploser toutes les [Brûlures] pour 40% de dégâts supplémentaires par [Brûlure].", false)
         .addField("<:passif:719664266969612379> 1: Renard noir", " Augmente l'ATQ de 15%, la précision des débuffs de 15%, la santé de 10% et la réduction des dégâts de 5%", false)
         .addField("<:passif:719664266969612379> 2: 9ème Queue: Activation !", "À la fin du tour, si Ilpyo Park est affecté par un malus, le supprime et octroit un bouclier équivalent à 20% de la santé maximale. Si Ilpyo Park meurt par une [Brûlure], le réanime et le rends immortel pendant 1 tour. S'active 1x.", false)
-	    .addField("ATQ", "24289", true)
+	.addField("ATQ", "24289", true)
         .addField("DEF", "532", true)
         .addField("PV", "104659", true)
         .addField("VIT", "407", true)
-	    .addField("Blocage", "%", true)
-        .addField("Taux Crit", "%", true)
-    	.addField("Armor Crash", "%", true)
-        .addField("Résist. Malus", "%", true)
-        .addField("Réduction dégâts", "%", true)
+	.addField("Blocage", "33%", true)
+        .addField("Taux Crit", "31.9%", true)
+    	.addField("Dégâts Crit", "22%", true)
+        .addField("Résist. Malus", "23%", true)
+        .addField("Réduction dégâts", "24%", true)
 
     message.channel.sendEmbed(embed)
 
@@ -891,7 +974,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .setTitle("Nine Tails Ilpyo Park :black_small_square: <:feu:719638080780501073> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
         .setDescription("Nine Tails __Ilpyo Park__ est un personnage secondaire récurrent de The God of Highschool, il peut être considéré comme un rival de Mori Jin, et est un participant puissant des tournois.")
         .setColor("RANDOM")
-        .setFooter("Khun Ran v0.6 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+        .setFooter("Khun Ran v0.11 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
         .setThumbnail("https://i.imgur.com/kTISvE4.png")
         .setImage("https://i.imgur.com/xrDj1e9.gif")
         .addField(":speech_balloon: Citation", "Il semble que je ne sois pas trop en retard.", false)
@@ -900,15 +983,15 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
         .addField("<:c3:719664266776412160> Technique secrète ultime du style Ssamsu: Coup de pied flamboyant - Troisième étape: Triple frappe enflammée du nirvana", "Attaque tous les adversaires avec 130% de l'ATQ et inflige 50% de dégâts supplémentaires aux adversaires affectés par un malus, avant de faire exploser toutes les [Brûlures] pour 40% de dégâts supplémentaires par [Brûlure].", false)
         .addField("<:passif:719664266969612379> 1: Renard noir", " Augmente l'ATQ de 15%, la précision des débuffs de 15%, la santé de 10% et la réduction des dégâts de 5%", false)
         .addField("<:passif:719664266969612379> 2: 9ème Queue: Activation !", "À la fin du tour, si Ilpyo Park est affecté par un malus, le supprime et octroit un bouclier équivalent à 20% de la santé maximale. Si Ilpyo Park meurt par une [Brûlure], le réanime et le rends immortel pendant 1 tour. S'active 1x.", false)
-	    .addField("ATQ", "24289", true)
+	.addField("ATQ", "24289", true)
         .addField("DEF", "532", true)
         .addField("PV", "104659", true)
         .addField("VIT", "407", true)
-    	.addField("Blocage", "%", true)
-        .addField("Taux Crit", "%", true)
-	    .addField("Armor Crash", "%", true)
-        .addField("Résist. Malus", "%", true)
-        .addField("Réduction dégâts", "%", true)
+	.addField("Blocage", "33%", true)
+        .addField("Taux Crit", "31.9%", true)
+    	.addField("Dégâts Crit", "22%", true)
+        .addField("Résist. Malus", "23%", true)
+        .addField("Réduction dégâts", "24%", true)
 
     message.channel.sendEmbed(embed)
 
@@ -922,12 +1005,12 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setFooter("Khun Ran v0.11 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/zZraoSj.png")
             .setImage("https://i.imgur.com/YjpTHXy.gif")
             .addField(":speech_balloon: Citation", "Aucune.", false)
             .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
-            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible pour [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
             .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
             .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
             .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
@@ -935,10 +1018,11 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .addField("DEF", "1015", true)
             .addField("PV", "129251", true)
             .addField("VIT", "407", true)
-            .addField("Taux Crit", "%", true)
-            .addField("Blocage", "%", true)
-            .addField("Résist. Malus", "%", true)
-            .addField("Déviation DGT", "%", true)
+            .addField("Blocage", "33%", true)
+            .addField("Taux Crit", "15%", true)
+            .addField("Dégâts Crit", "10%", true)
+            .addField("Résist. Malus", "33%", true)
+            .addField("Réduction dégâts", "24%", true)
     
         message.channel.sendEmbed(embed)
     
@@ -952,12 +1036,12 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setFooter("Khun Ran v0.11 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/zZraoSj.png")
             .setImage("https://i.imgur.com/YjpTHXy.gif")
             .addField(":speech_balloon: Citation", "Aucune.", false)
             .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
-            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible pour [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
             .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
             .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
             .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
@@ -965,10 +1049,11 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .addField("DEF", "1015", true)
             .addField("PV", "129251", true)
             .addField("VIT", "407", true)
-            .addField("Taux Crit", "%", true)
-            .addField("Blocage", "%", true)
-            .addField("Résist. Malus", "%", true)
-            .addField("Déviation DGT", "%", true)
+            .addField("Blocage", "33%", true)
+            .addField("Taux Crit", "15%", true)
+            .addField("Dégâts Crit", "10%", true)
+            .addField("Résist. Malus", "33%", true)
+            .addField("Réduction dégâts", "24%", true)
     
         message.channel.sendEmbed(embed)
     
@@ -982,12 +1067,12 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setFooter("Khun Ran v0.11 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/zZraoSj.png")
             .setImage("https://i.imgur.com/YjpTHXy.gif")
             .addField(":speech_balloon: Citation", "Aucune.", false)
             .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
-            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible pour [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
             .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
             .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
             .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
@@ -995,10 +1080,11 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .addField("DEF", "1015", true)
             .addField("PV", "129251", true)
             .addField("VIT", "407", true)
-            .addField("Taux Crit", "%", true)
-            .addField("Blocage", "%", true)
-            .addField("Résist. Malus", "%", true)
-            .addField("Déviation DGT", "%", true)
+            .addField("Blocage", "33%", true)
+            .addField("Taux Crit", "15%", true)
+            .addField("Dégâts Crit", "10%", true)
+            .addField("Résist. Malus", "33%", true)
+            .addField("Réduction dégâts", "24%", true)
     
         message.channel.sendEmbed(embed)
     
@@ -1012,12 +1098,12 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setFooter("Khun Ran v0.11 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/zZraoSj.png")
             .setImage("https://i.imgur.com/YjpTHXy.gif")
             .addField(":speech_balloon: Citation", "Aucune.", false)
             .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
-            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
+            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible pour [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
             .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
             .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
             .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
@@ -1025,46 +1111,18 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .addField("DEF", "1015", true)
             .addField("PV", "129251", true)
             .addField("VIT", "407", true)
-            .addField("Taux Crit", "%", true)
-            .addField("Blocage", "%", true)
-            .addField("Résist. Malus", "%", true)
-            .addField("Déviation DGT", "%", true)
+            .addField("Blocage", "33%", true)
+            .addField("Taux Crit", "15%", true)
+            .addField("Dégâts Crit", "10%", true)
+            .addField("Résist. Malus", "33%", true)
+            .addField("Réduction dégâts", "24%", true)
     
         message.channel.sendEmbed(embed)
     
         console.log("La commande de l'Héroïne Pure Green Arin viens d'être effectuée.");
 
     }
-	
-	        // Hero Cantare = Pure Green Arin
-        if (message.content === prefix + "pure"){
-            var embed = new Discord.RichEmbed()
-            .setTitle("Pure Green Arin :black_small_square: <:ice:719781844949925898> :black_small_square: <:element:724668549028905073> :black_small_square: <:ss:719641320343470150>")
-            .setDescription("Personnage sorti de l'univers de Tetra, uniquement dans Hero Cantare.")
-            .setColor("RANDOM")
-            .setFooter("Khun Ran v0.8 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
-            .setThumbnail("https://i.imgur.com/zZraoSj.png")
-            .setImage("https://i.imgur.com/YjpTHXy.gif")
-            .addField(":speech_balloon: Citation", "Aucune.", false)
-            .addField("<:c1:719664266797383680> Transpercement", "Attaque l'adversaire avec 90% de l'ATQ et soigne 2 alliés possédant le moins de PV pour [7% de la santé d'Arin]. Octroit [Soins continus] équivalent à 7% de la santé pendant 2 tours, si un allié est déjà affecté par un [Soins continus], restaure immédiatement 4% de la santé.", false)
-            .addField("<:c2:719664268722831421> Rotation circulaire de la tortue", "Soigne 2 alliés possédant la santé la plus faible avec [17% de la santé d'Arin] et octroit [Soins continus] équivalent à 17% de la santé pendant 2 tours. Si un [Soins continus] est déjà effectif, restaure immédiatement 7% de la santé.", false)
-            .addField("<:c3:719664266776412160> Balle de Dauphin", "Inflige des dégâts équivalents à [20% de la santé maximale d'Arin] à l'adversaire possédant le moins de santé, restaure immédiatement 15% de la santé des alliés et octroit [Soins continus] équivalent à 15% de la santé pendant 3 tours.", false)
-            .addField("<:passif:719664266969612379> 1: Soleil étincelant", "Augmente la santé de 20%, la défense de 20%, la réduction de dégâts de 5% et la résistance aux malus de 10%", false)
-            .addField("<:passif:719664266969612379> 2: Été agité", "Quand la santé passe en dessous des 50%, restaure 30% de la santé des alliés et octroit [Soins continus] équivalent à 10% de la santé pendant 2 tours. Quand Arin meurt, restaure 50% de la santé à l'allié possédant l'ATQ la plus élevée, et lui octroit [Soins continus] équivalent à 50% de la santé pendant 2 tours. (S'active 1x)", false)
-            .addField("ATQ", "20115", true)
-            .addField("DEF", "1015", true)
-            .addField("PV", "129251", true)
-            .addField("VIT", "407", true)
-            .addField("Taux Crit", "%", true)
-            .addField("Blocage", "%", true)
-            .addField("Résist. Malus", "%", true)
-            .addField("Déviation DGT", "%", true)
-    
-        message.channel.sendEmbed(embed)
-    
-        console.log("La commande de l'Héroïne Pure Green Arin viens d'être effectuée.");
-
-    }       
+     
 	
 	// Hero Cantare = Pure Green Arin
         if (message.content === prefix + "king dark"){
@@ -1248,6 +1306,47 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setThumbnail("https://i.imgur.com/7J8XVbB.png")
             .setImage("https://i.imgur.com/1mP6FxI.png")
             .setDescription("% d'infliger [Poison] en attaquant. \n \n **Statistique améliorée:** Santé")
+	message.channel.sendEmbed(embed)
+
+    }
+
+				// Hero Cantare Equipement Exclusif / Black-March Bam
+    if (message.content === prefix + "ee bm bam"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Ailes de l'Animal Sacré Transformé")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Black-March Bam")
+            .setThumbnail("https://i.imgur.com/skAqvue.png")
+            .setImage("https://i.imgur.com/dd2ci3y.png")
+            .setDescription("En entrant dans le statut 'Black-March', obtient un bonus d'ATQ de min% à max%. \n \n **Statistique améliorée:** Attaque")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+	
+				// Hero Cantare Equipement Exclusif / Black-March Bam
+    if (message.content === prefix + "ee black march bam"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Ailes de l'Animal Sacré Transformé")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Black-March Bam")
+            .setThumbnail("https://i.imgur.com/skAqvue.png")
+            .setImage("https://i.imgur.com/dd2ci3y.png")
+            .setDescription("En entrant dans le statut 'Black-March', obtient un bonus d'ATQ de min% à max%. \n \n **Statistique améliorée:** Attaque")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+	
+				// Hero Cantare Equipement Exclusif / Endorsi
+    if (message.content === prefix + "ee endorsi"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Coeur Bong-Bong")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif d'Endorsi")
+            .setThumbnail("https://i.imgur.com/NeaSehN.png")
+            .setImage("https://i.imgur.com/WAk16x8.png")
+            .setDescription("Génère un bouclier équivalent à % des PV pour les alliés d'élément lumière pendant 2 tours au début du combat. \n \n **Statistique améliorée:** Précision des malus")
 	message.channel.sendEmbed(embed)
 
     }
