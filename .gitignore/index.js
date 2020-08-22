@@ -67,7 +67,7 @@ bot.on('message', message => {
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la mise à jour 0.11 du 22/08")
            .addField("__**Correction(s)**__","➤ Correction d'une erreur de typo sur Pure Green Arin.")
-           .addField("__**Modification(s)**__","➤ Ajouts des statistiques manquantes de Nine Tails Ilpyo Park & Pure Green Arin.")
+           .addField("__**Modification(s)**__","➤ Ajouts des statistiques manquantes de Nine Tails Ilpyo Park & Pure Green Arin. \n ➤ Black-March Bam ajouté dans le $quisuisje")
            .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Ajout de l'héros Black-March Bam \n ➤ Équipement exclusif de Black-March Bam (Ailes de l'Animal Sacré Transformé) \n ➤ Équipement exclusif d'Endorsi (Coeur Bong-Bong)")
            .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
         message.channel.sendEmbed(embed);
@@ -1553,6 +1553,7 @@ bot.on("message", function(message) {
 		"https://i.imgur.com/FHMTIGQ.png",
 		"https://i.imgur.com/qfJBOJa.png",
 		"https://i.imgur.com/7b5E07e.png",
+		"https://i.imgur.com/6vbuphJ.png",
 
        
             ];
