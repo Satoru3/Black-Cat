@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.11 [22/08] | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.12 [02/09] | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -34,14 +34,14 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
 	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
             .addField("<:ss:719641320343470150> <:nature:719638081195475114>","**Kaiser** <:competence:719638081162051585> ($kaiser) \n **Seira** <:weapon:719781844744142875> ($seira)", true)
-            .addField("<:ss:719641320343470150> <:ice:719781844949925898>","**Elaine** <:weapon:719781844744142875> ($elaine) \n **Jyu Viole Grace** <:artmartiaux:723903194819985459> ($viole) \n **Pure Green Arin** <:element:724668549028905073> ($ss arin)", false)
+            .addField("<:ss:719641320343470150> <:ice:719781844949925898>","**Elaine** <:weapon:719781844744142875> ($elaine) \n **Jyu Viole Grace** <:artmartiaux:723903194819985459> ($viole) \n **Pure Green Arin** <:element:724668549028905073> ($ss arin) \n **Clan Leader Seira** <:competence:719638081162051585> ($cl seira) \n **Urek Mazino** (Soon)", false)
             .addField("<:ss:719641320343470150> <:feu:719638080780501073>","**Prime King Uma** <:competence:719638081162051585> ($pku) \n **Max Level Warrior** <:weapon:719781844744142875> ($mlw) \n **Yeon's Flame Khun** <:element:724668549028905073> ($flame khun) \n **Nine Tails Ilpyo Park** <:element:724668549028905073> ($nine tails)", false)
             .addField("<:ss:719641320343470150> <:dark:723941756109979760>","**Queen No Name** <:dieu:723941755996733583> ($qnn) \n **Unleashed Raizel** <:dieu:723941755996733583> ($unleashed)", false)
-            .addField("<:ss:719641320343470150> <:light:746561115395326013>","(**Black-March Bam** <:evil:724805535727353856> ($bm bam)", false)
+            .addField("<:ss:719641320343470150> <:light:746561115395326013>","**Black-March Bam** <:evil:724805535727353856> ($bm bam) \n **Endorsi** <:artmartiaux:723903194819985459> ($endorsi)", false)
 	    .addField("<:s_:724831181341720586>","**Frankenstein** <:feu:719638080780501073> <:element:724668549028905073> ($frankenstein) \n **Muzaka** <:nature:719638081195475114> <:artmartiaux:723903194819985459> ($muzaka) \n **M-21** <:nature:719638081195475114> <:competence:719638081162051585> ($m-21)")
             .addField("<:a_:724817244789538819>","**Raizel** <:ice:719781844949925898> <:evil:724805535727353856> ($raizel)")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.11 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
+            .setFooter("Khun Ran v0.12 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
             .setThumbnail("https://i.imgur.com/kwMfqwu.png")
 	message.channel.sendEmbed(embed);
         console.log("Page des personnages générée suite à une demande de " + message.author.username);
@@ -57,9 +57,10 @@ bot.on('message', message => {
 	    .addField("<:nature:719638081195475114>","➤ **Actuellement aucun équipement exclusif**", false)
 	    .addField("<:light:746561115395326013>","➤ **Black-March Bam** (__Ailes de l'Animal Sacré Transformé__ | $ee bm bam) \n ➤ **Endorsi** (__Coeur Bong-Bong__ | $ee endorsi)", false)
 	    .addField("<:dark:723941756109979760>","➤ **Hilda** (__Familier dimensionnel__ | $ee hilda)", false)
-	    .addField("À venir","➤ **Idol Rockcrawler** (__À venir__ | $ee idol (À venir)) \n ➤ **Daisy** (__À venir__ | $ee daisy (À venir)) \n ➤ **Odette** (__À venir__ | $ee odette (À venir))", false)
+            .addField("Commande ajoutées, mais incomplètes","➤ **Idol Rockcrawler** (__Scène d'Amour__ | $ee idol) \n ➤ **Daisy** (__Chapeau de pique-nique__ | $ee daisy) \n ➤ **Odette** (__Lance de la lumière__ | $ee odette)", false)
+	    .addField("À venir","➤ **Urek Mazino**", false)
 	    .setColor("RANDOM")
-            .setFooter("Khun Ran v0.11 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setFooter("Khun Ran v0.12 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/v9syQKz.gif")
 	message.channel.sendEmbed(embed);
         console.log("Page des équipemens exclusifs générés suite à la demande de " + message.author.username);
@@ -69,13 +70,115 @@ bot.on('message', message => {
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la mise à jour 0.11 du 22/08")
-           .addField("__**Correction(s)**__","➤ Correction d'une erreur de typo sur Pure Green Arin.")
-           .addField("__**Modification(s)**__","➤ Ajouts des statistiques manquantes de Nine Tails Ilpyo Park & Pure Green Arin. \n ➤ Black-March Bam ajouté dans le $quisuisje. \n ➤ Les alias les plus simples sont désormais affichés sur le $héros. \n ➤ Modification forcée à cause de la limite des embeds du $héros.")
-           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Black-March Bam \n ➤ Équipement exclusif de Black-March Bam (Ailes de l'Animal Sacré Transformé) \n ➤ Équipement exclusif d'Endorsi (Coeur Bong-Bong)")
+           .setTitle("Récapitulatif de la mise à jour 0.12 du 02/09")
+           .addField("__**Correction(s)**__","➤ Corrections, et améliorations suite à une amélioration de la traduction anglaise (rajoutant carrément des effets) des équipements exclusifs de: Maschenny, Hilda, Godkiller Zero & Master Pooh Upooh.")
+           .addField("__**Modification(s)**__","➤ Les nouveaux ajouts de Héros ne possèderont plus les statistiques, par soucis de gain de temps. Les statistiques seront supprimées pour les anciens bientôt. \n ➤ Ajout de Clan Leader Seira dans le $quisuisje")
+           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Endorsi \n ➤ Clan Leader Seira \n ➤ (Données incomplètes) Équipement exclusif de Daisy, Odette & Idol Rockcrawler.")
            .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
         message.channel.sendEmbed(embed);
 	   
+    }
+	
+						 // Hero Cantare = Clan Leader Seira
+    if (message.content === prefix + "cl seira"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Clan Leader Seira :black_small_square: <:ice:719781844949925898> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Clan Leader __Seira__ est une Noble ainsi qu'une étudiante à l'académie Ye Ran. Elle est également un des 8 chefs de clans.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.12 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setThumbnail("https://i.imgur.com/KWpT0MV.png")
+        .setImage("https://i.imgur.com/aQcb6Cg.png")
+        .addField(":speech_balloon: Citation", "Je n'ai aucun intérêt en ta faux de la mort.", false)
+        .addField("<:c1:719664266797383680> Faux de la Mort: Entaille", "Attaque 2 adversaires à hauteur de [120% de l'ATQ] et augmente [l'ATQ de Clan Leader Seira de 30%] pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Faux de la Mort: Anéantissement", "Attaque tous les adversaires avec [115% de l'ATQ], et inflige [30% de dégâts additionnels] à l'adversaire ayant l'ATQ la plus élevée, ainsi qu'à celui possédant les PV les plus élevés, puis a 80% de chance de leur infliger [**Malédiction**] pendant 2 tours. \n (**Malédiction**: Empêche l'adversaire ainsi que ses alliés de récupérer de la santé, et converti 20% des soins empêchés en dégâts additionnels.", false)
+        .addField("<:c3:719664266776412160> Faux de la Mort: The End", "Attaque tous les adversaires avec [140% de l'ATQ] puis s'octroit [**Immunité aux dégâts**] pendant 1 tour quand un adversaire est éliminé par Faux de la Mort: The End.", false)
+        .addField("<:passif:719664266969612379> 1: Devoir du Chef de Famille", "Augmente la vitesse de 40, l'attaque de 15%, la santé de 10%, et la réduction de dégâts de 10%.", false)
+        .addField("<:passif:719664266969612379> 2: Murmure de la Faucheuse", "L'**Entaille de la Faucheuse** [qui équivaut à 500% de l'ATQ] est activée sur l'adversaire ayant l'ATQ la plus élevée avec 30% de chance lors de l'utilisation de la compétence 3chain. Évite l'élimination 1x avec 1% de PV restant avant de s'octroyer [**Immunité aux dégâts**] pendant 1 tour. (S'active 1x)", false)
+
+    message.channel.sendEmbed(embed)
+	    
+	        console.log("La commande de l'Héroïne Clan Leader Seira viens d'être effectuée.");
+
+	    
+    }
+	
+							 // Hero Cantare = Clan Leader Seira
+    if (message.content === prefix + "clan leader seira"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Clan Leader Seira :black_small_square: <:ice:719781844949925898> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Clan Leader __Seira__ est une Noble ainsi qu'une étudiante à l'académie Ye Ran. Elle est également un des 8 chefs de clans.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.12 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setThumbnail("https://i.imgur.com/KWpT0MV.png")
+        .setImage("https://i.imgur.com/aQcb6Cg.png")
+        .addField(":speech_balloon: Citation", "Je n'ai aucun intérêt en ta faux de la mort.", false)
+        .addField("<:c1:719664266797383680> Faux de la Mort: Entaille", "Attaque 2 adversaires à hauteur de [120% de l'ATQ] et augmente [l'ATQ de Clan Leader Seira de 30%] pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Faux de la Mort: Anéantissement", "Attaque tous les adversaires avec [115% de l'ATQ], et inflige [30% de dégâts additionnels] à l'adversaire ayant l'ATQ la plus élevée, ainsi qu'à celui possédant les PV les plus élevés, puis a 80% de chance de leur infliger [**Malédiction**] pendant 2 tours. \n (**Malédiction**: Empêche l'adversaire ainsi que ses alliés de récupérer de la santé, et converti 20% des soins empêchés en dégâts additionnels.", false)
+        .addField("<:c3:719664266776412160> Faux de la Mort: The End", "Attaque tous les adversaires avec [140% de l'ATQ] puis s'octroit [**Immunité aux dégâts**] pendant 1 tour quand un adversaire est éliminé par Faux de la Mort: The End.", false)
+        .addField("<:passif:719664266969612379> 1: Devoir du Chef de Famille", "Augmente la vitesse de 40, l'attaque de 15%, la santé de 10%, et la réduction de dégâts de 10%.", false)
+        .addField("<:passif:719664266969612379> 2: Murmure de la Faucheuse", "L'**Entaille de la Faucheuse** [qui équivaut à 500% de l'ATQ] est activée sur l'adversaire ayant l'ATQ la plus élevée avec 30% de chance lors de l'utilisation de la compétence 3chain. Évite l'élimination 1x avec 1% de PV restant avant de s'octroyer [**Immunité aux dégâts**] pendant 1 tour. (S'active 1x)", false)
+
+    message.channel.sendEmbed(embed)
+	    
+	        console.log("La commande de l'Héroïne Clan Leader Seira viens d'être effectuée.");
+
+	    
+    }
+	
+							 // Hero Cantare = Clan Leader Seira
+    if (message.content === prefix + "clan seira"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Clan Leader Seira :black_small_square: <:ice:719781844949925898> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Clan Leader __Seira__ est une Noble ainsi qu'une étudiante à l'académie Ye Ran. Elle est également un des 8 chefs de clans.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.12 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setThumbnail("https://i.imgur.com/KWpT0MV.png")
+        .setImage("https://i.imgur.com/aQcb6Cg.png")
+        .addField(":speech_balloon: Citation", "Je n'ai aucun intérêt en ta faux de la mort.", false)
+        .addField("<:c1:719664266797383680> Faux de la Mort: Entaille", "Attaque 2 adversaires à hauteur de [120% de l'ATQ] et augmente [l'ATQ de Clan Leader Seira de 30%] pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Faux de la Mort: Anéantissement", "Attaque tous les adversaires avec [115% de l'ATQ], et inflige [30% de dégâts additionnels] à l'adversaire ayant l'ATQ la plus élevée, ainsi qu'à celui possédant les PV les plus élevés, puis a 80% de chance de leur infliger [**Malédiction**] pendant 2 tours. \n (**Malédiction**: Empêche l'adversaire ainsi que ses alliés de récupérer de la santé, et converti 20% des soins empêchés en dégâts additionnels.", false)
+        .addField("<:c3:719664266776412160> Faux de la Mort: The End", "Attaque tous les adversaires avec [140% de l'ATQ] puis s'octroit [**Immunité aux dégâts**] pendant 1 tour quand un adversaire est éliminé par Faux de la Mort: The End.", false)
+        .addField("<:passif:719664266969612379> 1: Devoir du Chef de Famille", "Augmente la vitesse de 40, l'attaque de 15%, la santé de 10%, et la réduction de dégâts de 10%.", false)
+        .addField("<:passif:719664266969612379> 2: Murmure de la Faucheuse", "L'**Entaille de la Faucheuse** [qui équivaut à 500% de l'ATQ] est activée sur l'adversaire ayant l'ATQ la plus élevée avec 30% de chance lors de l'utilisation de la compétence 3chain. Évite l'élimination 1x avec 1% de PV restant avant de s'octroyer [**Immunité aux dégâts**] pendant 1 tour. (S'active 1x)", false)
+
+    message.channel.sendEmbed(embed)
+	    
+	        console.log("La commande de l'Héroïne Clan Leader Seira viens d'être effectuée.");
+
+	    
+    }
+	
+					 // Hero Cantare = Endorsi
+    if (message.content === prefix + "endorsi"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Endorsi :black_small_square: <:light:746561115395326013> :black_small_square: <:artmartiaux:723903194819985459> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("__Endorsi__ est une princesse de Jahad & un personnage important de Tower of God.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.12 | Devenez plus fort, et grimpez la tour, élus.")
+        .setThumbnail("https://i.imgur.com/zwV9627.png")
+        .setImage("https://i.imgur.com/ofVf9E4.gif")
+        .addField(":speech_balloon: Citation", "Si tu comptes revenir, le plus tôt sera le mieux. Si tu arrives trop tard, nous n'aurons peut-être pas l'occasion. De sortir ensemble.", false)
+        .addField("<:c1:719664266797383680> Bong-Bong Stump", "Attaque l'adversaire possédant la DEF la plus élevée à hauteur de [140% de l'ATQ] et a 60% de chance de [réduire de 90% la DEF] de l'adversaire pendant 1 tour.", false)
+        .addField("<:c2:719664268722831421> Ruée de Bong-Bong", "A 15% de chance d'étourdir (à chacun) tous les ennemis, et attaque l'adversaire possédant l'ATQ la plus élevée à hauteur de [180% de l'ATQ], puis a 40% de chance d'étourdir cet adversaire. Augmente de [30% les chances de coup critique] pour les alliés d'élément Lumière pendant 2 tours.", false)
+        .addField("<:c3:719664266776412160> Chiffon Blast", "Attaque tous les adversaires avec [150% de l'ATQ] et réduit leur [chances de coup critique de 100%] pendant 2 tours. Octroit l'immunité aux malus aux alliés d'élément Lumière pendant 2 tours.", false)
+        .addField("<:passif:719664266969612379> 1: Idole de la Tour", " Augmente l'ATQ, la santé, la réduction de dégâts & la vitesse de 10%.", false)
+        .addField("<:passif:719664266969612379> 2: Coeur de Shinsu", "Utiliser les chains 2 ou 3 octroit 1 Mana et une jauge d'EX (1 boule) pour les alliés d'élément Lumière. Quand Endorsi est éliminée, supprime tous les malus appliqués sur les alliés d'élément Lumière, augmente de 50% leur dégâts de compétence pendant 3 tours, et leur octroit l'immunité aux malus pendant 2 tours.", false)
+        .addField("<:sp:720742202757873745> Matérialisation du Shinsu", "Attaque tous les adversaires avec [150% de l'ATQ] et réduit leur [ATQ de 30%] et leur [DEF de 90%] pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Faux de la Mort: Anéantissement", "Attaque tous les adversaires avec [115% de l'ATQ], et inflige [30% de dégâts additionnels] à l'adversaire ayant l'ATQ la plus élevée, et à celui ayant les PV les plus élevés, puis a 80% de chance de leur infliger [Malédiction] pendant 2 tours. \n (**Malédiction**: Empêche l'adversaire, o
+
+    message.channel.sendEmbed(embed)
+	    
+        var bembed = new Discord.RichEmbed()
+            .setTitle("Coeur Bong-Bong")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif d'Endorsi")
+            .setThumbnail("https://i.imgur.com/NeaSehN.png")
+            .setImage("https://i.imgur.com/WAk16x8.png")
+            .setDescription("Génère un bouclier équivalent à % des PV pour les alliés d'élément lumière pendant 2 tours au début du combat. \n \n **Statistique améliorée:** Précision des malus")
+	message.channel.sendEmbed(bembed)
+
+    console.log("La commande de l'Héroïne Endorsi viens d'être effectuée.");
+
     }
 	
 		 // Hero Cantare = M-21
@@ -109,6 +212,7 @@ bot.on('message', message => {
     console.log("La commande de l'Héros M-21 viens d'être effectuée.");
 
     }
+	
 	
 			 // Hero Cantare = M-21
     if (message.content === prefix + "m-21"){
@@ -1192,7 +1296,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif de God-Killer Zero. ")
             .setThumbnail("https://i.imgur.com/hOENdJ8.png")
             .setImage("https://i.imgur.com/g33NUMU.png")
-            .setDescription("Lorsqu'attaqué, inflige [Brûlure] à l'adversaire avec % de chance. \n \n **Statistique améliorée:** Précision des malus")
+            .setDescription("Lorsqu'attaqué, a % de chance d'infliger [Brûlure] pendant 2 tours. \n \n **Statistique améliorée:** Précision des malus")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1205,7 +1309,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif de God-Killer Zero. ")
             .setThumbnail("https://i.imgur.com/hOENdJ8.png")
             .setImage("https://i.imgur.com/g33NUMU.png")
-            .setDescription("Lorsqu'attaqué, inflige [Brûlure] à l'adversaire avec % de chance. \n \n **Statistique améliorée:** Précision des malus")
+            .setDescription("Lorsqu'attaqué, a % de chance d'infliger [Brûlure] pendant 2 tours. \n \n **Statistique améliorée:** Précision des malus")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1218,7 +1322,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif de God-Killer Zero. ")
             .setThumbnail("https://i.imgur.com/hOENdJ8.png")
             .setImage("https://i.imgur.com/g33NUMU.png")
-            .setDescription("Lorsqu'attaqué, inflige [Brûlure] à l'adversaire avec % de chance. \n \n **Statistique améliorée:** Précision des malus")
+            .setDescription("Lorsqu'attaqué, a % de chance d'infliger [Brûlure] pendant 2 tours. \n \n **Statistique améliorée:** Précision des malus")
 	message.channel.sendEmbed(embed)
 
     }		
@@ -1231,7 +1335,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif de Maschenny.")
             .setThumbnail("https://i.imgur.com/1JZsaqA.png")
             .setImage("https://i.imgur.com/dnxlTlg.png")
-            .setDescription("Lorsque Yellow May est activé, % chance de provoquer les adversaires pendant 1 tour. \n \n **Statistique améliorée:** Attaque")
+            .setDescription("Lorsque Yellow May est activé, devient immunisé aux dégâts pendant 1 tour et a % chance de provoquer les adversaires pendant 1 tour. \n \n **Statistique améliorée:** Attaque")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1244,7 +1348,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
             .setThumbnail("https://i.imgur.com/F8cXXOu.png")
             .setImage("https://i.imgur.com/E24MCI0.png")
-            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires pendant 1 tour. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1257,7 +1361,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
             .setThumbnail("https://i.imgur.com/F8cXXOu.png")
             .setImage("https://i.imgur.com/E24MCI0.png")
-            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires pendant 1 tour. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1270,7 +1374,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
             .setThumbnail("https://i.imgur.com/F8cXXOu.png")
             .setImage("https://i.imgur.com/E24MCI0.png")
-            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires pendant 1 tour. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1283,7 +1387,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
             .setThumbnail("https://i.imgur.com/F8cXXOu.png")
             .setImage("https://i.imgur.com/E24MCI0.png")
-            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires pendant 1 tour. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1296,7 +1400,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif de Master Pooh Upooh.")
             .setThumbnail("https://i.imgur.com/F8cXXOu.png")
             .setImage("https://i.imgur.com/E24MCI0.png")
-            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires. \n \n **Statistique améliorée:** Santé")
+            .setDescription("À la mort du premier allié, récupère 30% des PV et a % de provoquer les adversaires pendant 1 tour. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1309,7 +1413,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    .setFooter("Équipement exclusif d'Hilda")
             .setThumbnail("https://i.imgur.com/7J8XVbB.png")
             .setImage("https://i.imgur.com/1mP6FxI.png")
-            .setDescription("% d'infliger [Poison] en attaquant. \n \n **Statistique améliorée:** Santé")
+            .setDescription("% d'infliger [Poison] pendant 2 tours en attaquant. \n \n **Statistique améliorée:** Santé")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1351,6 +1455,45 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setThumbnail("https://i.imgur.com/NeaSehN.png")
             .setImage("https://i.imgur.com/WAk16x8.png")
             .setDescription("Génère un bouclier équivalent à % des PV pour les alliés d'élément lumière pendant 2 tours au début du combat. \n \n **Statistique améliorée:** Précision des malus")
+	message.channel.sendEmbed(embed)
+	
+    }  
+	
+	// Hero Cantare Equipement Exclusif / Odette
+    if (message.content === prefix + "ee odette"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Lance de la lumière")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif d'Odette")
+            .setThumbnail("https://i.imgur.com/PREUpV0.png")
+            .setImage(" ")
+            .setDescription("Inconnu. \n \n **Statistique améliorée:** Inconnue.")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+		// Hero Cantare Equipement Exclusif / Daisy
+    if (message.content === prefix + "ee daisy"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Chapeau de pique-nique")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Daisy")
+            .setThumbnail("https://i.imgur.com/SFZZ17P.png")
+            .setImage(" ")
+            .setDescription("Inconnu. \n \n **Statistique améliorée:** Inconnue.")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+		// Hero Cantare Equipement Exclusif / Idol Rockcrawler
+    if (message.content === prefix + "ee idol"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Scène d'Amour")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif d'Idol Rockcrawler")
+            .setThumbnail("https://i.imgur.com/if259VH.png")
+            .setImage(" ")
+            .setDescription("Inconnu. \n \n **Statistique améliorée:** Inconnue.")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1558,6 +1701,7 @@ bot.on("message", function(message) {
 		"https://i.imgur.com/qfJBOJa.png",
 		"https://i.imgur.com/7b5E07e.png",
 		"https://i.imgur.com/6vbuphJ.png",
+		"https://i.imgur.com/KWpT0MV.png",
 
        
             ];
