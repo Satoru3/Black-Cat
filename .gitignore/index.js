@@ -72,7 +72,7 @@ bot.on('message', message => {
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la mise à jour 0.12 du 02/09")
            .addField("__**Correction(s)**__","➤ Corrections, et améliorations suite à une amélioration de la traduction anglaise (rajoutant carrément des effets) des équipements exclusifs de: Maschenny, Hilda, Godkiller Zero & Master Pooh Upooh.")
-           .addField("__**Modification(s)**__","➤ Les nouveaux ajouts de Héros ne possèderont plus les statistiques, par soucis de gain de temps. Les statistiques seront supprimées pour les anciens bientôt. \n ➤ Ajout de Clan Leader Seira dans le $quisuisje")
+           .addField("__**Modification(s)**__","➤ Les nouveaux ajouts de Héros ne possèderont plus les statistiques, par soucis de gain de temps. Les statistiques seront supprimées pour les anciens bientôt. \n ➤ Ajout de Clan Leader Seira dans le $quisuisje (34 personnages actuellement)")
            .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Endorsi \n ➤ Clan Leader Seira \n ➤ (Données incomplètes) Équipement exclusif de Daisy, Odette & Idol Rockcrawler.")
            .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
         message.channel.sendEmbed(embed);
