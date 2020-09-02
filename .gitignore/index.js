@@ -157,7 +157,7 @@ bot.on('message', message => {
         .setFooter("Khun Ran v0.12 | Devenez plus fort, et grimpez la tour, élus.")
         .setThumbnail("https://i.imgur.com/zwV9627.png")
         .setImage("https://i.imgur.com/ofVf9E4.gif")
-        .addField(":speech_balloon: Citation", "Si tu comptes revenir, le plus tôt sera le mieux. Si tu arrives trop tard, nous n'aurons peut-être pas l'occasion. De sortir ensemble.", false)
+        .addField(":speech_balloon: Citation", "Si tu comptes revenir, le plus tôt sera le mieux. Si tu arrives trop tard, nous n'en aurons peut-être pas l'occasion. De sortir ensemble.", false)
         .addField("<:c1:719664266797383680> Bong-Bong Stump", "Attaque l'adversaire possédant la DEF la plus élevée à hauteur de [140% de l'ATQ] et a 60% de chance de [réduire de 90% la DEF] de l'adversaire pendant 1 tour.", false)
         .addField("<:c2:719664268722831421> Ruée de Bong-Bong", "A 15% de chance d'étourdir (à chacun) tous les ennemis, et attaque l'adversaire possédant l'ATQ la plus élevée à hauteur de [180% de l'ATQ], puis a 40% de chance d'étourdir cet adversaire. Augmente de [30% les chances de coup critique] pour les alliés d'élément Lumière pendant 2 tours.", false)
         .addField("<:c3:719664266776412160> Chiffon Blast", "Attaque tous les adversaires avec [150% de l'ATQ] et réduit leur [chances de coup critique de 100%] pendant 2 tours. Octroit l'immunité aux malus aux alliés d'élément Lumière pendant 2 tours.", false)
