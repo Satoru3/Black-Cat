@@ -164,7 +164,6 @@ bot.on('message', message => {
         .addField("<:passif:719664266969612379> 1: Idole de la Tour", " Augmente l'ATQ, la santé, la réduction de dégâts & la vitesse de 10%.", false)
         .addField("<:passif:719664266969612379> 2: Coeur de Shinsu", "Utiliser les chains 2 ou 3 octroit 1 Mana et une jauge d'EX (1 boule) pour les alliés d'élément Lumière. Quand Endorsi est éliminée, supprime tous les malus appliqués sur les alliés d'élément Lumière, augmente de 50% leur dégâts de compétence pendant 3 tours, et leur octroit l'immunité aux malus pendant 2 tours.", false)
         .addField("<:sp:720742202757873745> Matérialisation du Shinsu", "Attaque tous les adversaires avec [150% de l'ATQ] et réduit leur [ATQ de 30%] et leur [DEF de 90%] pendant 2 tours.", false)
-        .addField("<:c2:719664268722831421> Faux de la Mort: Anéantissement", "Attaque tous les adversaires avec [115% de l'ATQ], et inflige [30% de dégâts additionnels] à l'adversaire ayant l'ATQ la plus élevée, et à celui ayant les PV les plus élevés, puis a 80% de chance de leur infliger [Malédiction] pendant 2 tours. \n (**Malédiction**: Empêche l'adversaire, o
 
     message.channel.sendEmbed(embed)
 	    
