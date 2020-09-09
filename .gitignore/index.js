@@ -71,9 +71,9 @@ bot.on('message', message => {
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
            .setTitle("Récapitulatif de la mise à jour 0.13 du 09/09")
-           .addField("__**Correction(s)**__","➤ Aucune.")
+           .addField("__**Correction(s)**__","➤ Les statistiques de l'équipement exclusif d'Endorsi sont désormais plus complète.")
            .addField("__**Modification(s)**__","➤ Ajout de Jinsung Ha dans le $quisuisje (35 personnages actuellement)")
-           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Jinsung Ha \n ➤ Urek Mazino \n ➤ Green-April Yuri Ha")
+           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Jinsung Ha \n ➤ Urek Mazino \n ➤ Équipement exclusif d'Urek Mazino")
            .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
         message.channel.sendEmbed(embed);
 	   
