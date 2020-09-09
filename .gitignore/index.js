@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.12 [02/09] | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.13 [09/09] | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -34,14 +34,14 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Personnages** :black_small_square:")
 	    .setDescription("Le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule pour le moment.")
             .addField("<:ss:719641320343470150> <:nature:719638081195475114>","**Kaiser** <:competence:719638081162051585> ($kaiser) \n **Seira** <:weapon:719781844744142875> ($seira)", true)
-            .addField("<:ss:719641320343470150> <:ice:719781844949925898>","**Elaine** <:weapon:719781844744142875> ($elaine) \n **Jyu Viole Grace** <:artmartiaux:723903194819985459> ($viole) \n **Pure Green Arin** <:element:724668549028905073> ($ss arin) \n **Clan Leader Seira** <:competence:719638081162051585> ($cl seira) \n **Urek Mazino** (Soon)", false)
+            .addField("<:ss:719641320343470150> <:ice:719781844949925898>","**Elaine** <:weapon:719781844744142875> ($elaine) \n **Jyu Viole Grace** <:artmartiaux:723903194819985459> ($viole) \n **Pure Green Arin** <:element:724668549028905073> ($ss arin) \n **Clan Leader Seira** <:competence:719638081162051585> ($cl seira) \n **Urek Mazino** <:competence:719638081162051585> ($urek)", false)
             .addField("<:ss:719641320343470150> <:feu:719638080780501073>","**Prime King Uma** <:competence:719638081162051585> ($pku) \n **Max Level Warrior** <:weapon:719781844744142875> ($mlw) \n **Yeon's Flame Khun** <:element:724668549028905073> ($flame khun) \n **Nine Tails Ilpyo Park** <:element:724668549028905073> ($nine tails)", false)
             .addField("<:ss:719641320343470150> <:dark:723941756109979760>","**Queen No Name** <:dieu:723941755996733583> ($qnn) \n **Unleashed Raizel** <:dieu:723941755996733583> ($unleashed)", false)
-            .addField("<:ss:719641320343470150> <:light:746561115395326013>","**Black-March Bam** <:evil:724805535727353856> ($bm bam) \n **Endorsi** <:artmartiaux:723903194819985459> ($endorsi)", false)
+            .addField("<:ss:719641320343470150> <:light:746561115395326013>","**Black-March Bam** <:evil:724805535727353856> ($bm bam) \n **Endorsi** <:artmartiaux:723903194819985459> ($endorsi) \n **Jinsung Ha** <:artmartiaux:723903194819985459> ($jinsung)", false)
 	    .addField("<:s_:724831181341720586>","**Frankenstein** <:feu:719638080780501073> <:element:724668549028905073> ($frankenstein) \n **Muzaka** <:nature:719638081195475114> <:artmartiaux:723903194819985459> ($muzaka) \n **M-21** <:nature:719638081195475114> <:competence:719638081162051585> ($m-21)")
             .addField("<:a_:724817244789538819>","**Raizel** <:ice:719781844949925898> <:evil:724805535727353856> ($raizel)")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.12 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
+            .setFooter("Khun Ran v0.13 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
             .setThumbnail("https://i.imgur.com/kwMfqwu.png")
 	message.channel.sendEmbed(embed);
         console.log("Page des personnages générée suite à une demande de " + message.author.username);
@@ -53,14 +53,14 @@ bot.on('message', message => {
             .setTitle(":black_small_square: **Équipements exclusifs** :black_small_square:")
 	    .setDescription("Pour l'instant, le bot est sensible à la casse, merci d'écrire toutes vos commandes en minuscule.")
             .addField("<:feu:719638080780501073>","➤ **Max Level Warrior** (__Épée du dragon rouge__ | $ee mlw) \n ➤ **God-Killer Zero** (__Lance de l'obscurité totale__ | $ee gk0) \n ➤ **Maschenny** (__Lance de la sérénité__ | $ee maschenny)", true)
-            .addField("<:ice:719781844949925898>","➤ **Master Pooh Upooh** (__Parchemin du Roi des Fées__ | $ee mpu)", false)
+            .addField("<:ice:719781844949925898>","➤ **Master Pooh Upooh** (__Parchemin du Roi des Fées__ | $ee mpu) \n ➤ **Urek Mazino** (__Ensemble à capuche noir__ | $ee urek)", false)
 	    .addField("<:nature:719638081195475114>","➤ **Actuellement aucun équipement exclusif**", false)
 	    .addField("<:light:746561115395326013>","➤ **Black-March Bam** (__Ailes de l'Animal Sacré Transformé__ | $ee bm bam) \n ➤ **Endorsi** (__Coeur Bong-Bong__ | $ee endorsi)", false)
 	    .addField("<:dark:723941756109979760>","➤ **Hilda** (__Familier dimensionnel__ | $ee hilda)", false)
             .addField("Commande ajoutées, mais incomplètes","➤ **Idol Rockcrawler** (__Scène d'Amour__ | $ee idol) \n ➤ **Daisy** (__Chapeau de pique-nique__ | $ee daisy) \n ➤ **Odette** (__Lance de la lumière__ | $ee odette)", false)
-	    .addField("À venir","➤ **Urek Mazino**", false)
+	    .addField("À venir","➤ **Witch of the West Mira Yoo**", false)
 	    .setColor("RANDOM")
-            .setFooter("Khun Ran v0.12 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setFooter("Khun Ran v0.13 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/v9syQKz.gif")
 	message.channel.sendEmbed(embed);
         console.log("Page des équipemens exclusifs générés suite à la demande de " + message.author.username);
@@ -70,13 +70,122 @@ bot.on('message', message => {
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la mise à jour 0.12 du 02/09")
-           .addField("__**Correction(s)**__","➤ Corrections, et améliorations suite à une amélioration de la traduction anglaise (rajoutant carrément des effets) des équipements exclusifs de: Maschenny, Hilda, Godkiller Zero & Master Pooh Upooh.")
-           .addField("__**Modification(s)**__","➤ Les nouveaux ajouts de Héros ne possèderont plus les statistiques, par soucis de gain de temps. Les statistiques seront supprimées pour les anciens bientôt. \n ➤ Ajout de Clan Leader Seira dans le $quisuisje (34 personnages actuellement)")
-           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Endorsi \n ➤ Clan Leader Seira \n ➤ (Données incomplètes) Équipement exclusif de Daisy, Odette & Idol Rockcrawler.")
+           .setTitle("Récapitulatif de la mise à jour 0.13 du 09/09")
+           .addField("__**Correction(s)**__","➤ Aucune.")
+           .addField("__**Modification(s)**__","➤ Ajout de Jinsung Ha dans le $quisuisje (35 personnages actuellement)")
+           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Jinsung Ha \n ➤ Urek Mazino \n ➤ Green-April Yuri Ha")
            .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
         message.channel.sendEmbed(embed);
 	   
+    }
+					
+    if (message.content === prefix + "urek mazino"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Urek Mazino :black_small_square: <:ice:719781844949925898> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("__Urek Mazino__ est un irrégulier de Tower of God, et est également le vice-capitaine du Wolhaiksong")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.13 | Devenez plus fort, et grimpez la tour, élus.")
+        .setThumbnail("https://i.imgur.com/9EWwhXC.png")
+        .setImage("https://i.imgur.com/OnPWX2Q.png")
+        .addField(":speech_balloon: Citation", "C'est écrit sur mon dos ! 'Mazino' Si quelqu'un a un problème avec mes agissements, dites-lui de venir me trouver. Je n'ai peur de personne.", false)
+        .addField("<:c1:719664266797383680> Calme du vainqueur", "Attaque l'adversaire possédant l'ATQ la plus élevée avec [120% de l'ATQ] et a 60% de chance de provoquer pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Windmill", "Attaque tous les adversaires avec [95% de l'ATQ] et inflige des dégâts additionnels égaux à [20% de la santé maximale]. Inflige [**Sceau des pouvoirs passifs**] avec 90 % de chances qui scelle les passifs 1 & 2 de l'adversaire ayant l'ATQ la plus élevée pendant 1 tour (ne scelle pas les compétences passives qui ont déjà été activées).", false)
+        .addField("<:c3:719664266776412160> Coup de poing infernal", "Effectue une attaque perçante sur l'adversaire avec la santé la plus faible avec [240% de l'ATQ] et inflige des dégâts supplémentaires à tous les adversaires de la ligne arrière avec [30% de la santé perdue]. Récupère 100% des PV si l'adversaire est éliminé par cette attaque.", false)
+        .addField("<:passif:719664266969612379> 1: Membres irréguliers haut classé", "Augmente la santé de 25%, la défense de 15% et la réduction de dégâts de 10%. Octroit [**Immunité aux malus**] pendant 1 tour au début du combat.", false)
+        .addField("<:passif:719664266969612379> 2: L'homme le plus fort", "Défend l'allié ayant la santé maximale la plus faible. Le Héros prend 30% de tous les dégâts que l'allié est censé prendre et ces mêmes dégâts sont réduits de 50%. Lorsque la santé tombe en dessous de 50%, augmente l'ATQ de 10% de la santé maximale du héros. Lorsque la santé tombe en dessous de 30%, confère [**Immunité aux dégâts**] au héros pendant 1 tour et augmente son ATQ de 10% de sa santé maximale.", false)
+
+    message.channel.sendEmbed(embed)
+	    
+	var bembed = new Discord.RichEmbed()
+            .setTitle("Ensemble à capuche noir")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif d'Urek Mazino")
+            .setThumbnail("https://i.imgur.com/WIjVYHA.png")
+            .setImage("https://i.imgur.com/z7nNnlj.png")
+            .setDescription("La compétence 2 prolonge le [**Sceau des pouvoirs passifs**] d'un adversaire pendant 2 tours avec une probabilité de ?%, et inflige [**Sceau des pouvoirs passifs**] à l'adversaire ayant la santé la plus élevée pendant 1 tour avec ?% de chances. \n \n **Statistique améliorée:** Santé.")
+	message.channel.sendEmbed(bembed)
+	    
+	        console.log("La commande de l'Héros Urek Mazino viens d'être effectuée.");
+
+	    
+    }
+	
+	    if (message.content === prefix + "urek"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Urek Mazino :black_small_square: <:ice:719781844949925898> :black_small_square: <:competence:719638081162051585> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("__Urek Mazino__ est un irrégulier de Tower of God, et est également le vice-capitaine du Wolhaiksong")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.13 | Devenez plus fort, et grimpez la tour, élus.")
+        .setThumbnail("https://i.imgur.com/9EWwhXC.png")
+        .setImage("https://i.imgur.com/OnPWX2Q.png")
+        .addField(":speech_balloon: Citation", "C'est écrit sur mon dos ! 'Mazino' Si quelqu'un a un problème avec mes agissements, dites-lui de venir me trouver. Je n'ai peur de personne.", false)
+        .addField("<:c1:719664266797383680> Calme du vainqueur", "Attaque l'adversaire possédant l'ATQ la plus élevée avec [120% de l'ATQ] et a 60% de chance de provoquer pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Windmill", "Attaque tous les adversaires avec [95% de l'ATQ] et inflige des dégâts additionnels égaux à [20% de la santé maximale]. Inflige [**Sceau des pouvoirs passifs**] avec 90 % de chances qui scelle les passifs 1 & 2 de l'adversaire ayant l'ATQ la plus élevée pendant 1 tour (ne scelle pas les compétences passives qui ont déjà été activées).", false)
+        .addField("<:c3:719664266776412160> Coup de poing infernal", "Effectue une attaque perçante sur l'adversaire avec la santé la plus faible avec [240% de l'ATQ] et inflige des dégâts supplémentaires à tous les adversaires de la ligne arrière avec [30% de la santé perdue]. Récupère 100% des PV si l'adversaire est éliminé par cette attaque.", false)
+        .addField("<:passif:719664266969612379> 1: Membres irréguliers haut classé", "Augmente la santé de 25%, la défense de 15% et la réduction de dégâts de 10%. Octroit [**Immunité aux malus**] pendant 1 tour au début du combat.", false)
+        .addField("<:passif:719664266969612379> 2: L'homme le plus fort", "Défend l'allié ayant la santé maximale la plus faible. Le Héros prend 30% de tous les dégâts que l'allié est censé prendre et ces mêmes dégâts sont réduits de 50%. Lorsque la santé tombe en dessous de 50%, augmente l'ATQ de 10% de la santé maximale du héros. Lorsque la santé tombe en dessous de 30%, confère [**Immunité aux dégâts**] au héros pendant 1 tour et augmente son ATQ de 10% de sa santé maximale.", false)
+
+    message.channel.sendEmbed(embed)
+	    
+	var bembed = new Discord.RichEmbed()
+            .setTitle("Ensemble à capuche noir")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif d'Urek Mazino")
+            .setThumbnail("https://i.imgur.com/WIjVYHA.png")
+            .setImage("https://i.imgur.com/z7nNnlj.png")
+            .setDescription("La compétence 2 prolonge le [**Sceau des pouvoirs passifs**] d'un adversaire pendant 2 tours avec une probabilité de ?%, et inflige [**Sceau des pouvoirs passifs**] à l'adversaire ayant la santé la plus élevée pendant 1 tour avec ?% de chances. \n \n **Statistique améliorée:** Santé.")
+	message.channel.sendEmbed(bembed)
+	    
+	        console.log("La commande de l'Héros Urek Mazino viens d'être effectuée.");
+
+	    
+    }
+	
+		
+						 // Hero Cantare = Jinsung Ha
+    if (message.content === prefix + "jinsung ha"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Jinsung Ha :black_small_square: <:light:746561115395326013> :black_small_square: <:artmartiaux:723903194819985459> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("__Jinsung Ha__ est un Haut Ranker de Tower of God, il est le mentor de Jyu Viole Grace.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.13 | Devenez plus fort, et grimpez la tour, élus.")
+        .setThumbnail("https://i.imgur.com/0Ib7DKw.png")
+        .setImage("https://i.imgur.com/6M6agNg.gif")
+        .addField(":speech_balloon: Citation", "As-tu dit que tu voulais être fort ? Je vais te montrer comment devenir un Dieu.", false)
+        .addField("<:c1:719664266797383680> Renforcement Shinsu: Défense de Fer", "Attaque un adversaire avec [110% de l'ATQ] et inflige des dégâts équivalents à [15% de la santé perdue] à tous les adversaires.", false)
+        .addField("<:c2:719664268722831421> Mouvement mortel: Tempête démoniaque", "Effectue une attaque perçante sur tous les adversaires avec [120% de l'ATQ] et inflige des dégâts additionnels équivalent à [30% de la santé perdue]. A 70% de chance d'étourdir un (les) adversaire(s) possédant un bonus.", false)
+        .addField("<:c3:719664266776412160> Porte du Dragon: Explosion ultime de la vague étincelante", "Attaque l'adversaire ayant l'ATQ la plus élevée avec [220% de l'ATQ]. Inflige des dégâts additionnels égaux à [40% de la santé perdue] à tous les adversaires, et leur afflige le malus Vague (Wave) qui inflige des dégâts à hauteur de [100% de l'ATQ] pendant 2 tours.", false)
+        .addField("<:passif:719664266969612379> 1: Le monstre de l'ancien temps", "Augmente l'ATQ de 15%, la santé de 20% et la réduction de dégâts de 10%", false)
+        .addField("<:passif:719664266969612379> 2: Le corps de la famille Ha", "Lorsqu'il est touché, l'attaque suivante du Héros devient une attaque absolue qui ignore 40% de la réduction de dégâts & de la résistance aux malus. Si les dégâts reçus sont supérieurs à [20% de la santé max], supprime tous les malus appliqués et octroit [**Immunité aux dégâts**] une fois.", false)
+
+    message.channel.sendEmbed(embed)
+	    
+	        console.log("La commande de l'Héros Jinsung Ha viens d'être effectuée.");
+
+	    
+    }
+	
+							 // Hero Cantare = Jinsung Ha
+    if (message.content === prefix + "jinsung"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Jinsung Ha :black_small_square: <:light:746561115395326013> :black_small_square: <:artmartiaux:723903194819985459> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("__Jinsung Ha__ est un Haut Ranker de Tower of God, il est le mentor de Jyu Viole Grace.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.13 | Devenez plus fort, et grimpez la tour, élus.")
+        .setThumbnail("https://i.imgur.com/0Ib7DKw.png")
+        .setImage("https://i.imgur.com/6M6agNg.gif")
+        .addField(":speech_balloon: Citation", "As-tu dit que tu voulais être fort ? Je vais te montrer comment devenir un Dieu.", false)
+        .addField("<:c1:719664266797383680> Renforcement Shinsu: Défense de Fer", "Attaque un adversaire avec [110% de l'ATQ] et inflige des dégâts équivalents à [15% de la santé perdue] à tous les adversaires.", false)
+        .addField("<:c2:719664268722831421> Mouvement mortel: Tempête démoniaque", "Effectue une attaque perçante sur tous les adversaires avec [120% de l'ATQ] et inflige des dégâts additionnels équivalent à [30% de la santé perdue]. A 70% de chance d'étourdir un (les) adversaire(s) possédant un bonus.", false)
+        .addField("<:c3:719664266776412160> Porte du Dragon: Explosion ultime de la vague étincelante", "Attaque l'adversaire ayant l'ATQ la plus élevée avec [220% de l'ATQ]. Inflige des dégâts additionnels égaux à [40% de la santé perdue] à tous les adversaires, et leur afflige le malus Vague (Wave) qui inflige des dégâts à hauteur de [100% de l'ATQ] pendant 2 tours.", false)
+        .addField("<:passif:719664266969612379> 1: Le monstre de l'ancien temps", "Augmente l'ATQ de 15%, la santé de 20% et la réduction de dégâts de 10%", false)
+        .addField("<:passif:719664266969612379> 2: Le corps de la famille Ha", "Lorsqu'il est touché, l'attaque suivante du Héros devient une attaque absolue qui ignore 40% de la réduction de dégâts & de la résistance aux malus. Si les dégâts reçus sont supérieurs à [20% de la santé max], supprime tous les malus appliqués et octroit [**Immunité aux dégâts**] une fois.", false)
+
+    message.channel.sendEmbed(embed)
+	    
+	        console.log("La commande de l'Héros Jinsung Ha viens d'être effectuée.");
+
+	    
     }
 	
 						 // Hero Cantare = Clan Leader Seira
@@ -154,7 +263,7 @@ bot.on('message', message => {
         .setTitle("Endorsi :black_small_square: <:light:746561115395326013> :black_small_square: <:artmartiaux:723903194819985459> :black_small_square: <:ss:719641320343470150>")
         .setDescription("__Endorsi__ est une princesse de Jahad & un personnage important de Tower of God.")
         .setColor("RANDOM")
-        .setFooter("Khun Ran v0.12 | Devenez plus fort, et grimpez la tour, élus.")
+        .setFooter("Khun Ran v0.13 | Devenez plus fort, et grimpez la tour, élus.")
         .setThumbnail("https://i.imgur.com/zwV9627.png")
         .setImage("https://i.imgur.com/ofVf9E4.gif")
         .addField(":speech_balloon: Citation", "Si tu comptes revenir, le plus tôt sera le mieux. Si tu arrives trop tard, nous n'en aurons peut-être pas l'occasion. De sortir ensemble.", false)
@@ -172,7 +281,7 @@ bot.on('message', message => {
             .setColor("RANDOM")
 	    .setFooter("Équipement exclusif d'Endorsi")
             .setThumbnail("https://i.imgur.com/NeaSehN.png")
-            .setImage("https://i.imgur.com/WAk16x8.png")
+            .setImage("https://i.imgur.com/nICk8sI.png")
             .setDescription("Génère un bouclier équivalent à % des PV pour les alliés d'élément lumière pendant 2 tours au début du combat. \n \n **Statistique améliorée:** Précision des malus")
 	message.channel.sendEmbed(bembed)
 
@@ -1452,7 +1561,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setColor("RANDOM")
 	    .setFooter("Équipement exclusif d'Endorsi")
             .setThumbnail("https://i.imgur.com/NeaSehN.png")
-            .setImage("https://i.imgur.com/WAk16x8.png")
+            .setImage("https://i.imgur.com/nICk8sI.png")
             .setDescription("Génère un bouclier équivalent à % des PV pour les alliés d'élément lumière pendant 2 tours au début du combat. \n \n **Statistique améliorée:** Précision des malus")
 	message.channel.sendEmbed(embed)
 	
@@ -1493,6 +1602,19 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
             .setThumbnail("https://i.imgur.com/if259VH.png")
             .setImage(" ")
             .setDescription("Inconnu. \n \n **Statistique améliorée:** Inconnue.")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+			// Hero Cantare Equipement Exclusif / Urek Mazino
+    if (message.content === prefix + "ee urek"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Ensemble à capuche noir")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif d'Urek Mazino")
+            .setThumbnail("https://i.imgur.com/WIjVYHA.png")
+            .setImage("https://i.imgur.com/z7nNnlj.png")
+            .setDescription("La compétence 2 prolonge le [**Sceau des pouvoirs passifs**] d'un adversaire pendant 2 tours avec une probabilité de ?%, et inflige [**Sceau des pouvoirs passifs**] à l'adversaire ayant la santé la plus élevée pendant 1 tour avec ?% de chances. \n \n **Statistique améliorée:** Santé.")
 	message.channel.sendEmbed(embed)
 
     }
@@ -1701,6 +1823,7 @@ bot.on("message", function(message) {
 		"https://i.imgur.com/7b5E07e.png",
 		"https://i.imgur.com/6vbuphJ.png",
 		"https://i.imgur.com/KWpT0MV.png",
+		"https://i.imgur.com/0Ib7DKw.png",
 
        
             ];
