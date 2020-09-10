@@ -196,8 +196,8 @@ bot.on('message', async message => {
 		
 			    
                     // Reacts so the user only have to click the emojis
-                    message.react('👍').then(r => {
-                            message.react('👎');
+                    msg.react('👍').then(r => {
+                            msg.react('👎');
                     })});
 			    
 	var dembed = new Discord.RichEmbed()
