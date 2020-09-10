@@ -4,7 +4,7 @@ const bot = new Discord.Client();
 var prefix = ("$")
 
 bot.on('ready', function() {
-    bot.user.setActivity("$help | V 0.13 [09/09] | $màj pour les détails.");
+    bot.user.setActivity("$help | V 0.14 [10/09] | $màj pour les détails.");
 
     console.log("Je suis connecté !");
 
@@ -17,7 +17,7 @@ bot.on('message', message => {
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
             .setDescription("Voici les différentes catégories de la page d'aide")
-            .addField("__**Modération**__","`$kick` \n `$ban` \n `$purge`", true)
+            .addField("__**Modération**__","`$kick` \n `$ban` \n `$purge` \n `$mute` (Arrive septembre)", true)
             .addField("__**Utilitaires**__","`$help` \n `$botinfos` \n ~~$userinfos~~ \n `$màj`", true)
             .addField("__**Fun**__","`$26ball` \n `$avatar` \n `$say` \n `~~$quizz~~` \n `quisuisje`", true)
             .addField("__**Hero Cantare**__","`$héros` \n ~~$tierlist~~ \n `$ee`", true)
@@ -36,12 +36,12 @@ bot.on('message', message => {
             .addField("<:ss:719641320343470150> <:nature:719638081195475114>","**Kaiser** <:competence:719638081162051585> ($kaiser) \n **Seira** <:weapon:719781844744142875> ($seira)", true)
             .addField("<:ss:719641320343470150> <:ice:719781844949925898>","**Elaine** <:weapon:719781844744142875> ($elaine) \n **Jyu Viole Grace** <:artmartiaux:723903194819985459> ($viole) \n **Pure Green Arin** <:element:724668549028905073> ($ss arin) \n **Clan Leader Seira** <:competence:719638081162051585> ($cl seira) \n **Urek Mazino** <:competence:719638081162051585> ($urek)", false)
             .addField("<:ss:719641320343470150> <:feu:719638080780501073>","**Prime King Uma** <:competence:719638081162051585> ($pku) \n **Max Level Warrior** <:weapon:719781844744142875> ($mlw) \n **Yeon's Flame Khun** <:element:724668549028905073> ($flame khun) \n **Nine Tails Ilpyo Park** <:element:724668549028905073> ($nine tails)", false)
-            .addField("<:ss:719641320343470150> <:dark:723941756109979760>","**Queen No Name** <:dieu:723941755996733583> ($qnn) \n **Unleashed Raizel** <:dieu:723941755996733583> ($unleashed)", false)
+            .addField("<:ss:719641320343470150> <:dark:723941756109979760>","**Queen No Name** <:dieu:723941755996733583> ($qnn) \n **Unleashed Raizel** <:dieu:723941755996733583> ($unleashed) \n **Witch of the West** <:weapon:719781844744142875> ($witch)", false)
             .addField("<:ss:719641320343470150> <:light:746561115395326013>","**Black-March Bam** <:evil:724805535727353856> ($bm bam) \n **Endorsi** <:artmartiaux:723903194819985459> ($endorsi) \n **Jinsung Ha** <:artmartiaux:723903194819985459> ($jinsung)", false)
 	    .addField("<:s_:724831181341720586>","**Frankenstein** <:feu:719638080780501073> <:element:724668549028905073> ($frankenstein) \n **Muzaka** <:nature:719638081195475114> <:artmartiaux:723903194819985459> ($muzaka) \n **M-21** <:nature:719638081195475114> <:competence:719638081162051585> ($m-21)")
             .addField("<:a_:724817244789538819>","**Raizel** <:ice:719781844949925898> <:evil:724805535727353856> ($raizel)")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.13 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
+            .setFooter("Khun Ran v0.14 | Devenez plus fort, et grimpez la tour, "+ message.author.username)
             .setThumbnail("https://i.imgur.com/kwMfqwu.png")
 	message.channel.sendEmbed(embed);
         console.log("Page des personnages générée suite à une demande de " + message.author.username);
@@ -56,11 +56,11 @@ bot.on('message', message => {
             .addField("<:ice:719781844949925898>","➤ **Master Pooh Upooh** (__Parchemin du Roi des Fées__ | $ee mpu) \n ➤ **Urek Mazino** (__Ensemble à capuche noir__ | $ee urek)", false)
 	    .addField("<:nature:719638081195475114>","➤ **Actuellement aucun équipement exclusif**", false)
 	    .addField("<:light:746561115395326013>","➤ **Black-March Bam** (__Ailes de l'Animal Sacré Transformé__ | $ee bm bam) \n ➤ **Endorsi** (__Coeur Bong-Bong__ | $ee endorsi)", false)
-	    .addField("<:dark:723941756109979760>","➤ **Hilda** (__Familier dimensionnel__ | $ee hilda)", false)
+	    .addField("<:dark:723941756109979760>","➤ **Hilda** (__Familier dimensionnel__ | $ee hilda) \n ➤ **Witch of the West Mira Yoo** (__Épée secrète__ | $ee witch)", false)
             .addField("Commande ajoutées, mais incomplètes","➤ **Idol Rockcrawler** (__Scène d'Amour__ | $ee idol) \n ➤ **Daisy** (__Chapeau de pique-nique__ | $ee daisy) \n ➤ **Odette** (__Lance de la lumière__ | $ee odette)", false)
-	    .addField("À venir","➤ **Witch of the West Mira Yoo**", false)
+	    .addField("À venir","➤ **No-Name**", false)
 	    .setColor("RANDOM")
-            .setFooter("Khun Ran v0.13 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
+            .setFooter("Khun Ran v0.14 | Avancez, évoluez, et combattez pour devenir le meilleur d'Hero Cantare!")
             .setThumbnail("https://i.imgur.com/v9syQKz.gif")
 	message.channel.sendEmbed(embed);
         console.log("Page des équipemens exclusifs générés suite à la demande de " + message.author.username);
@@ -70,14 +70,204 @@ bot.on('message', message => {
 
    if (message.content === prefix + "màj"){
        var embed = new Discord.RichEmbed()
-           .setTitle("Récapitulatif de la mise à jour 0.13 du 09/09")
-           .addField("__**Correction(s)**__","➤ Les statistiques de l'équipement exclusif d'Endorsi sont désormais plus complète.")
-           .addField("__**Modification(s)**__","➤ Ajout de Jinsung Ha dans le $quisuisje (35 personnages actuellement)")
-           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Jinsung Ha \n ➤ Urek Mazino \n ➤ Équipement exclusif d'Urek Mazino")
-           .addField("__**Nouvelle(s) commande(s)**__","➤ Aucune.")
+           .setTitle("Récapitulatif de la mise à jour 0.14 du 10/09")
+           .addField("__**Correction(s)**__","➤ Aucune.")
+           .addField("__**Modification(s)**__","➤ Statistiques de M-21 & Black-March Bam supprimées. (Les autres suivront.) \n ➤ Ajout de Witch of the West Mira Yoo & Green-April Yuri Ha dans le $quisuisje (37 personnages actuellement) \n ➤ Ajout de l'alias $h pour la commande $héros")
+           .addField("__**Ajout(s) de héros / équipements exclusifs**__", "➤ Green-April Yuri Ha \n ➤ Witch of the West Mira Yoo \n ➤ Équipement exclusif de Witch of the West Mira Yoo")
+           .addField("__**Nouvelle(s) commande(s)**__","➤ $costume")
         message.channel.sendEmbed(embed);
 	   
     }
+	
+	    if (message.content === prefix + "ga yuri ha"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Green-April Yuri Ha :black_small_square: <:dark:723941756109979760> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Witch of the West __Mira Yoo__ est une des protagonistes de The God of Highschool.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.14 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+        .setThumbnail("https://i.imgur.com/AkERziq.png")
+        .setImage("https://i.imgur.com/7aidUnp.png")
+        .addField(":speech_balloon: Citation", "Je dois protéger l'épée de ma famille ! As-tu déjà eu ce genre de responsabilité ?", false)
+        .addField("<:c1:719664266797383680> Coup unique", "Attaque l'adversaire ayant l'ATQ la plus élevée avec [125% de l'ATQ] et a 80% de chance d'infliger 1 [**Poison**] égal à [30% de l'ATQ] pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Style de l'épée Lunaire: Clair de lune éternel", "Attaque un adversaire de la ligne arrière et un de la ligne avant avec [130% de l'ATQ] et étend le(s) [**Poison** / **Brûlure**/ **Saignement**] appliqué(s) sur l'adversaire pendant 2 tours. Si l'adversaire est déjà empoisonné, lui inflige un [**Poison**] additionnel pour [30% de l'ATQ] pendant 2 tours. Augmente les [**Chances de coup critique de 30%**] pendant 2 tours.", false)
+        .addField("<:c3:719664266776412160> Malédiction de la Sorcière", "Attaque tous les adversaires avec [135% de l'ATQ] et inflige 5 [**Poisons**] pour [30% de l'ATQ] chacun. Inflige jusqu'à 100% de dégâts additionnels en fonction de la réduction du nombre d'adversaires.", false)
+        .addField("<:passif:719664266969612379> 1: Le corps du Roi", "Augmente l'attaque de 15%, les dégâts coup critique de 25%, la santé de 5% et la résistance aux malus de 30%.", false)
+        .addField("<:passif:719664266969612379> 2: Berserker", "Accumule un bonus de [25% d'ATQ] et [10% de réduction de dégâts] à chaque fois que la santé actuelle passe le palier des 80/60/40/20%.", false)
+        .addField("<:sp:720742202757873745> Trésor national: Lame de Tathagata", "Attaque tous les adversaires avec [130% de l'ATQ] et fait exploser tous les [**Poison**] appliqués aux adversaires pour leur infliger 50% de dégâts supplémentaires pour chaque [**Poison**].", false)
+
+	
+    message.channel.sendEmbed(embed)
+	    
+	var bembed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(bembed)
+	    
+	        console.log("La commande de l'Héroïne Witch of the West Mira Yoo viens d'être effectuée.");
+
+	    
+    }
+	
+	    if (message.content === prefix + "witch of the west mira yoo"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Witch of the West Mira Yoo :black_small_square: <:dark:723941756109979760> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Witch of the West __Mira Yoo__ est une des protagonistes de The God of Highschool.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.14 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+        .setThumbnail("https://i.imgur.com/AkERziq.png")
+        .setImage("https://i.imgur.com/7aidUnp.png")
+        .addField(":speech_balloon: Citation", "Je dois protéger l'épée de ma famille ! As-tu déjà eu ce genre de responsabilité ?", false)
+        .addField("<:c1:719664266797383680> Coup unique", "Attaque l'adversaire ayant l'ATQ la plus élevée avec [125% de l'ATQ] et a 80% de chance d'infliger 1 [**Poison**] égal à [30% de l'ATQ] pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Style de l'épée Lunaire: Clair de lune éternel", "Attaque un adversaire de la ligne arrière et un de la ligne avant avec [130% de l'ATQ] et étend le(s) [**Poison** / **Brûlure**/ **Saignement**] appliqué(s) sur l'adversaire pendant 2 tours. Si l'adversaire est déjà empoisonné, lui inflige un [**Poison**] additionnel pour [30% de l'ATQ] pendant 2 tours. Augmente les [**Chances de coup critique de 30%**] pendant 2 tours.", false)
+        .addField("<:c3:719664266776412160> Malédiction de la Sorcière", "Attaque tous les adversaires avec [135% de l'ATQ] et inflige 5 [**Poisons**] pour [30% de l'ATQ] chacun. Inflige jusqu'à 100% de dégâts additionnels en fonction de la réduction du nombre d'adversaires.", false)
+        .addField("<:passif:719664266969612379> 1: Le corps du Roi", "Augmente l'attaque de 15%, les dégâts coup critique de 25%, la santé de 5% et la résistance aux malus de 30%.", false)
+        .addField("<:passif:719664266969612379> 2: Berserker", "Accumule un bonus de [25% d'ATQ] et [10% de réduction de dégâts] à chaque fois que la santé actuelle passe le palier des 80/60/40/20%.", false)
+        .addField("<:sp:720742202757873745> Trésor national: Lame de Tathagata", "Attaque tous les adversaires avec [130% de l'ATQ] et fait exploser tous les [**Poison**] appliqués aux adversaires pour leur infliger 50% de dégâts supplémentaires pour chaque [**Poison**].", false)
+
+	
+    message.channel.sendEmbed(embed)
+	    
+	var bembed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(bembed)
+		    
+	let msg = await message.channel.send("Peut-être cherches-tu sa relique exclusive, Witch of the West (Sorcière de l'Ouest) ?");
+	await msg.react('❤');
+		    
+		    	var cembed = new Discord.RichEmbed()
+            .setTitle("Peut-être cherches-tu sa relique exclusive ?")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(bembed)
+		    
+	const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === ❤, {time: 15000});
+	message.channel.sendEmbed(cembed)
+		    
+	var cembed = new Discord.RichEmbed()
+            .setTitle("Peut-être cherches-tu sa relique exclusive ?")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(bembed)
+	    
+	        console.log("La commande de l'Héroïne Witch of the West Mira Yoo viens d'être effectuée.");
+
+	    
+    }
+	
+		    if (message.content === prefix + "witch"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Witch of the West Mira Yoo :black_small_square: <:dark:723941756109979760> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Witch of the West __Mira Yoo__ est une des protagonistes de The God of Highschool.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.14 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+        .setThumbnail("https://i.imgur.com/AkERziq.png")
+        .setImage("https://i.imgur.com/7aidUnp.png")
+        .addField(":speech_balloon: Citation", "Je dois protéger l'épée de ma famille ! As-tu déjà eu ce genre de responsabilité ?", false)
+        .addField("<:c1:719664266797383680> Coup unique", "Attaque l'adversaire ayant l'ATQ la plus élevée avec [125% de l'ATQ] et a 80% de chance d'infliger 1 [**Poison**] égal à [30% de l'ATQ] pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Style de l'épée Lunaire: Clair de lune éternel", "Attaque un adversaire de la ligne arrière et un de la ligne avant avec [130% de l'ATQ] et étend le(s) [**Poison** / **Brûlure**/ **Saignement**] appliqué(s) sur l'adversaire pendant 2 tours. Si l'adversaire est déjà empoisonné, lui inflige un [**Poison**] additionnel pour [30% de l'ATQ] pendant 2 tours. Augmente les [**Chances de coup critique de 30%**] pendant 2 tours.", false)
+        .addField("<:c3:719664266776412160> Malédiction de la Sorcière", "Attaque tous les adversaires avec [135% de l'ATQ] et inflige 5 [**Poisons**] pour [30% de l'ATQ] chacun. Inflige jusqu'à 100% de dégâts additionnels en fonction de la réduction du nombre d'adversaires.", false)
+        .addField("<:passif:719664266969612379> 1: Le corps du Roi", "Augmente l'attaque de 15%, les dégâts coup critique de 25%, la santé de 5% et la résistance aux malus de 30%.", false)
+        .addField("<:passif:719664266969612379> 2: Berserker", "Accumule un bonus de [25% d'ATQ] et [10% de réduction de dégâts] à chaque fois que la santé actuelle passe le palier des 80/60/40/20%.", false)
+        .addField("<:sp:720742202757873745> Trésor national: Lame de Tathagata", "Attaque tous les adversaires avec [130% de l'ATQ] et fait exploser tous les [**Poison**] appliqués aux adversaires pour leur infliger 50% de dégâts supplémentaires pour chaque [**Poison**].", false)
+
+	
+    message.channel.sendEmbed(embed)
+	    
+	var bembed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(bembed)
+	    
+	        console.log("La commande de l'Héroïne Witch of the West Mira Yoo viens d'être effectuée.");
+
+	    
+    }
+	
+		    if (message.content === prefix + "witch mira"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Witch of the West Mira Yoo :black_small_square: <:dark:723941756109979760> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Witch of the West __Mira Yoo__ est une des protagonistes de The God of Highschool.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.14 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+        .setThumbnail("https://i.imgur.com/AkERziq.png")
+        .setImage("https://i.imgur.com/7aidUnp.png")
+        .addField(":speech_balloon: Citation", "Je dois protéger l'épée de ma famille ! As-tu déjà eu ce genre de responsabilité ?", false)
+        .addField("<:c1:719664266797383680> Coup unique", "Attaque l'adversaire ayant l'ATQ la plus élevée avec [125% de l'ATQ] et a 80% de chance d'infliger 1 [**Poison**] égal à [30% de l'ATQ] pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Style de l'épée Lunaire: Clair de lune éternel", "Attaque un adversaire de la ligne arrière et un de la ligne avant avec [130% de l'ATQ] et étend le(s) [**Poison** / **Brûlure**/ **Saignement**] appliqué(s) sur l'adversaire pendant 2 tours. Si l'adversaire est déjà empoisonné, lui inflige un [**Poison**] additionnel pour [30% de l'ATQ] pendant 2 tours. Augmente les [**Chances de coup critique de 30%**] pendant 2 tours.", false)
+        .addField("<:c3:719664266776412160> Malédiction de la Sorcière", "Attaque tous les adversaires avec [135% de l'ATQ] et inflige 5 [**Poisons**] pour [30% de l'ATQ] chacun. Inflige jusqu'à 100% de dégâts additionnels en fonction de la réduction du nombre d'adversaires.", false)
+        .addField("<:passif:719664266969612379> 1: Le corps du Roi", "Augmente l'attaque de 15%, les dégâts coup critique de 25%, la santé de 5% et la résistance aux malus de 30%.", false)
+        .addField("<:passif:719664266969612379> 2: Berserker", "Accumule un bonus de [25% d'ATQ] et [10% de réduction de dégâts] à chaque fois que la santé actuelle passe le palier des 80/60/40/20%.", false)
+        .addField("<:sp:720742202757873745> Trésor national: Lame de Tathagata", "Attaque tous les adversaires avec [130% de l'ATQ] et fait exploser tous les [**Poison**] appliqués aux adversaires pour leur infliger 50% de dégâts supplémentaires pour chaque [**Poison**].", false)
+
+	
+    message.channel.sendEmbed(embed)
+	    
+	var bembed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(bembed)
+	    
+	        console.log("La commande de l'Héroïne Witch of the West Mira Yoo viens d'être effectuée.");
+
+	    
+    }
+	
+		    if (message.content === prefix + "witch mira yoo"){
+        var embed = new Discord.RichEmbed()
+        .setTitle("Witch of the West Mira Yoo :black_small_square: <:dark:723941756109979760> :black_small_square: <:weapon:719781844744142875> :black_small_square: <:ss:719641320343470150>")
+        .setDescription("Witch of the West __Mira Yoo__ est une des protagonistes de The God of Highschool.")
+        .setColor("RANDOM")
+        .setFooter("Khun Ran v0.14 | Entraînez-vous, empruntez les pouvoirs des dieux, et remportez les tournois, participants !")
+        .setThumbnail("https://i.imgur.com/AkERziq.png")
+        .setImage("https://i.imgur.com/7aidUnp.png")
+        .addField(":speech_balloon: Citation", "Je dois protéger l'épée de ma famille ! As-tu déjà eu ce genre de responsabilité ?", false)
+        .addField("<:c1:719664266797383680> Coup unique", "Attaque l'adversaire ayant l'ATQ la plus élevée avec [125% de l'ATQ] et a 80% de chance d'infliger 1 [**Poison**] égal à [30% de l'ATQ] pendant 2 tours.", false)
+        .addField("<:c2:719664268722831421> Style de l'épée Lunaire: Clair de lune éternel", "Attaque un adversaire de la ligne arrière et un de la ligne avant avec [130% de l'ATQ] et étend le(s) [**Poison** / **Brûlure**/ **Saignement**] appliqué(s) sur l'adversaire pendant 2 tours. Si l'adversaire est déjà empoisonné, lui inflige un [**Poison**] additionnel pour [30% de l'ATQ] pendant 2 tours. Augmente les [**Chances de coup critique de 30%**] pendant 2 tours.", false)
+        .addField("<:c3:719664266776412160> Malédiction de la Sorcière", "Attaque tous les adversaires avec [135% de l'ATQ] et inflige 5 [**Poisons**] pour [30% de l'ATQ] chacun. Inflige jusqu'à 100% de dégâts additionnels en fonction de la réduction du nombre d'adversaires.", false)
+        .addField("<:passif:719664266969612379> 1: Le corps du Roi", "Augmente l'attaque de 15%, les dégâts coup critique de 25%, la santé de 5% et la résistance aux malus de 30%.", false)
+        .addField("<:passif:719664266969612379> 2: Berserker", "Accumule un bonus de [25% d'ATQ] et [10% de réduction de dégâts] à chaque fois que la santé actuelle passe le palier des 80/60/40/20%.", false)
+        .addField("<:sp:720742202757873745> Trésor national: Lame de Tathagata", "Attaque tous les adversaires avec [130% de l'ATQ] et fait exploser tous les [**Poison**] appliqués aux adversaires pour leur infliger 50% de dégâts supplémentaires pour chaque [**Poison**].", false)
+
+	
+    message.channel.sendEmbed(embed)
+	    
+	var bembed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(bembed)
+	    
+	        console.log("La commande de l'Héroïne Witch of the West Mira Yoo viens d'être effectuée.");
+
+	    
+    }
+	
 					
     if (message.content === prefix + "urek mazino"){
         var embed = new Discord.RichEmbed()
@@ -295,7 +485,7 @@ bot.on('message', message => {
         .setTitle("M-21 :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:s_:724831181341720586>")
         .setDescription("__M-21__ est un membre du groupe de Raizel dans Noblesse, il est un humain modifié.")
         .setColor("RANDOM")
-        .setFooter("Khun Ran v0.9 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setFooter("Khun Ran v0.14 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
         .setThumbnail("https://i.imgur.com/Wzq48L5.png")
         .setImage("https://i.imgur.com/c3J9VyE.png")
         .addField(":speech_balloon: Citation", "Je n'ai jamais voulu d'un tel pouvoir !!", false)
@@ -304,16 +494,6 @@ bot.on('message', message => {
         .addField("<:c3:719664266776412160> Mode Hyper complet", "Attaque tous les adversaires avec [160% de l'ATQ]. Les dégâts sont augmentés jusqu'à 100% proportionnellement à la réduction du nombre d'adversaires.", false)
         .addField("<:passif:719664266969612379> 1: Rugissement du loup", " Augmente l'ATQ et la santé de 15%.", false)
         .addField("<:passif:719664266969612379> 2: Coeur de Loup-Garou", "L'ATQ est améliorée jusqu'à 50% proportionnellement aux PV restants. Lorsque le héros est touché, augmente [l'ATQ de 30%] pendant 2 tours.", false)
-	.addField("ATQ", "18952", true)
-        .addField("DEF", "547", true)
-        .addField("PV", "114679", true)
-        .addField("VIT", "429", true)
-	.addField("Blocage", "33%", true)
-        .addField("Taux Crit", "20%", true)
-	.addField("Dégâts Crit", "5%", true)
-	.addField("Armor Crash", "5%", true)
-        .addField("Résist. Malus", "28%", true)
-        .addField("Réduction dégâts", "19%", true)
 
     message.channel.sendEmbed(embed)
 
@@ -328,7 +508,7 @@ bot.on('message', message => {
         .setTitle("M-21 :black_small_square: <:nature:719638081195475114> :black_small_square: <:competence:719638081162051585> :black_small_square: <:s_:724831181341720586>")
         .setDescription("__M-21__ est un membre du groupe de Raizel dans Noblesse, il est un humain modifié.")
         .setColor("RANDOM")
-        .setFooter("Khun Ran v0.9 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
+        .setFooter("Khun Ran v0.14 | Surpassez-vous, respectez le code des Nobles, et détruisez ces traîtres.")
         .setThumbnail("https://i.imgur.com/Wzq48L5.png")
         .setImage("https://i.imgur.com/c3J9VyE.png")
         .addField(":speech_balloon: Citation", "Je n'ai jamais voulu d'un tel pouvoir !!", false)
@@ -337,16 +517,6 @@ bot.on('message', message => {
         .addField("<:c3:719664266776412160> Mode Hyper complet", "Attaque tous les adversaires avec [160% de l'ATQ]. Les dégâts sont augmentés jusqu'à 100% proportionnellement à la réduction du nombre d'adversaires.", false)
         .addField("<:passif:719664266969612379> 1: Rugissement du loup", " Augmente l'ATQ et la santé de 15%.", false)
         .addField("<:passif:719664266969612379> 2: Coeur de Loup-Garou", "L'ATQ est améliorée jusqu'à 50% proportionnellement aux PV restants. Lorsque le héros est touché, augmente [l'ATQ de 30%] pendant 2 tours.", false)
-	.addField("ATQ", "18952", true)
-        .addField("DEF", "547", true)
-        .addField("PV", "114679", true)
-        .addField("VIT", "429", true)
-	.addField("Blocage", "33%", true)
-        .addField("Taux Crit", "20%", true)
-	.addField("Dégâts Crit", "5%", true)
-	.addField("Armor Crash", "5%", true)
-        .addField("Résist. Malus", "28%", true)
-        .addField("Réduction dégâts", "19%", true)
 
     message.channel.sendEmbed(embed)
 
@@ -359,7 +529,7 @@ bot.on('message', message => {
             .setTitle("Black-March Bam :black_small_square: <:light:746561115395326013> :black_small_square: <:evil:724805535727353856> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Black-March __Bam__ est le protagoniste principal de Tower of God. Il est un irrégulier.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.11 | Devenez plus fort, et grimpez la tour, élus.")
+            .setFooter("Khun Ran v0.14 | Devenez plus fort, et grimpez la tour, élus.")
             .setThumbnail("https://i.imgur.com/6vbuphJ.png")
             .setImage("https://i.imgur.com/dDp8e9U.gif")
             .addField(":speech_balloon: Citation :", "Si je dois me battre, je me battrai pour protéger ce qui m'est précieux.", false)
@@ -369,15 +539,6 @@ bot.on('message', message => {
             .addField("<:passif:719664266969612379> 1: Trou noir sphérique de Shinsu", "Augmente l'attaque de 20%, les chances de coup critique de 15% et la santé de 10%", false)
             .addField("<:passif:719664266969612379> 2: Déclenchement de Black-March ", "Lorsque la santé passe en dessous des 50%, octroit [Immunité aux dégâts] pendant 1 tour et invoque Black-March. (Statut Black-March: Augmentation de l'ATQ de 50%, de la précision des malus de 30% et ajoute l'élément Ténèbre.) (S'active 1x)", false)
             .addField("<:sp:720742202757873745> Poussière d'étoile", "Effectue une attaque **perçante** sur l'adversaire ayant la plus haute ATQ avec [250% de l'ATQ] et s'octroit [Immunité aux dégâts] pendant 1 tour. Inflige [50% de dégâts supplémentaires] lorsque le lanceur est sous l'effet Black-March.", false)
-	    .addField("ATQ", "22997", true)
-            .addField("DEF", "901", true)
-            .addField("PV", "131371", true)
-            .addField("VIT", "503", true)
-	    .addField("Blocage", "33%", true)
-	    .addField("Taux Crit", "30%", true)
-            .addField("Armor Crash", "5%", true)
-            .addField("Résist. Malus", "23%", true)
-            .addField("Réduction dégâts", "29%", true)
 	
 	message.channel.sendEmbed(embed)
 		    
@@ -400,7 +561,7 @@ bot.on('message', message => {
             .setTitle("Black-March Bam :black_small_square: <:light:746561115395326013> :black_small_square: <:evil:724805535727353856> :black_small_square: <:ss:719641320343470150>")
             .setDescription("Black-March __Bam__ est le protagoniste principal de Tower of God. Il est un irrégulier.")
             .setColor("RANDOM")
-            .setFooter("Khun Ran v0.11 | Devenez plus fort, et grimpez la tour, élus.")
+            .setFooter("Khun Ran v0.14 | Devenez plus fort, et grimpez la tour, élus.")
             .setThumbnail("https://i.imgur.com/6vbuphJ.png")
             .setImage("https://i.imgur.com/dDp8e9U.gif")
             .addField(":speech_balloon: Citation :", "Si je dois me battre, je me battrai pour protéger ce qui m'est précieux.", false)
@@ -410,15 +571,6 @@ bot.on('message', message => {
             .addField("<:passif:719664266969612379> 1: Trou noir sphérique de Shinsu", "Augmente l'attaque de 20%, les chances de coup critique de 15% et la santé de 10%", false)
             .addField("<:passif:719664266969612379> 2: Déclenchement de Black-March ", "Lorsque la santé passe en dessous des 50%, octroit [Immunité aux dégâts] pendant 1 tour et invoque Black-March. (Statut Black-March: Augmentation de l'ATQ de 50%, de la précision des malus de 30% et ajoute l'élément Ténèbre.) (S'active 1x)", false)
             .addField("<:sp:720742202757873745> Poussière d'étoile", "Effectue une attaque **perçante** sur l'adversaire ayant la plus haute ATQ avec [250% de l'ATQ] et s'octroit [Immunité aux dégâts] pendant 1 tour. Inflige [50% de dégâts supplémentaires] lorsque le lanceur est sous l'effet Black-March.", false)
-	    .addField("ATQ", "22997", true)
-            .addField("DEF", "901", true)
-            .addField("PV", "131371", true)
-            .addField("VIT", "503", true)
-	    .addField("Blocage", "33%", true)
-	    .addField("Taux Crit", "30%", true)
-            .addField("Armor Crash", "5%", true)
-            .addField("Résist. Malus", "23%", true)
-            .addField("Réduction dégâts", "29%", true)
 	
 	message.channel.sendEmbed(embed)
 		    
@@ -1618,6 +1770,54 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	message.channel.sendEmbed(embed)
 
     }
+	
+    if (message.content === prefix + "ee witch"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+	    if (message.content === prefix + "ee witch of the west mira yoo"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+	    if (message.content === prefix + "ee witch mira"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(embed)
+
+    }
+	
+	    if (message.content === prefix + "ee witch mira yoo"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+	message.channel.sendEmbed(embed)
+
+    }
 
 				  // Epic Seven Artefact = Justice for All
     if (message.content === prefix + "justice"){
@@ -1824,6 +2024,7 @@ bot.on("message", function(message) {
 		"https://i.imgur.com/6vbuphJ.png",
 		"https://i.imgur.com/KWpT0MV.png",
 		"https://i.imgur.com/0Ib7DKw.png",
+		"https://i.imgur.com/AkERziq.png",
 
        
             ];
