@@ -227,7 +227,7 @@ bot.on('message', async message => {
 	        console.log("La commande de l'Héroïne Witch of the West Mira Yoo viens d'être effectuée.");
 
 	    
-    }
+    })
 	
 		    if (message.content === prefix + "witch mira"){
         var embed = new Discord.RichEmbed()
