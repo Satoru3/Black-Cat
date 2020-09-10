@@ -2152,7 +2152,7 @@ bot.on("message", async message => {
   if(command === "ban") {
    
     if(!message.member.roles.some(r=>["Club de Sécurité Publique (Mod)"].includes(r.name)) )
-      return message.reply(" désolé, tu n'as pas la permission d'effectuer cette action !");
+      return message.channel.send(" désolé, tu n'as pas la permission d'effectuer cette action !");
     
     let member = message.mentions.members.first();
     if(!member)
@@ -2164,8 +2164,8 @@ bot.on("message", async message => {
     if(!reason) reason = "Aucune raison donnée.";
     
     await member.ban(reason)
-      .catch(error => message.reply(`désolé, je ne peux pas le ban à cause de : ${error}`));
-    message.reply(`${member.user.tag} à été banni par ${message.author.tag} pour : ${reason}`);
+      .catch(error => message.channel.send(`Désolé, je ne peux pas le bannir à cause de : **${error}**`));
+    message.channel.send(`${member.user} a été banni par ${message.author} pour : **${reason}**`);
   }
   
   if(command === "purge") {
