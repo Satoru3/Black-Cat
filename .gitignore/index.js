@@ -144,7 +144,10 @@ bot.on('message', async message => {
 		    
 	let msg = await message.channel.send("Peut-être cherches-tu sa relique exclusive, Witch of the West (Sorcière de l'Ouest) ?");
 	await msg.react(agree);
-		   
+		    
+	const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === agree, {time: 15000});
+	message.channel.sendEmbed(cembed)
+
 	var cembed = new Discord.RichEmbed()
             .setTitle("Witch of the West (Sorcière de l'Ouest")
             .setColor("RANDOM")
@@ -152,9 +155,6 @@ bot.on('message', async message => {
             .setThumbnail("https://i.imgur.com/SU71npQ.png")
             .setImage("https://i.imgur.com/q3aDAB3.png")
             .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
-	message.channel.sendEmbed(cembed)
-		    
-	const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === agree, {time: 15000});
 	message.channel.sendEmbed(cembed)
 		    
 	    
