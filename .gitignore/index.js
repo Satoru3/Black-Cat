@@ -2144,15 +2144,15 @@ bot.on("message", async message => {
     if(!reason) reason = "Aucune raison donnée.";
     
     await member.kick(reason)
-      .catch(error => message.reply(`Désolé ${message.author}, je ne peux pas expulser cet utilisateur pour : ${error}`));
-    message.reply(`${member.user.tag} à été expulsé du serveur par ${message.author.tag} pour : ${reason}`);
+      .catch(error => message.channel.send(`Désolé ${message.author}, je ne peux pas expulser cet utilisateur pour : ${error}`));
+    message.channel.send(`${member.user.tag} a été expulsé du serveur par ${message.author} pour : **${reason}**`);
 
   }
   
   if(command === "ban") {
    
     if(!message.member.roles.some(r=>["Club de Sécurité Publique (Mod)"].includes(r.name)) )
-      return message.channel.send(" désolé, tu n'as pas la permission d'effectuer cette action !");
+      return message.channel.send("Désolé, tu n'as pas la permission d'effectuer cette action !");
     
     let member = message.mentions.members.first();
     if(!member)
