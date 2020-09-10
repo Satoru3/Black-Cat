@@ -198,7 +198,7 @@ bot.on('message', async message => {
                     // Reacts so the user only have to click the emojis
                     message.react('👍').then(r => {
                             message.react('👎');
-                    });
+                    }});
 			    
 	var dembed = new Discord.RichEmbed()
             .setTitle("Épée secrète")
