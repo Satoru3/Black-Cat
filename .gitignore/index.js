@@ -12,7 +12,7 @@ bot.on('ready', function() {
 
 bot.login(process.env.TOKEN);
 
-bot.on('message', message => {
+bot.on('message', async message => {
     if (message.content === prefix + "help"){ //Commande d'aide
         var embed = new Discord.RichEmbed()
             .setTitle(":black_small_square: **Page d'aide** :black_small_square:")
