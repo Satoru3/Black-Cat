@@ -192,7 +192,7 @@ bot.on('message', async message => {
 		
 		                    message.react('👍').then(r => {
                             message.react('👎');
-				    }});
+				    });
 
 		var cembed = new Discord.RichEmbed()
 		    .setDescription("Tu cherches la relique exclusive **Witch of the West** de ce personnage ? Réagis à l'émoticône 👍")
