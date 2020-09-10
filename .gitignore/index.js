@@ -2156,9 +2156,9 @@ bot.on("message", async message => {
     
     let member = message.mentions.members.first();
     if(!member)
-      return message.reply("S'il te plaît, mentionne un utilisateur valide présent sur le serveur.");
+      return message.channel.send("Tu dois mentionner un utilisateur valide présent sur le serveur.");
     if(!member.bannable) 
-      return message.reply("je ne peux pas bannir cet utilisateur ! Peut-être a t-il un rôle supérieur ? Avez-vous la permission de bannir ?");
+      return message.channel.send("Je ne peux pas bannir cet utilisateur ! Peut-être a t-il un rôle supérieur ? Avez-vous la permission de bannir ?");
 
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Aucune raison donnée.";
