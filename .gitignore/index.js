@@ -188,22 +188,23 @@ bot.on('message', async message => {
             .setThumbnail("https://i.imgur.com/SU71npQ.png")
             .setImage("https://i.imgur.com/q3aDAB3.png")
             .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
-	message.channel.sendEmbed(bembed)
+	message.channel.sendEmbed(bembed).then(msg => {
+		
+		                    message.react('👍').then(r => {
+                            message.react('👎');
+				    }});
 
- 			    message.channel.send({embed: {
-                            color: 3447003,
-                             description: "Peut-être cherches-tu la relique exclusive de Witch of the West Mira Yoo, Witch of the West (Sorcière de l'Ouest) \n"
-				    + "Réagis avec le pouce vers le haut si c'est le cas, pouce vers le bas si non."
-				    
-			    }});
-
-
+		var cembed = new Discord.RichEmbed()
+		    .setDescription("Tu cherches la relique exclusive **Witch of the West** de ce personnage ? Réagis à l'émoticône 👍")
+		    message.channel.sendEmbed(cembed)
+		
+			    
                     // Reacts so the user only have to click the emojis
                     message.react('👍').then(r => {
                             message.react('👎');
                     });
 			    
-	var cembed = new Discord.RichEmbed()
+	var dembed = new Discord.RichEmbed()
             .setTitle("Épée secrète")
             .setColor("RANDOM")
 	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
@@ -215,7 +216,7 @@ bot.on('message', async message => {
                     message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
                             { max: 1, time: 15000 }).then(collected => {
                                     if (collected.first().emoji.name == '👍') {
-                                            message.channel.sendEmbed(cembed);
+                                            message.channel.sendEmbed(dembed);
                                     }
                                     else
                                             message.reply('Apparition de la relique exclusive refusée.');
