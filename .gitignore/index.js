@@ -193,17 +193,16 @@ bot.on('message', async message => {
 		var cembed = new Discord.RichEmbed()
 		    .setDescription("Tu cherches la relique exclusive **Witch of the West** de ce personnage ? Réagis à l'émoticône 👍")
 		    message.channel.sendEmbed(cembed).then(msg => {
-		
-			    
+				    
                     // Reacts so the user only have to click the emojis
                     msg.react('👍').then(r => {
                             msg.react('👎');
                     })});
 			    
 	var dembed = new Discord.RichEmbed()
-            .setTitle("Épée secrète")
+            .setTitle("Witch of the West (Sorcière de l'Ouest)")
             .setColor("RANDOM")
-	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+	    .setFooter("Relique exclusive de Witch of the West Mira Yoo")
             .setThumbnail("https://i.imgur.com/SU71npQ.png")
             .setImage("https://i.imgur.com/q3aDAB3.png")
             .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
@@ -2133,7 +2132,7 @@ bot.on("message", async message => {
     if (command === "kick") {
 
     if(!message.member.roles.some(r=>["Club de Sécurité Publique (Mod)", "Moderator"].includes(r.name)) )
-      return message.reply("Désolé, vous n'avez pas la permission d'effectuer cette action !");
+      return message.channel.send("Désolé, vous n'avez pas la permission d'effectuer cette action !");
 
     let member = message.mentions.members.first() || message.guild.members.get(args[0]);
     if(!member)
