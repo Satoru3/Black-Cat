@@ -99,7 +99,7 @@ bot.on('message', async message => {
     message.channel.sendEmbed(embed)
 	    
 	var bembed = new Discord.RichEmbed()
-            .setTitle("Épée secrète")
+            .setTitle("Costume")
             .setColor("RANDOM")
 	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
             .setThumbnail("https://i.imgur.com/SU71npQ.png")
@@ -142,7 +142,7 @@ bot.on('message', async message => {
 	
 	const agree = "❤";
 		    
-	let msg = await message.channel.send("Peut-être cherches-tu sa relique exclusive, Witch of the West (Sorcière de l'Ouest) ?");
+	let msg = await message.channel.send("Peut-être cherches-tu sa relique exclusive, Witch of the West (Sorcière de l'Ouest) ? Si oui, réagis à cette émoticône dans les 15 secondes qui suivent.");
 	await msg.react(agree);
 
 	var cembed = new Discord.RichEmbed()
@@ -189,6 +189,34 @@ bot.on('message', async message => {
             .setImage("https://i.imgur.com/q3aDAB3.png")
             .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
 	message.channel.sendEmbed(bembed)
+			    
+                    message.reply("Peut-être cherches tu la relique exclusive de Witch of the West Mira Yoo, Witch of the West (Sorcière de l'Ouest)\n"
+                            + "Réagis avec le pouce vers le haut si oui, pouce vers le bas si non.");
+
+                    // Reacts so the user only have to click the emojis
+                    message.react('👍').then(r => {
+                            message.react('👎');
+                    });
+			    
+	var cembed = new Discord.RichEmbed()
+            .setTitle("Épée secrète")
+            .setColor("RANDOM")
+	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+            .setThumbnail("https://i.imgur.com/SU71npQ.png")
+            .setImage("https://i.imgur.com/q3aDAB3.png")
+            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
+
+                    // First argument is a filter function
+                    message.awaitReactions((reaction, user) => user.id == message.author.id && (reaction.emoji.name == '👍' || reaction.emoji.name == '👎'),
+                            { max: 1, time: 15000 }).then(collected => {
+                                    if (collected.first().emoji.name == '👍') {
+                                            message.channel.sendEmbed(cembed);
+                                    }
+                                    else
+                                            message.reply('Apparition de la relique exclusive refusée.');
+                            }).catch(() => {
+                                    message.reply("Aucune réaction après 15 secondes, il n'est désormais plus possible de réagir.");
+                            });
 	    
 	        console.log("La commande de l'Héroïne Witch of the West Mira Yoo viens d'être effectuée.");
 
