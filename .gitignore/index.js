@@ -146,9 +146,9 @@ bot.on('message', async message => {
 	await msg.react(agree);
 		   
 	var cembed = new Discord.RichEmbed()
-            .setTitle("Peut-être cherches-tu sa relique exclusive ?")
+            .setTitle("Witch of the West (Sorcière de l'Ouest")
             .setColor("RANDOM")
-	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
+	    .setFooter("Relique exclusive de Witch of the West Mira Yoo")
             .setThumbnail("https://i.imgur.com/SU71npQ.png")
             .setImage("https://i.imgur.com/q3aDAB3.png")
             .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
@@ -157,14 +157,6 @@ bot.on('message', async message => {
 	const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === agree, {time: 15000});
 	message.channel.sendEmbed(cembed)
 		    
-	var cembed = new Discord.RichEmbed()
-            .setTitle("Peut-être cherches-tu sa relique exclusive ?")
-            .setColor("RANDOM")
-	    .setFooter("Équipement exclusif de Witch of the West Mira Yoo")
-            .setThumbnail("https://i.imgur.com/SU71npQ.png")
-            .setImage("https://i.imgur.com/q3aDAB3.png")
-            .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
-	message.channel.sendEmbed(cembed)
 	    
 	        console.log("La commande de l'Héroïne Witch of the West Mira Yoo viens d'être effectuée.");
 
