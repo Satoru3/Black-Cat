@@ -192,7 +192,7 @@ bot.on('message', async message => {
 
 		var cembed = new Discord.RichEmbed()
 		    .setDescription("Tu cherches la relique exclusive **Witch of the West** de ce personnage ? Réagis à l'émoticône 👍")
-		    message.channel.sendEmbed(cembed)
+		    message.channel.sendEmbed(cembed).then(msg => {
 		
 			    
                     // Reacts so the user only have to click the emojis
