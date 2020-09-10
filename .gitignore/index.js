@@ -1943,7 +1943,7 @@ console.log("La commande de l'Héros Raizel viens d'être effectuée.");
 	    
     }
 
-});
+};
 
 bot.on("message", function(message) {
     if (message.author.equals(bot.user)) return;
