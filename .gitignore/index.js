@@ -189,9 +189,14 @@ bot.on('message', async message => {
             .setImage("https://i.imgur.com/q3aDAB3.png")
             .setDescription("Obtient [**Immortalité**] pendant 1 tour avec ?% de chances. (S'active 1x) \n \n **Statistique améliorée:** Précision des malus.")
 	message.channel.sendEmbed(bembed)
-			    
-                    message.reply("Peut-être cherches tu la relique exclusive de Witch of the West Mira Yoo, Witch of the West (Sorcière de l'Ouest)\n"
-                            + "Réagis avec le pouce vers le haut si oui, pouce vers le bas si non.");
+
+ 			    message.channel.send({embed: {
+                            color: 3447003,
+                             description: "Peut-être cherches-tu la relique exclusive de Witch of the West Mira Yoo, Witch of the West (Sorcière de l'Ouest) \n"
+				    + "Réagis avec le pouce vers le haut si c'est le cas, pouce vers le bas si non."
+				    
+			    }});
+
 
                     // Reacts so the user only have to click the emojis
                     message.react('👍').then(r => {
